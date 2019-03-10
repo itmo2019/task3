@@ -35,12 +35,16 @@
     display: inline-block;
     opacity: 0.5;
     font-size: 15px;
-    line-height: 2.13;
+    padding-left: 16px;
     color: #000000;
+    line-height: 32px;
 }
 
 .remove {
     display: inline-block;
+    float: right;
+    margin-right: 10px;
+    line-height: 32px;
 }
 
 .write {
@@ -51,6 +55,7 @@
     font-size: 12px;
     background-color: #6287bd;
     text-align: center;
+    line-height: 32px;
 }
 
 .folders {
@@ -59,29 +64,32 @@
 
 .chosen {
     height: 22px;
-    width: 147px;
+    width: 137px;
     border-radius: 3px;
     background-color: #cdd6e4;
     font-size: 11px;
     color: #555555;
     font-weight: bold;
-    text-align: center;
+    padding-left: 10px;
+    line-height: 22px;
 }
 
 .not_chosen {
     height: 22px;
-    width: 147px;
+    width: 137px;
     font-size: 11px;
     color: #707070;
+    padding-left: 10px;
+    line-height: 22px;
 }
 
 .menu {
-    display: inline-block;
     margin-right: 22px;
+    float: left;
 }
 
 .mail_rectangle {
-    display: inline-block;
+    min-width: 500px;
     margin-right: 20px;
     margin-bottom: 14px;
     padding-left: 20px;
@@ -89,10 +97,18 @@
     background-color: #fff;
     border-radius: 3px;
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.34);
+    overflow: hidden;
 }
 
 .options {
     height: 37px;
+}
+
+.action {
+    display: inline-block;
+    vertical-align: center;
+    margin-left: 22px;
+    line-height: 37px;
 }
 
 .check_mark {
@@ -102,6 +118,7 @@
     border-radius: 3px;
     border: solid 1px rgba(0, 0, 0, 0.15);
     background-color: #ffffff;
+    line-height: 38px;
 }
 
 header {
@@ -128,14 +145,17 @@ header {
     font-size: 18.4px;
     color: #fff;
     text-align: center;
+    line-height: 30px;
 }
 
 .unread_mark {
+    vertical-align: center;
     display: inline-block;
     width: 10px;
     height: 10px;
     border-radius: 5px;
     background-color: #6287bd;
+    line-height: 38px;
 }
 
 .read_mark {
@@ -148,36 +168,35 @@ header {
 }
 
 .message_unread, .from_unread{
-    position: absolute;
-    top: 50%;
-    margin-top: -0.625em;
+    vertical-align: center;
     display: inline-block;
     font-family: HelveticaNeue;
     font-size: 13px;
     font-weight: bold;
     color: #000000;
+    line-height: 38px;
 }
 
 .message_read, .from_read{
-    position: absolute;
-    top: 50%;
-    margin-top: -0.625em;
+    vertical-align: center;
     display: inline-block;
     font-family: HelveticaNeue;
     font-size: 13px;
     color: #000000;
+    line-height: 38px;
 }
 
-.mails {
+.mails :target{
+    display: block;
     width: 100%;
 }
 
-.mails :active {
-    display: table;
+.mails {
+    display: none;
+    width: 100%;
 }
 
 .mail {
-    position: relative;
     height: 38px;
     width: 100%;
 }
@@ -189,19 +208,26 @@ header {
 }
 
 .date {
-    position: absolute;
-    top: 50%;
-    margin-top: -0.625em;
+    vertical-align: center;
     display: inline-block;
-    text-align: right;
+    float: right;
     padding-right: 20px;
     color: #9b9b9b;
     font-size: 13px;
+    line-height: 38px;
 }
 
 .item {
     display: inline-block;
     text-align: right;
+    margin-left: 20px;
+    line-height: 30px;
+}
+
+.help_data {
+    float: right;
+    margin-right: 20px;
+    height: 30px;
 }
 
 body {
@@ -209,41 +235,34 @@ body {
     font-family: serif;
 }
 
-table {
+.after_click:target{
+    display: block;
+}
+
+.after_click {
     display: none;
+    width: 100%;
+}
+
+.close {
+    float: right;
 }
 
 h3 {
     color: #484848;
-    text-align: left;
-    text-decoration: overline;
-    text-indent: -3%;
-}
-
-yandex {
-    color: #ff0000;
-    text-decoration: line-through;
-    text-decoration-color: #111;
 }
 
 .picture-container {
-    display: flex;
-    justify-content: center;
+    float: left;
+    margin-right: -250px;
+    shape-outside: polygon(48% 2%, 66% 10%, 85% 25%, 93% 47%, 93% 67%, 83% 88%, 69% 93%, 57% 98%, 7% 95%, 1% 36%, 3% 13%);;
 }
 
 img {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 5px;
-    border-style: solid;
-    border-width: 30px;
-    border-color: #2f4f4f;
-    border-radius: 10px;
     height: 40%;
     width: 40%;
 }
-
 
 .emphasis {
     color: #8a2be2;

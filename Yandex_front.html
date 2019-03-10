@@ -18,120 +18,91 @@
         </div>
     </div>
     <div class="search_rectangle">
-        <p class="search">Поиск</p>
-        <p class="remove">x</p>
+        <div class="search">Поиск</div>
+        <div class="remove">x</div>
     </div>
 </header>
 <main>
     <div class="menu">
-        <p class="write">Написать</p>
+        <div class="write">Написать</div>
         <div class="folders">
-            <p class="chosen">Входящие</p>
-            <p class="not_chosen">Отправленные</p>
-            <p class="not_chosen">Удалённые</p>
-            <p class="not_chosen">Спам</p>
-            <p class="not_chosen">Черновики</p>
-            <p class="not_chosen">Создать папку</p>
+            <div class="chosen">Входящие</div>
+            <div class="not_chosen">Отправленные</div>
+            <div class="not_chosen">Удалённые</div>
+            <div class="not_chosen">Спам</div>
+            <div class="not_chosen">Черновики</div>
+            <div class="not_chosen">Создать папку</div>
         </div>
     </div>
 
     <div class="mail_rectangle">
     <div class="options">
         <div class="check_mark"></div>
-        Переслать
-        Удалить
-        Это спам
-        Прочитано
+        <div class="action">Переслать</div>
+        <div class="action">Удалить</div>
+        <div class="action">Это спам</div>
+        <div class="action">Прочитано</div>
     </div>
         <div class="divider"></div>
-    <div class="mails">
-        <div class="mail">
-            <div class="check_mark"></div>
-            <p class="logo">Я</p>
-            <div class="unread_mark"></div>
-            <p class="from_unread">Яндекс.Паспорт</p>
-            <p class="message_unread"></p>
-            <p class="date">6 авг</p>
+        <div class="mails" id="all_mails">
+            <a href="#a1" class="mail clicker">
+                <div class="check_mark"></div>
+                <div class="logo">Я</div>
+                <div class="unread_mark"></div>
+                <div class="from_unread">Яндекс.Паспорт</div>
+                <div class="message_unread"></div>
+                <div class="date">6 авг</div>
+            </a>
+            <div class="divider"></div>
+            <div class="mail">
+                <div class="check_mark"></div>
+                <div class="logo">Я</div>
+                <div class="unread_mark"></div>
+                <div class="from_unread">Команда Яндекс.Почты</div>
+                <div class="message_unread"></div>
+                <div class="date">6 июл</div>
+            </div>
+            <div class="divider"></div>
+            <div class="mail">
+                <div class="check_mark"></div>
+                <div class="logo">Я</div>
+                <div class="read_mark"></div>
+                <div class="from_read">Команда Яндекс.Почты</div>
+                <div class="message_read"></div>
+                <div class="date">6 июл</div>
+            </div>
+            <div class="divider"></div>
+            <div class="mail">
+                <div class="check_mark"></div>
+                <div class="logo">Я</div>
+                <div class="read_mark"></div>
+                <div class="from_read">Яндекс</div>
+                <div class="message_read"></div>
+                <div class="date">6 июл</div>
+            </div>
+            <div class="divider"></div>
+
         </div>
-        <div class="divider"></div>
-        <div class="mail">
-            <div class="check_mark"></div>
-            <p class="logo">Я</p>
-            <div class="unread_mark"></div>
-            <p class="from_unread">Команда Яндекс.Почты</p>
-            <p class="message_unread"></p>
-            <p class="date">6 июл</p>
+
+        <div class="after_click" id="a1">
+            <table>
+                <a href="#all_mails" class="close">X</a>
+                <h3>Тюлень</h3>
+                <div class="picture-container">
+                    <img src="sticker.png" alt="img">
+                </div>
+                <p>Тюле́ни — общее название двух семейств млекопитающих, полифилетическая группа, ранее относимая вместе с моржовыми (Odobenidae) в отдельный отряд ластоногих (Pinnipedia), который по современным представлениям считается устаревшим и исключён из систематики.
+                    Тюленями называют представителей семейств ушастых тюленей (Otariidae) и настоящих тюленей (Phocidae). У обеих групп обе пары конечностей преобразованы в ласты, вооружённые когтями; задние ласты направлены назад. Ушастые тюлени, вероятно, произошли от примитивных медведеобразных, настоящие — по-видимому, от примитивных куньих. У настоящих тюленей нет ушных раковин; задние ласты служат для передвижения в воде. У ушастых тюленей для передвижения в воде служат передние конечности, а задние в воде служат рулями, а на суше подгибаются вперёд и поддерживают массивное тело. Насчитывается около 20 видов из 12 родов.
+                    Распространены широко; особенно многочисленны в приполярных широтах. Большинство видов образует на льдах залёжки (на период размножения и линьки). Беременность, как правило, длится около года.
+                </p>
+            </table>
         </div>
-        <div class="divider"></div>
-        <div class="mail">
-            <div class="check_mark"></div>
-            <p class="logo">Я</p>
-            <div class="read_mark"></div>
-            <p class="from_read">Команда Яндекс.Почты</p>
-            <p class="message_read"></p>
-            <p class="date">6 июл</p>
+        <div class="help_data">
+            <div class="item">Помощь и обратная связь</div>
+            <div class="item">Реклама</div>
+            <div class="item">© 2001—2018, Яндекс</div>
         </div>
-        <div class="divider"></div>
-        <div class="mail">
-            <div class="check_mark"></div>
-            <p class="logo">Я</p>
-            <div class="read_mark"></div>
-            <p class="from_read">Яндекс</p>
-            <p class="message_read"></p>
-            <p class="date">6 июл</p>
-        </div>
-        <div class="divider"></div>
-    </div>
-    <div class="help_data">
-        <p class="item">Помощь и обратная связь</p>
-        <p class="item">Реклама</p>
-        <p class="item">© 2001—2018, Яндекс</p>
-    </div>
     </div>
 </main>
-    <table>
-        <tr>
-            <td>
-                <h3>Меня зовут Юлия Савон и я бы хотела рассказать, что я ожидаю от курса фронтенд в ИТМО.</h3>
-                <p>
-                    Прежде всего я открыла <yandex>Yandex</yandex> <a href="https://google.com">Google</a> и поискала чем фронтенд занимается подробнее. <br>
-                    Нашла статьи и умилительную картинку, которая отражает взаимодействие между фронтом и бэком)
-                </p>
-                <div class="picture-container">
-                    <img src="images/TinyFrontend.jpg" alt="First vision">
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>
-                    С фронтендом как с предметом я сталкивалась кажется один раз, в школе. в 8 классе мы писали
-                    небольшие сайтики на html. Там был одноцветный фон, несколько картинок и разный текст.
-                </p>
-                <p>
-                    Сейчас я понимаю, что мне этого недостаточно для того, чтобы создать даже примитивный сайт.
-                    Хотелось бы понять и попробовать следующие вещи:
-                </p>
-                    <ul>
-                        <li>Как писать <strong>красивую</strong> и <em>понятную</em> структуру страницы</li>
-                        <li>Как оформлять её дизайн <span class="emphasis">быстро</span> и аккуратно</li>
-                        <li>Разобраться с тем, <b>как работают</b> встроенные игрушки</li>
-                        <li>Как работает реклама, как её интегрировать и, соответственно наоборот, выловить и удалить</li>
-                        <li>Как могут работать вредоносные подпрограммы на страницах</li>
-                        <li>Делать <sup>красивый</sup> и <sub>невырвиглазный</sub> дизайн</li>
-                        <li>И, наконец, научиться делать это так, чтобы "сайт не тормозил"</li>
-                    </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>
-                    Последнее особенно важно в условиях плохого интернета у пользователя. Недавно я прочитала статью про то, что сейчас
-                когда мы заходим на интернет-страницу у нас 60% времени прогружается реклама и сторонние скрипты. Хотелось бы понять, можно ли делать иначе.
-                </p>
-            </td>
-        </tr>
-    </table>
-    </main>
 </body>
 </html>
