@@ -1,0 +1,334 @@
+@font-face {
+    font-family: 'YandexRegular';
+    src: url("fonts/YandexSansDisplay-Regular.woff");
+}
+
+@font-face {
+    font-family: 'YandexBold';
+    src: url("fonts/YandexSansText-Medium.woff");
+}
+
+body {
+    background-color: #e5eaf0;
+    padding-top: 12px;
+    padding-left: 22px;
+    padding-right: 20px;
+    font-family: YandexRegular, sans-serif;
+}
+
+.upper-line {
+    position: fixed;
+}
+
+.three-dashes {
+    position: fixed;
+    display: inline-block;
+    height: 31px;
+    width: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.dash-one {
+    margin: 8px 0 0 0;
+    width: 20px;
+    height: 2.4px;
+    background-color: #000000;
+}
+
+.dash-two {
+    margin: 4.8px 0 0 0;
+    width: 20px;
+    height: 2.4px;
+    background-color: #000000;
+}
+
+.dash-three {
+    margin: 4.8px 0 0 0;
+    width: 20px;
+    height: 2.4px;
+    background-color: #000000;
+}
+
+.logo {
+    vertical-align: top;
+    display: inline-block;
+    margin: -5px 0 0 -30px;
+    padding: 0;
+    height: 31px;
+    width: 300px;
+    font-family: sans-serif;
+    font-size: 40px;
+    transform: scaleX(0.5);
+}
+
+.yandex {
+    vertical-align: top;
+    horiz-align: left;
+    margin: 0;
+    display: inline-block;
+
+    font-weight: bolder;
+}
+
+.mail {
+    margin: 0;
+    display: inline-block;
+}
+
+.search {
+    width: 301px;
+    height: 32px;
+    background-color: #ffffff;
+    padding-right: 50px;
+    color: #000000;
+    opacity: 0.5;
+    padding-left: 16px;
+}
+
+.clearBtn {
+    margin-left: -40px;
+    border: 0;
+    background-color: white;
+    color: rgba(0, 0, 0, 0.15);
+}
+
+.cross {
+    color: rgba(0, 0, 0, 0.25);
+}
+
+.main {
+    position: fixed;
+    margin-top: 56px;
+    width: 100%;
+    overflow: auto;
+}
+
+.left-column {
+    position: fixed;
+    width: 147px;
+    margin: 0;
+}
+
+.write {
+    height: 32px;
+    width: 147px;
+    background-color: #6287bd;
+    color: white;
+    border: 0;
+}
+
+.btn-group {
+    width: 147px;
+}
+
+.btn-group button {
+    width: 147px;
+    min-height: 22px;
+    background-color: transparent;
+    border: 0;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.btn-group button:hover{
+    background-color: #cdd6e4;
+}
+
+.btn-group button:active{
+    font-weight: bold;
+}
+
+.white-block {
+    display: inline-block;
+    background-color: white;
+    margin-right: 20px;
+    margin-left: 169px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.34);
+    width: -moz-calc(100% - 219px);
+    width: -webkit-calc(100% - 219px);
+    width: calc(100% - 219px);
+    min-height: 500px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.square {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    border: solid 1px rgba(0, 0, 0, 0.15);
+    background-color: white;
+    margin-left: 20px;
+    margin-top: 12px;
+}
+
+.upper-row {
+    border-bottom: solid 1px #e2e2e2;
+    height: 37px;
+    padding: 0;
+}
+
+.upper-row-btn {
+    vertical-align: middle;
+    background-color: transparent;
+    border: 0;
+    color: #cccccc;
+    margin-right: 26px;
+    margin-left: 20px;
+    margin-top: -10px;
+}
+
+.central-row-unread {
+    border-bottom: solid 1px #e2e2e2;
+    height: 40px;
+    padding: 0;
+}
+
+.central-row-read {
+    height: 40px;
+    border-bottom: solid 1px #e2e2e2;
+    padding: 0;
+}
+
+.lower-row {
+    margin-left: 0;
+    margin-right: 0;
+    position: absolute;
+    bottom: 20px;
+    border-top: solid 1px #e2e2e2;
+    height: 31px;
+    color: #9b9b9b;
+    font-family: YandexRegular;
+    padding-right: 20px;
+    width: calc(100% - 219px - 20px);
+    text-align: right;
+}
+
+
+.ya-circle {
+    vertical-align: top;
+    margin-left: 10px;
+    margin-top: 5px;
+    display: inline-block;
+    background-color: #ff3333;
+    border: 0;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    height: 30px;
+    width: 30px;
+    padding: 0;
+}
+
+.ya-letter {
+    display: inline;
+    margin-top: 5px;
+    margin-left: -1px;
+    font-size: 25px;
+}
+
+.msg-sender {
+    vertical-align: top;
+    margin-top: 10px;
+    display: inline-block;
+    margin-left: 10px;
+    width: 250px;
+}
+
+.central-row-unread .msg-sender {
+    font-family: YandexBold;
+}
+
+.point {
+    vertical-align: top;
+    margin-left: 20px;
+    margin-top: 15px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #6287bd;
+    border-radius: 50%;
+}
+
+.central-row-unread .msg-theme {
+    font-family: YandexBold;
+}
+
+.msg-theme {
+    vertical-align: top;
+    margin-left: 10px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+
+.central-row-read .point {
+    visibility: hidden;
+}
+
+.date {
+    position: absolute;
+    right: 0;
+    margin-right: 60px;
+    margin-top: 10px;
+    display: inline-block;
+    text-align: right;
+    color: #9b9b9b;
+    width: 80px;
+}
+
+.my-msg {
+    display: none;
+}
+
+.check-box-in-square {
+    height: 16px;
+    width: 16px;
+    /*visibility: hidden;*/
+}
+
+#hiddenMessage {
+    display: none;
+}
+
+#hiddenMessage:checked + .my-msg {
+    display: block;
+    background-color: white;
+    position: fixed;
+    z-index: 100;
+    margin-top: -40px;
+    min-height: 390px;
+    width: calc(100% - 260px);
+    padding: 20px;
+}
+
+.my-msg-img {
+    alignment: right;
+    height: 200px;
+    width: 300px;
+    border-radius: 50%;
+    background-color: #7db9e8;
+    margin: 0 25px 5px 0;
+    float: left;
+    -webkit-shape-outside: circle();
+    shape-outside: circle();
+}
+
+.msg-cross {
+    color: rgba(0, 0, 0, 0.25);
+    z-index: 200;
+    horiz-align: right;
+    float: right;
+}
+
+.my-msg-text {
+    margin-top: 30px;
+}
+
+.lower-row-block {
+    margin-top: 5px;
+    display: inline-block;
+    margin-right: 20px;
+}
