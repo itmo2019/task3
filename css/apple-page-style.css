@@ -1,0 +1,40 @@
+.apple-page {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1;
+    background-color: white;
+}
+
+.apple-page__text {
+    padding: 20px;
+    font-family: sans-serif;
+    font-size: 14px;
+    white-space: normal;
+}
+
+.apple-page__exit {
+    float: right;
+    margin-top: -5px;
+    margin-right: 5px;
+    font-size: 35px;
+    color: gray;
+    cursor: pointer;
+}
+
+.apple-page__apple-img {
+    width: 150px;
+    height: 180px;
+    shape-outside: url('../images/apple.png');
+    shape-image-threshold: 0.7;
+}
+
+#apple-page__hider {
+    display: none;
+}
+
+#apple-page__hider:checked ~ .apple-page {
+    display: block;
+}

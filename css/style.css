@@ -1,0 +1,36 @@
+html {
+    margin: 0 10px;
+    background: #e5eaf0;
+    white-space: nowrap;
+}
+
+main {
+    margin-top: 13px;
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 65px);
+}
+
+main > * {
+    display: inline-block;
+    vertical-align: top;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+.cursor {
+    cursor: pointer;
+}
