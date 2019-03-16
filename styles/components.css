@@ -109,7 +109,7 @@
 }
 
 .mail_status_not-read .mail__item-mail__text-message:before {
-    content: '';
+    content: ' ';
     display: inline-block;
     color: white;
     width: 10px;
