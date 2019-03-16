@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Yandex Mail Demo">
+    <meta name="author" content="Gleb Drozdov">
+    <title>Яндекс.Почта</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<header>
+    <div id="logo-ya-and-menu">
+        <div id="header-menu">
+            <div class="single-strip"></div>
+            <div class="single-strip"></div>
+            <div class="single-strip"></div>
+        </div>
+        <img class="ya-logo-mail" src="resources/yandex-mail.png" alt="yandex" height="25" width="150">
+    </div>
+    <input id="search-header-bar" type="search" placeholder="Поиск"/>
+</header>
+<section>
+    <aside id="block-aside">
+        <button class="button-aside-menu">Написать</button>
+        <button class="button-aside-menu" id="button-add-message" onclick="">Добавить письмо</button>
+        <nav id="menu-container">
+            <ul class="aside-menu">
+                <li class="menu-item active"><a href="#">Входящие</a></li>
+                <li class="menu-item"><a href="#">Отправленные</a></li>
+                <li class="menu-item"><a href="#">Удалённые</a></li>
+                <li class="menu-item"><a href="#">Спам</a></li>
+                <li class="menu-item"><a href="#">Черновики</a></li>
+                <li class="menu-item"><a href="#">Создать папку</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main id="block-main">
+        <div id="top-message-bar">
+            <input class="top-selector" type="checkbox" id="select-all-checkbox"/>
+            <ul class="horizontal-nav-panel">
+                <li class="horizontal-nav-panel-elem"><a class="top-bar" href="#">Переслать</a></li>
+                <li class="horizontal-nav-panel-elem"><a class="top-bar" href="#" id="remove-message">Удалить</a></li>
+                <li class="horizontal-nav-panel-elem"><a class="top-bar" href="#">Это спам!</a></li>
+                <li class="horizontal-nav-panel-elem"><a class="top-bar" href="#">Прочитано</a></li>
+            </ul>
+        </div>
+        <div id="messages-container">
+            <div class="message-container bold">
+                <input class="message-selector" type="checkbox" id="show-page-checkbox">
+                <div id="hidden-page">
+                    <label id="cancel-btn" for="show-page-checkbox">X</label>
+                    Золотистый ретривер — это собака гармоничного телосложения, с крепкими и мускулистыми конечностями и
+                    округлыми лапами.
+                    <img class="dog-image" src="resources/retriver.jpg" align="right" alt="Dog"
+                         width="250" height="200">
+                    Голова пропорциональна корпусу, теменная часть широкая.
+                    Хорошо выражен переход ото лба к морде. Мочка носа чёрная. Глаза тёмно-коричневого цвета, широко
+                    расставлены, с тёмными краями век.
+                    Уши среднего размера, висячие, посажены примерно на уровне глаз.
+                    Шея мускулистая, довольно длинная. Грудь широкая. Хвост длинный, никогда не загибается. Шерсть
+                    прямая или волнистая, толстый подшёрсток плохо пропускает воду. Окрас может состоять из любого
+                    оттенка золотого или кремового цвета.
+                    Иногда на груди могут быть небольшие белые пятна. Если золотистый ретривер белого цвета, то это
+                    считается племенным браком.
+                    Высота в холке составляет от 56 до 61 см у кобелей, и от 51 до 56 см у сук. Масса: у кобелей —
+                    26—41,5 кг, у сук — 25—37 кг.
+                </div>
+                <label for="show-page-checkbox">
+                    <img class="ya-img" src="resources/ya-default.png">
+                    <span class="message-sender">Яндекс.Животные</span>
+                    <span class="unread-circle"></span>
+                    <span class="message-theme">Сегодня у нас в подборке золотистый ретривер</span>
+                    <time class="message-date">6 авг</time>
+                </label>
+            </div>
+            <div class="message-container bold">
+                <input class="message-selector" type="checkbox">
+                <img class="ya-img" src="resources/ya-default.png">
+                <div class="message-sender">Команда Яндекс.Почты</div>
+                <span class="unread-circle"></span>
+                <div class="message-theme">Как читать почту с мобильного</div>
+                <div class="message-date">6 июл</div>
+            </div>
+            <div class="message-container">
+                <input class="message-selector" type="checkbox">
+                <img class="ya-img" src="resources/ya-default.png">
+                <div class="message-sender">Команда Яндекс.Почты</div>
+                <span class="unread-circle"></span>
+                <div class="message-theme">Как читать почту с мобильного</div>
+                <div class="message-date">6 июл</div>
+            </div>
+            <div class="message-container">
+                <input class="message-selector" type="checkbox">
+                <img class="ya-img" src="resources/ya-default.png">
+                <div class="message-sender">Яндекс</div>
+                <span class="unread-circle"></span>
+                <div class="message-theme">Соберите всю почту в ящик</div>
+                <div class="message-date">6 июл</div>
+            </div>
+        </div>
+        <footer class="footer-add-info">
+            <nav class="footer-bar">
+                <div class="footer-text"><a href="#">Помощь и обратная связь</a></div>
+                <div class="footer-text"><a href="#">Реклама</a></div>
+                <div class="footer-text"><a href="#">&#9400; 2001—2018, Яндекc</a></div>
+            </nav>
+        </footer>
+    </main>
+</section>
+<script src="scripts/letter-worker.js"></script>
+</body>
+</html>
