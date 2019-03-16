@@ -8,4 +8,5 @@
 
 2-й дедлайн: 23.03.2019 23:59
 
-![Animation](https://user-images.githubusercontent.com/357689/54089391-8865fd80-4379-11e9-8702-b1aca43e0d78.gif)
+Демо:
+![Demo](https://github.com/YuryBandarchuk16/task3/blob/master/demo/demo_best.gif)
