@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Почта</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/content.css">
+    <link rel="stylesheet" href="css/mail.css">
+    <link rel="stylesheet" href="css/my_letter.css">
+    <link rel="stylesheet" href="css/animation-letter.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header clearfix">
+            <div class="header__burger">
+                <div class="header__line"></div>
+                <div class="header__line"></div>
+                <div class="header__line"></div>
+            </div>
+            <img src="img/Shape.png" alt="logo" class="logo">
+            <form action="" method="post" class="search-form">
+                <input type="text" placeholder="Поиск" class="form-search__input">
+                <button type="reset" class="form-search__button">
+                    <img src="img/reset.png" alt="reset">
+                </button>
+            </form>
+        </header>
+        <div class="container clearfix">
+            <div class="container__sidebar">
+                <button class="container__button-write">
+                    Написать
+                </button>
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Входящие</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Отправленные</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link" >Удаленные</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Спам</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Черновики</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Создать папку</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="container__content">
+                <div class="container__content-navigation clearfix">
+                    <div class="container__content-checkbox">
+                        <input type="checkbox" class="check" id="check-all">
+                    </div>
+
+                    <ul class="container__content-menu">
+                       <li class="container__content-item">
+                            <a href="#" class="container__content-link" id="addElement">Добавить</a>
+                        </li>
+                        <li class="container__content-item">
+                            <a href="#" class="container__content-link">Переслать</a>
+                        </li>
+                        <li class="container__content-item" id="delete-messeges">
+                            <a href="#" class="container__content-link" onclick="delete_element()">Удалить</a>
+                        </li>
+                        <li class="container__content-item">
+                            <a href="#" class="container__content-link">Это спам!</a>
+                        </li>
+                        <li class="container__content-item">
+                            <a href="#" class="container__content-link">Прочитано</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mail">
+                       <input type="checkbox" class="mail__checkbox_hidden" id="message-check">
+                    <div class="mail__my-letter">
+                        <label for="message-check" class="mail__letter-close clearfix">Назад</label>
+                        <p class="mail__letter-text">
+                               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam possimus, quo similique
+                                voluptatum porro exercitationem molestias recusandae corporis numquam cumque ut,
+                                consequuntur alias molestiae et architecto cupiditate facilis dolorum autem.
+                            <img src="http://bm.img.com.ua/nxs/img/prikol/images/large/1/2/308321_879389.jpg" alt="monkey" width="200px" height="200px" class="monkey">
+                                Accusantium dignissimos nesciunt debitis officia tenetur unde ratione in quam veniam ea, fuga
+                                sunt quos, cupiditate facere rerum dolor doloribus eos qui, architecto praesentium. Suscipi
+                                t eligendi ipsam ut vel sed?Deserunt aut perspiciatis dolorum ab vero, repellendus, illum
+                                officia. Odit ipsam porro cupiditate a commodi quis sit officia, est dicta, praesentium
+                                cum eaque atque id fuga autem facere, error mollitia.Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Magni recusandae distinctio quae, reprehenderit repellat. Accusamus amet
+                                ratione maxime quas, provident ad nemo vel, velit molestiae omnis facere atque? Doloribus,
+                                sunt.>Accusantium dignissimos nesciunt debitis officia tenetur unde ratione in quam veniam ea,
+                                fuga sunt quos, cupiditate facere rerum dolor doloribus eos qui, architecto praesentium.
+                                Suscipit eligendi ipsam ut vel sed?Deserunt aut perspiciatis dolorum ab vero, repellendus,
+                                illum officia. Odit ipsam porro cupiditate a commodi quis sit officia, est dicta,
+                                praesentium cum eaque atque id fuga autem facere, error mollitia.Lorem ipsum dolor sit
+                                amet, consectetur adipisicing elit. Magni recusandae distinctio quae, reprehenderit
+                                repellat. Accusamus amet ratione maxime quas, provident ad nemo vel, velit molestiae omnis
+                                facere atque? Doloribus, sunt.>Accusantium dignissimos nesciunt debitis officia tenetur unde
+                                ratione in quam veniam ea, fuga sunt quos, cupiditate facere rerum dolor doloribus eos qui,
+                                architecto praesentium. Suscipit eligendi ipsam ut vel sed?Deserunt aut perspiciatis
+                                dolorum ab vero, repellendus, illum officia. Odit ipsam porro cupiditate a commodi quis sit
+                                officia, est dicta, praesentium cum eaque atque id fuga autem facere, error mollitia.Lorem
+                                ipsum dolor sit amet, consectetur adipisicing elit. Magni recusandae distinctio quae,
+                                reprehenderit repellat. Accusamus amet ratione maxime quas, provident ad nemo vel, velit
+                                molestiae omnis facere atque? Doloribus, sunt.>Accusantium dignissimos nesciunt debitis
+                                officia tenetur unde ratione in quam veniam ea, fuga sunt quos, cupiditate facere rerum
+                                dolor doloribus eos qui, architecto praesentium. Suscipit eligendi ipsam ut vel
+                                sed?Deserunt aut perspiciatis dolorum ab vero, repellendus, illum officia. Odit ipsam
+                                porro cupiditate a commodi quis sit officia, est dicta, praesentium cum eaque atque id fuga
+                                autem facere, error mollitia.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Magni recusandae distinctio quae, reprehenderit repellat. Accusamus amet ratione maxime
+                                quas, provident ad nemo vel, velit molestiae omnis facere atque? Doloribus, sunt.
+                                Accusantium dignissimos nesciunt debitis officia tenetur unde ratione in quam veniam ea,
+                                fuga sunt quos, cupiditate facere rerum dolor doloribus eos qui, architecto praesentium.
+                                Suscipit eligendi ipsam ut vel sed?Deserunt aut perspiciatis dolorum ab vero, repellendus,
+                                illum officia. Odit ipsam porro cupiditate a commodi quis sit officia, est dicta,
+                                praesentium cum eaque atque id fuga autem facere, error mollitia.
+                        </p>
+                    </div>   
+                    <div class="mail__message clearfix">
+                        <label>
+                            <input type="checkbox" class="check" >
+                        </label>
+                        <label for="message-check">
+                            <div class="mail__logo-yandex"><img src="img/2-layers.png" alt="Yandex"></div>
+                            <div class="mail__message-type mail__message_bold">
+                                    Яндекс Паспорт
+                            </div>
+                            <div class="mail__marker-letter"></div>
+                            <div class="mail__message_bold mail__letter ">Доступ к аккаунту востановлен</div>
+                            <div class="mail__latter-date">6 авг</div>
+                        </label>
+                    </div>
+                    
+                    
+                    
+                   <div class="mail__message clearfix">
+                        <input type="checkbox" class="check">
+                        <div class="mail__logo-yandex"><img src="img/2-layers.png" alt="Yandex"></div>
+                        <div class="mail__message-type mail__message_bold">
+                            Команда Яндекс.Почты
+                        </div>
+                        <div class="mail__marker-letter"></div>
+                        <div class="mail__letter mail__message_bold">Как читать почту с мобильного</div>
+                        <div class="mail__latter-date">6 июл</div>
+                    </div>
+                    <div class="mail__message clearfix">
+                        <input type="checkbox" class="check">
+                        <div class="mail__logo-yandex"><img src="img/2-layers.png" alt="Yandex"></div>
+                        <div class="mail__message-type">
+                            Команда Яндекс.Почты
+                        </div>
+                        <div class="mail__marker-letter mail__marker-letter_hidden"></div>
+                        <div class="mail__letter">Как читать почту с мобильного</div>
+                        <div class="mail__latter-date">6 июл</div>
+                    </div>
+                    <div class="mail__message clearfix">
+                        <input type="checkbox" class="check">
+                        <div class="mail__logo-yandex"><img src="img/2-layers.png" alt="Yandex"></div>
+                        <div class="mail__message-type">
+                             Яндекс
+                        </div>
+                        <div class="mail__marker-letter mail__marker-letter_hidden"></div>
+                        <div class="mail__letter">Собери свою поту в этот ящик</div>
+                        <div class="mail__latter-date">6 июл</div>
+                    </div>
+                </div>
+                <footer class="footer">
+                   <div class="footer__block">
+                        <span class="footer__item">
+                           <a href="#" class="footer__link">Помощь и обратная связь</a>
+                           <a href="#" class="footer__link">Реклама</a>
+                        </span>
+                        <span>
+                            &copy; 2001&mdash;2018, Яндекс
+                        </span>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
