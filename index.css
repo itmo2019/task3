@@ -36,7 +36,7 @@
   height: 31px;
   width: 153px;
   background: #ccc;
-  content: url("mail_logo.png");
+  content: url("images/mail_logo.png");
 }
 
 .search-bar-container {
@@ -124,7 +124,7 @@
   margin-top: 6px;
 }
 
-.menu-action a {
+.menu_actions__action a {
   outline: none;
   text-decoration: none;
   color: inherit;
@@ -142,7 +142,7 @@
   height: 22px;
 }
 
-.menu-action:hover:not(.selected-menu-action) {
+.menu_actions__action:hover:not(.selected-menu-action) {
   border-radius: 3px;
   background-color: #d0d6e0;
 }
@@ -326,7 +326,7 @@
     shape-outside:circle();
     height: 250px;
     width: 250px;
-    content: url("cat.png");
+    content: url("images/cat.png");
 }
 
 #first-email {
