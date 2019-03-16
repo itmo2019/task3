@@ -6,6 +6,17 @@ html {
     white-space: nowrap;
 }
 
+header {
+    height: 32px;
+    letter-spacing: -1em;
+    position: relative;
+}
+
+header > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 main {
     margin-top: 13px;
     position: absolute;
