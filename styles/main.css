@@ -1,0 +1,58 @@
+.mainBody {
+    width: 100%;
+    display: inline-block;
+}
+
+.buttons {
+    margin-left: 2%;
+    display: inline-block;
+    width: 15%;
+    height: 270px;
+    vertical-align: top;
+}
+
+.buttonWrite {
+    border-style: none;
+    border-radius: 3px;
+    background: rgb(98, 135, 189);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: "Yandex Sans Light", serif;
+    font-size: 15px;
+    height: 40px;
+    width: 100%;
+}
+
+.folders {
+    margin-top: 10px;
+}
+
+.folders__button {
+    border: none;
+    background-color: #E5EAF0;
+    text-align: left;
+    padding-left: 20px;
+    width: 100%;
+    height: 30px;
+    color: rgb(85, 85, 85);
+    font-family: "Yandex Sans Light", serif;
+    font-size: 13px;
+}
+
+.folders__button:hover {
+    background: rgb(205, 214, 228);
+    border-radius: 3px;
+}
+
+
+.buttonGetLetter {
+    border-style: none;
+    border-radius: 3px;
+    background: rgb(98, 135, 189);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: "Yandex Sans Light", serif;
+    font-size: 15px;
+    height: 40px;
+    width: 100%;
+}

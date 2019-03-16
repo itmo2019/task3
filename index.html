@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Яндекс.Почта</title>
+    <link href="styles/header.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="styles/letters.css" rel="stylesheet">
+    <link href="styles/interactive.css" rel="stylesheet">
+    <link href="styles/animation.css" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <div class="menu">
+        <div class="menu__rectangle"></div>
+        <div class="menu__rectangle"></div>
+        <div class="menu__rectangle"></div>
+    </div>
+    <div class="nameLogo"></div>
+    <input class="search" type="search" placeholder="Поиск">
+</header>
+<main class="mainBody">
+    <div class="buttons">
+        <button class="buttonWrite">Написать</button>
+        <div class="folders">
+            <button class="folders__button">Входящие</button>
+            <button class="folders__button">Отправленные</button>
+            <button class="folders__button">Удаленные</button>
+            <button class="folders__button">Спам</button>
+            <button class="folders__button">Черновики</button>
+            <button class="folders__button">Создать папку</button>
+        </div>
+        <button class="buttonGetLetter" onclick="addLetter()">Получить письмо</button>
+    </div>
+    <div id="letters">
+        <header class="headerLetters">
+            <div class="checkbox"></div>
+            <button class="headerLetters__button">Переслать</button>
+            <button class="headerLetters__button">Удалить</button>
+            <button class="headerLetters__button">Это спам!</button>
+            <button class="headerLetters__button">Прочитано</button>
+        </header>
+        <div class="line"></div>
+        <div class="bodyLetters"></div>
+        <div class="line"></div>
+        <footer class="footerLetters">
+            <a class="footerLetters__a">Помощь и обратная связь</a>
+            <a class="footerLetters__a">Реклама</a>
+            <a class="footerLetters__a">&copy; 2001 - 2018, Яндекс</a>
+        </footer>
+    </div>
+</main>
+</body>
+
+<script src="scripts/script.js"></script>
+</html>
