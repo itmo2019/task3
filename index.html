@@ -4,79 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Яндекс.Почта</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/header.css">
 </head>
 <body>
-<header class="clearfix">
-    <div class="lines">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
+<header class="header clearfix">
+    <div class="header__lines">
+        <div class="header__line"></div>
+        <div class="header__line"></div>
+        <div class="header__line"></div>
     </div>
-    <div class="main-logo">
+    <div class="header__main-logo">
         <img src="img/logo.png" alt="logo">
     </div>
-    <form method="post" class="search">
-        <input type="text" placeholder="Поиск" class="search-input">
-        <button type="reset" class="search-button">
+    <form method="post" class="header__search">
+        <input type="text" placeholder="Поиск" class="header__input">
+        <button type="reset" class="header__button">
             <img src="img/reset.png" height="12" width="12" alt="reset">
         </button>
     </form>
 </header>
 <div class="clearfix">
     <section class="menu">
-        <button class="to-write">
+        <button class="menu__to-write">
             Написать
         </button>
-        <ul class="bar">
-            <li class="bar-li">
-                <a href="#" class="bar-a">Входящие</a>
+        <ul class="menu__bar">
+            <li class="menu__action">
+                <a href="#" class="menu__text-ref">Входящие</a>
             </li>
-            <li class="bar-li">
-                <a href="#" class="bar-a">Отправленные</a>
+            <li class="menu__action">
+                <a href="#" class="menu__text-ref">Отправленные</a>
             </li>
-            <li class="bar-li">
-                <a href="#" class="bar-a">Удаленные</a>
+            <li class="menu__action">
+                <a href="#" class="menu__text-ref">Удаленные</a>
             </li>
-            <li class="bar-li">
-                <a href="#" class="bar-a">Спам</a>
+            <li class="menu__action">
+                <a href="#" class="menu__text-ref">Спам</a>
             </li>
-            <li class="bar-li">
-                <a href="#" class="bar-a">Черновики</a>
+            <li class="menu__action">
+                <a href="#" class="menu__text-ref">Черновики</a>
             </li>
-            <li class="bar-li">
-                <a href="#" class="bar-a">Создать папку</a>
+            <li class="menu__action">
+                <a href="#" class="menu__text-ref">Создать папку</a>
             </li>
         </ul>
     </section>
     <div class="main-block">
-        <div class="mail-functions clearfix">
+        <div class="main-block__mail-functions clearfix">
             <label>
-                <input type="checkbox" class="check mail-checkbox">
+                <input type="checkbox" class="check main-block__mail-checkbox">
             </label>
-            <ul class="mail-functions-ul">
-                <li class="mail-functions-li">
-                    <a href="#" class="mail-functions-li-a">Переслать</a>
+            <ul class="main-block__all-function">
+                <li class="main-block__func">
+                    <input type="button" id="get-letter" value="Получить сообщение">
                 </li>
-                <li class="mail-functions-li">
-                    <a href="#" class="mail-functions-li-a">Удалить</a>
+                <li class="main-block__func">
+                    <input type="button" id="remove" value="Удалить">
                 </li>
-                <li class="mail-functions-li">
-                    <a href="#" class="mail-functions-li-a">Это спам!</a>
+                <li class="main-block__func">
+                    <a href="#" class="main-block__ref-func">Переслать</a>
                 </li>
-                <li class="mail-functions-li">
-                    <a href="#" class="mail-functions-li-a">Прочитано</a>
+                <li class="main-block__func">
+                    <a href="#" class="main-block__ref-func">Это спам!</a>
+                </li>
+                <li class="main-block__func">
+                    <a href="#" class="main-block__ref-func">Прочитано</a>
                 </li>
             </ul>
         </div>
 
-        <div class="all-letters">
+        <div class="main-block__all-letters" >
             <input type="checkbox" class="check hidden-check" id="op">
-            <div class="my-topic">
+            <div class="main-block__my-letter">
                 <label for="op" class="close clearfix">
                     <img src="img/reset.png" alt="reset" width="15">
                 </label>
-                <p>
+                <p class="main-block__paragraph">
                 <h1>
                     Амурский тигр
                 </h1>
@@ -87,22 +92,22 @@
                     <br>
                     Род: Panthera
                 </h2>
-                <p>
+                <p class="main-block__paragraph">
                     <img src="https://avatars.mds.yandex.net/get-pdb/33827/636d8365-c3e7-4f98-82b0-f88b17257327/orig"
-                         alt="tiger" width="300px" height="300px" class="tiger">
+                         alt="tiger" width="300px" height="300px" class="main-block__letter-img">
 
                     Под охраной: В 1947 году тигр был взят под охрану — в России охота на него была полностью запрещена.
                     Этот удивительный зверь занесён в Красный список Международного союза охраны природы и Красную книгу
                     Российской Федерации как вид, находящийся под угрозой исчезновения, включён в Приложение II
                     Конвенции о
                     международной торговле видами дикой фауны и флоры, находящимися под угрозой исчезновения (СИТЕС).
-                <p>
+                <p class="main-block__paragraph">
                     Где живет: В настоящее время 95% всей популяции амурского тигра обитает на Дальнем Востоке России.
                     5% – в Китае.
                     Размер: Длина тела амурского тигра без хвоста – 160-200 см, длина хвоста около 100 см. Вес взрослого
                     животного может достигать 300 кг. Самая большая зафиксированная масса тигра – 384 кг.
                 </p>
-                <p>
+                <p class="main-block__paragraph">
                     Внешний вид: Амурский тигр крупнее своих южных сородичей, его шерсть гуще и светлее. По рыжеватому
                     фону,
                     образуя сложный узор, идут поперечные тёмные полосы. Рисунок на шкуре тигра уникален, как отпечатки
@@ -115,67 +120,68 @@
                 </p>
             </div>
 
-            <div class="letter clearfix">
+            <div class="main-block__letter clearfix">
                 <label>
                     <input type="checkbox" class="check">
                 </label>
                 <label for="op">
-                    <div class="ya">
+                    <div class="main-block__img-ya">
                         <img src="img/yandex.png" alt="Yandex">
                     </div>
-                    <span class="mail-from bold-text">Яндекс Паспорт</span>
-                    <div class="circle"></div>
-                    <span class="topic bold-text">Доступ к аккаунту востановлен</span>
-                    <time class="date" datetime="06.08">6 авг</time>
+                    <span class="main-block__mail-from  bold-text">Яндекс Паспорт</span>
+                    <div class="main-block__mail-not-read"></div>
+                    <span class="main-block__topic bold-text">Доступ к аккаунту востановлен</span>
+                    <time class="main-block__date" datetime="06.08">6 авг</time>
                 </label>
             </div>
 
-            <div class="letter clearfix">
+            <div class="main-block__letter clearfix">
                 <label>
                     <input type="checkbox" class="check">
                 </label>
-                <div class="ya">
+                <div class="main-block__img-ya">
                     <img src="img/yandex.png" alt="Yandex">
                 </div>
-                <span class="mail-from bold-text">Команда Яндекс.Почты</span>
-                <div class="circle"></div>
-                <span class="topic bold-text">Как читать почту с мобильного</span>
-                <time class="date" datetime="06.07">6 июл</time>
+                <span class="main-block__mail-from  bold-text">Команда Яндекс.Почты</span>
+                <div class="main-block__mail-not-read"></div>
+                <span class="main-block__topic bold-text">Как читать почту с мобильного</span>
+                <time class="main-block__date" datetime="06.07">6 июл</time>
             </div>
-            <div class="letter clearfix">
+            <div class="main-block__letter clearfix">
                 <label>
                     <input type="checkbox" class="check">
                 </label>
-                <div class="ya">
+                <div class="main-block__img-ya">
                     <img src="img/yandex.png" alt="Yandex">
                 </div>
-                <span class="mail-from">Команда Яндекс.Почты</span>
-                <div class="circle hidden"></div>
-                <span class="topic">Как читать почту с мобильного</span>
-                <time class="date" datetime="06.07">6 июл</time>
+                <span class="main-block__mail-from ">Команда Яндекс.Почты</span>
+                <div class="main-block__mail-not-read hidden"></div>
+                <span class="main-block__topic">Как читать почту с мобильного</span>
+                <time class="main-block__date" datetime="06.07">6 июл</time>
             </div>
-            <div class="letter clearfix">
+            <div class="main-block__letter clearfix">
                 <label>
                     <input type="checkbox" class="check">
                 </label>
-                <div class="ya">
+                <div class="main-block__img-ya">
                     <img src="img/yandex.png" alt="Yandex">
                 </div>
-                <span class="mail-from">Яндекс</span>
-                <div class="circle hidden"></div>
-                <span class="topic">Собери свою поту в этот ящик</span>
-                <time class="date" datetime="06.07">6 июл</time>
+                <span class="main-block__mail-from ">Яндекс</span>
+                <div class="main-block__mail-not-read hidden"></div>
+                <span class="main-block__topic">Собери свою поту в этот ящик</span>
+                <time class="main-block__date" datetime="06.07">6 июл</time>
             </div>
         </div>
 
-        <footer>
-            <span class="footer-text">
-                <a href="#" class="footer-a">Помощь и обратная связь</a>
-                <a href="#" class="footer-a">Реклама</a>
+        <footer class="footer">
+            <span class="footer__texts">
+                <a href="#" class="footer__ref">Помощь и обратная связь</a>
+                <a href="#" class="footer__ref">Реклама</a>
                 <span>&copy; 2001&mdash;2018, Яндекс</span>
             </span>
         </footer>
     </div>
 </div>
 </body>
+<script src="js/actions.js"></script>
 </html>
