@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task3</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Daria Zvyagintseva">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<button id="delButton">удалить</button>
+	<button id="newButton">новое письмо</button>
+	<script language="JavaScript" type="text/javascript">
+		document.getElementById("delButton").onclick=function(){
+			var d = document.getElementById("toDeleteLetter");
+			d.className += " deleted";
+			var d = document.getElementsByClassName("lettermove");
+			for (var i = 0; i < d.length; i++) {
+				d[i].className+=" deleted";
+			}
+			var d = document.getElementById("lastline");
+			d.className += " deleted";
+		}
+	</script>
+	<script language="JavaScript" type="text/javascript">
+		document.getElementById("newButton").onclick=function(){
+			var d = document.getElementById("newLetter");
+			d.className += " show";
+			var d = document.getElementById("newLine");
+			d.className += " show";
+		}
+	</script>
+	<input  class="body__find" name="request" value="" type="search" placeholder="Поиск">
+	<div class="yandex body__yandex">
+		<img src="./logo.jpg" 
+		alt="Лого яндекса"
+		height="31"
+		width="153"
+		class="yandex__logo">
+	</div>
+	<div class="body__inbox"></div>
+	<div class="body__newbox">
+		<a class="body__newbox-refl">Написать</a>
+	</div>
+	<div class="menu body__menu">
+		<ul class="menu__list-of-options">
+			<li class="menu__list-in">
+				<a>Входящие</a>
+			</li>
+			<li class="menu__list-send">
+				<a>Отправленные</a>
+			</li>
+			<li class="menu__list-del">
+				<a>Удаленные</a>
+			</li>
+			<li class="menu__list-spam">
+				<a>Спам</a>
+			</li>
+			<li class="menu__list-draft">
+				<a>Черновики</a>
+			</li>
+			<li class="menu__list-makedir">
+				<a>Создать папку</a>
+			</li>
+		</ul>
+	</div>	
+	<div class="window body__window">
+		<div class="allright window__allright">
+			<div class="allright__line"></div>
+			<p class="allright__foot">Помощь и обратноя связь &nbsp; &nbsp; &nbsp; Реклама &nbsp; &nbsp; &nbsp;  &#169; 2001-2018, Яндекс</p>
+		</div>
+		<div class="header window__header">
+				<input type="checkbox" class="header__box-item">
+				<input type="submit" name="forward" class="header__item" value="Переслать">
+				<input type="submit" name="delete" class="header__item" value="Удалить">
+				<input type="submit" name="spam" class="header__item" value="Это спам!">
+				<input type="submit" name="read" class="header__item" value="Прочитано">
+		</div>
+		<input type="checkbox" id="essay-action">
+		<article id = "essay">
+			<label id="krestik" for="essay-action">x</label>
+           	<iframe src="essay/index.html" width=100% height=100%></iframe>
+		</article>
+		<div class="window__firstline"></div>
+		<div class="letters window__letters">
+			<div class="letter letters__letter" id="newLetter">
+				<input type="checkbox" class="letter__box">
+				<div class="letter__logo-authtor">Д</div>
+				<div class="letter__authtor">Дарья Звягинцева</div> 
+				<div class="letter__unreaded"></div>
+				<div class="letter__textletter">Привет! У меня хорошие новости!</div>
+				<div class="letter__date">16 мар</div>
+			</div>
+			<div class="letters__line" id="newLine"></div>
+			<div class = "firstletter letters__firstletter">
+				<label for="essay-action" class="firstletter__clickme">
+					<input type="checkbox" class="firstletter__box">
+					<div class="firstletter__logo-authtor">Я</div>
+					<div class="firstletter__authtor">Яндекс.Паспорт</div> 
+					<div class="firstletter__textletter">Доступ к аккаунту востановлен</div>
+					<div class="firstletter__date">6 авг</div>
+					<div class="firstletter__unreaded"></div>
+				</label>
+			</div>
+			<div class="letters__line"></div>
+			<div class="letter letters__letter" id="toDeleteLetter">
+				<input type="checkbox" class="letter__box">
+					<div class="letter__logo-authtor">Я</div>
+					<div class="letter__authtor">Команда Яндекс.Почты</div> 
+					<div class="letter__unreaded"></div>
+					<div class="letter__textletter">Как читать почту с мобильного</div>
+					<div class="letter__date">6 июл</div>
+			</div>
+			<div class="letters__line" id="toDelLine"></div>
+			<div class="lettermove letters__lettermove">
+				<input type="checkbox" class="lettermove__box">
+					<div class="lettermove__logo-authtor">Я</div>
+					<div class="lettermove__authtor">Команда Яндекс.Почты имеет слишком длинное название</div> 
+					<div class="lettermove__textletter">Как читать почту с мобильного</div>
+					<div class="lettermove__date">6 июл</div>
+			</div>
+			<div class="letters__line"></div>
+			<div class="lettermove letters__lettermove">
+				<input type="checkbox" class="lettermove__box">
+					<div class="lettermove__logo-authtor">Я</div>
+					<div class="lettermove__authtor">Яндекс</div> 
+					<div class="lettermove__textletter">Это очень длинное письмо и поэтому его показывать не стоит. Very long text, very long text, very long text, very long text, very long text, very long text, very long text, very long text, very long text, very long text, very long text, very long text, very long text</div>
+					<div class="lettermove__date">8 июл</div>
+			</div>
+			<div class="letters__line" id="lastline"></div>
+		</div>
+	</div>
+</body>
+</html>
