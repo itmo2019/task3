@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Яндекс.Почта</title>
+    <link href="css/mail.css" rel="stylesheet">
+    <link href="css/essay.css" rel="stylesheet">
+    <link href="js/index.js" rel="script">
+    <script src="js/index.js"></script>
+</head>
+<body class="mail_body">
+<div class="layout_sidebar">
+    <nav class="sidebar">
+        <div class="sidebar_logo_container">
+            <svg class="sidebar_hamburger" viewBox="0 0 16 16" xml:space="preserve"
+                 xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h16v2H0V0zm0 7h16v2H0V7zm0 7h16v2H0v-2z" fill="currentColor"
+                          fill-rule="evenodd">
+                    </path>
+            </svg>
+            <div class="sidebar_logo">
+                <img class="sidebar_logo_yandex" src="images/yandex.svg" alt="yandex">
+                <img class="sidebar_logo_mail" src="images/mail.svg" alt="mail">
+            </div>
+        </div>
+        <button class="sidebar_new_letter_container sidebar_new_letter clickable" onclick="addRandomLetter()">
+            Написать
+        </button>
+        <div class="sidebar_menu_container">
+            <ul class="sidebar_menu">
+                <li class="sidebar_menu_item_active">
+                    <a class="link_unset_style" href="#">Входящие</a>
+                </li>
+                <li><a class="link_unset_style" href="#">Отправленные</a></li>
+                <li><a class="link_unset_style" href="#">Удалённые</a></li>
+                <li><a class="link_unset_style" href="#">Спам</a></li>
+                <li><a class="link_unset_style" href="#">Черновики</a></li>
+                <li><a class="link_unset_style" href="#">Создать папку</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="layout_search">
+    <div class="search_bar">
+        <input class="search_bar_input gray-text" placeholder="Поиск" type="text">
+        <button class="search_bar_close clickable">X</button>
+    </div>
+</div>
+<div class="layout_letters">
+    <div class="letters">
+        <div class="letters_panel">
+            <label class="checkbox">
+                <input class="checkbox-input" type="checkbox">
+            </label>
+            <div class="letters_panel_item">
+                <p><a class="link_unset_style single-line letters_panel_link" href="#">Переслать</a></p>
+            </div>
+            <div class="letters_panel_item">
+                <p><a class="link_unset_style single-line letters_panel_link" href="#" onclick="deleteSelectedLetters()">Удалить</a></p>
+            </div>
+            <div class="letters_panel_item">
+                <p><a class="link_unset_style single-line letters_panel_link" href="#">Это спам!</a></p>
+            </div>
+            <div class="letters_panel_item">
+                <p><a class="link_unset_style single-line letters_panel_link" href="#">Прочитано</a></p>
+            </div>
+        </div>
+        <input class="letters_checkbox_hidden" id="open-task-1" type="checkbox"/>
+        <div class="letters_inbox" id="inbox">
+            <div class="letters_letter letters_letter_unread">
+                <label class="label_control clickable" for="open-task-1">
+                    <label class="checkbox">
+                        <input class="checkbox-input" type="checkbox">
+                    </label>
+                    <div class="letters_sender_icon">
+                        <span class="single-letter">Я</span>
+                    </div>
+                    <p class="letters_sender_name single-line">Яндекс.Паспорт</p>
+                    <div class="letters_read_box"></div>
+                    <p class="single-line letters_preview">Доступ к аккаунту восстановлен</p>
+                    <div class="letters_date gray-text">
+                        <p class="single-line">6 авг</p>
+                    </div>
+                </label>
+            </div>
+            <div class="letters_letter letters_letter_unread">
+                <label class="checkbox">
+                    <input class="checkbox-input" type="checkbox">
+                </label>
+                <a class="link_unset_style" href="#">
+                    <div class="letters_sender_icon">
+                        <span class="single-letter">Я</span>
+                    </div>
+                    <p class="letters_sender_name single-line">Команда Яндекс.Почты</p>
+                    <div class="letters_read_box"></div>
+                    <p class="single-line letters_preview">Как читать почту с мобильного</p>
+                    <div class="letters_date gray-text">
+                        <p class="single-line">6 июл</p>
+                    </div>
+                </a>
+            </div>
+            <div class="letters_letter">
+                <label class="checkbox">
+                    <input class="checkbox-input" type="checkbox">
+                </label>
+                <a class="link_unset_style" href="#">
+                    <div class="letters_sender_icon">
+                        <span class="single-letter">Я</span>
+                    </div>
+                    <p class="letters_sender_name single-line">Яндекс</p>
+                    <div class="letters_read_box "></div>
+                    <p class="single-line letters_preview">Соберите всю почту в этот ящик</p>
+                    <div class="letters_date gray-text">
+                        <p class="single-line">5 июл</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="letters_inline_first_task">
+            <div class="essay_body">
+                <div class="all" id="all">
+                    <div class="essay_centered_item essay_paragraph_container"><h1 class="essay_header">
+                        Чего я жду от курсов Фронтенда?
+                    </h1>
+                        <p class="essay_paragraph">
+                            Ну, во-первых, жду от курса закрываемости. Не хотелось бы месяцами ждать проверку дз или его
+                            появление. В
+                            общем,
+                            нужна какая-то регулярность в этом деле с обоих сторон.
+                        </p>
+                        <p class="essay_paragraph">
+                            Так же было бы неплохо конвертнуть группу в телеграме в канал (т.е. удалить группу). Столько
+                            спама и
+                            идиотских
+                            вопросов вынести невозможно. Говорят, что нужно не стесняться задавать свой вопрос, если
+                            кажется, что он
+                            тупой.
+                            Но нормально ли это часами мусолить тему того - что такое: <q>использовать 40 тегов в
+                            задании</q>?
+                        </p>
+                        <p class="essay_paragraph">
+                            <u>По поводу курса</u>, ожидаю разбор классических проблем фронтенд разработки <sub
+                                class="essay_black_text_block">(понятия
+                            не имею, что
+                            это
+                            значит)</sub>. Хочу
+                            узнать, почему веб теперь такой, какой мы его имеем: откуда засилье фреймворков? почему всем
+                            правит только
+                            js?
+                            Может быть, стоит осветить какие-то паттерны фронтенд разработки (что-то отличное от <span
+                                class="essay_emphasize">MVC</span>,
+                            <ruby class="essay_lowercase">MVVM
+                                <rt class="essay_rt"> Эм-ви-ви-эм</rt>
+                            </ruby>
+                            ), типо как
+                            <img alt="round"
+                                 class="essay_streamlined_img"
+                                 src="https://openclipart.org/image/2400px/svg_to_png/23674/Anonymous-red-round-button.png"/>
+                            написать сайт так, чтобы он работал при потере соединения с сервером (считая, что у нас
+                            интерактивное
+                            веб-приложение). Или как сделать, чтобы каждый элемент твоего приложения реагировал
+                            <i class="essay_i">асинхронно</i> на каждое изменение данных сервера, и при этом не убить
+                            сервер,
+                            и не погибнуть в
+                            бесконечных запросах. Еще хочу <abbr title="Web Assembly">WASM</abbr> и его будущее,
+                            <img alt="jb team" class="essay_rotate"
+                                 src="https://camo.githubusercontent.com/9e56add92e31202218fcaea188e566a0a3757a6a/687474703a2f2f6a622e67672f6261646765732f7465616d2e737667">
+                            <a class="essay_link"
+                               href="https://github.com/JetBrains/kotlin-wrappers/tree/master/kotlin-react">kotlin-react</a>
+                            (но я про него знаю, просто людям показать, много кто на котлине пишет).
+                        </p>
+                    </div>
+                    <div class="essay_centered_item essay_button">
+                        <button onclick="document.getElementById('all').style.setProperty('display', 'none'); document.getElementById('backoff').style.setProperty('display', 'block')"
+                                type="button">
+                            hit to copystrike
+                        </button>
+                    </div>
+                    <div class="essay_footer">
+                        <div class="essay_target_container">
+                            <p class="footer-center-text"> Well what will be if th </p>
+                            <img alt="target"
+                                 class="target essay_medium_width"
+                                 src="http://cdn.shoplightspeed.com/shops/611633/files/3455511/3006-3006-mini-paper-target-10-ring-each.jpg"
+                                 usemap="#targetmap">
+                            <map name="targetmap">
+                                <area alt="center" class="essay_target_inner essay_medium_width" coords="150,150,30"
+                                      href="#code"
+                                      shape="circle">
+                            </map>
+                        </div>
+                    </div>
+                    <div class="essay_centered_item essay_code_snippet essay_medium_width">
+                        <code>
+                            hit the target
+                        </code>
+                    </div>
+                    <div class="essay_centered_item essay_medium_width">
+                        <ul>
+                            <li>1. List for tags?????</li>
+                            <li>2. PROFIT!!</li>
+                        </ul>
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>Color</th>
+                                <th>Box</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>#324053</td>
+                                <td class="essay_table_dark_cell"></td>
+                            </tr>
+                            <tr>
+                                <td>#f9a283</td>
+                                <td class="essay_table_peach_cell"></td>
+                            </tr>
+                            <tr>
+                                <td>#125783</td>
+                                <td class="essay_table_marine_cell"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="essay_centered_item essay_label">
+                        <label>
+        <textarea class="essay_textarea">
+            write to copy strike...
+        </textarea>
+                        </label>
+                    </div>
+                </div>
+                <div class="essay_nuclear_explosion" id="backoff">
+                </div>
+            </div>
+            <button class="essay_close gray-text">
+                <label class="label_control clickable" for="open-task-1">
+                    X
+                </label>
+            </button>
+        </div>
+        <footer class="letters_footer gray-text">
+            <div class="letters_footer_item">
+                <p><a class="single-line letters_footer_link link_unset_style" href="#">© 2001-2018, Яндекс</a></p>
+            </div>
+            <div class="letters_footer_item">
+                <p><a class="single-line letters_footer_link link_unset_style" href="#">Реклама</a></p>
+            </div>
+            <div class="letters_footer_item">
+                <p><a class="single-line letters_footer_link link_unset_style" href="#">Помощь и обратная связь</a></p>
+            </div>
+        </footer>
+    </div>
+</div>
+</body>
+</html>
