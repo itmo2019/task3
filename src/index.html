@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru" class="all-page">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Frontend, task № 3">
+        <meta name="author" content="Ilya Kokorin">
+        <title>Яндекс. Почта</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="logo-and-search">
+            <div class="logo-lines">
+                <div class="logo-lines__line_first"></div>
+                <div class="logo-lines__line"></div>
+                <div class="logo-lines__line"></div>
+            </div>
+            <div class="logo">
+                <img class="logo__yandex-mail-pic" src="../resources/mail_logo_for_top.png" alt="yandex mail logo"/>
+            </div>
+            <div class="search">
+                <input class="search__textfield" type="text" placeholder="Поиск"/>
+                <div class="search__cross">x</div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="mail-menu">
+                <div class="mail-menu__write-button-wrapper">
+                    <button class="mail-menu__write-button">Написать</button>
+                </div>
+                <div class="mail-menu__get-letters-button-wrapper">
+                    <button id="mail-menu__get-letters-button" onclick="insertLetterToTop()">Получить почту</button>
+                </div>
+                <ul class="mail-menu__menu-options">
+                    <li class="mail-menu__menu-option"><a href="" class="mail-menu__menu-link">Входящие</a></li>
+                    <li class="mail-menu__menu-option"><a href="" class="mail-menu__menu-link">Отправленные</a></li>
+                    <li class="mail-menu__menu-option"><a href="" class="mail-menu__menu-link">Удалённые</a></li>
+                    <li class="mail-menu__menu-option"><a href="" class="mail-menu__menu-link">Спам</a></li>
+                    <li class="mail-menu__menu-option"><a href="" class="mail-menu__menu-link">Черновики</a></li>
+                    <li class="mail-menu__menu-option"><a href="" class="mail-menu__menu-link">Здесь будет очень-очень-очень длинная надпись, в которой нет никакого смысла</a></li>
+                </ul>
+            </div>
+
+            <div class="letter-box">
+                <ul class="letter-box__header">
+                    <li class="all-mails-chooser letter-box_element_first">
+                        <label>
+                            <input id="all-mails-chooser__input" type="checkbox" onclick="markAll()">
+                            <span class="all-mails-chooser__box"></span>
+                        </label>
+                    </li>
+                    <li class="letter-box__item letter-box_element"><input type="button" class="letter-box_option" value="Переслать"></li>
+                    <li class="letter-box__item letter-box_element"><input type="button" class="letter-box_option" id="remove-letter" value="Удалить" onclick="removeLetters()"></li>
+                    <li class="letter-box__item letter-box_element"><input type="button" class="letter-box_option" value="Это спам!"></li>
+                    <li class="letter-box__item letter-box_element"><input type="button" class="letter-box_option" value="Прочитано"></li>
+                </ul>
+                <hr class="letter-box__hr">
+
+                <div id="letter-box__letters">
+                    <input type="checkbox" id="first-message-read-trigger">
+                    <div class="first-message-body">
+                        <label for="first-message-read-trigger">
+                            <div class="first-message-body__cross">x</div>
+                        </label>
+                        <div class="first-message-body__text">
+                            <img class="first-message-body__letov-image" src="../resources/yoba-letov.jpg" alt="Жёлтый ехидный колобок" width="300px", height="300px">
+                            Летов здесь находится потому, что макет оказался сильней. Спасибо за внимание. <br>
+                            Я не знаю, чем заполнить пустое прострнаство, поэтому приведу тут отрывок из Сорокина. <br>
+                            Да, из "Нормы". Нет, не про норму. <br><br>
+                            Здравствуйте дорогой Мартин Алексеич! Пишу вам сразу по приезду, прямо вот только что вошёл и сел писать. Тут всё у нас хорошо, весна вовсю, снег ещё не сошёл, но вроде бы сходит, на дороге намёрзло много, а калитку я еле отодрал — вон как пристыл внизу ледок то! Так что вошёл когда, сразу трубы проверил и понял что целы слава Богу. Ну и действительно — зима то не очень сурова была больше двадцати двух и не было кажется, а для нас это прямо благодать — и яблонки молодые и розы ваши и опять же чтоб трубы не разорвало. Но ничего, всё обошлось, всё тут хорошо. Мартин Алексеевич! Я позвонил Любане перед отъездом и она мне рассказала всё как было у вас с Николаем. Это конечно очень неприятно. Я давно говорил, что Николай человек грубый и невоспитан. Я ей по телефону говорил, но она меня успокоила и говорит, что всё нормально, что Николай извинялся. Я думаю что всё это пустяки и вы не берите в голову. А я тут встретил совершенно случайно Рудакова. Иду со станции, а он с внучкой идёт. Узнал меня, поздоровался, подошёл. Как здоровье спросил, и про вас спрашивал. Я говорит, только что из командировки, а я говорю, так что ж ты значит ещё работаешь, а он говорит — опять устроился, дома не могу. Вот как. Ушёл, говорит, с работы полгода назад, а после прямо невмоготу, а как же! Человек ведь привыкает. И опять туда же его взяли прямо с распростёртыми объятьями, потому что работник он хороший, исполнительный, он мне рассказывал. Он говорит, я как ревизию поеду делать, так только пух летит — весь завод вверх дном! А вроде и не очень видный человек, но вот что значит — с характером. Мартин Алексеич! Я всё хотел спросить, а что мы с парниками делать будем? Ведь подпорки ещё прошлый год гнилые были, а нынче я потрогал, так они все попрели — одна труха, так что плёнку не выдержат. Я думаю надо б попросить Серёжу привезти трубок таких и из них я б подпорок напилил, а после мы б их проволокою скрутили и стояло бы хорошо, хоть сто лет. А эти не выдержат ни за что, ещё бы, ведь плёнка она и от ветра заиграть может и опять же когда дождь пойдёт — раз, и вода вверху скопилась, он и повалился. Так что я думаю, что трубки это оптимальный варьянт. А огород уже протаял, я вдоль грядок ходил, они всё в норме и клубника и всё остальное. Я думаю мы картошку в этом году в заду посадим, это возле туалета, где подсолнух и горох росли. Там и почва хорошая, а у забора пусть редиска, да салат, да разная морковка. А картофелю там самый раз будет, он солнце любит, а там опять же мы ведь бузину повырубили, так что солнца хоть отбавляй. Ещё я как только пришёл, сразу в погреб полез поглядеть как там не натекло, но там всё было в норме — вода есть, но немного, не то что в позапрошлом году, когда и слезть то некуда было! А в этом всё нормально — на три пальца внизу, в ложбине, а к мешкам и не подобралась — все сухие. Так что о погребе вы не волнуйтесь. А после я на тераске семена смотрел и опять всё нормально — картошка сухая, тюльпаны и гладиолусы ваши тоже. Мартин Алексеевич! Как ваше здоровье? Как Людмила Степановна? Как там Саша поживает? Вы мне пишите чаще, и передавайте всем приветы. Так что жду от вас писем и Ц.У.
+                        </div>
+                    </div>
+
+                    <div class="letter">
+                        <label for="first-message-read-trigger">
+                            <ul class="letter__line_first">
+                                <li class="check letter__element_first">
+                                    <label>
+                                        <input class="check__input" type="checkbox" onclick="unsellectCheckOne(this)">
+                                        <span class="check__box"></span>
+                                    </label>
+                                </li>
+                                <li class="letter__sender-logo-wrapper letter__element">
+                                    <img class="letter__sender-pic" src="../resources/sender-pic.png" alt="Yandex logo">
+                                </li>
+                                <li class="letter__sender-name letter__line_not-read letter__element">Яндекс.Норма</li>
+                                <li class="letter__read-mark read-mark_not-read letter__element"></li>
+                                <li class="letter__text letter__line_not-read letter__element">
+                                    Это письмо можно прочитать.
+                                </li>
+                                <li class="letter__date letter__element">6 авг</li>
+                            </ul>
+                        </label>
+                        <hr class="letter-box__hr">
+                    </div>
+
+                    <div class="letter">
+                        <ul class="letter__line">
+                            <li class="check letter__element_first">
+                                <label>
+                                    <input class="check__input" type="checkbox" onclick="unsellectCheckOne(this)">
+                                    <span class="check__box"></span>
+                                </label>
+                            </li>
+                            <li class="letter__sender-logo-wrapper letter__element"><img class="letter__sender-pic" src="../resources/sender-pic.png" alt="Yandex logo">
+                            </li>
+                            <li class="letter__sender-name letter__line_not-read letter__element">Команда Яндекс.Почты</li>
+                            <li class="letter__read-mark read-mark_not-read letter__element"></li>
+                            <li class="letter__text letter__line_not-read letter__element">
+                                Опять очень длинное письмо от команды яндекс.почты, позволяющее проверить, что происходит
+                                с длинными строчками, не помещающимися целиком. Раз, два, три. Конь, стул, двадцать восемь.
+                            </li>
+                            <li class="letter__date letter__element">6 июл</li>
+                        </ul>
+                        <hr class="letter-box__hr">
+                    </div>
+
+                    <div class="letter">
+                        <ul class="letter__line">
+                            <li class="check letter__element_first">
+                                <label>
+                                    <input class="check__input" type="checkbox" onclick="unsellectCheckOne(this)">
+                                    <span class="check__box"></span>
+                                </label>
+                            </li>
+                            <li class="letter__sender-logo-wrapper letter__element">
+                                <img class="letter__sender-pic" src="../resources/sender-pic.png" alt="Yandex logo">
+                            </li>
+                            <li class="letter__sender-name letter__element">Команда Яндекс.Почты</li>
+                            <li class="letter__read-mark letter__element"></li>
+                            <li class="letter__text letter__element">Дуб - дерево. Роза - цветок. Олень - животное. Воробей - птица. Россия - наше отечество. Смерть неизбежна.</li>
+                            <li class="letter__date letter__element">6 июл</li>
+                        </ul>
+                        <hr class="letter-box__hr">
+                    </div>
+
+                    <div class="letter">
+                        <ul class="letter__line">
+                            <li class="check letter__element_first">
+                                <label>
+                                    <input class="check__input" type="checkbox" onclick="unsellectCheckOne(this)">
+                                    <span class="check__box"></span>
+                                </label>
+                            </li>
+                            <li class="letter__sender-logo-wrapper letter__element"><img class="letter__sender-pic" src="../resources/sender-pic.png" alt="Yandex logo">
+                            </li>
+                            <li class="letter__sender-name letter__element">Яндекс</li>
+                            <li class="letter__read-mark letter__element"></li>
+                            <li class="letter__text letter__element">Соберите всю почту в этот ящик.</li>
+                            <li class="letter__date letter__element">6 июл</li>
+                        </ul>
+                        <hr class="letter-box__hr">
+                    </div>
+                </div>
+
+                <div class="letter-box__footer">
+                    <hr class="letter-box__hr">
+                    <div class="letter-box__footer-info">
+                        <a href="" class="letter-box__footer-link">Помощь и обратная связь</a>
+                        <a href="" class="letter-box__footer-link">Реклама</a>
+                        <div class="letter-box__footer-item">© 2001-2019, Яндекс</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+
+    <script src="script.js" type="application/javascript" language="JavaScript" async></script>
+</html>
