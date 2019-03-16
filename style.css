@@ -1,0 +1,339 @@
+@font-face {
+    font-family: YandexSansBold;
+    src: url("fonts/YandexSansDisplay-Bold.ttf");
+}
+
+@font-face {
+    font-family: YandexSansThin;
+    src: url("fonts/YandexSansDisplay-Thin.ttf");
+}
+
+@font-face {
+    font-family: HelveticaNeueLight;
+    src: url("fonts/HelveticaNeueCyr-Light.otf");
+}
+
+@font-face {
+    font-family: HelveticaNeue;
+    src: url("fonts/HelveticaNeueCyr-Medium.otf");
+}
+
+header {
+    width: 184px;
+    height: 31px;
+    position: absolute;
+    left: 22px;
+    top: 12px;
+}
+
+.inline{
+    display: inline;
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+    background-color: #e5eaf0;
+}
+
+#page{
+    position: relative;
+    width: 800px;
+    min-height: 100%;
+    margin: 0 auto;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a, a:active, a:visited, a:hover {
+    color: unset;
+    text-decoration: none;
+    position: unset !important;
+}
+
+#ya-mail-logo{
+    font-size: 25px;
+}
+
+#ya-logo{
+    width: 100%;
+    font-family: YandexSansBold, sans-serif;
+    margin-right: 4px;
+    margin-left: 3px;
+}
+
+#mail-logo{
+    width: 100%;
+    font-family: YandexSansThin, sans-serif;
+}
+
+#ya-search{
+    position: absolute;
+    width: 301px;
+    height: 32px;
+    left: 320px;
+    top: 11px;
+    vertical-align: middle;
+    opacity: 0.5;
+    padding-left: 16px;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    font-family: YandexSanThin;
+    font-size: 15px;
+    line-height: 2.13;
+    color: #000000;
+}
+
+#message-creator {
+    position: absolute;
+    top: 11px;
+    left: 640px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+#nav-sidebar{
+    margin-left: 22;
+    margin-top: 0px;
+    padding: 0;
+}
+
+#nav-sidebar li:not(#compose-message){
+    width: 137px;
+    height: 22px;
+    margin-left: 0;
+    padding-left: 10px;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 22px;
+}
+
+#nav-sidebar li:not(#compose-message):hover{
+    background-color: #cdd6e4;
+}
+
+#compose-message{
+    width: 147px;
+    height: 32px;
+    background-color: #6287bd;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    font-family: HelveticaNeue, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 32px;
+}
+
+#ya-sidebar{
+    position: absolute;
+    left: 0;
+    top: 56px;
+    width: 200px;
+    font-family: HelveticaNeue, sans-serif;
+    font-size: 11px;
+    font-weight: 500px;
+    color: #707070;
+}
+
+section{
+    position: absolute;
+    left: 191px;
+    top: 56px;
+    margin-bottom: 30px;
+    width: 589;
+    min-height: 530px;
+    left: 291px;
+    top: 76px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.34);
+}
+
+#content-top-bar{
+    position: relative;
+    width: 100%;
+    height: 37px;
+    font-family: HelveticaNeue, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #cccccc;
+}
+
+#content-top-bar *{
+    position: absolute;
+    top: 11px;
+}
+
+#content-top-bar ul{
+    position: unset;
+}
+
+.select-all{
+    left: 20px;
+}
+
+#resend{
+    left: 56px;
+}
+
+#delete{
+    left: 150px;
+}
+
+#spam{
+    left: 228px;
+}
+
+#mark-as-read{
+    left: 315;
+}
+
+.message{
+    position: relative;
+    height: 37px;
+    font: 13px HelveticaNeue;
+    color: #000000;
+    border-bottom: solid 1px #e2e2e2;
+}
+
+.unread{
+    font-weight: bold;
+}
+
+.message *{
+    display: inline;
+    position: absolute;
+    top: 12px;
+}
+
+#content-messages{
+    width: 100%;
+    min-height: 463px;
+    border-top: solid 1px #e2e2e2;
+    border-bottom: solid 1px #e2e2e2;
+}
+
+#message-list{
+    margin: 0;
+    padding: 0;
+}
+
+.message-select{
+    left: 20px; 
+}
+
+#my-blog{
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 463px;
+    position: absolute;
+    top: 0;
+    background-color: white;
+    font-family: sans-serif;
+    font-size: 14px;
+    padding: 20px 0 20px 20px;
+    display: none;
+    font-weight: 300;
+    z-index: 1;
+}
+
+#message-open{
+    position: unset;
+}
+
+#message-select1:checked + #my-blog{
+    display: block;
+}
+
+#round{
+    position: relative;
+    float: right;
+    border-radius: 50%;
+    shape-outside:circle();
+}
+
+#exit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    width: 15px;
+    height: 15px;
+    font-family: HelveticaNeueLight, sans-serif;
+    font-weight: 100;
+    text-align: center;
+    line-height: 15px;
+    vertical-align: middle;
+}
+
+#exit:hover {
+    background-color: #cdd6e4;
+}
+.author-avatar{
+    width: 30px;
+    height: 30px;
+    left: 46px;
+    top: 4px;
+    background-image: url(https://yastatic.net/mail/socialavatars/socialavatars/v4/ya-default.svg);
+    border-radius: 15px;
+}
+
+.author-name{
+    left: 86px;
+    max-width: 170px;
+    max-height: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mark-as-read-tick{
+    width: 10px;
+    height: 10px;
+    left: 261px;
+    background-color: #6287bd;
+    border-radius: 10px;
+}
+
+.mark-as-read-tick:checked {
+    background-color: rgb(34, 34, 129);
+}
+
+.message-subject{
+    left: 281px;
+    max-width: 250px;
+    max-height: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.message-receive-time{
+    right: 20px;
+    text-align: right;
+    color: #9b9b9b;
+    /* font-weight: normal; */
+}
+
+#footer-content{
+    position: relative;
+    width: 100%;
+    height: 30px;
+}
+
+footer{
+    width: 345px;
+    height: 12px;
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    font-size: 11px;
+    font-family: HelveticaNeueLight;
+    color: #9b9b9b;
+}
+
+#copyright, .link{
+    margin-left: 15px;
+}

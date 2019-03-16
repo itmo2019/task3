@@ -1,0 +1,125 @@
+<html>
+
+<head>
+    <title>Яндекс.Почта</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div id="page">
+        <header>
+            <div id="ya-menu-logo" class="inline">
+                <a href=""><img src="images/sidebar-menu.png" width="20" height="14"></a>
+            </div>
+            <div id="ya-mail-logo" class="inline">
+                <span id="ya-logo">Яндекс</span><span id="mail-logo">Почта</span>
+            </div>
+        </header>
+        <input type="search" id="ya-search" placeholder="Поиск">
+        <button id="message-creator" onclick="createMessage()">Создать письмо</button>
+        <div id="ya-sidebar">
+            <ul id="nav-sidebar">
+                <li id="compose-message"><a href="">Написать</a></li>
+                <li><a href="#">Входящие</a></li>
+                <li><a href="#">Отправленные</a></li>
+                <li><a href="#">Удалённые</a></li>
+                <li><a href="#">Спам</a></li>
+                <li><a href="#">Черновики</a></li>
+                <li><a href="#">Создать папку</a></li>
+            </ul>
+        </div>
+        <section class="ya-mail">
+            <div id="content-top-bar">
+                <input type="checkbox" class="select-all inline">
+                <ul class="inline">
+                    <li id="resend" class="inline"><a href="#">Переслать</a></li>
+                    <li id="delete" class="inline"><a href="#" onclick="deleteSelected()">Удалить</a></li>
+                    <li id="spam" class="inline"> <a href="#">Это спам!</a></li>
+                    <li id="mark-as-read" class="inline"><a href="#">Прочитанно</a></li>
+                </ul>
+            </div>
+            <div id="content-messages">
+                <ul id="message-list">
+                    <li class="message unread">
+                        <input type="checkbox" id="message-select1" class="message-select">
+                        <div id="my-blog">
+                            <label for="message-select1" id="exit">X</label>
+                            <img id="round" src="images/round.png" width="400" height="400">
+                            Press tick to close :)
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam vero minus accusamus hic eum fuga, voluptatibus, perspiciatis inventore 
+                            sunt, a natus asperiores nisi nam nulla magni cumque laborum nihil. Nam!
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit 
+                            laudantium aliquid aspernatur expedita eaque? Omnis optio qui saepe 
+                            facilis doloribus accusantium, laboriosam libero, voluptate aspernatur, 
+                            sapiente inventore! Impedit, nulla explicabo!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam 
+                            vero minus accusamus hic eum fuga, voluptatibus, perspiciatis inventore 
+                            sunt, a natus asperiores nisi nam nulla magni cumque laborum nihil. Nam!
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit 
+                            laudantium aliquid aspernatur expedita eaque? Omnis optio qui saepe 
+                            facilis doloribus accusantium, laboriosam libero, voluptate aspernatur, 
+                            sapiente inventore! Impedit, nulla explicabo!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam 
+                            vero minus accusamus hic eum fuga, voluptatibus, perspiciatis inventore 
+                            sunt, a natus asperiores nisi nam nulla magni cumque laborum nihil. Nam!
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit 
+                            laudantium aliquid aspernatur expedita eaque? Omnis optio qui saepe 
+                            facilis doloribus accusantium, laboriosam libero, voluptate aspernatur, 
+                            sapiente inventore! Impedit, nulla explicabo!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam 
+                            vero minus accusamus hic eum fuga, voluptatibus, perspiciatis inventore 
+                            sunt, a natus asperiores nisi nam nulla magni cumque laborum nihil. Nam!
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit 
+                            laudantium aliquid aspernatur expedita eaque? Omnis optio qui saepe 
+                            facilis doloribus accusantium, laboriosam libero, voluptate aspernatur, 
+                            sapiente inventore! Impedit, nulla explicabo!
+                        </div>
+                        <label id="message-open" for="message-select1">
+                            <img class="author-avatar" width="30px" height="30px">
+                            <span class="author-name">Яндекс.Паспорт</span>
+                            <input type="checkbox" class="mark-as-read-tick">
+                            <span class="message-subject">Доступ к аккаунту восстановлен</span>
+                            <time class="message-receive-time">6 авг</time>
+                        </label>
+                    </li>
+                    <li class="message unread">
+                        <input type="checkbox" class="message-select">
+                        <img class="author-avatar" width="30px" height="30px">
+                        <span class="author-name">Яндекс.Паспорт</span>
+                        <input type="checkbox" class="mark-as-read-tick">
+                        <span class="message-subject">Доступ к аккаунту восстановлен</span>
+                        <time class="message-receive-time">5 авг</time>
+                    </li>
+                    <li class="message">
+                        <input type="checkbox" class="message-select">
+                        <img class="author-avatar" width="30px" height="30px">
+                        <span class="author-name">Яндекс.Паспорт</span>
+                        <span class="message-subject">Доступ к аккаунту восстановлен</span>
+                        <time class="message-receive-time">4 авг</time>
+                    </li>
+                    <li class="message">
+                        <input type="checkbox" class="message-select">
+                        <img class="author-avatar" width="30px" height="30px">
+                        <span class="author-name">Яндекс.Паспорт</span>
+                        <span class="message-subject">Доступ к аккаунту восстановлен</span>
+                        <time class="message-receive-time">3 авг</time>
+                    </li>
+                </ul>
+            </div>
+            <div id="footer-content">
+                <footer>
+                    <nav class="inline">
+                        <a href="#" class="link">Помощь и обратная связь</a>
+                        <a href="#" class="link">Реклама</a>
+                    </nav>
+                    <span id="copyright">&copy;2001&mdash;2018, Яндекс</span>
+                </footer>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
