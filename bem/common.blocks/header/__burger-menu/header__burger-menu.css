@@ -1,0 +1,7 @@
+.header__burger-menu {
+    position: absolute;
+    left: 22px;
+    height: 30px;
+    width: 20px;
+    padding-top: 2px;
+}

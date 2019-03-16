@@ -1,0 +1,15 @@
+.message__unread-dot {
+
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+
+    /*position: absolute;*/
+    /*left: 261px;*/
+    float: left;
+    margin-left: 20px;
+    margin-top: 14px;
+    background-color: #6287bd;
+
+    cursor: pointer;
+}

@@ -1,0 +1,11 @@
+.full-message {
+    display: none;
+    position: absolute;
+    top: 0;
+
+    overflow: scroll;
+    max-height: 430px;
+    padding: 0 30px 30px 30px;
+    background-color: #ffffff;
+    z-index: 100;
+}

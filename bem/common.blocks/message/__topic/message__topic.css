@@ -1,0 +1,12 @@
+.message__topic {
+    padding-top: 12px;
+    float: left;
+
+    max-width: 35%;
+    margin-left: 10px;
+    margin-right: -100px;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}

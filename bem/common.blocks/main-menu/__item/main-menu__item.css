@@ -1,0 +1,22 @@
+.main-menu__item {
+    padding-left: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-decoration: none;
+
+    text-overflow: ellipsis;
+    max-height: 22px;
+    max-width: 147px;
+    overflow: hidden;
+    white-space: nowrap;
+
+    cursor: pointer;
+}
+
+.main-menu__item:hover {
+    border-radius: 3px;
+    background-color: #cdd6e4;
+
+    font-weight: bold;
+    color: #555555;
+}
