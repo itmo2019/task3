@@ -1,9 +1,12 @@
 .letter-box {
     margin: 0 10px 10px 10px;
-    min-width: calc(100% - 160px);
+    position: absolute;
+    left: 159px;
+    right: 0;
+    top: 0;
+    bottom: 10px;
     min-height: 350px;
-    height: calc(100% - 10px);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.34);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .34);
     border-radius: 3px;
     background-color: #fff;
     font-family: "Helvetica Neue", sans-serif;
@@ -22,9 +25,11 @@
 }
 
 #letter-box__letters {
-    position: relative;
     width: 100%;
-    height: calc(100% - 65px);
+    position: absolute;
+    top: 40px;
+    bottom: 25px;
+    background-color: #fff;
     overflow: auto;
 }
 
@@ -36,7 +41,7 @@
 
 .letter-box__hr {
     margin: 0;
-    opacity: 0.4;
+    opacity: .4;
 }
 
 .letter {
@@ -49,7 +54,7 @@
     padding: 10px 20px;
     font-size: 13px;
     height: 20px;
-    background-color: white;
+    background-color: #fff;
 }
 
 .letter__line > li {
@@ -94,7 +99,7 @@
 }
 
 .letter-box__header > li > input[type="button"]:hover {
-    color: black;
+    color: #000;
 }
 
 /* Check Box */
@@ -116,13 +121,13 @@
     width: 16px;
     height: 16px;
     border-radius: 3px;
-    border: 1px solid rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, .15);
     background-color: #fff;
     cursor: pointer;
 }
 
 .check__input:checked + .check__box {
-    border-color: rgba(153, 122, 0, 0.5);
+    border-color: rgba(153, 122, 0, .5);
     box-shadow: inset 0 90px #ffeba0;
 }
 
@@ -142,8 +147,8 @@
     border-right: 2px solid;
     border-bottom: 2px solid;
     color: #000;
-    -webkit-transform: scale(0.85) rotate(47deg) skewX(12deg);
-    transform: scale(0.85) rotate(47deg) skewX(12deg);
+    -webkit-transform: scale(.85) rotate(47deg) skewX(12deg);
+    transform: scale(.85) rotate(47deg) skewX(12deg);
     visibility: hidden;
 }
 
@@ -198,13 +203,19 @@
 }
 
 .letter-box__footer {
-    padding: 5px 20px;
-    float: right;
-    font-size: 11px;
-    font-family: 'Helvetica Neue Light', sans-serif;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
-.letter-box__footer > * {
+.letter-box__footer-info {
+    padding: 5px 20px;
+    text-align: right;
+    font: 11px 'Helvetica Neue Light', sans-serif;
+}
+
+.letter-box__footer-info > * {
     display: inline-block;
     vertical-align: center;
     margin-left: 25px;

@@ -23,7 +23,7 @@
     text-align: center;
     border-radius: 3px;
     background-color: #6287bd;
-    color: #ffffff;
+    color: #fff;
     font-size: 12px;
     font-weight: 500;
     cursor: pointer;
@@ -54,6 +54,6 @@
 .nav__list-li_select {
     border-radius: 3px;
     background-color: #cdd6e4;
-    color: #555555;
+    color: #555;
     font-weight: 700;
 }

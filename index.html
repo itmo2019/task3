@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/nav-style.css">
     <link rel="stylesheet" href="css/letter-box-style.css">
     <link rel="stylesheet" href="css/apple-page-style.css">
-    <script src="js/functions.js"></script>
 </head>
 <body>
 <header>
@@ -55,11 +54,11 @@
                 <input class="check__input" type="checkbox" onclick="selectAll()">
                 <span class="check__box"></span>
             </label></li>
-            <li><input type="button" onclick="addLetter()" value="Получить сообщение"></li>
-            <li><input type="button" value="Переслать"></li>
-            <li><input type="button" onclick="removeLetters()" value="Удалить"></li>
-            <li><input type="button" onclick="removeLetters()" value="Это спам!"></li>
-            <li><input type="button" onclick="markReadLetters()" value="Прочитано"></li>
+            <li><input type="button" id="get-letter" value="Получить сообщение"></li>
+            <li><input type="button" id="forward-letter" value="Переслать"></li>
+            <li><input type="button" id="remove-letter" value="Удалить"></li>
+            <li><input type="button" id="spam-letter" value="Это спам!"></li>
+            <li><input type="button" id="mark-read-letter" value="Прочитано"></li>
         </ul>
         <hr class="letter-box__hr">
 
@@ -171,14 +170,17 @@
             <div class="letters-after"></div>
         </ul>
 
-        <hr class="letter-box__hr">
         <div class="letter-box__footer">
-            <a href="https://yandex.ru/support/mail/">Помощь и обратная связь</a>
-            <a href="https://yandex.ru/adv/">Реклама</a>
-            <div>© 2001&mdash;2019, <a href="https://yandex.ru">Яндекс</a></div>
+            <hr class="letter-box__hr">
+            <div class="letter-box__footer-info">
+                <a href="https://yandex.ru/support/mail/">Помощь и обратная связь</a>
+                <a href="https://yandex.ru/adv/">Реклама</a>
+                <div>© 2001&mdash;2019, <a href="https://yandex.ru">Яндекс</a></div>
+            </div>
         </div>
     </div>
 </main>
 
 </body>
+<script src="js/functions.js"></script>
 </html>

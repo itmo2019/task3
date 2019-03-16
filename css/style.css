@@ -6,9 +6,11 @@ html {
 
 main {
     margin-top: 13px;
-    position: relative;
-    width: 100%;
-    height: calc(100vh - 65px);
+    position: absolute;
+    top: 42px;
+    left: 18px;
+    right: 18px;
+    bottom: 10px;
 }
 
 main > * {
