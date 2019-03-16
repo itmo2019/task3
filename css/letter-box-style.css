@@ -12,18 +12,6 @@
     font-family: "Helvetica Neue", sans-serif;
 }
 
-@media screen and (max-width: 800px) {
-    .letter-box {
-        min-width: 600px;
-    }
-}
-
-@media screen and (min-width: 4000px) {
-    .letter-box {
-        left: 5.3%;
-    }
-}
-
 #letter-box__letters {
     width: 100%;
     position: absolute;

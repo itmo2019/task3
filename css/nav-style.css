@@ -4,12 +4,6 @@
     margin-bottom: 10px;
 }
 
-@media screen and (min-width: 4000px) {
-    .nav {
-        width: 5%;
-    }
-}
-
 .nav > * {
     white-space: normal;
     word-wrap: break-word;

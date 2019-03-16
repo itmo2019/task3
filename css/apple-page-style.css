@@ -1,9 +1,10 @@
 .apple-page {
-    position: absolute;
     display: none;
-    top: 0;
-    left: 0;
-    height: 100%;
+    position: fixed;
+    top: 94px;
+    bottom: 39px;
+    left: 187px;
+    right: 20px;
     z-index: 50;
     background-color: #fff;
 }
