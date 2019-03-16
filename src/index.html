@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8"/>
+        <title>Яндекс Почта</title>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+    </head>
+
+    <body>
+        <div>
+            <div class="top">
+                <div class="strips">
+                    <div class="strip"></div>
+                    <div class="strip"></div>
+                    <div class="strip"></div>
+                </div>
+                <img src="../images/mail-logo.png" class="mail_logo">    
+                <div class="search">
+                    <input class="entry_field" placeholder="Поиск">
+                    <div class="close_icon">𐄂</button>
+                </div>
+            </div>
+            <div class="main">
+                <div class="menu">
+                    <button class="menu_button">Написать</button>                  
+                    <ul class="options">
+                            <li class="option" id="incoming"><a class="option_link" href="">Входящие</a></li>
+                            <li class="option"><a class="option_link" href="">Отправленные</a></li>
+                            <li class="option"><a class="option_link" href="">Удалённые</a></li>
+                            <li class="option"><a class="option_link" href="">Спам</a></li>
+                            <li class="option"><a class="option_link" href="">Черновики</a></li>
+                            <li class="option"><a class="option_link" href="">Создать папку</a></li>
+                     </ul>
+                     <button id="receive_letter" class="menu_button">Получить письмо</button>
+                </div>
+                <div class="content">
+                    <div class="actions">
+                        <input type="checkbox" class="check">
+                        <div class="action">Переслать</div>
+                        <div class="action">Удалить</div>
+                        <div class="action">Это Спам!</div>
+                        <div class="action">Прочитано</div>
+                    </div>
+                    <div id="letters">
+                    </div>
+                    <div class="footer">
+                        <div class="info">
+                            <div class="info_option">Помощь и обратная связь</div>
+                            <div class="info_option">Реклама</div>
+                            <div class="info_option">© 2001-2018, Яндекс</div>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+        </div>
+    </body>
+    <script src="script.js"></script>
+</html>
