@@ -130,3 +130,4 @@ document.getElementById('spam-letter').addEventListener("click", removeLetters);
 document.getElementById('mark-read-letter').addEventListener("click", markReadLetters);
 
 document.getElementById('letter-box__letters').addEventListener('click', selectLetter);
+document.body.querySelector('check__input').addEventListener('click', selectAll);

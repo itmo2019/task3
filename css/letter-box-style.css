@@ -4,7 +4,7 @@
     left: 159px;
     right: 0;
     top: 0;
-    bottom: 10px;
+    bottom: 0;
     min-height: 350px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, .34);
     border-radius: 3px;
@@ -20,7 +20,7 @@
 
 @media screen and (min-width: 4000px) {
     .letter-box {
-        min-width: 94%;
+        left: 5.3%;
     }
 }
 
@@ -31,12 +31,6 @@
     bottom: 25px;
     background-color: #fff;
     overflow: auto;
-}
-
-@media screen and (min-width: 6000px) {
-    #letter-box__letters {
-        height: 98%;
-    }
 }
 
 .letter-box__hr {

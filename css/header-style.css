@@ -50,6 +50,12 @@ header > div {
     line-height: 100%;
 }
 
+@media screen and (min-width: 4000px) {
+    .search {
+        margin: 0 1% 0 5%;
+    }
+}
+
 .search > input {
     display: inline-block;
     border: none;
