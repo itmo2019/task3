@@ -13,7 +13,7 @@ let memerId = 0;
 function selectAll() {
     let checkboxes = document.getElementsByClassName('check__input');
     let mainCheck = checkboxes[0];
-    for (let i = 1; i < checkboxes.length; i++) {
+    for (var i = 1; i < checkboxes.length; i++) {
         checkboxes[i].checked = mainCheck.checked;
     }
 }
@@ -38,11 +38,13 @@ function addLetter() {
     letters.insertBefore(newLetter, letters.children[0]);
 
     newLetter.style.height = '0';
+    newLetter.style.top = '-42px';
     let fps = 1000 / 42;
     animate(
         function (timePassed) {
             var shift = (timePassed / fps);
             newLetter.style.height = shift + 'px';
+            newLetter.style.top = (-42 + shift) + 'px';
         },
         1000
     );
@@ -50,7 +52,7 @@ function addLetter() {
 
 function _doActionWithLetters(action) {
     let checkboxes = document.getElementsByClassName('check__input');
-    for (let i = 1; i < checkboxes.length; i++) {
+    for (var i = 1; i < checkboxes.length; i++) {
         if (checkboxes[i].checked) {
             var letter = checkboxes[i];
             while (letter.className != 'letter') {
@@ -67,18 +69,21 @@ function _removeLetter(letter) {
 
 function _removeAnimateLetter(letter) {
     let fps = 1000 / 42;
+    letter.style.zIndex = '0';
     animate(
         function (timePassed) {
             var shift = (timePassed / fps);
             letter.style.height = (42 - shift) + 'px';
+            letter.style.top = -shift + 'px';
         },
         1000,
-        _removeLetter,
-        letter
+        function () {
+            _removeLetter(letter);
+        }
     );
 }
 
-function animate(draw, duration, complete, completeParam) {
+function animate(draw, duration, complete) {
     var start = performance.now();
 
     requestAnimationFrame(function animate(time) {
@@ -89,7 +94,7 @@ function animate(draw, duration, complete, completeParam) {
         if (timePassed < duration) {
             requestAnimationFrame(animate);
         } else {
-            complete(completeParam);
+            complete();
         }
     });
 }

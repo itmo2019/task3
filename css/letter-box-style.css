@@ -39,6 +39,11 @@
     opacity: 0.4;
 }
 
+.letter {
+    position: relative;
+    z-index: 1;
+}
+
 .letter__line {
     position: relative;
     padding: 10px 20px;
