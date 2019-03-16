@@ -7,28 +7,42 @@
 </head>
 <body>
 
-<div class="upper-line">
-    <div class="three-dashes">
-        <div class="dash-one"></div>
-        <div class="dash-two"></div>
-        <div class="dash-three"></div>
+<div class="header">
+    <div class="header__three_dashes">
+        <div class="dash dash__first-dash"></div>
+        <div class="dash dash__second-dash"></div>
+        <div class="dash dash__third-dash"></div>
     </div>
-    <div class="logo">
-        <span class="yandex">Яндекс</span>
-        <span class="mail">Почта</span>
-    </div>
-    <label>
-        <input type="text" class="search" value="Поиск">
-        <input type="button" class="clearBtn">
-        <span class="cross"> X </span>
+    <img src="yandex_mail.png" class="header__logo">
+    <label class="header__search">
+        <input class="search__input-text" type="text" value="Поиск">
+        <input class="search__input-button" type="button">
+        <span class="search__cross"> X </span>
     </label>
+    <span id="delete-div">
+        <button id="change" onClick="myScrip()">delete</button>
+        <script>
+            function myScrip() {
+                document.getElementById("will-be-deleted").className = "white-block__deleted white-block_central-row-unread";
+            }
+        </script>
+
+    </span>
+    <span id="add-div">
+        <button id="add" onClick="myScrippp()">add</button>
+        <script>
+            function myScrippp() {
+                document.getElementById("will-be-added").className = "new-message__appear  white-block__row white-block__central-row white-block__central-row_unread white-block__new-message";
+            }
+        </script>
+    </span>
 </div>
 <div class="main">
-    <div class="left-column">
+    <div class="main__left-column">
         <form>
-            <button class="write">Написать</button>
+            <button class="left-column__btn_write">Написать</button>
         </form>
-        <div class="btn-group">
+        <div class="left-column__btn-group">
             <button>Входящие</button>
             <button>Отправленные</button>
             <button>Удалённые</button>
@@ -37,71 +51,112 @@
             <button>Создать папку</button>
         </div>
     </div>
-    <div class="white-block">
-        <div class="upper-row">
-            <div class="square"></div>
-            <button class="upper-row-btn">Переслать</button>
-            <button class="upper-row-btn">Удалить</button>
-            <button class="upper-row-btn">Это спам</button>
-            <button class="upper-row-btn">Прочитано</button>
-        </div>
-        <label for="hiddenMessage">
-        <div class="central-row-unread">
-            <div class="square"></div>
-            <div class="ya-circle"><a class="ya-letter">Я</a></div>
-            <div class="msg-sender">Яндекс Паспорт</div>
-            <div class="point"></div>
-            <div class="msg-theme">Доступ к аккаунту восстановлен</div>
-            <div class="date">6 авг</div>
-        </div>
-        </label>
-        <input type = "checkbox" id = "hiddenMessage">
-        <div class = "my-msg">
-            <label for = "hiddenMessage">
-                <span class="msg-cross">X</span>
+    <div class="main__white-block">
+        <div class="white-block__row white-block__upper-row">
+            <label class="check">
+                <input class="check__input" type="checkbox">
             </label>
-            <div class = "my-msg-text">
+            <div class="upper-row__btn tooltip">Переслать
+                <span class="tooltip-text">Переслать</span>
+            </div>
+            <div class="upper-row__btn tooltip">Удалить
+                <span class="tooltip-text">Удалить</span></div>
+            <div class="upper-row__btn tooltip">Это спам
+                <span class="tooltip-text">Удалить</span></div>
+            <div class="upper-row__btn tooltip">Прочитано
+                <span class="tooltip-text">Прочитано</span></div>
+        </div>
+        <div id="will-be-added"
+             class=" white-block__row white-block__central-row white-block__central-row_unread white-block__new-message">
+            <label class="check">
+                <input class="check__input" type="checkbox">
+            </label>
+            <div class="central-row__avatar-frame">
+                <div class="central-row__ya-circle"><a class="ya-circle__ya-letter">Я</a></div>
+            </div>
+            <div class="central-row__msg-sender">Новый отправитель</div>
+            <div class="central-row__point"></div>
+            <div class="central-row__msg-theme">Новая тема</div>
+            <div class="central-row__date">16 мар</div>
+        </div>
+        <label for="hidden-message__chb">
+            <div class="white-block__row white-block__central-row white-block__central-row_unread">
+                <label class="check">
+                    <input class="check__input" type="checkbox">
+                </label>
+                <div class="central-row__avatar-frame">
+                    <div class="central-row__ya-circle"><a class="ya-circle__ya-letter">Я</a></div>
+                </div>
+                <div class="central-row__msg-sender">Яндекс Паспорт</div>
+                <div class="central-row__point"></div>
+                <div class="central-row__msg-theme">Доступ к аккаунту восстановлен</div>
+                <div class="central-row__date">6 авг</div>
+            </div>
+        </label>
+        <input type="checkbox" id="hidden-message__chb">
+        <div class="hidden-message">
+            <label for="hidden-message__chb">
+                <span class="hidden-message__cross">X</span>
+            </label>
+            <div class="hidden-message__text">
                 Британцы – это кошки среднего размера, с крепким приземистым корпусом и массивными короткими лапами.
                 У них массивная округлая голова, а мордочка слегка сглажена (но не приплюснута, как у персов).
-                <img class = "my-msg-img" src = "cat.jpg" alt="alt-img">
-                Визитной карточкой британцев являются их пушистые толстые щечки, а также кожные складочки на животе и на короткой толстой шее.
-                Глаза круглые, выразительные, чаще всего янтарно-желтого цвета, но могут встречаться голубой или изумрудный цвет.
+                <img class="hidden-message__img" src="cat.jpg" alt="alt-img">
+                Визитной карточкой британцев являются их пушистые толстые щечки, а также кожные складочки на животе и на
+                короткой толстой шее.
+                Глаза круглые, выразительные, чаще всего янтарно-желтого цвета, но могут встречаться голубой или
+                изумрудный цвет.
                 Средней длины толстый хвост слегка закруглен на конце.
 
-                Отличительной особенностью породы является их плюшевая шерстка – такой эффект достигается за счет того, что остевой волос одинаковый по длине с подшерстком.
-                Шерсть короткая, очень густая, не очень прилегает к телу. Что касается окрасов, то всего насчитывается около 60 вариантов:
-                голубой, лиловый, черный, шоколадный, бежевый (циннамон или фавн), кремовый, черепаховый, шиншилловый (серебристый и золотистый),
+                Отличительной особенностью породы является их плюшевая шерстка – такой эффект достигается за счет того,
+                что остевой волос одинаковый по длине с подшерстком.
+                Шерсть короткая, очень густая, не очень прилегает к телу. Что касается окрасов, то всего насчитывается
+                около 60 вариантов:
+                голубой, лиловый, черный, шоколадный, бежевый (циннамон или фавн), кремовый, черепаховый, шиншилловый
+                (серебристый и золотистый),
                 табби (пятнистый, тигровый, мраморный) и многие другие.
             </div>
         </div>
-        <div class="central-row-unread">
-           <div class="square"></div>
-            <div class="ya-circle"><a class="ya-letter">Я</a></div>
-            <div class="msg-sender">Команда Яндекс.Почты</div>
-            <div class="point"></div>
-            <div class="msg-theme">Как читать почту с мобильного</div>
-            <div class="date">6 июл</div>
+        <div class="white-block__row white-block__central-row white-block__central-row_unread" id="will-be-deleted">
+            <label class="check">
+                <input class="check__input" type="checkbox">
+            </label>
+            <div class="central-row__avatar-frame">
+                <div class="central-row__ya-circle"><a class="ya-circle__ya-letter">Я</a></div>
+            </div>
+            <div class="central-row__msg-sender">Команда Яндекс.Почты</div>
+            <div class="central-row__point"></div>
+            <div class="central-row__msg-theme">Как читать почту с мобильного</div>
+            <div class="central-row__date">6 июл</div>
         </div>
-        <div class="central-row-read">
-           <div class="square"></div>
-            <div class="ya-circle"><a class="ya-letter">Я</a></div>
-            <div class="msg-sender">Команда Яндекс.Почты</div>
-            <div class="point"></div>
-            <div class="msg-theme">Как читать почту с мобильного</div>
-            <div class="date">6 июл</div>
+        <div class="white-block__row white-block__central-row white-block__central-row_read">
+            <label class="check">
+                <input class="check__input" type="checkbox">
+            </label>
+            <div class="central-row__avatar-frame">
+                <div class="central-row__ya-circle"><a class="ya-circle__ya-letter">Я</a></div>
+            </div>
+            <div class="central-row__msg-sender">Команда Яндекс.Почты</div>
+            <div class="central-row__point"></div>
+            <div class="central-row__msg-theme">Как читать почту с мобильного</div>
+            <div class="central-row__date">6 июл</div>
         </div>
-        <div class="central-row-read">
-           <div class="square"></div>
-            <div class="ya-circle"><a class="ya-letter">Я</a></div>
-            <div class="msg-sender">Яндекс</div>
-            <div class="point"></div>
-            <div class="msg-theme">Соберите всю почту в этот ящик</div>
-            <div class="date">6 июл</div>
+        <div class="white-block__row white-block__central-row white-block__central-row_read">
+            <label class="check">
+                <input class="check__input" type="checkbox">
+            </label>
+            <div class="central-row__avatar-frame">
+                <div class="central-row__ya-circle"><a class="ya-circle__ya-letter">Я</a></div>
+            </div>
+            <div class="central-row__msg-sender">Яндекс</div>
+            <div class="central-row__point"></div>
+            <div class="central-row__msg-theme">Соберите всю почту в этот ящик</div>
+            <div class="central-row__date">6 июл</div>
         </div>
-        <div class="lower-row">
-            <div class="lower-row-block">Помощь и обратная связь</div>
-            <div class="lower-row-block">Реклама</div>
-            <div class="lower-row-block">&copy2001-2018, Яндекс </div>
+        <div class="white-block__lower-row">
+            <div class="lower-row__item">Помощь и обратная связь</div>
+            <div class="lower-row__item">Реклама</div>
+            <div class="lower-row__item">&copy2001-2018, Яндекс</div>
         </div>
 
     </div>
