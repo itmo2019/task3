@@ -1,11 +1,10 @@
 .apple-page {
-    display: none;
-    position: fixed;
-    top: 94px;
-    bottom: 39px;
-    left: 187px;
-    right: 20px;
-    z-index: 50;
+    position: relative;
+}
+
+.apple-page__content {
+    height: 400px;
+    width: 500px;
     background-color: #fff;
 }
 
@@ -13,7 +12,6 @@
     padding: 20px;
     font-family: sans-serif;
     font-size: 14px;
-    white-space: normal;
 }
 
 .apple-page__exit {
@@ -29,13 +27,12 @@
     width: 150px;
     height: 180px;
     shape-outside: url('../images/apple.png');
-    shape-image-threshold: 0.7;
 }
 
 #apple-page__hider {
     display: none;
 }
 
-#apple-page__hider:checked ~ .apple-page {
+#apple-page__hider:checked ~ .apple-page__content {
     display: block;
 }

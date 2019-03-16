@@ -1,11 +1,11 @@
 let defaultLetter = '<ul class="letter__line"><li class="check">' +
     '<label><input class="check__input" type="checkbox">' +
     '<span class="check__box"></span></label></li>\n' +
-    '<li class="author"><img class="author__logo" src="images/logo-author-yandex.png" alt="Я"></li>\n' +
-    '<li class="author-name letter__line_not-read ">Яндекс Мемер №</li>\n' +
-    '<li class="read-mark read-mark_not-read"></li>\n' +
-    '<li class="topic letter__line_not-read">Свежий мем из Яндекса! Успей орнуть первым.</li>\n' +
-    '<li class="date">16 фев</li></ul>' +
+    '<li class="letter__author"><img class="letter__author_has-logo" src="images/ya-default.svg" alt="Я"></li>\n' +
+    '<li class="letter__author-name letter__line_unread ">Яндекс Мемер №</li>\n' +
+    '<li class="letter__read-mark letter__read-mark_unread"></li>\n' +
+    '<li class="letter__topic letter__line_unread">Свежий мем из Яндекса! Успей орнуть первым.</li>\n' +
+    '<li class="letter__date">16 фев</li></ul>' +
     '<hr class="letter-box__hr">';
 
 let memerId = 0;
@@ -31,14 +31,14 @@ function selectLetter(event) {
 }
 
 function _updateLetter(letter) {
-    letter.querySelector('.author-name').textContent += memerId++;
-    letter.querySelector('.date').textContent = '16 фев';
+    letter.querySelector('.letter__author-name').textContent += memerId++;
+    letter.querySelector('.letter__date').textContent = '16 фев';
 }
 
 function addLetter() {
     let letters = document.getElementById('letter-box__letters');
     let newLetter = document.createElement('li');
-    newLetter.className = 'letter';
+    newLetter.className = 'letter letter-box__letter';
     newLetter.innerHTML = defaultLetter;
     _updateLetter(newLetter);
     letters.insertBefore(newLetter, letters.firstChild);
@@ -61,7 +61,7 @@ function _doActionWithLetters(action) {
     for (var i = 1; i < checkboxes.length; i++) {
         if (checkboxes[i].checked) {
             var letter = checkboxes[i];
-            while (letter.className != 'letter') {
+            while (!letter.classList.contains('letter')) {
                 letter = letter.parentElement;
             }
             action(letter);
@@ -116,8 +116,8 @@ function _removeClass(letter, className) {
 }
 
 function _markReadLetter(letter) {
-    _removeClass(letter, 'letter__line_not-read');
-    _removeClass(letter, 'read-mark_not-read');
+    _removeClass(letter, 'letter__line_unread');
+    _removeClass(letter, 'letter__read-mark_unread');
 }
 
 function markReadLetters() {

@@ -1,40 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Яндекс Почта</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/header-style.css">
-    <link rel="stylesheet" href="css/nav-style.css">
-    <link rel="stylesheet" href="css/letter-box-style.css">
-    <link rel="stylesheet" href="css/apple-page-style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/letter-box.css">
+    <link rel="stylesheet" href="css/letter-toolbar.css">
+    <link rel="stylesheet" href="css/support-line.css">
+    <link rel="stylesheet" href="css/letter.css">
+    <link rel="stylesheet" href="css/check.css">
+    <link rel="stylesheet" href="css/apple-page.css">
 </head>
 <body>
 <header>
-    <div class="menu">
+    <div class="menu header__menu">
         <div></div>
         <div></div>
         <div></div>
     </div>
 
-    <div class="logo">
-        <a href="https://yandex.ru">
-            <img class="logo__yandex" src="images/logo-yandex.png" alt="Яндекс"/>
-        </a>
-        <a href="https://mail.yandex.ru">
-            <img class="logo__mail" src="images/logo-mail.png" alt="Почта"/>
-        </a>
+    <div class="logo header__logo">
+        <img src="images/YandexLogo.svg" alt="Яндекс Почта"/>
+        <a class="logo__yandex" href="https://yandex.ru"></a>
+        <a class="logo__mail" href="https://mail.yandex.ru"></a>
     </div>
 
-    <div class="search">
+    <div class="search header__search">
         <input type="text" placeholder="Поиск"/>
         <div class="search__clear inline-middle">×</div>
     </div>
 </header>
-
 <main>
-    <nav class="nav">
+    <nav class="nav main__nav">
         <a href="index.html">
             <button class="write-button">Написать</button>
         </a>
@@ -49,7 +49,7 @@
     </nav>
 
     <div class="letter-box">
-        <ul class="letter-box__header">
+        <ul class="letter-toolbar">
             <li class="check"><label>
                 <input class="check__input" type="checkbox">
                 <span class="check__box"></span>
@@ -63,65 +63,67 @@
         <hr class="letter-box__hr">
 
         <ul id="letter-box__letters">
-            <input type="checkbox" id="apple-page__hider">
             <div class="apple-page">
-                <label for="apple-page__hider">
-                    <div class="apple-page__exit">×</div>
-                </label>
-                <div class="apple-page__text">
-                    Яблоко — плод яблони, который употребляется в пищу в свежем виде, служит сырьём в кулинарии и
-                    для
-                    приготовления напитков. Яблоня - род листопадных деревьев и кустарников семейства розоцветных с
-                    шаровидными сладкими или кисло-сладкими плодами. Это самая распространенная плодовая культура в
-                    наших садах. Великолепное цветение этих садов весной и изобилие фруктов осенью делают яблоню
-                    самым
-                    излюбленным деревом.
-                    <img class="apple-page__apple-img" src="images/apple.png" align="right" alt="Apple">
-                    Яблоня - самое неприхотливое дерево, при хорошем уходе она может давать обильный урожай и на
-                    солнечном месте и при затенении. Не люб ит она только низины, впадины и замкнутые котловины, где
-                    во
-                    время цветения поздние заморозки могут повреждать цветки. Многие виды яблони выращивают в
-                    качестве
-                    декоративных растений в садах и в парках. Все виды - хорошие медоносы.
-                    Древесина у яблони плотная, крепкая, легко режется и хорошо полируется; пригодна для токарных и
-                    столярных изделий, мелких поделок. Наибольшее распространение получила яблоня домашняя. На
-                    сегодняшний день существует множество сортов этого вида яблони, произрастающих в различных
-                    климатических условиях.
+                <input type="checkbox" id="apple-page__hider">
+                <div class="apple-page__content letter-box__apple-page-content">
+                    <label for="apple-page__hider">
+                        <div class="apple-page__exit">×</div>
+                    </label>
+                    <div class="apple-page__text">
+                        Яблоко — плод яблони, который употребляется в пищу в свежем виде, служит сырьём в кулинарии и
+                        для
+                        приготовления напитков. Яблоня - род листопадных деревьев и кустарников семейства розоцветных с
+                        шаровидными сладкими или кисло-сладкими плодами. Это самая распространенная плодовая культура в
+                        наших садах. Великолепное цветение этих садов весной и изобилие фруктов осенью делают яблоню
+                        самым
+                        излюбленным деревом.
+                        <img class="apple-page__apple-img" src="images/apple.png" align="right" alt="Apple">
+                        Яблоня - самое неприхотливое дерево, при хорошем уходе она может давать обильный урожай и на
+                        солнечном месте и при затенении. Не люб ит она только низины, впадины и замкнутые котловины, где
+                        во
+                        время цветения поздние заморозки могут повреждать цветки. Многие виды яблони выращивают в
+                        качестве
+                        декоративных растений в садах и в парках. Все виды - хорошие медоносы.
+                        Древесина у яблони плотная, крепкая, легко режется и хорошо полируется; пригодна для токарных и
+                        столярных изделий, мелких поделок. Наибольшее распространение получила яблоня домашняя. На
+                        сегодняшний день существует множество сортов этого вида яблони, произрастающих в различных
+                        климатических условиях.
+                    </div>
                 </div>
             </div>
 
-            <li class="letter">
+            <li class="letter letter-box__letter">
                 <label for="apple-page__hider">
                     <ul class="letter__line cursor">
                         <li class="check"><label>
-                            <input class="check__input" type="checkbox" >
+                            <input class="check__input" type="checkbox">
                             <span class="check__box"></span>
                         </label></li>
-                        <li class="author">
-                            <img class="author__logo" src="images/logo-author-yandex.png" alt="Я">
+                        <li class="letter__author">
+                            <img class="letter__author_has-logo" src="images/ya-default.svg" alt="Я">
                         </li>
-                        <li class="author-name letter__line_not-read">Яндекс.Паспорт</li>
-                        <li class="read-mark read-mark_not-read"></li>
-                        <li class="topic letter__line_not-read">
+                        <li class="letter__author-name letter__line_unread">Яндекс.Паспорт</li>
+                        <li class="letter__read-mark letter__read-mark_unread"></li>
+                        <li class="letter__topic letter__line_unread">
                             Меню сверху тоже скалируется
                         </li>
-                        <li class="date">6 авг</li>
+                        <li class="letter__date">6 авг</li>
                     </ul>
                 </label>
                 <hr class="letter-box__hr">
             </li>
 
-            <li class="letter">
+            <li class="letter letter-box__letter">
                 <ul class="letter__line">
                     <li class="check"><label>
                         <input class="check__input" type="checkbox">
                         <span class="check__box"></span>
                     </label></li>
-                    <li class="author"><img class="author__logo" src="images/logo-author-yandex.png" alt="Я">
+                    <li class="letter__author"><img class="letter__author_has-logo" src="images/ya-default.svg" alt="Я">
                     </li>
-                    <li class="author-name letter__line_not-read">Команда Яндекс.Почтыы</li>
-                    <li class="read-mark read-mark_not-read"></li>
-                    <li class="topic letter__line_not-read">
+                    <li class="letter__author-name letter__line_unread">Команда Яндекс.Почтыы</li>
+                    <li class="letter__read-mark letter__read-mark_unread"></li>
+                    <li class="letter__topic letter__line_unread">
                         Яблоко — плод яблони, который употребляется в пищу в свежем виде, служит сырьём в кулинарии и
                         для
                         приготовления напитков. Яблоня - род листопадных деревьев и кустарников семейства розоцветных с
@@ -130,49 +132,47 @@
                         самым
                         излюбленным деревом.
                     </li>
-                    <li class="date">6 июл</li>
+                    <li class="letter__date">6 июл</li>
                 </ul>
                 <hr class="letter-box__hr">
             </li>
 
-            <li class="letter">
+            <li class="letter letter-box__letter">
                 <ul class="letter__line">
                     <li class="check"><label>
                         <input class="check__input" type="checkbox">
                         <span class="check__box"></span>
                     </label></li>
-                    <li class="author"><img class="author__logo" src="images/logo-author-yandex.png" alt="Я">
+                    <li class="letter__author"><img class="letter__author_has-logo" src="images/ya-default.svg" alt="Я">
                     </li>
-                    <li class="author-name">Команда Яндекс.Почты</li>
-                    <li class="read-mark"></li>
-                    <li class="topic">Как читать почту с мобильного с кастомными чекбоксами</li>
-                    <li class="date">6 июл</li>
+                    <li class="letter__author-name">Команда Яндекс.Почты</li>
+                    <li class="letter__read-mark"></li>
+                    <li class="letter__topic">Как читать почту с мобильного с кастомными чекбоксами</li>
+                    <li class="letter__date">6 июл</li>
                 </ul>
                 <hr class="letter-box__hr">
             </li>
 
-            <li class="letter">
+            <li class="letter letter-box__letter">
                 <ul class="letter__line">
                     <li class="check"><label>
                         <input class="check__input" type="checkbox">
                         <span class="check__box"></span>
                     </label></li>
-                    <li class="author"><img class="author__logo" src="images/logo-author-yandex.png" alt="Я">
+                    <li class="letter__author"><img class="letter__author_has-logo" src="images/ya-default.svg" alt="Я">
                     </li>
-                    <li class="author-name">Яндекс</li>
-                    <li class="read-mark"></li>
-                    <li class="topic">Можно добавить письма и ничего не сломается! (скорей всего)</li>
-                    <li class="date">31 июл</li>
+                    <li class="letter__author-name">Яндекс</li>
+                    <li class="letter__read-mark"></li>
+                    <li class="letter__topic">Можно добавить письма и ничего не сломается! (скорей всего)</li>
+                    <li class="letter__date">31 июл</li>
                 </ul>
                 <hr class="letter-box__hr">
             </li>
-
-            <div class="letters-after"></div>
         </ul>
 
-        <div class="letter-box__footer">
+        <div class="letter-box__support-line">
             <hr class="letter-box__hr">
-            <div class="letter-box__footer-info">
+            <div class="support-line">
                 <a href="https://yandex.ru/support/mail/">Помощь и обратная связь</a>
                 <a href="https://yandex.ru/adv/">Реклама</a>
                 <div>© 2001&mdash;2019, <a href="https://yandex.ru">Яндекс</a></div>
@@ -180,7 +180,6 @@
         </div>
     </div>
 </main>
-
 </body>
 <script src="js/functions.js"></script>
 </html>

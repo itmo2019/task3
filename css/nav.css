@@ -1,11 +1,13 @@
 .nav {
     font-family: "Helvetica Neue", sans-serif;
     width: 147px;
-    margin-bottom: 10px;
+}
+
+.main__nav > * {
+    white-space: normal;
 }
 
 .nav > * {
-    white-space: normal;
     word-wrap: break-word;
 }
 
@@ -29,7 +31,6 @@
 
 .nav__list {
     margin-top: 8px;
-    width: 100%;
 }
 
 .nav__list > li {
