@@ -33,7 +33,7 @@ function deleteMessage() {
     message.className += " delete-message";
     setTimeout( function() {
         message.remove();
-    }, 1000);
+    }, 500);
 }
 
 let composeButton = document.getElementById("compose-button");
