@@ -369,7 +369,7 @@ body {
     height: 180px;
 }
 
-.first-message-label:hover {
+#first-message-label:hover {
     cursor: pointer;
 }
 

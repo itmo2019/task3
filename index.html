@@ -46,9 +46,9 @@
         <div class="messages-block">
 
             <div class="messages-block-header">
-                <input type="checkbox" class="checkbox" id="check-all">
+                <input type="checkbox" class="checkbox" id="check-all" onclick="selectAll(this)">
                 <div class="messages-block-header__action">Переслать</div>
-                <div class="messages-block-header__action">Удалить</div>
+                <div class="messages-block-header__action" id="delete-messages" onclick="deleteSelectedMessages()">Удалить</div>
                 <div class="messages-block-header__action">Это спам!</div>
                 <div class="messages-block-header__action">Прочитано</div>
             </div>
@@ -81,10 +81,10 @@
             </div>
 
             <div class="messages-list">
-                <label for="show-first-message" class="first-message-label">
-                    <div class="message">
+                <label for="show-first-message" id="first-message-label">
+                    <div class="message labeled-message">
                         <div class="message-info__left-part">
-                            <input type="checkbox" class="select-message-checkbox checkbox">
+                            <input type="checkbox" class="select-message-checkbox checkbox" onclick="selectCheckbox(this)">
                             <div class="sender-logo">АК</div>
                             <div class="sender bold">Антон Копица</div>
                             <div class="mark unread-mark"></div>
@@ -98,7 +98,7 @@
 
                 <div class="message">
                     <div class="message-info__left-part">
-                        <input type="checkbox" class="select-message-checkbox checkbox">
+                        <input type="checkbox" class="select-message-checkbox checkbox" onclick="selectCheckbox(this)">
                         <div class="sender-logo">Я</div>
                         <div class="sender bold">Команда Яндекс.Почты</div>
                         <div class="mark unread-mark"></div>
@@ -111,7 +111,7 @@
 
                 <div class="message">
                     <div class="message-info__left-part">
-                        <input type="checkbox" class="select-message-checkbox checkbox">
+                        <input type="checkbox" class="select-message-checkbox checkbox" onclick="selectCheckbox(this)">
                         <div class="sender-logo">Я</div>
                         <div class="sender">Команда Яндекс.Почты</div>
                         <div class="mark read-mark"></div>
@@ -124,7 +124,7 @@
 
                 <div class="message">
                     <div class="message-info__left-part">
-                        <input type="checkbox" class="select-message-checkbox checkbox">
+                        <input type="checkbox" class="select-message-checkbox checkbox" onclick="selectCheckbox(this)">
                         <div class="sender-logo">Я</div>
                         <div class="sender">Яндекс</div>
                         <div class="mark read-mark"></div>
