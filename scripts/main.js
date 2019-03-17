@@ -1,7 +1,8 @@
 const ENABLED_DEBUG             = true // switch this off for anything execpt for debug
 
-const ID_FETCH_INBOX            = 'fetch-inbox'
-const ID_DELETE_SELECTED_EMAILS = 'delete-selected-mails'
+const ID_FETCH_INBOX                = 'fetch-inbox'
+const ID_DELETE_SELECTED_EMAILS     = 'delete-selected-mails'
+const ID_SELECT_ALL_EMAILS_CHECKBOX = 'select-all-emails-checkbox'
 
 const CLASS_EMAILS_CONTAINER = 'mail-emails'
 const CLASS_EMAIL_CHECKBOX   = 'email__mailscreen-checkbox'
@@ -11,11 +12,15 @@ const ANIMATION_BOUNCE_OUT_RIGHT_CLASS = 'bounceOutRight'
 
 const EMAIL_ID_PREFIX = '__msg'
 
-let fetchInboxButton = null
-let deleteSelectedEmailsButton = null
-
 function LOG() {
   [...arguments].forEach((a) => console.log(a))
+}
+
+const resetSelectAllEmailsCheckbox = () => {
+  const selectAllEmailsCheckbox = document.getElementById(ID_SELECT_ALL_EMAILS_CHECKBOX)
+  if (selectAllEmailsCheckbox !== null) {
+    selectAllEmailsCheckbox.checked = false
+  }
 }
 
 const getEmailIdByNum = (num /*: number */) => {
@@ -84,17 +89,29 @@ const stringToNode = (s /*: string */) => {
 
 const fetchInboxClickHandler = (event /*: any*/) => {
   LOG('fetchInbox button has been clicked', event)
-  
+
   const newMessageId   = getMaximalExistingMessageId() + 1
-  const newMessage     = composeNewMessage(newMessageId)
-  const newMessageNode = stringToNode(newMessage)
+  const newMessageHTML = composeNewMessage(newMessageId)
+  const newMessageNode = stringToNode(newMessageHTML)
   
   const emailsContainer = getFirstByClass(CLASS_EMAILS_CONTAINER)
   emailsContainer.insertBefore(newMessageNode, emailsContainer.firstChild)
-  
+
+  resetSelectAllEmailsCheckbox()
+
   setTimeout(() => {
     document.getElementById(getEmailIdByNum(newMessageId)).classList.remove(ANIMATION_BOUNCE_IN_CLASS)
   }, 600)
+}
+
+const selectAllEmailsCheckboxClickHandler = (event /*: any*/) => {
+  LOG('selectAllEmailsCheckbox has been changed', event)
+  
+  const updateChecked = (checkbox) => {
+    checkbox.checked = event.target.checked
+  }
+  
+  [...getAllEmailsSelectCheckboxes()].map(updateChecked)
 }
 
 const getSelectedEmails = () => {
@@ -128,11 +145,14 @@ const deleteSelectedEmailsClickHandler = (event /*: any*/) => {
       }, 900)
     }
   }
+
+  setTimeout(resetSelectAllEmailsCheckbox, 800)
 }
 
 const initListeners = () => {
-  fetchInboxButton = document.getElementById(ID_FETCH_INBOX)
-  deleteSelectedEmailsButton = document.getElementById(ID_DELETE_SELECTED_EMAILS)
+  const fetchInboxButton = document.getElementById(ID_FETCH_INBOX)
+  const deleteSelectedEmailsButton = document.getElementById(ID_DELETE_SELECTED_EMAILS)
+  const selectAllEmailsCheckbox = document.getElementById(ID_SELECT_ALL_EMAILS_CHECKBOX)
   
   if (fetchInboxButton !== null) {
     LOG('fetchInboxButton has been successfully assigned a click listener')
@@ -142,6 +162,11 @@ const initListeners = () => {
   if (deleteSelectedEmailsButton !== null) {
     LOG('deleteSelectedEmailsButton has been successfully assigned a click listener')
     deleteSelectedEmailsButton.addEventListener('click', deleteSelectedEmailsClickHandler, false)
+  }
+
+  if (selectAllEmailsCheckbox !== null) {
+    LOG('selectAllEmailsCheckbox has been successfully assigned a click listener')
+    selectAllEmailsCheckbox.addEventListener('click', selectAllEmailsCheckboxClickHandler, false)
   }
 }
 
