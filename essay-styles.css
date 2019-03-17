@@ -1,0 +1,108 @@
+.essay {
+	font: 20px Arial, sans-serif;
+	margin-left: 20px;
+	margin-right: 20px;
+	line-height: 1.5;
+}
+
+.essay__title {
+	text-align: center;
+	margin: 10px 0px 60px 0px;
+	color: #666;
+}
+
+.birds-img-container__figcaption {
+	text-align: center;
+	font-size: 15px;
+}
+
+.birds-img-container__img {
+	border-radius: 2%;
+}
+
+.essay__article p::first-letter {
+	color: red;
+}
+
+.birds-img-container {
+	float: right;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 5px;
+	background: #eee;
+	width: 300px;
+	box-shadow: 0 0 10px #333;
+}
+
+.essay-list__item {
+	padding: 10px;
+	max-width: 500px;
+}
+
+.essay-list__item:nth-child(2n) {
+	color: #777;
+}
+
+.essay-list__item:hover {
+	background-color: #eee;
+	box-shadow: 0px 0px 0px 2px white inset;
+}
+
+.ascii-art-container {
+	text-align: center;
+}
+
+.ascii-art-container__pre {
+	display: inline-block;
+	color: blue;
+}
+
+.footer__changed {
+	float: right;
+	margin: 0px;
+}
+
+.contacts__property {
+	color: #888;
+	font-family: "Courier New", Courier, monospace;
+}
+
+.contacts__address {
+	font-style: inherit;
+}
+
+.essay__cite {
+	font-family: Courier New;
+}
+
+.essay__footer {
+	margin-bottom: 30px;
+}
+
+.essay__hr {
+	background-color: #ddd;
+	color: #ddd;
+	height: 1px;
+	border: none;
+}
+
+.changed__time {
+	color: #555;
+}
+
+.essay__link:visited {
+	color: green;
+}
+
+.essay__link:hover {
+	color: #5ab;
+}
+
+.essay__link:active {
+	color: #abc;
+}
+
+.essay__pacman-image {
+	float: left;
+	shape-outside: polygon(90% 5%, 100% 18%, 62% 49%, 100% 85%, 73% 100%, 31% 96%, 0 70%, 0 26%, 36% 0, 66% 0);
+}
