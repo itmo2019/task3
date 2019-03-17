@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title> Яндекс Почта </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+  <header id="main-header">
+    <a href="#popup-menu" class="box-popup-menu"> </a>
+    <img src="images/logo.png" class="logo-picture">
+
+    <input class="search-line" type="search" placeholder="Поиск">
+  </header>
+
+  <div class="menu-zone">
+
+    <button id="create-message-button" type="button" name="create-message-button"> Написать </button>
+
+    <ul class="folders-list">
+      <li> Входящие </li>
+      <li> Отправленные </li>
+      <li> Удаленные </li>
+      <li> Спам </li>
+      <li> Черновики </li>
+      <li> Создать папку </li>
+    </ul>
+
+    <button type="button" id="add-message-button" name="add-message-button"> Получить сообщение </button>
+
+  </div>
+
+  <div class="mail-box">
+
+    <div id="mail-box-action-list">
+      <input id="select-all" type="checkbox" style="width: 16px; height: 16px">
+      <ul class="mail-box-actions">
+        <li id="resend">Переслать</li>
+        <li id="delete">Удалить</li>
+        <li id="strike">Это спам!</li>
+        <li id="mark-as-read">Прочитано</li>
+      </ul>
+    </div>
+
+    <input type="checkbox" id="open-message1" role="button">
+
+    <section id="messages-section">
+
+      <label for="open-message1" onclick="">
+        <div class="message-item">
+          <input id="select-message1" type="checkbox" class="checkbox">
+          <span class="circle"> <img src="images/message-company-logo.png"> </span>
+          <p class="unread-message-preview"> Яндекс.Паспорт </p>
+          <span class="unread-circle"> </span>
+          <p class="unread-message-content"> Доступ к аккаунту восстановлен </p>
+          <time datetime="2019-08-06" class="message-time">6 авг</time>
+        </div>
+      </label>
+
+      <div class="message-item">
+        <input id="select-message2" type="checkbox" class="checkbox">
+        <span class="circle"> <img src="images/message-company-logo.png"> </span>
+        <p class="unread-message-preview"> Команда Яндекс.Почты </p>
+        <span class="unread-circle"> </span>
+        <p class="unread-message-content"> Как читать почту с мобильного </p>
+        <time datetime="2019-08-06" class="message-time">6 авг</time>
+      </div>
+
+      <div class="message-item">
+        <input id="select-message3" type="checkbox" class="checkbox">
+        <span class="circle" style="background: blue"> JB </span>
+        <p class="read-message-preview"> Команда Яндекс.Почты </p>
+        <p class="read-message-content"> Как читать почту с мобильного </p>
+        <time datetime="2019-08-06" class="message-time">6 авг</time>
+      </div>
+
+      <div class="message-item">
+        <input id="select-message4" type="checkbox" class="checkbox">
+        <span class="circle"> <img src="images/message-company-logo.png"> </span>
+        <p class="read-message-preview"> Яндекс </p>
+        <p class="read-message-content"> Соберите всю почту в один ящик </p>
+        <time datetime="2019-08-06" class="message-time">6 авг</time>
+      </div>
+
+      <!-- to allow increasing in height without overlapping with footer -->
+      <div style="height: 50px"> </div>
+      
+    </section>
+
+    <div class="essay">
+      <label for="open-message1" onclick="">
+        <div id="cross">X</div>
+      </label>
+      <iframe src="essay.html"></iframe>
+    </div>
+
+    <footer class="footer-class">
+      <nav>
+        <a href="">Помощь и обратная связь</a>
+        <a href="">Реклама</a>
+      </nav>
+      <span>
+        © 2001&mdash;2019, Яндекс
+      </span>
+    </footer>
+
+  </div>
+
+  <script src="scripts/task.js" type="text/javascript"></script>
+</body>
