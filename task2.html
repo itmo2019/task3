@@ -9,14 +9,28 @@
 <script>
     function deleteSelectedChecks() {
         var checks = document.querySelectorAll(".checkbox");
-        for(var i = 0; i < checks.length;i++) {
-            if(checks[i].checked) {
-                var checkParent = checks[i];
-                while(!checkParent.classList.contains("message-box__list")) {
-                    checkParent = checkParent.parentNode;
+        if(checks[0].checked) {
+            deleteAll(checks)
+            checks[0].checked = false;
+        } else {
+            for(var i = 1; i < checks.length;i++) {
+                if(checks[i].checked) {
+                    var checkParent = checks[i];
+                    while(!checkParent.classList.contains("message-box__list")) {
+                        checkParent = checkParent.parentNode;
+                    }
+                    checkParent.remove();
                 }
-                checkParent.remove();
             }
+        }
+    }
+    function deleteAll(checks) {
+        for(var i = 1; i < checks.length;i++) {
+            var checkParent = checks[i];
+            while(!checkParent.classList.contains("message-box__list")) {
+                checkParent = checkParent.parentNode;
+            }
+            checkParent.remove();
         }
     }
 
