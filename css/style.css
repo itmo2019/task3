@@ -51,9 +51,9 @@ body {
     color: #9b9b9b; 
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1500px) {
     .wrapper {
-        width: 1400px;
+        max-width: 1600px;
         margin: 0 auto;
     }
     

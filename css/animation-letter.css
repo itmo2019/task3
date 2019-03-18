@@ -1,5 +1,6 @@
 .animation-letter {
     animation: appearance 0.5s cubic-bezier(0.1,0.25,0,1) 0s 2 alternate both;
+    
 }
 
 @keyframes appearance{

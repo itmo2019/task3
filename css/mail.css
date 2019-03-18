@@ -1,3 +1,14 @@
+.mail {
+    overflow: scroll;
+    height: calc(100vh - 169px);
+}
+
+.mail__conatainer {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100%;
+}
+
 .mail__message {
     border-bottom: 2px solid #e2e2e2;
     padding-top: 13px;
