@@ -30,14 +30,14 @@ body {
 .header__pic-yandex {
     box-sizing: border-box;
     margin-top: 1px;
-    vertical-align: top;    
+    vertical-align: top;
     margin-left: 11px;
 }
 
 .header__menu {
     box-sizing: border-box;
     margin-top: 8px;
-    display: inline-block;  
+    display: inline-block;
     margin-left: 22px;
     vertical-align: top;
 }
@@ -160,6 +160,7 @@ li {
 
 .block-inner__links {
     color: #ccc;
+    cursor: pointer;
 }
 
 .block-inner__letters {
@@ -170,7 +171,6 @@ li {
     display: inline;
     white-space: nowrap;
     box-sizing: border-box;
-    
 }
 
 .block-inner__ul {
@@ -213,7 +213,7 @@ li {
 
 .block-inner__date-msg {
     vertical-align: top;
-    font-family: HelveticaNeue; 
+    font-family: HelveticaNeue;
     position: absolute;
     font-size: 13px;
     margin-top: 13px;
@@ -253,7 +253,7 @@ li {
     font-size: 13px;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;    
+    text-overflow: ellipsis;
 }
 
 .block-inner__resend {
@@ -292,11 +292,11 @@ li {
     box-sizing: border-box;
     text-align: right;
     position: absolute;
-    bottom: 0; 
+    bottom: 0;
     left: 0;
     right: 0;
     border-top: solid 1px #e2e2e2;
-    width: 100%;   
+    width: 100%;
     height: 30.5px;
     padding: 8.5px 20px 0 0;
 }
@@ -319,7 +319,7 @@ li {
     shape-outside: circle();
 }
 
-#block-inner__choose:checked + .block-inner__mail {
+#block-inner__choose:checked+.block-inner__mail {
     display: inline-block;
     margin-left: -42px;
 }
@@ -362,4 +362,60 @@ li {
 
 .block-inner__mark-unread {
     background-color: #6287bd;
+}
+
+.msg-added {
+    animation: add-msg 1s ease;
+}
+
+.msg-deleted-right {
+    animation: del-msg-right 2s ease forwards;
+}
+
+.msg-deleted-left {
+    animation: del-msg-left 2s ease forwards;
+}
+
+@keyframes add-msg {
+    from {
+        opacity: 0;
+        height: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 0.9;
+        height: 38.5px;
+    }
+}
+
+@keyframes del-msg-right {
+    from {
+        opacity: 1;
+    }
+    75% {
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 0;
+        height: 0;
+        transform: translateX(100%);
+        border: 0;
+    }
+}
+
+@keyframes del-msg-left {
+    from {
+        opacity: 1;
+    }
+    75% {
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 0;
+        height: 0;
+        transform: translateX(-100%);
+        border: 0;
+    }
 }
