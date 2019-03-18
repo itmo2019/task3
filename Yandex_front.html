@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Mail Yandex</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="animation.js" async></script>
+</head>
+<body>
+<header>
+    <div class="header_Yandex">
+        <img src="Yandex_logo.jpg" alt="logo">
+    </div>
+    <div class="search_rectangle">
+        <div class="search">Поиск</div>
+        <div class="remove">x</div>
+    </div>
+</header>
+<main>
+    <div class="menu">
+        <div class="write">Написать</div>
+        <div class="folders">
+            <div class="chosen">Входящие</div>
+            <div class="not_chosen">Отправленные</div>
+            <div class="not_chosen">Удалённые</div>
+            <div class="not_chosen">Спам</div>
+            <div class="not_chosen">Черновики</div>
+            <div class="not_chosen">Создать папку</div>
+        </div>
+    </div>
+
+    <div class="mail_rectangle">
+        <div class="options">
+            <div class="check_mark"></div>
+            <div class="action">Переслать</div>
+            <div class="action" id="remove">Удалить</div>
+            <div class="action">Это спам</div>
+            <div class="action">Прочитано</div>
+            <div class="action" id="create">Получить новое сообщение</div>
+        </div>
+        <div class="divider"></div>
+        <a id="all_mails"></a>
+        <a id="a1"></a>
+        <div class="tab mails default-tab" id="mails">
+            <div class="mail_with_divider  new_mail" id="mail5">
+                <div class="mail" id="content5">
+                    <div class="check_mark" id="check_mark5"></div>
+                    <div class="logo">Т</div>
+                    <div class="from_unread">Татьяна Ларина</div>
+                    <div class="unread_mark"></div>
+                    <div class="date">8 фев</div>
+                    <div class="message_unread">Я к вам пришу - чего же боле? Что я могу ещё сказать?</div>
+                </div>
+                <div class="divider"></div>
+            </div>
+            <a href="#a1" class="clicker">
+                <div class="mail_with_divider" id="mail4">
+                    <div class="mail" id="content4">
+                        <div class="check_mark" id="check_mark4"></div>
+                        <div class="logo">Я</div>
+                        <div class="from_unread">Яндекс.Паспорт.Длинное название</div>
+                        <div class="unread_mark"></div>
+                        <div class="date">6 авг</div>
+                        <div class="message_unread">Доступ к аккаунту восстановлен</div>
+                    </div>
+                    <div class="divider"></div>
+                </div>
+            </a>
+            <div class="mail_with_divider" id="mail3">
+                <div class="mail" id="content3">
+                    <div class="check_mark" id="check_mark3"></div>
+                    <div class="logo">Я</div>
+                    <div class="from_unread">Команда Яндекс.Почты</div>
+                    <div class="unread_mark"></div>
+                    <div class="date">6 июл</div>
+                    <div class="message_unread">Как читать почту с мобильного. И допустим дальше очень длинное название которое не должно влезть</div>
+                </div>
+                <div class="divider"></div>
+            </div>
+            <div class="mail_with_divider" id="mail2">
+                <div class="mail" id="content2">
+                    <div class="check_mark" id="check_mark2"></div>
+                    <div class="logo">Я</div>
+                    <div class="from_read">Команда Яндекс.Почты</div>
+                    <div class="read_mark"></div>
+                    <div class="date">6 июл</div>
+                    <div class="message_read">Как читать почту с мобильного</div>
+                </div>
+                <div class="divider"></div>
+            </div>
+            <div class="mail_with_divider" id="mail1">
+                <div class="mail" id="content1">
+                    <div class="check_mark" id="check_mark1"></div>
+                    <div class="logo">Я</div>
+                    <div class="from_read">Яндекс</div>
+                    <div class="read_mark"></div>
+                    <div class="message_read">Соберите всю почту в этот ящик</div>
+                    <div class="date">6 июл</div>
+                </div>
+                <div class="divider"></div>
+            </div>
+        </div>
+
+        <div class="tab after_click">
+            <table>
+                <a href="#all_mails" class="close">X</a>
+                <h3>Тюлень</h3>
+                <div class="picture-container">
+                    <img src="sticker.png" alt="img">
+                </div>
+                <p>Тюле́ни — общее название двух семейств млекопитающих, полифилетическая группа, ранее относимая вместе с моржовыми (Odobenidae) в отдельный отряд ластоногих (Pinnipedia), который по современным представлениям считается устаревшим и исключён из систематики.
+                    Тюленями называют представителей семейств ушастых тюленей (Otariidae) и настоящих тюленей (Phocidae). У обеих групп обе пары конечностей преобразованы в ласты, вооружённые когтями; задние ласты направлены назад. Ушастые тюлени, вероятно, произошли от примитивных медведеобразных, настоящие — по-видимому, от примитивных куньих. У настоящих тюленей нет ушных раковин; задние ласты служат для передвижения в воде. У ушастых тюленей для передвижения в воде служат передние конечности, а задние в воде служат рулями, а на суше подгибаются вперёд и поддерживают массивное тело. Насчитывается около 20 видов из 12 родов.
+                    Распространены широко; особенно многочисленны в приполярных широтах. Большинство видов образует на льдах залёжки (на период размножения и линьки). Беременность, как правило, длится около года.
+                </p>
+            </table>
+        </div>
+        <div class="footer">
+            <div class="divider"></div>
+            <div class="help_data">
+                <div class="item">Помощь и обратная связь</div>
+                <div class="item">Реклама</div>
+                <div class="item">© 2001—2018, Яндекс</div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
