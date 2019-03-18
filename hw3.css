@@ -355,9 +355,9 @@ li {
     vertical-align: top;
     display: inline-block;
     margin-top: 14px;
-    width: 13px;
-    height: 13px;
-    border-radius: 13px;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
 }
 
 .block-inner__mark-unread {
