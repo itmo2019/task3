@@ -21,8 +21,12 @@
     vertical-align: initial;
 }
 
-.letter__line_unread {
+.letter_unread {
     font-weight: 700;
+}
+
+.letter__line > li:last-child {
+    font-weight: initial;
 }
 
 .letter__author {

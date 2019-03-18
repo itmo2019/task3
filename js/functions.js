@@ -1,12 +1,16 @@
-let defaultLetter = '<ul class="letter__line"><li class="check">' +
-    '<label><input class="check__input" type="checkbox">' +
-    '<span class="check__box"></span></label></li>\n' +
-    '<li class="letter__author"><img class="letter__author_has-logo" src="images/ya-default.svg" alt="Я"></li>\n' +
-    '<li class="letter__author-name letter__line_unread ">Яндекс Мемер №</li>\n' +
-    '<li class="letter__read-mark letter__read-mark_unread"></li>\n' +
-    '<li class="letter__topic letter__line_unread">Свежий мем из Яндекса! Успей орнуть первым.</li>\n' +
-    '<li class="letter__date">16 фев</li></ul>' +
-    '<hr class="letter-box__hr">';
+let defaultLetter =
+    `<ul class="letter__line">
+        <li class="check">
+            <label><input class="check__input" type="checkbox">
+            <span class="check__box"></span>
+        </label></li>
+        <li class="letter__author"><img class="letter__author_has-logo" src="images/ya-default.svg" alt="Я"></li>
+        <li class="letter__author-name">Яндекс Мемер №</li>
+        <li class="letter__read-mark letter__read-mark_unread"></li>
+        <li class="letter__topic">Свежий мем из Яндекса! Успей орнуть первым.</li>
+        <li class="letter__date">16 фев</li>
+     </ul>
+     <hr class="letter-box__hr">`;
 
 let memerId = 0;
 
@@ -26,7 +30,7 @@ function _selectMain(checkbox) {
 }
 
 function selectLetter(event) {
-    if (event.target.className !== 'check__input') return;
+    if (!event.target.matches('.check__input')) return;
     _selectMain(event.target);
 }
 
@@ -38,16 +42,17 @@ function _updateLetter(letter) {
 function addLetter() {
     let letters = document.getElementById('letter-box__letters');
     let newLetter = document.createElement('li');
-    newLetter.className = 'letter letter-box__letter';
+    newLetter.className = 'letter letter-box__letter letter_unread';
     newLetter.innerHTML = defaultLetter;
     _updateLetter(newLetter);
     letters.insertBefore(newLetter, letters.firstChild);
+    document.body.querySelector('.check__input').checked = false;
 
     newLetter.style.height = '0';
     newLetter.style.top = '-42px';
     let fps = 1000 / 42;
     animate(
-        function (timePassed) {
+        (timePassed) => {
             var shift = (timePassed / fps);
             newLetter.style.height = shift + 'px';
             newLetter.style.top = (-42 + shift) + 'px';
@@ -60,11 +65,7 @@ function _doActionWithLetters(action) {
     let checkboxes = document.body.querySelectorAll('.check__input');
     for (var i = 1; i < checkboxes.length; i++) {
         if (checkboxes[i].checked) {
-            var letter = checkboxes[i];
-            while (!letter.classList.contains('letter')) {
-                letter = letter.parentElement;
-            }
-            action(letter);
+            action(checkboxes[i].closest('.letter'));
         }
     }
 }
@@ -77,13 +78,13 @@ function _removeAnimateLetter(letter) {
     let fps = 1000 / 42;
     letter.style.zIndex = '0';
     animate(
-        function (timePassed) {
+        timePassed => {
             var shift = (timePassed / fps);
             letter.style.height = (42 - shift) + 'px';
             letter.style.top = -shift + 'px';
         },
         1000,
-        function () {
+        () => {
             _removeLetter(letter);
         }
     );
@@ -116,7 +117,7 @@ function _removeClass(letter, className) {
 }
 
 function _markReadLetter(letter) {
-    _removeClass(letter, 'letter__line_unread');
+    letter.classList.remove('letter_unread');
     _removeClass(letter, 'letter__read-mark_unread');
 }
 

@@ -39,15 +39,24 @@
     right: 0;
 }
 
+.letter-box__apple-page {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
 .letter-box__apple-page-content {
     display: none;
     position: fixed !important;
-    top: 94px;
-    bottom: 39px;
+    z-index: 50;
     left: 187px;
     right: 20px;
-    z-index: 50;
+    top: 94px;
+    bottom: 39px;
     width: auto !important;
     height: auto !important;
+    min-width: 700px;
+    min-height: 285px;
     white-space: normal;
 }
