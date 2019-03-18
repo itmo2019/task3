@@ -32,7 +32,7 @@ function removeLetters() {
 }
 
 function buildLetter() {
-    return tg("div", "mail unread", () => {
+    return tg("div", "letters_mail unread", () => {
         createYaCheckbox();
         createUserAvatar();
         createSender();
@@ -42,18 +42,18 @@ function buildLetter() {
 }
 
 function createTitle() {
-    children.push(tg("input", "read-mark", () => {
+    children.push(tg("input", "letters__mail_read-mark", () => {
         ctx.setAttribute("type", "checkbox");
     }));
-    children.push(tg("span", "message-title", () => "Ваша выписка готова"));
+    children.push(tg("span", "letters__mail_message-title", () => "Ваша выписка готова"));
 }
 
 function createSender() {
-    children.push(tg("span", "sender", () => "Росреестр"));
+    children.push(tg("span", "letters__mail_sender", () => "Росреестр"));
 }
 
 function createReceiveTime() {
-    children.push(tg("span", "receive-time", () => "18 мрт"));
+    children.push(tg("span", "letters__mail_receive-time", () => "18 мрт"));
 }
 
 function createYaCheckbox() {
@@ -63,7 +63,7 @@ function createYaCheckbox() {
 }
 
 function createUserAvatar() {
-    children.push(tg("img", "user-avatar", () => {
+    children.push(tg("img", "letters__mail_user-avatar", () => {
         ctx.setAttribute("src", "img/ya-default.svg");
     }));
 }

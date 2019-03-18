@@ -11,20 +11,20 @@
 <div class="main-layout">
     <header>
         <div id="ya-services">
-            <div class="rectangle"></div>
-            <div class="rectangle"></div>
-            <div class="rectangle"></div>
+            <div class="ya-services__logo-item"></div>
+            <div class="ya-services__logo-item"></div>
+            <div class="ya-services__logo-item"></div>
         </div>
         <div class="mail-logo"></div>
-        <div class="search-block">
-            <input id="ya-search" type="text" placeholder="Поиск">
-            <i class="clear-button">&times;</i>
+        <div class="ya-search">
+            <input id="ya-search__input" type="text" placeholder="Поиск">
+            <i class="ya-search__clear-button">&times;</i>
         </div>
     </header>
     <div class="main-container">
         <div id="actions-bar">
+            <button class="ya-big-button" onclick="sendLetter()">Написать</button>
             <ul id="nav-bar">
-                <button class="ya-big-button" onclick="sendLetter()">Написать</button>
                 <li><a class="ya-link" href="index.html">Входящие</a></li>
                 <li><a class="ya-link" href="index.html">Отправленные</a></li>
                 <li><a class="ya-link" href="index.html">Удаленные</a></li>
@@ -34,61 +34,61 @@
             </ul>
         </div>
         <div id="mails">
-            <div id="mail-actions">
+            <div id="mails__actions">
                 <input id="select-all" class="ya-checkbox" type="checkbox">
-                <div class="action"><a class="ya-link" href="index.html">Переслать</a></div>
-                <div class="action"><a class="ya-link" href="#" onclick="removeLetters()">Удалить</a></div>
-                <div class="action"><a class="ya-link" href="index.html">Это спам!</a></div>
-                <div class="action"><a class="ya-link" href="index.html">Прочитано</a></div>
+                <div class="mail__action"><a class="ya-link" href="index.html">Переслать</a></div>
+                <div class="mail__action"><a class="ya-link" href="#" onclick="removeLetters()">Удалить</a></div>
+                <div class="mail__action"><a class="ya-link" href="index.html">Это спам!</a></div>
+                <div class="mail__action"><a class="ya-link" href="index.html">Прочитано</a></div>
             </div>
             <div id="letters">
-                <div class="mail unread">
+                <div class="letters_mail unread">
                     <input class="ya-checkbox" type="checkbox">
-                    <img class="user-avatar" src="img/ya-default.svg">
-                    <span class="sender">Яндекс.Паспорт</span>
-                    <input type="checkbox" class="read-mark">
-                    <span class="message-title">Доступ к аккаунту восстановлен</span>
-                    <span class="receive-time">6 авг</span>
+                    <img class="letters__mail_user-avatar" src="img/ya-default.svg">
+                    <span class="letters__mail_sender">Яндекс.Паспорт</span>
+                    <input class="letters__mail_read-mark" type="checkbox" >
+                    <span class="letters__mail_message-title">Доступ к аккаунту восстановлен</span>
+                    <span class="letters__mail_receive-time">6 авг</span>
                     </input>
                 </div>
-                <div class="mail unread">
+                <div class="letters_mail unread">
                     <input class="ya-checkbox" type="checkbox">
-                    <img class="user-avatar" src="img/ya-default.svg">
-                    <span class="sender">Команда Яндекс.Почты</span>
-                    <input type="checkbox" class="read-mark">
-                    <span class="message-title">Как читать почту с мобильного</span>
-                    <span class="receive-time">6 июл</span>
+                    <img class="letters__mail_user-avatar" src="img/ya-default.svg">
+                    <span class="letters__mail_sender">Команда Яндекс.Почты</span>
+                    <input class="letters__mail_read-mark" type="checkbox" >
+                    <span class="letters__mail_message-title">Как читать почту с мобильного</span>
+                    <span class="letters__mail_receive-time">6 июл</span>
                 </div>
-                <div class="mail">
+                <div class="letters_mail">
                     <input class="ya-checkbox" type="checkbox">
-                    <img class="user-avatar" src="img/ya-default.svg">
-                    <span class="sender">Команда Яндекс.Почты</span>
-                    <input type="checkbox" class="read-mark">
-                    <span class="message-title">Как читать почту с мобильного</span>
-                    <span class="receive-time">6 июн</span>
+                    <img class="letters__mail_user-avatar" src="img/ya-default.svg">
+                    <span class="letters__mail_sender">Команда Яндекс.Почты</span>
+                    <input class="letters__mail_read-mark" type="checkbox" >
+                    <span class="letters__mail_message-title">Как читать почту с мобильного</span>
+                    <span class="letters__mail_receive-time">6 июн</span>
                 </div>
-                <div class="mail">
+                <div class="letters_mail">
                     <input class="ya-checkbox" type="checkbox">
-                    <img class="user-avatar" src="img/ya-default.svg">
-                    <span class="sender">Яндекс</span>
-                    <input type="checkbox" class="read-mark">
-                    <span class="message-title">Соберите всю почту в этот ящик</span>
-                    <span class="receive-time">26 мар</span>
+                    <img class="letters__mail_user-avatar" src="img/ya-default.svg">
+                    <span class="letters__mail_sender">Яндекс</span>
+                    <input class="letters__mail_read-mark" type="checkbox">
+                    <span class="letters__mail_message-title">Соберите всю почту в этот ящик</span>
+                    <span class="letters__mail_receive-time">26 мар</span>
                 </div>
-                <div class="mail">
+                <div class="letters_mail">
                     <input class="ya-checkbox" type="checkbox">
-                    <img class="user-avatar" src="img/ya-default.svg">
-                    <span class="sender">Длиннной динович длинновинский</span>
-                    <input type="checkbox" class="read-mark">
-                    <span class="message-title">Съешь ещё этих мягких французскихбулок, да выпей чаю</span>
-                    <span class="receive-time">26 мар</span>
+                    <img class="letters__mail_user-avatar" src="img/ya-default.svg">
+                    <span class="letters__mail_sender">Длиннной динович длинновинский</span>
+                    <input type="checkbox" class="letters__mail_read-mark">
+                    <span class="letters__mail_message-title">Съешь ещё этих мягких французскихбулок, да выпей чаю</span>
+                    <span class="letters__mail_receive-time">26 мар</span>
                 </div>
             </div>
             <footer>
                 <nav class="credential">
-                    <a class="credential-el ya-link" href="">Помощь и обратная связь</a>
-                    <a class="credential-el ya-link" href="">Реклама</a>
-                    <a class="credential-el ya-link" href="">&copy 2001&mdash;2018, Яндекс</a>
+                    <a class="credential__item ya-link" href="">Помощь и обратная связь</a>
+                    <a class="credential__item ya-link" href="">Реклама</a>
+                    <a class="credential__item ya-link" href="">&copy 2001&mdash;2018, Яндекс</a>
                 </nav>
             </footer>
         </div>
