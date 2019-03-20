@@ -80,9 +80,9 @@
 
        <div class="list-of-letters workplace__list-of-letters">
            <div id="new-letter">
-               <label for="open-topic">
-                   <div class="unread-letter list-of-letters__unread-letter">
-                       <div class="unread-letter__marker"></div>
+               <label class="list-of-letters__label" for="open-topic">
+                   <div class="letter unread-letter list-of-letters__unread-letter">
+                       <input type="checkbox" class="unread-letter__marker"/>
                        <div class="unread-letter__sender">Шостина A.</div>
                        <div class="unread-letter__read-marker"></div>
                        <div class="unread-letter__title">Не котики</div>
@@ -90,43 +90,41 @@
                    </div>
                </label>
            </div>
-           <div id="del-letter">
-           <label for="open-topic">
-           <div class="unread-letter list-of-letters__unread-letter">
-               <div class="unread-letter__marker"></div>
-               <div class="unread-letter__sender">Шостина A.</div>
-               <div class="unread-letter__read-marker"></div>
-               <div class="unread-letter__title">Не котики</div>
-               <p class="unread-letter__date">6 авг</p>
-           </div>
-           </label>
-           </div>
-           <label>
-           <div class="unread-letter list-of-letters__unread-letter">
-               <div class="unread-letter__marker"></div>
-               <div class="sender-label unread-letter__sender-label">
-                   <img class="sender-label__src" width="30px" src="yandexCircle.jpg"/>
+           <label class="list-of-letters__label" for="open-topic">
+               <div class="letter unread-letter list-of-letters__unread-letter">
+                   <input type="checkbox" class="unread-letter__marker"></input>
+                   <div class="unread-letter__sender">Шостина A.</div>
+                   <div class="unread-letter__read-marker"></div>
+                   <div class="unread-letter__title">Не котики</div>
+                   <p class="unread-letter__date">6 авг</p>
                </div>
-               <div class="unread-letter__sender">Яндекс.Почта</div>
-               <div class="unread-letter__read-marker"></div>
-               <div class="unread-letter__title">Доступ к аккаунту восстановлен</div>
-               <p class="unread-letter__date">6 авг</p>
-           </div>
            </label>
-           <label>
-           <div class="letter list-of-letters__letter">
-               <div class="letter__marker"></div>
-               <div class="sender-label letter__sender-label">
-                   <img class="sender-label__src" width="30px" src="yandexCircle.jpg"/>
+           <label class="list-of-letters__label">
+               <div class="letter unread-letter list-of-letters__unread-letter">
+                   <input type="checkbox" class="unread-letter__marker"></input>
+                   <div class="sender-label unread-letter__sender-label">
+                       <img class="sender-label__src" width="30px" src="yandexCircle.jpg"/>
+                   </div>
+                   <div class="unread-letter__sender">Яндекс.Почта</div>
+                   <div class="unread-letter__read-marker"></div>
+                   <div class="unread-letter__title">Доступ к аккаунту восстановлен</div>
+                   <p class="unread-letter__date">6 авг</p>
                </div>
-               <div class="letter__sender">Команда Яндекс.Почты</div>
-               <div class="letter__title">Как читать почту с мобильного</div>
-               <p class="letter__date">6 авг</p>
-           </div>
            </label>
-           <label>
+           <label class="list-of-letters__label">
                <div class="letter list-of-letters__letter">
-                   <div class="letter__marker"></div>
+                   <input type="checkbox" class="letter__marker"></input>
+                   <div class="sender-label letter__sender-label">
+                       <img class="sender-label__src" width="30px" src="yandexCircle.jpg"/>
+                   </div>
+                   <div class="letter__sender">Команда Яндекс.Почты</div>
+                   <div class="letter__title">Как читать почту с мобильного</div>
+                   <p class="letter__date">6 авг</p>
+               </div>
+           </label>
+           <label class="list-of-letters__label">
+               <div class="letter list-of-letters__letter">
+                   <input type="checkbox" class="letter__marker"></input>
                    <div class="sender-label letter__sender-label">
                        <img class="sender-label__src" width="30px" src="yandexCircle.jpg"/>
                    </div>
@@ -145,8 +143,13 @@
    </div>
    <script>
        document.getElementById('delete-button').onclick=function() {
-           var d = document.getElementById('del-letter');
-           d.className += " delete";
+           var d;
+           d=document.getElementsByClassName('letter');
+           for (var i = 0; i < d.length; i++) {
+               if (d[i].firstElementChild.checked) {
+                   d[i].className+=" delete";
+               }
+           }
        }
        document.getElementById('update').onclick=function() {
            var d = document.getElementById('new-letter');

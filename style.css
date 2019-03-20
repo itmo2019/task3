@@ -189,6 +189,7 @@ span {
 .workplace__list-of-letters {
     margin-top: 0;
     margin-left: 0;
+    z-index: 1;
 }
 
 .list-of-letters__unread-letter {
@@ -341,9 +342,10 @@ span {
 
 .workplace__topic {
     display: none;
-    margin-top: 20px;
+    position: absolute;
     margin-bottom: 44px;
-    height: calc(100% - 64px);
+    margin-right: 20px;
+    height: calc(100% - 68px - 56px - 14px);
 }
 
 .topic {
@@ -365,11 +367,11 @@ span {
 }
 
 .workplace__open-topic:checked ~ .workplace__list-of-letters {
-    display: none;
+    z-index: -1;
 }
 
 .workplace__open-topic:checked ~ .workplace__topic {
-    display: block;
+    z-index: 1;
 }
 
 .body__footer {
@@ -396,20 +398,19 @@ span {
 }
 
 @keyframes del-animation {
-    50% {
+    90% {
         transform:  translateX(100%);
         height: 0;
     }
     to {
+        z-index: -2;
         display: none;
         position: absolute;
     }
 }
-
 .delete {
-    animation: del-animation linear 3s;
+    animation: del-animation linear 1s;
     animation-fill-mode:forwards;
-    animation-iteration-count: 1;
 }
 
 #new-letter {
@@ -420,6 +421,5 @@ span {
 #new-letter.add {
     opacity: 1;
     height: auto;
-    transition-property: all;
     transition: all 3s ease-in-out;
 }
