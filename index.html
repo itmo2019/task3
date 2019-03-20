@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>mail</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="top_elements">
+    <div class="service_logo">
+      <img class="menu_button" src="./resources/svg/menu-button.svg">
+      <img class="logo" src="./resources/images/mail_logo.png">
+    </div>
+    <div class="search_block">
+      <input type="text" class="search" placeholder="Поиск">
+    </div>
+  </header>
+
+  <main class="main_info">
+    <div class="left_part_bar">
+      <button class="send_button">Написать</button>
+
+      <ul class="bar">
+        <li class="hovered-item"><a href="">Входящие</a></li>
+        <li><a href="">Отправленные</a></li>
+        <li><a href="">Удалённые</a></li>
+        <li><a href="">Спам</a></li>
+        <li><a href="">Черновики</a></li>
+        <li><a href="">Создать папку</a></li>
+      </ul>
+    </div>
+
+    <div class="mail_box">
+      <div class="mails_action">
+        <input type="checkbox" class="chooce_all chooce">
+        <div class="mails_action_items">
+          <button class="resend">Переслать</button>
+          <button class="delete">Удалить</button>
+          <button class="spam">Это спам!</button>
+          <button class="read">Прочитано</button>
+        </div>
+      </div>
+      <ul class="mails">
+        <li class="mail">
+          <div class="unread_mail mail_context">
+            <input type="checkbox" id="article_checkbox">
+            <div class="article">
+              <label class="close_item" for="article_checkbox">x</label>
+              С древних времён вину приписывались лечебные свойства. В качестве лекарства оно применялось в Месопотамии,
+              Китае и Древнем Египте за две тысячи лет до нашей эры. Гиппократ применял вино в качестве антисептика,
+              диуретика, успокоительного и растворителя для лекарств, а также рекомендовал пить вино своим пациентам.
+              <img src="resources/images/wine.png" class="wine_img">
+              Эффекты, оказываемые употреблением вина на здоровье, ещё полностью не изучены. Эпидемиологические данные
+              свидетельствуют, что употребление вина в разумных пределах снижает риск развития сердечной недостаточности
+              и
+              такого серьёзного заболевания сердечно-сосудистой системы, как инфаркт миокарда, повышает гемоглобин и
+              оказывает влияние на качественный состав крови.
+
+              Хотя на данный момент ещё достоверно не установлено, чем обусловлен данный эффект. Одни учёные связывают
+              его с
+              действием алкоголя, другие — с действием биологически активных веществ, содержащихся в вине. С высокой
+              степенью достоверности установлено, что умеренное потребление алкоголя снижает вероятность развития
+              сердечной
+              недостаточности.
+            </div>
+            <label for="article_checkbox">
+              <div>
+                <input type="checkbox" class="chooce_item chooce">
+                <img class="sender_logo" src="./resources/images/ya-logo.png">
+                <span class="sender-name hidden_text">Яндекс.Паспорт</span>
+                <div class="unread_mail_flag"></div>
+                <span class="sender-title hidden_text">Доступ к аккаунту восстановлен</span>
+                <time class="sender-time">6 авг</time>
+              </div>
+            </label>
+          </div>
+        </li>
+        <li class="mail">
+          <div class="unread_mail mail_context">
+            <input type="checkbox" class="chooce_item chooce">
+            <img class="sender_logo" src="./resources/images/ya-logo.png">
+            <span class="sender-name hidden_text">Команда Яндекс.Почта</span>
+            <div class="unread_mail_flag"></div>
+            <span class="sender-title hidden_text">Тут ну ооооочень-оооооооочень много буковок в тееееема этоооооого
+              совсем пустого
+              письма</span>
+            <time class="sender-time">6 июл</time>
+          </div>
+        </li>
+        <li class="mail">
+          <div class="mail_context">
+            <input type="checkbox" class="chooce_item chooce">
+            <img class="sender_logo" src="./resources/images/ya-logo.png">
+            <span class="sender-name hidden_text">Команда Яндекс.Почта</span>
+            <div class="unread_mail_flag inactive"></div>
+            <span class="sender-title hidden_text">Как читать почту с мобильного</span>
+            <time class="sender-time">6 июл</time>
+          </div>
+        </li>
+        <li class="mail">
+          <div class="mail_context">
+            <input type="checkbox" class="chooce_item chooce">
+            <img class="sender_logo" src="./resources/images/ya-logo.png">
+            <span class="sender-name hidden_text">Яндекс</span>
+            <div class="unread_mail_flag inactive"></div>
+            <span class="sender-title hidden_text">Собери всю почту в этот ящик</span>
+            <time class="sender-time">6 июл</time>
+          </div>
+        </li>
+      </ul>
+
+      <div class="contacts">
+        <footer class="contacts_info">
+          <span class="contact_info_item"><a href="">Помощь и обратная связь</a></span>
+          <span class="contact_info_item"><a href="">Реклама</a></span>
+          <span class="contact_info_item">&copy; 2001 &ndash; 2018, Яндекс</span>
+        </footer>
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>
