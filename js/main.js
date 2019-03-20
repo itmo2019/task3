@@ -7,15 +7,43 @@ function selectAllLetter() {
 }
 
 
+function getCurrentDate() {
+    let date = new Date();
+    currentDay = date.getDay();
+    month = {
+        1: 'янв',
+        2: 'фев',
+        3: 'мар',
+        4: 'апр',
+        5: 'май',
+        6: 'июн',
+        7: 'июл',
+        8: 'авг',
+        9: 'сен',
+        10: 'окт',
+        11: 'ноя',
+        12: 'дек',
+    };
+    return String(date.getDay()) + ' ' + String(month[date.getMonth()]);
+}
+
+var count = 0;
+
 function addLetter() {
     let templateLetter =    '<input type="checkbox" class="check">\n' +
                             '<div class="mail__logo-yandex">\n' + 
                             '<img src="img/2-layers.png" alt="Yandex"></div>\n' +
-                            '<div class="mail__message-type mail__message_bold"></div>\n' +
+                            '<div class="mail__message-type mail__message_bold">'+
+                            'Author' +
+                            '</div>\n' +
                             '<div class="mail__marker-letter"></div>\n' +
-                            '<div class="mail__letter mail__message_bold"></div>\n' +
-                            '<div class="mail__latter-date">6 июл</div>\n';
-    
+                            '<div class="mail__letter mail__message_bold">'+
+                            'Message ' + count + 
+                            '</div>\n' +
+                            '<div class="mail__latter-date">' + 
+                            getCurrentDate() +
+                            '</div>\n';
+    count++;
     elements = document.getElementsByClassName('mail__conatainer')[0];
     letter = document.createElement('div');
     letter.classList.add('mail__message', 'clearfix','animation-letter');
@@ -60,7 +88,30 @@ function deleteLetters() {
     }
 }
 
+function randomInteger(min, max) {
+    var rand = min - 0.5 + Math.random() * (max - min + 1)
+    rand = Math.floor(rand);    
+    return rand;
+}
 
+function ticks() {
+    addLetter();
+    randomTime = randomInteger(0, 10000);
+    console.log(randomTime);
+    timers = setTimeout(ticks, randomTime);
+}
+
+function generationRandomLetter() {
+    setTimeout(ticks, 10000);
+}
+
+
+var myEvent = new CustomEvent("customAddLetter");
+var myElement = document.body;
+myElement.addEventListener("customAddLetter", generationRandomLetter);
+myElement.dispatchEvent(myEvent);
+
+                                             
 document.getElementById('addElement').addEventListener("click", addLetter);
 document.getElementById('check-all').addEventListener('click', selectAllLetter);
 document.getElementById('delete-letter').addEventListener("click", deleteLetters);
