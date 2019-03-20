@@ -51,15 +51,17 @@ body {
     color: #9b9b9b; 
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1600px) {
     .wrapper {
-        max-width: 1600px;
+        width: 1500px;
         margin: 0 auto;
     }
     
     .mail__my-letter {
-        height: calc(100% - 89px);
+        height: calc(100% - 40px);
     }
+    
+    
 }
 
 @media (max-width: 760px) {

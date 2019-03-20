@@ -94,21 +94,18 @@ function randomInteger(min, max) {
     return rand;
 }
 
-function ticks() {
-    addLetter();
-    randomTime = randomInteger(0, 10000);
-    console.log(randomTime);
-    timers = setTimeout(ticks, randomTime);
-}
 
-function generationRandomLetter() {
-    setTimeout(ticks, 10000);
+function randomLetterGenerator() {
+    randomTime = randomInteger(10, 300000);
+    addLetter();
+    console.log(randomTime);
+    setTimeout(randomLetterGenerator, 300000+randomTime);
 }
 
 
 var myEvent = new CustomEvent("customAddLetter");
 var myElement = document.body;
-myElement.addEventListener("customAddLetter", generationRandomLetter);
+myElement.addEventListener("customAddLetter", randomLetterGenerator);
 myElement.dispatchEvent(myEvent);
 
                                              
