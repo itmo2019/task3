@@ -1,20 +1,21 @@
 var counter = 1;
-let messagesContainer = document.getElementById('messages-container');
+
+let messagesContainer = document.getElementsByClassName('messages-box');
 
 function createMessage() {
-    return '                <input class="message-selector" type="checkbox">\n' +
-        '                <img class="ya-img" src="resources/ya-default.png">\n' +
-        '                <div class="message-sender">Яндекс</div>\n' +
-        '                <span class="unread-circle"></span>\n' +
-        '                <div class="message-theme">Сообщение №' + counter++ + '</div>\n' +
-        '                <div class="message-date">6 июл</div>';
+    return      '            <input class="message__checkbox" type="checkbox">\n' +
+        '            <img class="message__ya-img" src="resources/ya-default.png">\n' +
+        '            <div class="message__sender">Команда Яндекс.Почты</div>\n' +
+        '            <span class="message__unread-circle"></span>\n' +
+        '            <div class="message__theme">Сообщение №' + counter++ + '</div>\n' +
+        '            <div class="message__date">6 июл</div>\n';
 }
 
 function addMessage() {
     let newMessage = document.createElement('div');
-    newMessage.className = 'message-container';
+    newMessage.className = 'message';
     newMessage.innerHTML = createMessage();
-    messagesContainer.insertBefore(newMessage, messagesContainer.firstChild);
+    messagesContainer[0].insertBefore(newMessage, messagesContainer[0].firstChild);
 
     let animationDuration = 1000;
     let fps = animationDuration / 30;
@@ -55,7 +56,7 @@ function removeElement(el) {
 
 
 function deleteMessages() {
-    let checkboxes = document.body.querySelectorAll('.message-selector');
+    let checkboxes = document.body.querySelectorAll('.message__checkbox');
     for (let i = 0; i < checkboxes.length; i++) {
         if (checkboxes[i].checked) {
             let message = checkboxes[i].parentElement;
@@ -67,7 +68,7 @@ function deleteMessages() {
 function selectAllMessages() {
     let isCheckedAll = document.querySelector('#select-all-checkbox').checked;
     console.log(isCheckedAll);
-    let checkboxes = document.body.querySelectorAll('.message-selector');
+    let checkboxes = document.body.querySelectorAll('.message__checkbox');
     for (let i = 0; i < checkboxes.length; i++) {
         console.log(checkboxes[i].id);
         if (checkboxes[i].id === "show-page-checkbox") continue;
@@ -76,5 +77,5 @@ function selectAllMessages() {
 }
 
 document.getElementById('button-add-message').addEventListener("click", addMessage);
-document.getElementById('remove-message').addEventListener("click", deleteMessages);
+document.getElementById('button-remove-message').addEventListener("click", deleteMessages);
 document.getElementById('select-all-checkbox').addEventListener("click", selectAllMessages);
