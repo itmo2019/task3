@@ -86,39 +86,39 @@
 
     <main id="main-content" class="content">
         <label>
-            <input class="my-input content__my-checkbox" type="checkbox">
+            <input class="page__my-input content__my-checkbox" type="checkbox">
         </label>
-        <ul class="content__message-menu">
-            <li class="content__message-menu-text">
-                <a href="#" class="my-link content__message-menu-link"><p class="page__my-text">Переслать</p></a>
+        <ul class="message-menu">
+            <li class="message-menu__text">
+                <a href="#" class="page__my-link message-menu__link"><p class="page__my-text">Переслать</p></a>
             </li>
-            <li class="content__message-menu-text">
-                <a href="#" class="my-link content__message-menu-link" onclick="deleteMessage()"><p class="page__my-text">Удалить</p>
+            <li class="message-menu__text">
+                <a href="#" class="page__my-link message-menu__link" onclick="deleteMessage()"><p class="page__my-text">Удалить</p>
                 </a>
             </li>
-            <li class="content__message-menu-text">
-                <a href="#" class="my-link content__message-menu-link"><p class="page__my-text">Это спам!</p></a>
+            <li class="message-menu__text">
+                <a href="#" class="page__my-link message-menu__link"><p class="page__my-text">Это спам!</p></a>
             </li>
-            <li class="content__message-menu-text">
-                <a href="#" class="my-link content__message-menu-link"><p class="page__my-text">Прочитанно</p></a>
+            <li class="message-menu__text">
+                <a href="#" class="page__my-link message-menu__link"><p class="page__my-text">Прочитанно</p></a>
             </li>
         </ul>
         <div class="page__line"></div>
-        <ul id="content__letters">
+        <ul class="letters">
             <li>
                 <label>
-                    <input class="my-input content__my-checkbox" type="checkbox">
+                    <input class="page__my-input letters__my-checkbox" type="checkbox">
                 </label>
-                <a href="#main-content" class="content__letter-head content__letter_unread" id="my-letter">
-                    <img class="content__author-image" src="images/ox.png" alt="author logo">
-                    <div class="content__author-name">
+                <a href="#main-content" class="letter-head letter-head_unread" id="my-letter">
+                    <img class="letter-head__author-image" src="images/ox.png" alt="author logo">
+                    <div class="letter-head__author-name">
                         <p class="page__my-text">Евгений Глухов</p>
                     </div>
-                    <div class="content__read"></div>
-                    <div class="content__letter-head-text">
+                    <div class="letter-head__read"></div>
+                    <div class="letter-head__text">
                         <p class="page__my-text">ДЗ №1</p>
                     </div>
-                    <div class="content__date">
+                    <div class="letter-head__date">
                         <time datetime="2019-03-09 23:59"><p>9 мар</p></time>
                     </div>
                 </a>
@@ -126,18 +126,18 @@
             </li>
             <li>
                 <label>
-                    <input class="my-input content__my-checkbox" type="checkbox">
+                    <input class="page__my-input letters__my-checkbox" type="checkbox">
                 </label>
-                <a href="#" class="content__letter-head content__letter_unread">
-                    <img class="content__author-image" src="images/yandex.png" alt="author logo">
-                    <div class="content__author-name">
+                <a href="#" class="letter-head letter-head_unread">
+                    <img class="letter-head__author-image" src="images/yandex.png" alt="author logo">
+                    <div class="letter-head__author-name">
                         <p class="page__my-text">Команда Яндекс.Почты</p>
                     </div>
-                    <div class="content__read"></div>
-                    <div class="content__letter-head-text">
+                    <div class="letter-head__read"></div>
+                    <div class="letter-head__text">
                         <p class="page__my-text">Доступ к аккаунту восстановлен</p>
                     </div>
-                    <div class="content__date">
+                    <div class="letter-head__date">
                         <time datetime="2019-03-07 18:02"><p>7 мар</p></time>
                     </div>
                 </a>
@@ -145,18 +145,18 @@
             </li>
             <li>
                 <label>
-                    <input class="my-input content__my-checkbox" type="checkbox">
+                    <input class="page__my-input letters__my-checkbox" type="checkbox">
                 </label>
-                <a href="#" class="content__letter-head">
-                    <img class="content__author-image" src="images/yandex.png" alt="author logo">
-                    <div class="content__author-name">
+                <a href="#" class="letter-head">
+                    <img class="letter-head__author-image" src="images/yandex.png" alt="author logo">
+                    <div class="letter-head__author-name">
                         <p class="page__my-text">Команда Яндекс.Почты</p>
                     </div>
-                    <div class="content__read"></div>
-                    <div class="content__letter-head-text">
+                    <div class="letter-head__read"></div>
+                    <div class="letter-head__text">
                         <p class="page__my-text">Как читать почту с мобильного</p>
                     </div>
-                    <div class="content__date">
+                    <div class="letter-head__date">
                         <time datetime="2019-03-07 18:01"><p>7 мар</p></time>
                     </div>
                 </a>
@@ -164,18 +164,18 @@
             </li>
             <li>
                 <label>
-                    <input class="my-input content__my-checkbox" type="checkbox">
+                    <input class="page__my-input letters__my-checkbox" type="checkbox">
                 </label>
-                <a href="#" class="content__letter-head">
-                    <img class="content__author-image" src="images/yandex.png" alt="author logo">
-                    <div class="content__author-name">
+                <a href="#" class="letter-head">
+                    <img class="letter-head__author-image" src="images/yandex.png" alt="author logo">
+                    <div class="letter-head__author-name">
                         <p class="page__my-text">Яндекс</p>
                     </div>
-                    <div class="content__read"></div>
-                    <div class="content__letter-head-text">
+                    <div class="letter-head__read"></div>
+                    <div class="letter-head__text">
                         <p class="page__my-text">Соберите всю почту в этот ящик и все будет хорошо</p>
                     </div>
-                    <div class="content__date">
+                    <div class="letter-head__date">
                         <time datetime="2019-03-07 18:00"><p>7 мар</p></time>
                     </div>
                 </a>
@@ -183,18 +183,18 @@
             </li>
             <li>
                 <label>
-                    <input class="my-input content__my-checkbox" type="checkbox">
+                    <input class="page__my-input letters__my-checkbox" type="checkbox">
                 </label>
-                <a href="#" class="content__letter-head">
-                    <img class="content__author-image" src="images/yandex.png" alt="author logo">
-                    <div class="content__author-name">
+                <a href="#" class="letter-head">
+                    <img class="letter-head__author-image" src="images/yandex.png" alt="author logo">
+                    <div class="letter-head__author-name">
                         <p class="page__my-text">Яндекс</p>
                     </div>
-                    <div class="content__read"></div>
-                    <div class="content__letter-head-text">
+                    <div class="letter-head__read"></div>
+                    <div class="letter-head__text">
                         <p class="page__my-text">Соберите всю почту в этот ящик и все будет хорошо</p>
                     </div>
-                    <div class="content__date">
+                    <div class="letter-head__date">
                         <time datetime="2019-03-07 18:00"><p>7 мар</p></time>
                     </div>
                 </a>
@@ -202,20 +202,20 @@
             </li>
             <li>
                 <label>
-                    <input class="my-input content__my-checkbox" type="checkbox">
+                    <input class="page__my-input letters__my-checkbox" type="checkbox">
                 </label>
-                <a href="#" class="content__letter-head">
-                    <img class="content__author-image" src="images/yandex.png" alt="author logo">
-                    <div class="content__author-name">
+                <a href="#" class="letter-head">
+                    <img class="letter-head__author-image" src="images/yandex.png" alt="author logo">
+                    <div class="letter-head__author-name">
                         <p class="page__my-text">Яндекс</p>
                     </div>
-                    <div class="content__read"></div>
-                    <div class="content__letter-head-text">
+                    <div class="letter-head__read"></div>
+                    <div class="letter-head__text">
                         <p class="page__my-text">Соберите всю почту в этот ящик. Если у вас несколько почтовых адресов, не
                             обязательно проверять их по отдельности — вы можете получать все письма на Яндексе. Чтобы
                             присоединить к Яндекс.Почте новый ящик, достаточно помнить логин и пароль от него.</p>
                     </div>
-                    <div class="content__date">
+                    <div class="letter-head__date">
                         <time datetime="2019-03-07 18:00"><p>7 мар</p></time>
                     </div>
                 </a>
@@ -253,11 +253,11 @@
         <footer class="footer">
             <ul class="footer__menu">
                 <li class="footer__menu-link footer__menu-text">
-                    <a href="#" class="my-link footer__link"><p>Помощь и обратная связь</p></a>
+                    <a href="#" class="page__my-link footer__link"><p>Помощь и обратная связь</p></a>
                 </li>
 
                 <li class="footer__menu-link footer__menu-text">
-                    <a href="#" class="my-link footer__link"><p>Реклама</p></a>
+                    <a href="#" class="page__my-link footer__link"><p>Реклама</p></a>
                 </li>
 
                 <li class="footer__menu-link footer__menu-text">
