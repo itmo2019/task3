@@ -1,6 +1,5 @@
 .yandex-mail__header {
-    position: absolute;
-    top: 12px;
+    display: block;
     height: 32px;
     width: 100%;
 }

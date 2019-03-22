@@ -1,4 +1,3 @@
 .message__unread-dot_disable {
-    /*display: none;*/
     visibility: hidden;
 }

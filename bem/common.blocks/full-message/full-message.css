@@ -1,11 +1,9 @@
 .full-message {
     display: none;
     position: absolute;
-    top: 0;
+    top: 31px;
 
-    overflow: scroll;
-    max-height: 430px;
-    padding: 0 30px 30px 30px;
-    background-color: #ffffff;
+    height: 80%;
+    background-color: #fff;
     z-index: 100;
 }

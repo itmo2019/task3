@@ -1,7 +1,0 @@
-.text_alignment_center {
-    width: inherit;
-    height: inherit;
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-}
