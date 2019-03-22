@@ -25,6 +25,8 @@
 }
 
 .menu__action {
+    height: 22px;
+    margin-top: 2px;
     width: 147px;
     list-style: none;
     border-radius: 3px;
@@ -35,11 +37,16 @@
     color: #555555;
     font-family: "HelveticaNeue", sans-serif;
     font-size: 11px;
-    font-weight: 700;
-    padding-top: 12px;
+    font-weight: 500;
+    display: block;
+    line-height: 22px;
     padding-left: 10px;
 }
 
 .menu__action:hover {
     background-color: #cdd6e4;
+}
+
+.menu__text-ref:hover {
+    font-weight: 700;
 }

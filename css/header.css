@@ -41,9 +41,11 @@
     border: none;
     width: calc(100% - 50px);
     margin-left: 16px;
-    height: 27px;
+    height: 26px;
     outline: none;
-    background-color: #f2f5f8;
+    display: inline-block;
+    vertical-align: center;
+    background: none;
 }
 
 .header__button {
