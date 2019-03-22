@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Egor Galkin">
+    <link rel="stylesheet" href="styles.css">
+    <title>Яндекс почта</title>
+</head>
+<body>
+    <header class="Header">
+        <img src="yandex-logo.svg" class="MailLogo">
+        <form class="SearchBar">
+            <input type="text" placeholder="Поиск" class="Search">
+        </form>
+    </header>
+    <main class="PageContent">
+        <div class="Sidebar">
+            <a href="index.html">
+                <button class="MailSend TextOverflow">
+                    Написать
+                </button>
+            </a>
+            <div class="AnotherItems">
+                <ul class="ItemsList">
+                    <li class="ListItem"><a href="index.html"><p class="ListElem ActiveItem">Входящие</p></li>
+                    <li class="ListItem"><a href="index.html"><p class="ListElem">Отправленные</p></a></li>
+                    <li class="ListItem"><a href="index.html"><p class="ListElem">Удаленны</p></a></li>
+                    <li class="ListItem"><a href="index.html"><p class="ListElem">Спам</p></a></li>
+                    <li class="ListItem"><a href="index.html"><p class="ListElem">Черновики</p></a></li>
+                    <li class="ListItem"><a href="index.html"><p class="ListElem">Создать папку</p></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="Content">
+            <header class="Actions BottomSeparator">
+                <div class="Choose ActionElem HeaderOption">
+                    <input class="Checkbox" type="checkbox">
+                </div>
+                <div class="Resend ActionElem HeaderOption TextOverflow">
+                    Переслать
+                </div>
+                <div class="Delete ActionElem HeaderOption TextOverflow">
+                    Удалить
+                </div>
+                <div class="Spam ActionElem HeaderOption TextOverflow">
+                    Это спам!
+                </div>
+                <div class="Read ActionElem HeaderOption TextOverflow">
+                    Прочитано
+                </div>
+            </header>
+            <main class="ContentMain">
+                <section class="Mail BottomSeparator">
+                    <div class="Choose MailElem">
+                        <input class="Checkbox" type="checkbox">
+                    </div>
+                    <a href="#PopupEssay">
+                        <div class="SenderLogo"><p class="Ya">Я</p></div>
+                        <div class="MailAuthor">
+                            <p class="YandexPassport MessageStyle">Яндекс.Паспорт</p>
+                        </div>
+                        <div class="NotRead ReadStatus"></div>
+                        <div class="MessageBody">
+                            <p class="PassportBody MessageStyle TextOverflow">Доступ к аккаунту восстановлен</p>
+                        </div>
+                        <div class="MessageDate">
+                            <p class="Date MessageStyle">6 авг</p>
+                        </div>
+                    </a>
+                </section>
+                <section class="Mail BottomSeparator">
+                    <div class="Choose MailElem">
+                        <input class="Checkbox" type="checkbox">
+                    </div>
+                    <a href="index.html">
+                        <div class="SenderLogo"><p class="Ya">Я</p></div>
+                        <div class="MailAuthor">
+                            <p class="YandexTeam MessageStyle">Команда Яндекс.Почты</p>
+                        </div>
+                        <div class="NotRead ReadStatus"></div>
+                        <div class="MessageBody">
+                            <p class="TeamBody MessageStyle TextOverflow">Как читать почту с мобильного</p>
+                        </div>
+                        <div class="MessageDate">
+                            <p class="Date MessageStyle">6 июл</p>
+                        </div>
+                    </a>
+                </section>
+                <section class="Mail BottomSeparator">
+                    <div class="Choose MailElem">
+                        <input class="Checkbox" type="checkbox">
+                    </div>
+                    <a href="index.html">
+                        <div class="SenderLogo"><p class="Ya">Я</p></div>
+                        <div class="MailAuthor">
+                            <p class="YandexTeam-2 MessageStyle">Команда Яндекс.Почты</p>
+                        </div>
+                        <div class="AlreadyRead ReadStatus"></div>
+                        <div class="MessageBody">
+                            <p class="TeamBody-2 MessageStyle TextOverflow">Как читать почту с мобильного</p>
+                        </div>
+                        <div class="MessageDate">
+                            <p class="Date MessageStyle">6 июл</p>
+                        </div>
+                    </a>
+                </section>
+                <section class="Mail BottomSeparator">
+                    <div class="Choose MailElem">
+                        <input class="Checkbox" type="checkbox">
+                    </div>
+                    <a href="index.html">
+                        <div class="SenderLogo"><p class="Ya">Я</p></div>
+                        <div class="MailAuthor">
+                            <p class="Yandex MessageStyle">Яндекс</p>
+                        </div>
+                        <div class="AlreadyRead ReadStatus"></div>
+                        <div class="MessageBody">
+                            <p class="YandexBody MessageStyle TextOverflow">Соберите всю почту в этот ящик</p>
+                        </div>
+                        <div class="MessageDate">
+                            <p class="Date MessageStyle">6 июл</p>
+                        </div>
+                    </a>
+                </section>
+                <div id="PopupEssay" class="Essay">
+                    <div class="EssayBlock">
+                        <a class="CloseEssay" href="#">&times;</a><br>
+                        <header class="EssayHeader">
+                            <h1 class="EssayH1">Эссе на тему: "Чего я жду от курсов по фронтенду"</h1>
+                        </header>
+                        <div class="EssayMain">
+                            <article class="EssayArticle">
+                                <section class="EssaySection">
+                                    <h2 class="EssayH2">Предыстория</h2>
+                                    <div class="paragraph">
+                                        <img src="avatar.png" alt="It's me, author" class="Avatar">
+                                        <p class="EssayParagraph">
+                                            Я учусь в <abbr title="Санкт-Петербургский национальный исследовательский университет информационных технологий, механики и оптики"><b>ИТМО</b></abbr>
+                                            уже третий год. И стоит признаться, мое знакомство с фронтендом начиналось и заканчивалось знакомством с <abbr title="HyperText Markup Language"><b>HTML</b></abbr>
+                                            и <abbr title="Cascading Style Sheets"><b>CSS</b></abbr> в 10 классе на уроках информатики.
+                                            Эти темы мне давались тяжело и не сильно цепляли меня. Мне это казалось скучным по сравнению с обычным программирование. Если при решение каких то алгоритмических
+                                            задач тебе приходилось думать над эффективностью алгоритма и как его красивее написать, то верстка же заключалась в обычной рутине. Плюс думаю свое влияние на процесс
+                                            оказало осутствие у меня чувства вкуса, из за чего мои страницы, даже удовлетворяющие поставленным требованиям, выглядели откровенно неочень. После этого я попытался
+                                            забыть об этом и долгое время не сталкивался с фронтом. Также у меня сложилась стойкая неприязнь к верстке, фронту и ко всему, что с этим связано. И сейчас уже я понимаю,
+                                            что в большинтсве своем эта неприязнь не обоснована. Мое отношения к фронту начало меняться относительно недавно, летом, как вступительное испытание на стажировку, мне
+                                            нужно было написать небольшую личную финансовую систему и к ней естественно надо было прикрутить небольшой фронт. Тогда я справился простыми средствами, но опять же получившейся
+                                            результат был далек от идеала. Посже уже на стажировке и работе я сталкивался с необходимостью верстки и использования <abbr title="JavaScript"><b>JS</b></abbr> и его фреймворков. Мое отношение к фронту
+                                            начало потихоньку меняться, я стал понимать, что пусть это и не так интересно как бэк, но без этого сейчас никуда и глупо было бы пропускать мимо себя такой монструозный
+                                            пласт индустрии из-за впечатлений пятилетней давности. И вот, как по велению судьбы, нам предложили пройти курс по фротненду. И я понял, что это и есть мой шанс, поменять
+                                            свое отношение к фронту, ведь как говорил Уинстон Черчиль <q>Глуп тот человек, который никогда не меняет своего мнения</q>.
+                                        </p>
+                                    </div>
+                                </section>
+                                <section class="EssaySection">
+                                    <h2 class="EssayH2">Ожидание от курса</h2>
+                                    <div class="paragraph">
+                                        <p class="EssayParagraph">
+                                            В первую очередь, от курса я ожидаю целостности. Хочется, чтоб это было не просто сухой пересказ функциональности и спецефикаций, но интересный рассказ об основах фронта, причинах
+                                            почему какая то вещь делается так или иначе и как писать фронт так, чтобы не было стыдно. И судя по первой лекции, и тому, что до ИТМО этот курс долгое время читался
+                                            в <abbr title="Уральский федеральный университет"><b>УрФУ</b></abbr>, с этим
+                                            все будт в порядке. Также было бы очень круто если какую то часть времени посвятили бы новым языкам во фронте, на подобии
+                                            <a class="programming_language_link" href="https://www.dartlang.org/" target="_blank">Dart</a>
+                                            или <a class="programming_language_link" href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>. А также, на мой взгляд, проблеме сильного
+                                            разброса технологий во фронте. Если в бэкэнд языках есть плюс минус стабильные стеки технологий, то в мире <abbr title="JavaScript"><b>JS</b></abbr> все гораздо сложнее. Я на работе столкнулся с тем, что в одной команде
+                                            используют Vue.js, в другой React. Фрейморков несчетное множество и хотелось бы услышать, на что вообще обращать внимание при выборе технологий и есть ли на данный момент, какие то
+                                            технологии о которых в той или иной мере можно сказать, что они будут актуальны еще пару лет. Возможно некоторые интересующие меня вопросы могут показаться глупыми, но это мой взгляд
+                                            без опыта и фундаментальных знаний о фронте.
+                                        </p>
+                                    </div>
+                                </section>
+                                <section class="EssaySection">
+                                    <h2 class="EssayH2">Заключение</h2>
+                                    <div class="paragraph">
+                                        <p class="EssayParagraph">Хорошо это или плохо, но сейчас без хотя бы базовых знаний о фронте не обойтись даже бэкенд разработчику. Я уверен, что курс в любом случае будет интересным и его прослушивание,
+                                            позволит мне пересмотреть свой взгляд на фронтенд. И даже если я не полюблю фронт всей душой, старания во время курса не пропадут даром и позволят мне стать хотя бы чуть более хорошим
+                                            разработчиком.</p>
+                                    </div>
+                                </section>
+                            </article>
+                        </div>
+                        <footer class="EssayFooter">
+                            <hr class="EssayHr">
+                            <p class="timestamp">Последнее изменение:<time>2019-02-21</time></p>
+                            <address>Author: <a class="EssayLink" href="mailto:egor.galkin99@yandex.ru" target="_blank">egor.galkin99@yandex.ru</a></address>
+                        </footer>
+                    </div>
+                </div>
+            </main>
+            <footer class="ContentFooter">
+                <p class="SiteInformation">
+                    Помощь и обратная связь      Реклама      &copy; 2001 &mdash; 2018, Яндекс
+                </p>
+            </footer>
+        </div>
+    </main>
+</body>
+</html>
