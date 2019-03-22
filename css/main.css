@@ -19,7 +19,7 @@
 }
 
 body {
-    min-width: 660px;
+    min-width: 750px;
     max-width: 1600px;
     background: #e5eaf0;
     margin: 0 auto;
@@ -52,7 +52,7 @@ body {
 
 .main-block {
     width: calc(100% - 230px);
-    min-width: 400px;
+    min-width: 515px;
     min-height: 400px;
     margin-left: 22px;
     margin-bottom: 14px;
@@ -121,7 +121,7 @@ body {
     margin-top: 11px;
     min-width: 30px;
     width: 30%;
-    height: 16px;
+    height: 18px;
     overflow: hidden;
     float: left;
 }

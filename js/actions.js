@@ -12,9 +12,22 @@ let oneLetter = '<label>\n' +
 function addLetter() {
     let allLetters = document.getElementById('all-letters');
     let newLetter = document.createElement('div');
-    newLetter.className = 'main-block__letter clearfix';
+    newLetter.className = 'animation-insert main-block__letter';
     newLetter.innerHTML = oneLetter;
     allLetters.insertBefore(newLetter, allLetters.childNodes[2]);
+    allLetters.classList.add('all-letter-down');
+    setTimeout(removeClass, 600, newLetter, 'animation-insert');
+    setTimeout(removeClass, 600, allLetters, 'all-letter-down');
+
+}
+
+function removeClass(letter, name) {
+    letter.classList.remove(name);
+}
+
+function removeWithAnimation(letter) {
+    removeClass(letter, 'animation-delete');
+    letter.remove();
 }
 
 function remove() {
@@ -25,9 +38,8 @@ function remove() {
             while (!letter.classList.contains('main-block__letter')) {
                 letter = letter.parentElement;
             }
-            letter.style.zIndex = '0';
-            letter.style.height = '0px';
-            letter.remove();
+            letter.classList.add('animation-delete');
+            setTimeout(removeWithAnimation, 600, letter);
         }
     }
 }
