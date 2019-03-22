@@ -7,118 +7,118 @@
     <title>Яндекс почта</title>
 </head>
 <body>
-    <header class="Header">
-        <img src="yandex-logo.svg" class="MailLogo">
-        <form class="SearchBar">
-            <input type="text" placeholder="Поиск" class="Search">
+    <header class="header">
+        <img src="yandex-logo.svg" class="header__mail-logo">
+        <form class="search-bar search-bar_position">
+            <input type="text" placeholder="Поиск" class="search-bar__input search-bar__input_view">
         </form>
     </header>
-    <main class="PageContent">
-        <div class="Sidebar">
-            <a href="index.html">
-                <button class="MailSend TextOverflow">
+    <main class="page-content">
+        <div class="sidebar sidebar_position">
+            <a href="index.html" class = "_simple-link-view">
+                <button class="sidebar__mail-send sidebar__mail-send_view  _text-overflow-behaviour">
                     Написать
                 </button>
             </a>
-            <div class="AnotherItems">
-                <ul class="ItemsList">
-                    <li class="ListItem"><a href="index.html"><p class="ListElem ActiveItem">Входящие</p></li>
-                    <li class="ListItem"><a href="index.html"><p class="ListElem">Отправленные</p></a></li>
-                    <li class="ListItem"><a href="index.html"><p class="ListElem">Удаленны</p></a></li>
-                    <li class="ListItem"><a href="index.html"><p class="ListElem">Спам</p></a></li>
-                    <li class="ListItem"><a href="index.html"><p class="ListElem">Черновики</p></a></li>
-                    <li class="ListItem"><a href="index.html"><p class="ListElem">Создать папку</p></a></li>
+            <div class="another-items">
+                <ul class="another-items__list another-items__list_view">
+                    <li class="another-items__item another-items__item_view"><a href="index.html" class="_simple-link-view"><p class="another-items__item-paragraph another-items__item-paragraph_view another-items__item-paragraph_active">Входящие</p></a></li>
+                    <li class="another-items__item another-items__item_view"><a href="index.html" class="_simple-link-view"><p class="another-items__item-paragraph another-items__item-paragraph_view">Отправленные</p></a></li>
+                    <li class="another-items__item another-items__item_view"><a href="index.html" class="_simple-link-view"><p class="another-items__item-paragraph another-items__item-paragraph_view">Удаленны</p></a></li>
+                    <li class="another-items__item another-items__item_view"><a href="index.html" class="_simple-link-view"><p class="another-items__item-paragraph another-items__item-paragraph_view">Спам</p></a></li>
+                    <li class="another-items__item another-items__item_view"><a href="index.html" class="_simple-link-view"><p class="another-items__item-paragraph another-items__item-paragraph_view">Черновики</p></a></li>
+                    <li class="another-items__item another-items__item_view"><a href="index.html" class="_simple-link-view"><p class="another-items__item-paragraph another-items__item-paragraph_view">Создать папку</p></a></li>
                 </ul>
             </div>
         </div>
-        <div class="Content">
-            <header class="Actions BottomSeparator">
-                <div class="Choose ActionElem HeaderOption">
-                    <input class="Checkbox" type="checkbox">
+        <div class="mail-content mail-content_view">
+            <header class="actions _bottom-separator-view">
+                <div class="chose chose_view actions_elem-view actions_option-view">
+                    <input class="checkbox" type="checkbox">
                 </div>
-                <div class="Resend ActionElem HeaderOption TextOverflow">
+                <div class="actions__resend actions__resend_view actions_elem-view actions_option-view _text-overflow-behaviour">
                     Переслать
                 </div>
-                <div class="Delete ActionElem HeaderOption TextOverflow">
+                <div class="actions__delete actions__delete_view actions_elem-view actions_option-view _text-overflow-behaviour">
                     Удалить
                 </div>
-                <div class="Spam ActionElem HeaderOption TextOverflow">
+                <div class="actions__spam actions__spam_view actions_elem-view actions_option-view _text-overflow-behaviour">
                     Это спам!
                 </div>
-                <div class="Read ActionElem HeaderOption TextOverflow">
+                <div class="actions__read actions_elem-view actions_option-view _text-overflow-behaviour">
                     Прочитано
                 </div>
             </header>
-            <main class="ContentMain">
-                <section class="Mail BottomSeparator">
-                    <div class="Choose MailElem">
-                        <input class="Checkbox" type="checkbox">
+            <main class="content-main">
+                <section class="mail _bottom-separator-view">
+                    <div class="chose chose_view mail__elem mail__elem_view">
+                        <input class="checkbox" type="checkbox">
                     </div>
                     <a href="#PopupEssay">
-                        <div class="SenderLogo"><p class="Ya">Я</p></div>
-                        <div class="MailAuthor">
-                            <p class="YandexPassport MessageStyle">Яндекс.Паспорт</p>
+                        <div class="mail__sender-logo mail__sender-logo_view"><p class="Ya">Я</p></div>
+                        <div class="mail__author mail__author_view">
+                            <p class="mail__yandex-passport mail__yandex-passport_view _message_view">Яндекс.Паспорт</p>
                         </div>
-                        <div class="NotRead ReadStatus"></div>
-                        <div class="MessageBody">
-                            <p class="PassportBody MessageStyle TextOverflow">Доступ к аккаунту восстановлен</p>
+                        <div class="read-status read-status_view read-status_not-read"></div>
+                        <div class="mail__message-body mail__message-body_view mail__message-body mail__message-body_view_view">
+                            <p class="passport-body passport-body_view _message_view _text-overflow-behaviour">Доступ к аккаунту восстановлен</p>
                         </div>
-                        <div class="MessageDate">
-                            <p class="Date MessageStyle">6 авг</p>
-                        </div>
-                    </a>
-                </section>
-                <section class="Mail BottomSeparator">
-                    <div class="Choose MailElem">
-                        <input class="Checkbox" type="checkbox">
-                    </div>
-                    <a href="index.html">
-                        <div class="SenderLogo"><p class="Ya">Я</p></div>
-                        <div class="MailAuthor">
-                            <p class="YandexTeam MessageStyle">Команда Яндекс.Почты</p>
-                        </div>
-                        <div class="NotRead ReadStatus"></div>
-                        <div class="MessageBody">
-                            <p class="TeamBody MessageStyle TextOverflow">Как читать почту с мобильного</p>
-                        </div>
-                        <div class="MessageDate">
-                            <p class="Date MessageStyle">6 июл</p>
+                        <div class="message-date message-date_view message-date message-date_view_view">
+                            <p class="date date_view _message_view">6 авг</p>
                         </div>
                     </a>
                 </section>
-                <section class="Mail BottomSeparator">
-                    <div class="Choose MailElem">
-                        <input class="Checkbox" type="checkbox">
+                <section class="mail _bottom-separator-view">
+                    <div class="chose mail__elem mail__elem_view">
+                        <input class="checkbox" type="checkbox">
                     </div>
-                    <a href="index.html">
-                        <div class="SenderLogo"><p class="Ya">Я</p></div>
-                        <div class="MailAuthor">
-                            <p class="YandexTeam-2 MessageStyle">Команда Яндекс.Почты</p>
+                    <a href="index.html" class="_simple-link-view">
+                        <div class="mail__sender-logo mail__sender-logo_view"><p class="Ya">Я</p></div>
+                        <div class="mail__author mail__author_view">
+                            <p class="mail__yandex-team mail__yandex-team_view _message_view">Команда Яндекс.Почты</p>
                         </div>
-                        <div class="AlreadyRead ReadStatus"></div>
-                        <div class="MessageBody">
-                            <p class="TeamBody-2 MessageStyle TextOverflow">Как читать почту с мобильного</p>
+                        <div class="read-status read-status_view read-status_not-read"></div>
+                        <div class="mail__message-body mail__message-body_view">
+                            <p class="team-body team-body_view _message_view _text-overflow-behaviour">Как читать почту с мобильного</p>
                         </div>
-                        <div class="MessageDate">
-                            <p class="Date MessageStyle">6 июл</p>
+                        <div class="message-date message-date_view">
+                            <p class="date date_view _message_view">6 июл</p>
                         </div>
                     </a>
                 </section>
-                <section class="Mail BottomSeparator">
-                    <div class="Choose MailElem">
-                        <input class="Checkbox" type="checkbox">
+                <section class="mail _bottom-separator-view">
+                    <div class="chose mail__elem mail__elem_view">
+                        <input class="checkbox" type="checkbox">
                     </div>
-                    <a href="index.html">
-                        <div class="SenderLogo"><p class="Ya">Я</p></div>
-                        <div class="MailAuthor">
-                            <p class="Yandex MessageStyle">Яндекс</p>
+                    <a href="index.html" class="_simple-link-view">
+                        <div class="mail__sender-logo mail__sender-logo_view"><p class="Ya">Я</p></div>
+                        <div class="mail__author mail__author_view">
+                            <p class="mail__yandex-team-2 mail__yandex-team-2_view _message_view">Команда Яндекс.Почты</p>
                         </div>
-                        <div class="AlreadyRead ReadStatus"></div>
-                        <div class="MessageBody">
-                            <p class="YandexBody MessageStyle TextOverflow">Соберите всю почту в этот ящик</p>
+                        <div class="read-status read-status_view read-status_read"></div>
+                        <div class="mail__message-body mail__message-body_view">
+                            <p class="team-body-2 team-body-2_view _message_view _text-overflow-behaviour">Как читать почту с мобильного</p>
                         </div>
-                        <div class="MessageDate">
-                            <p class="Date MessageStyle">6 июл</p>
+                        <div class="message-date message-date_view">
+                            <p class="date date_view _message_view">6 июл</p>
+                        </div>
+                    </a>
+                </section>
+                <section class="mail _bottom-separator-view">
+                    <div class="chose mail__elem mail__elem_view">
+                        <input class="checkbox" type="checkbox">
+                    </div>
+                    <a href="index.html" class="_simple-link-view">
+                        <div class="mail__sender-logo mail__sender-logo_view"><p class="Ya">Я</p></div>
+                        <div class="mail__author mail__author_view">
+                            <p class="yandex yandex_view _message_view">Яндекс</p>
+                        </div>
+                        <div class="read-status read-status_view read-status_read"></div>
+                        <div class="mail__message-body mail__message-body_view">
+                            <p class="yandex-body yandex-body_view _message_view _text-overflow-behaviour">Соберите всю почту в этот ящик</p>
+                        </div>
+                        <div class="message-date message-date_view">
+                            <p class="date date_view _message_view">6 июл</p>
                         </div>
                     </a>
                 </section>

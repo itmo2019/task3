@@ -2,7 +2,7 @@ body {
     background-color: #e5eaf0;
 }
 
-.Header {
+.header {
     width: 100%;
     height: 56px;
     float: right;
@@ -16,7 +16,7 @@ body {
     background-color: #000;
 }
 
-.MailLogo {
+.header__mail-logo {
     width: 153px;
     height: 31px;
     float: left;
@@ -24,20 +24,26 @@ body {
 }
 
 
-.SearchBar {
+.search-bar {
     float: left;
-    margin: 11px 0 13px;
     width: 30%;
     height: 60%;
+}
+
+.search-bar_position {
+    margin: 11px 0 13px;
     opacity: 0.5;
+}
+
+.search-bar__input {
+    float: left;
+    width: 98%;
+    height: 100%;
 
 }
 
-.Search {
-    float: left;
+.search-bar__input_view {
     margin: 0;
-    width: 98%;
-    height: 100%;
     padding-left: 2%;
     opacity: 0.5;
     text-overflow: ellipsis;
@@ -53,37 +59,43 @@ body {
 }
 
 
-.PageContent {
+.page-content {
     width: 100%;
     float: left;
 }
 
-.Sidebar {
+.sidebar {
     width: 147px;
     height: 100%;
+}
+
+.sidebar_position {
     top: 64px;
     left: 22px;
     position: absolute;
 }
 
-.Content {
-    position: relative;
+.mail-content {
     width: 70%;
-    margin-left: 180px;
     min-width: 730px;
     min-height: 500px;
     height: 90vh;
+}
+
+.mail-content_view {
+    position: relative;
+    margin-left: 180px;
     border-radius: 3px;
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.34);
     background-color: #fff;
 }
 
-.Mail {
+.mail {
     float: left;
     width: 100%;
 }
 
-.Actions {
+.actions {
     height: 37px;
 }
 
@@ -93,15 +105,15 @@ body {
     height: 33px;
 }
 
-.ContentMain {
+.content-main {
     height: 90%;
 }
 
-.BottomSeparator {
+._bottom-separator-view {
     border-bottom: 1px solid #e2e2e2;
 }
 
-.ActionElem {
+.actions_elem-view {
     margin: 11px 10px;
     float: left;
 }
@@ -112,104 +124,143 @@ body {
     border: solid 1px #e2e2e2;
 }
 
-a {
-    color: #000 !important;
+._simple-link-view {
+    color: #000;
     text-decoration: none;
 }
 
-.HeaderOption {
+.actions_option-view {
     font: normal 500 13px normal HelveticaNeue;
     font-stretch: normal;
     letter-spacing: normal;
     color: #cccccc;
 }
 
-.Choose {
-    margin-left: 20px;
-    margin-right: 20px;
+.chose {
     float: left;
 }
 
-.Checkbox {
-    margin: 0;
+.chose_view {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.checkbox {
     width: 16px;
     height: 16px;
+}
+
+.actions__checkbox_view {
+    margin: 0;
     border-radius: 3px;
     border: solid 1px rgba(0, 0, 0, 0.15);
     background-color: #fff;
 }
 
-.MailElem {
-    margin: 11px 10px 11px 20px;
+.mail__elem {
     float: left;
 }
 
+.mail__elem_view {
+    margin: 11px 10px 11px 20px;
+}
 
-.MailAuthor {
+
+.mail__author {
     width: 155px;
     height: 16px;
-    margin: 10px 20px 13px 0;
     float: left;
 }
 
-.MessageBody {
+.mail__author_view {
+    margin: 10px 20px 13px 0;
+}
+
+.mail__message-body {
     width: 213px;
     height: 16px;
-    margin: 12px 44px 10px 0;
     float: left;
 }
 
-.MessageDate {
+.mail__message-body_view {
+    margin: 12px 44px 10px 0;
+}
+
+.message-date {
     width: 36px;
     height: 15px;
-    margin: 13px 20px 11px;
     float: right;
 }
 
-.Date {
-    margin: 0;
+.message-date_view {
+    margin: 13px 20px 11px;
+}
+
+.date {
     width: 36px;
     height: 15px;
+
+}
+
+.date_view {
+    margin: 0;
     font-weight: normal;
     text-align: right;
 }
 
-.PassportBody {
-    margin: 0;
+.passport-body {
     width: 213px;
     height: 16px;
-    font-weight: bold;
 }
 
-.YandexTeam {
+.passport-body_view {
+    font-weight: bold;
     margin: 0;
+}
+
+.mail__yandex-team {
+
     width: 155px;
     height: 16px;
+
+}
+
+.mail__yandex-team_view {
+    margin: 0;
     font-size: 13px;
     font-weight: bold;
 }
 
-.YandexTeam-2 {
-    margin: 0;
+.mail__yandex-team-2 {
     width: 145px;
     height: 15px;
 }
 
-.TeamBody-2 {
+.mail__yandex-team-2_view {
     margin: 0;
+}
+
+.team-body-2 {
     width: 192px;
     height: 15px;
 }
 
-.TeamBody {
+.team-body-2_view {
     margin: 0;
+}
+
+.team-body {
     width: 204px;
     height: 16px;
+}
+
+.team-body_view {
+    margin: 0;
     font-size: 13px;
     font-weight: bold;
 }
 
-.MessageStyle {
+._message_view {
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
@@ -219,41 +270,53 @@ a {
     color: #000;
 }
 
-.Yandex {
-    margin: 0;
+.yandex {
     width: 45px;
     height: 15px;
 }
 
+.yandex_view {
+    margin: 0;
+}
 
-.TextOverflow {
+
+._text-overflow-behaviour {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.YandexBody {
-    margin: 0;
+.yandex-body {
     width: 201px;
     height: 15px;
 }
 
-.YandexPassport {
+.yandex-body_view {
     margin: 0;
+}
+
+.mail__yandex-passport {
     width: 106px;
     height: 16px;
     font-weight: bold;
 }
 
-.ReadStatus {
-    margin: 14px 10px 14.5px 0;
+.mail__yandex-passport_view {
+    margin: 0;
+}
+
+.read-status {
     float: left;
     width: 10px;
     height: 10px;
+
+}
+
+.read-status_view {
+    margin: 14px 10px 15px 0;
     border-radius: 50%;
     background-color: #6287bd;
 }
-
 .SiteInformation {
     float: right;
     margin: 1% 1% 0 0;
@@ -270,19 +333,22 @@ a {
     color: #9b9b9b;
 }
 
-.NotRead {
+.read-status_not-read {
     visibility: visible;
 }
 
-.AlreadyRead {
+.read-status_read {
     visibility: hidden;
 }
 
-.SenderLogo {
-    margin: 5px 10px 4px 10px;
+.mail__sender-logo {
     float: left;
     width: 30px;
     height: 30px;
+}
+
+.mail__sender-logo_view {
+    margin: 5px 10px 4px 10px;
     border-radius: 50%;
     background-color: #ff3333;
 }
@@ -297,26 +363,35 @@ a {
     color: #fff;
 }
 
-.Resend {
-    margin-right: 26px;
+.actions__resend {
     width: 70px;
     height: 16px;
 
 }
 
-.Delete {
-    margin-right: 24px;
+.actions__resend_view {
+    margin-right: 26px;
+}
+
+.actions__delete {
     width: 54px;
     height: 16px;
 }
 
-.Spam {
-    margin-right: 25px;
+.actions__delete_view {
+    margin-right: 24px;
+}
+
+.actions__spam {
     width: 62px;
     height: 16px;
 }
 
-.Read {
+.actions__spam_view {
+    margin-right: 25px;
+}
+
+.actions__read {
     width: 70px;
     height: 16px;
 }
@@ -328,54 +403,61 @@ a {
     position: absolute;
 }
 
-.MailSend {
+.sidebar__mail-send {
     width: 147px;
     height: 32px;
+}
+
+.sidebar__mail-send_view {
     margin-bottom: 8px;
     border-radius: 3px;
     background-color: #6287bd;
     border: none;
-    font-family: HelveticaNeue;
-    font-size: 12px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
+    font: normal 500 12px normal HelveticaNeue;
     letter-spacing: normal;
+    font-stretch: normal;
     color: #fff;
 }
 
-.ItemsList {
+.another-items__list {
+}
+
+.another-items__list_view {
     margin: 0;
     padding-left: 0;
 }
 
 
-.ListElem {
+.another-items__item-paragraph {
+    width: 70px;
+}
+
+.another-items__item-paragraph_view {
     margin: 0;
     padding: 4px 67px 5px 10px;
     font: normal 500 11px normal HelveticaNeue;
-    width: 70px;
     font-stretch: normal;
     letter-spacing: normal;
-
 }
 
-.ActiveItem {
+.another-items__item-paragraph_active {
     border-radius: 3px;
     background-color: #cdd6e4;
 }
 
-.ListItem {
-    margin: 0;
-    padding: 0;
+.another-items__item {
     width: 147px;
     height: 22px;
+}
+
+.another-items__item_view {
+    margin: 0;
+    padding: 0;
     color: #707070;
     list-style-type: none;
 }
 
-.ListItem:hover {
+.another-items__item:hover {
     border-radius: 3px;
     background-color: #cdd6e4;
 }
