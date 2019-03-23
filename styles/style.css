@@ -206,7 +206,7 @@ body {
     display: inline-block;
 }
 
-.letters__my-checkbox {
+.letters__my-checkbox, .content__my-checkbox {
     width: 16px;
     height: 16px;
     outline: none;
