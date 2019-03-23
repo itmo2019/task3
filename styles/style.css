@@ -218,7 +218,7 @@ body {
     margin-top: 11px;
 }
 
-.letters__my-checkbox:checked {
+.letters__my-checkbox:checked, .content__my-checkbox:checked {
     background: rgba(0, 0, 0, 0.15);
     background-clip: content-box;
 }
