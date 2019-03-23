@@ -1,4 +1,4 @@
-var mailHtml = '                <section class="mail _bottom-separator-view">\n' +
+const mailHtml = '                <section class="mail _bottom-separator-view">\n' +
     '                            <div class="chose mail__elem mail__elem_view">\n' +
     '                                <input class="checkbox" type="checkbox">\n' +
     '                            </div>\n' +
@@ -20,7 +20,6 @@ var mailHtml = '                <section class="mail _bottom-separator-view">\n'
 
 function addNewMail() {
     let newItem = document.createElement("li");
-    newItem.setAttribute("class", "mail-list__elem mail-list__elem_view");
     newItem.innerHTML = mailHtml;
     let list = document.getElementById("mailList");
     let firstElem = document.getElementsByClassName("mail-list__elem")[0];
@@ -30,6 +29,9 @@ function addNewMail() {
         firstElem.childNodes[1].childNodes[3].replaceWith(ref);
     }
     list.insertBefore(newItem, list.childNodes[0]);
+    setTimeout(function() {
+        newItem.className = newItem.className + " mail-list__elem mail-list__elem_view";
+    }, 10);
 }
 
 function deleteTopMail() {
