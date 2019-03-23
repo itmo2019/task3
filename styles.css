@@ -150,9 +150,14 @@ body {
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.34);
 }
 
-.letters {
+.main-content {
     width: 100%;
     height: calc(100% - 80px);
+    overflow-y: hidden;
+}
+
+.letters {
+    height: 100%;
     overflow-y: scroll;
 }
 
@@ -292,7 +297,7 @@ body {
 
 .hidden-page {
     width: 90%;
-    position: absolute;
+    height: 100%;
     margin: 0;
     background-color: #fff;
     display: none;
