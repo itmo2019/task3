@@ -99,6 +99,10 @@ body {
     height: 37px;
 }
 
+.actions_view {
+    overflow: hidden;
+}
+
 .footer_view {
     border-top: 1px solid #e2e2e2;
     bottom: 0;
@@ -112,6 +116,10 @@ body {
 
 .content-main {
     height: 90%;
+}
+
+.content-main_view {
+    overflow: hidden;
 }
 
 ._bottom-separator-view {
@@ -284,6 +292,16 @@ body {
     margin: 0;
 }
 
+.ivan-ivanov {
+    width: 145px;
+    height: 15px;
+}
+
+.ivan-ivanov_view {
+    margin: 0;
+    font-weight: bold;
+}
+
 
 ._text-overflow-behaviour {
     white-space: nowrap;
@@ -300,6 +318,15 @@ body {
     margin: 0;
 }
 
+.ivan-body {
+    width: 201px;
+    height: 15px;
+}
+
+.ivan-body_view {
+    margin: 0;
+}
+
 .mail__yandex-passport {
     width: 106px;
     height: 16px;
@@ -309,6 +336,7 @@ body {
 .mail__yandex-passport_view {
     margin: 0;
 }
+
 
 .read-status {
     float: left;
@@ -322,6 +350,7 @@ body {
     border-radius: 50%;
     background-color: #6287bd;
 }
+
 .footer__site-information {
     float: right;
     width: 345px;
@@ -351,17 +380,40 @@ body {
     height: 30px;
 }
 
-.mail__sender-logo_view {
+.mail__yandex-logo_view {
     margin: 5px 10px 4px 10px;
     border-radius: 50%;
     background-color: #ff3333;
 }
 
-.Ya {
+.ya {
     margin: 0;
-    padding: 5px 10.9px 6.4px 9.5px;
-    width: 9.5px;
-    height: 18.6px;
+    padding: 5px 11px 6px 10px;
+    width: 10px;
+    height: 19px;
+    font-weight: bold;
+    font-family: 'Yandex Sans Text';
+    color: #fff;
+}
+
+
+.main__ivanov-logo {
+    float: left;
+    width: 30px;
+    height: 30px;
+}
+
+.mail__ivanov-logo_view {
+    margin: 5px 10px 4px 10px;
+    border-radius: 50%;
+    background-color: #0000ff;
+}
+
+.ii {
+    margin: 0;
+    padding: 5px 11px 6px 10px;
+    width: 10px;
+    height: 19px;
     font-weight: bold;
     font-family: 'Yandex Sans Text';
     color: #fff;
@@ -416,8 +468,42 @@ body {
     color: #fff;
 }
 
+.sidebar__add-mail {
+    width: 147px;
+    height: 32px;
+}
+
+.sidebar__add-mail_view {
+    margin-top: 8px;
+    border-radius: 3px;
+    background-color: #6287bd;
+    border: none;
+    font: normal 500 12px normal HelveticaNeue;
+    letter-spacing: normal;
+    font-stretch: normal;
+    color: #fff;
+}
+
+.sidebar__delete-mail {
+    width: 147px;
+    height: 32px;
+}
+
+
+.sidebar__delete-mail_view {
+    margin-top: 8px;
+    border-radius: 3px;
+    background-color: #6287bd;
+    border: none;
+    font: normal 500 12px normal HelveticaNeue;
+    letter-spacing: normal;
+    font-stretch: normal;
+    color: #fff;
+}
+
 .another-items__list {
 }
+
 
 .another-items__list_view {
     margin: 0;
@@ -458,6 +544,29 @@ body {
     border-radius: 3px;
     background-color: #cdd6e4;
 }
+
+
+.mail-list {
+    margin: 0;
+    padding-left: 0;
+}
+
+
+.mail-list__elem_view {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.sidebar__add-mail.slide-fade li {
+    transition: all 0.4s ease-out;
+    opacity: 0;
+}
+
+.sidebar__add-mail.slide-fade li.mail-list__elem {
+    opacity: 1;
+}
+
 
 .essay {
     width: 69.5%;

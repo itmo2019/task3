@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="author" content="Egor Galkin">
     <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
     <title>Яндекс почта</title>
 </head>
 <body>
@@ -30,9 +31,15 @@
                     <li class="another-items__item another-items__item_view"><a href="index.html" class="_simple-link-view"><p class="another-items__item-paragraph another-items__item-paragraph_view">Создать папку</p></a></li>
                 </ul>
             </div>
+            <button class="sidebar__add-mail sidebar__add-mail_view _text-overflow-behaviour" id="sidebar__add-mail" onclick="addNewMail()">
+                Получить письмо
+            </button>
+            <button class="sidebar__delete-mail sidebar__delete-mail_view _text-overflow-behaviour" id="sidebar__delete-mail" onclick="deleteTopMail()">
+                Удалить письмо
+            </button>
         </div>
         <div class="mail-content mail-content_view">
-            <header class="actions _bottom-separator-view">
+            <header class="actions actions_view _bottom-separator-view">
                 <div class="chose chose_view actions_elem-view actions_option-view">
                     <input class="checkbox" type="checkbox">
                 </div>
@@ -49,79 +56,89 @@
                     Прочитано
                 </div>
             </header>
-            <main class="content-main">
-                <section class="mail _bottom-separator-view">
-                    <div class="chose chose_view mail__elem mail__elem_view">
-                        <input class="checkbox" type="checkbox">
-                    </div>
-                    <a href="#popup-essay">
-                        <div class="mail__sender-logo mail__sender-logo_view"><p class="Ya">Я</p></div>
-                        <div class="mail__author mail__author_view">
-                            <p class="mail__yandex-passport mail__yandex-passport_view _message_view">Яндекс.Паспорт</p>
-                        </div>
-                        <div class="read-status read-status_view read-status_not-read"></div>
-                        <div class="mail__message-body mail__message-body_view mail__message-body mail__message-body_view_view">
-                            <p class="passport-body passport-body_view _message_view _text-overflow-behaviour">Доступ к аккаунту восстановлен</p>
-                        </div>
-                        <div class="message-date message-date_view message-date message-date_view_view">
-                            <p class="date date_view _message_view">6 авг</p>
-                        </div>
-                    </a>
-                </section>
-                <section class="mail _bottom-separator-view">
-                    <div class="chose mail__elem mail__elem_view">
-                        <input class="checkbox" type="checkbox">
-                    </div>
-                    <a href="index.html" class="_simple-link-view">
-                        <div class="mail__sender-logo mail__sender-logo_view"><p class="Ya">Я</p></div>
-                        <div class="mail__author mail__author_view">
-                            <p class="mail__yandex-team mail__yandex-team_view _message_view">Команда Яндекс.Почты</p>
-                        </div>
-                        <div class="read-status read-status_view read-status_not-read"></div>
-                        <div class="mail__message-body mail__message-body_view">
-                            <p class="team-body team-body_view _message_view _text-overflow-behaviour">Как читать почту с мобильного</p>
-                        </div>
-                        <div class="message-date message-date_view">
-                            <p class="date date_view _message_view">6 июл</p>
-                        </div>
-                    </a>
-                </section>
-                <section class="mail _bottom-separator-view">
-                    <div class="chose mail__elem mail__elem_view">
-                        <input class="checkbox" type="checkbox">
-                    </div>
-                    <a href="index.html" class="_simple-link-view">
-                        <div class="mail__sender-logo mail__sender-logo_view"><p class="Ya">Я</p></div>
-                        <div class="mail__author mail__author_view">
-                            <p class="mail__yandex-team-2 mail__yandex-team-2_view _message_view">Команда Яндекс.Почты</p>
-                        </div>
-                        <div class="read-status read-status_view read-status_read"></div>
-                        <div class="mail__message-body mail__message-body_view">
-                            <p class="team-body-2 team-body-2_view _message_view _text-overflow-behaviour">Как читать почту с мобильного</p>
-                        </div>
-                        <div class="message-date message-date_view">
-                            <p class="date date_view _message_view">6 июл</p>
-                        </div>
-                    </a>
-                </section>
-                <section class="mail _bottom-separator-view">
-                    <div class="chose mail__elem mail__elem_view">
-                        <input class="checkbox" type="checkbox">
-                    </div>
-                    <a href="index.html" class="_simple-link-view">
-                        <div class="mail__sender-logo mail__sender-logo_view"><p class="Ya">Я</p></div>
-                        <div class="mail__author mail__author_view">
-                            <p class="yandex yandex_view _message_view">Яндекс</p>
-                        </div>
-                        <div class="read-status read-status_view read-status_read"></div>
-                        <div class="mail__message-body mail__message-body_view">
-                            <p class="yandex-body yandex-body_view _message_view _text-overflow-behaviour">Соберите всю почту в этот ящик</p>
-                        </div>
-                        <div class="message-date message-date_view">
-                            <p class="date date_view _message_view">6 июл</p>
-                        </div>
-                    </a>
-                </section>
+            <main class="content-main content-main_view">
+                <ul class="mail-list" id="mailList">
+                    <li class="mail-list__elem mail-list__elem_view">
+                        <section class="mail _bottom-separator-view">
+                            <div class="chose chose_view mail__elem mail__elem_view">
+                                <input class="checkbox" type="checkbox">
+                            </div>
+                            <a href="index.html" class="_simple-link-view">
+                                <div class="mail__sender-logo mail__yandex-logo_view"><p class="ya">Я</p></div>
+                                <div class="mail__author mail__author_view">
+                                    <p class="mail__yandex-passport mail__yandex-passport_view _message_view">Яндекс.Паспорт</p>
+                                </div>
+                                <div class="read-status read-status_view read-status_not-read"></div>
+                                <div class="mail__message-body mail__message-body_view mail__message-body mail__message-body_view_view">
+                                    <p class="passport-body passport-body_view _message_view _text-overflow-behaviour">Доступ к аккаунту восстановлен</p>
+                                </div>
+                                <div class="message-date message-date_view message-date message-date_view_view">
+                                    <p class="date date_view _message_view">6 авг</p>
+                                </div>
+                            </a>
+                        </section>
+                    </li>
+                    <li class="mail-list__elem mail-list__elem_view">
+                        <section class="mail _bottom-separator-view">
+                            <div class="chose mail__elem mail__elem_view">
+                                <input class="checkbox" type="checkbox">
+                            </div>
+                            <a href="index.html" class="_simple-link-view">
+                                <div class="mail__sender-logo mail__yandex-logo_view"><p class="ya">Я</p></div>
+                                <div class="mail__author mail__author_view">
+                                    <p class="mail__yandex-team mail__yandex-team_view _message_view">Команда Яндекс.Почты</p>
+                                </div>
+                                <div class="read-status read-status_view read-status_not-read"></div>
+                                <div class="mail__message-body mail__message-body_view">
+                                    <p class="team-body team-body_view _message_view _text-overflow-behaviour">Как читать почту с мобильного</p>
+                                </div>
+                                <div class="message-date message-date_view">
+                                    <p class="date date_view _message_view">6 июл</p>
+                                </div>
+                            </a>
+                        </section>
+                    </li>
+                    <li class="mail-list__elem mail-list__elem_view">
+                        <section class="mail _bottom-separator-view">
+                            <div class="chose mail__elem mail__elem_view">
+                                <input class="checkbox" type="checkbox">
+                            </div>
+                            <a href="index.html" class="_simple-link-view">
+                                <div class="mail__sender-logo mail__yandex-logo_view"><p class="ya">Я</p></div>
+                                <div class="mail__author mail__author_view">
+                                    <p class="mail__yandex-team-2 mail__yandex-team-2_view _message_view">Команда Яндекс.Почты</p>
+                                </div>
+                                <div class="read-status read-status_view read-status_read"></div>
+                                <div class="mail__message-body mail__message-body_view">
+                                    <p class="team-body-2 team-body-2_view _message_view _text-overflow-behaviour">Как читать почту с мобильного</p>
+                                </div>
+                                <div class="message-date message-date_view">
+                                    <p class="date date_view _message_view">6 июл</p>
+                                </div>
+                            </a>
+                        </section>
+                    </li>
+                    <li class="mail-list__elem mail-list__elem_view" id="mail-list">
+                        <section class="mail _bottom-separator-view">
+                            <div class="chose mail__elem mail__elem_view">
+                                <input class="checkbox" type="checkbox">
+                            </div>
+                            <a href="index.html" class="_simple-link-view">
+                                <div class="mail__sender-logo mail__yandex-logo_view"><p class="ya">Я</p></div>
+                                <div class="mail__author mail__author_view">
+                                    <p class="yandex yandex_view _message_view">Яндекс</p>
+                                </div>
+                                <div class="read-status read-status_view read-status_read"></div>
+                                <div class="mail__message-body mail__message-body_view">
+                                    <p class="yandex-body yandex-body_view _message_view _text-overflow-behaviour">Соберите всю почту в этот ящик</p>
+                                </div>
+                                <div class="message-date message-date_view">
+                                    <p class="date date_view _message_view">6 июл</p>
+                                </div>
+                            </a>
+                        </section>
+                    </li>
+                </ul>
                 <div id="popup-essay" class="essay essay_view">
                     <div class="essay-block essay-block_view">
                         <a class="popup-essay_close" href="#">&times;</a><br>
