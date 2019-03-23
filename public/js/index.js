@@ -1,11 +1,11 @@
 (function() {
 	document.querySelector('.delete-letters-button').onclick = () => {
 		removeLetters(getMarkedLetters());
-	}
+	};
 
 	function removeLetters(letters) {
 		letters.forEach(letter => {
-			letter.classList.add('letter_deleted')
+			letter.classList.add('letter_deleted');
 			letter.addEventListener("animationend", () => {
 				letter.remove();
 			});
@@ -21,24 +21,26 @@
 (function() {
 	document.querySelector('.new-letter-button').onclick = () => {
 		document.querySelector('.letters__list').insertAdjacentElement('afterbegin', createNewLetter());
-	}
+	};
 
-	var letterContent =  {
-		img: 'img/ya.svg',
-		name: 'Some name',
-		content: 'Some subject',
-		date: '2018-07-06'
-	}
+    const letterContent = {
+        img: 'img/ya.svg',
+        name: 'Команда Яндекс',
+        content: 'К сожалению, вы нам не подходите, всего доброго',
+        date: '2018-07-06'
+    };
 
-	function createNewLetter() {
-		var letter = document.createElement('li');
-		letter.classList.add('letter', 'letters__letter', 'letter_unread', 'letter_new');
+    function createNewLetter() {
+        const letter = document.createElement('li');
+        letter.classList.add('letter', 'letters__letter', 'letter_unread', 'letter_new');
 		letter.insertAdjacentHTML('afterbegin', createLetterHtml(letterContent));
 
-		letter.addEventListener("animationend", () => {
-			letter.classList.remove('letter_new');
-			letter.removeEventListener("animationend", this)
-		});
+        const listener = () => {
+            letter.classList.remove('letter_new');
+            letter.removeEventListener("animationend", listener)
+        };
+
+        letter.addEventListener("animationend", listener);
 
 		return letter;
 	}
@@ -62,13 +64,13 @@
 				</a>`
 	}
 
-	var months = ['янв', 'фев', 'мар', 'апр', 'май', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек']
-	function parseDate(date) {
-		var dateEntries = date.split('-');
+    const months = ['янв', 'фев', 'мар', 'апр', 'май', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'];
+    function parseDate(date) {
+        const dateEntries = date.split('-');
 
-		var month = parseInt(dateEntries[1]);
-		var day = parseInt(dateEntries[2]);
+        const month = parseInt(dateEntries[1]);
+        const day = parseInt(dateEntries[2]);
 
-		return `${day} ${months[month]}`;
+        return `${day} ${months[month]}`;
 	}
 })();

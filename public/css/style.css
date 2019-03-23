@@ -324,11 +324,6 @@
   visibility: visible;
 }
 
-.letter__checkbox {
-  /*	padding-top: 10px;
-	padding-bottom: 10px;*/
-}
-
 .letter__content-preview {
   display: inline-block;
   box-sizing: border-box;
@@ -455,7 +450,6 @@
   display: block;
   box-sizing: border-box;
   padding: 0 10px;
-  color: inherit;
   text-decoration: none;
   color: #707070;
   font: 500 11px/22px "Helvetica Neue";

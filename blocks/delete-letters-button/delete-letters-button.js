@@ -1,11 +1,11 @@
 (function() {
 	document.querySelector('.delete-letters-button').onclick = () => {
 		removeLetters(getMarkedLetters());
-	}
+	};
 
 	function removeLetters(letters) {
 		letters.forEach(letter => {
-			letter.classList.add('letter_deleted')
+			letter.classList.add('letter_deleted');
 			letter.addEventListener("animationend", () => {
 				letter.remove();
 			});
