@@ -121,7 +121,6 @@
 
 .actions__button {
     cursor: pointer;
-    padding: 0;
     border: none;
     height: inherit;
     background-color: inherit;
