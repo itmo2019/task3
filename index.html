@@ -1,0 +1,137 @@
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <title>Яндекс.Почта</title>
+</head>
+<body>
+<header class="header">
+    <div class="header__burger-menu">
+        <div class="header__burger-menu-rectangle"></div>
+        <div class="header__burger-menu-rectangle"></div>
+        <div class="header__burger-menu-rectangle"></div>
+    </div>
+    <a href="https://mail.yandex.ru"><img class="header__yandex-mail-logo" src="images/yandex-mail-logo.svg" alt="logo"></a>
+    <div class="header__search-input-block">
+        <input class="header__search-input" type="text" placeholder="Поиск">
+        <span class="header__search-input-close">&#x2715;</span>
+    </div>
+</header>
+<main class="main">
+    <div class="menu">
+        <button class="menu__new-letter-button"><span class="menu__new-letter-button-text">Написать</span></button>
+        <ul class="menu-buttons">
+            <li class="menu-buttons__button"><a href="#" class="main_links">Входящие</a></li>
+            <li class="menu-buttons__button"><a href="#" class="main_links">Отправленные</a></li>
+            <li class="menu-buttons__button"><a href="#" class="main_links">Удаленные</a></li>
+            <li class="menu-buttons__button"><a href="#" class="main_links">Спам</a></li>
+            <li class="menu-buttons__button"><a href="#" class="main_links">Черновики</a></li>
+            <li class="menu-buttons__button"><a href="#" class="main_links">Создать папку</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="content-header">
+            <input class="content-header__checkbox" type="checkbox">
+            <div class="content-header-menu">
+                <div class="content-header-menu__text"><a href="#" class="main_links">Переслать</a></div>
+                <div id="delete-letter-button" class="content-header-menu__text"><a href="#" class="main_links">Удалить</a></div>
+                <div class="content-header-menu__text"><a href="#" class="main_links">Это спам!</a></div>
+                <div class="content-header-menu__text"><a href="#" class="main_links">Прочитано</a></div>
+            </div>
+        </div>
+        <div class="letters">
+            <input type="checkbox" id="hidden-page-viewer">
+            <div class="hidden-page">
+                <label for="hidden-page-viewer">
+                    <span class="hidden-page__page-close-button">&#x2715;</span>
+                </label>
+                <img class="hidden-page__raccoon-image" src="images/raccoon.png" alt="raccoon">
+                Енот – животное крайне забавное. В начале 20 века зоолог Альфред Брем описал этих любопытных зверьков
+                так:
+                «По умственному складу енот несколько походит на обезьяну: также весел, жив, при случае смел, а при
+                выслеживании добычи хитер, как лисица, ест он все, начиная с растений и кончая рыбой и крабами, которых
+                ловит из воды. Любит также таскать домашних кур».
+                <p>Еноты – хищники (семейство енотовые). Самый известный и распространенный вид - енот-полоскун. Вес и
+                    размеры енота сродни небольшому бочонку: тело достигает до 65 см в длину, вес – до 10 кг. Обычно
+                    самочки
+                    уступают самцам в размерах. Зубов у енота много (от 31 до 46), их длина достигает нескольких
+                    сантиметров. Енот всеяден, он охотно поедает ягоды, червячков, букашек, лягушек, мелких грызунов.
+                    Из-за
+                    своей прожорливости многие еноты селятся неподалеку от человека в поисках объедков на свалках и
+                    помойках. Не редки случаи, когда в поисках пищи наглые еноты пробираются не только во дворы, но и в
+                    сами
+                    дома.
+                <p>Родина енотов – Северная и Центральная Америка. В начале 20 века из-за ценного меха этих животных
+                    стали
+                    разводить и на других материках. Сегодня еноты-полоскуны обитают в некоторых странах Европы и в
+                    Европейской части России. Продолжительность жизни енотов в естественной среде – до 10 лет,
+                    прирученные
+                    еноты дольше – до 15 лет. Читайте подробнее про домашних енотов.
+            </div>
+            <div class="letter">
+                <label for="hidden-page-viewer">
+                    <input class="letter__checkbox" type="checkbox">
+                    <div class="letter__author-logo">
+                        <div class="letter__author_abbr">РХ</div>
+                    </div>
+                    <div class="letter__author bold-text letter__text">Руслан Халимов
+                    </div>
+                    <div class="letter__new-letter-flag letter_new-letter-flag-enabled"></div>
+                    <div class="letter__subject bold-text letter__text">Новая статья про енотов
+                    </div>
+                    <div class="letter__time">6 авг</div>
+                </label>
+            </div>
+            <div class="letter">
+                <input class="letter__checkbox" type="checkbox">
+                <div class="letter__author-logo">
+                    <div class="letter__author_abbr">Я</div>
+                </div>
+                <div class="letter__author bold-text letter__text">Команда
+                    Яндекс.Почты
+                </div>
+                <div class="letter__new-letter-flag letter_new-letter-flag-enabled"></div>
+                <div class="letter__subject bold-text letter__text">Как
+                    читать почту с мобильного
+                </div>
+                <div class="letter__time">6 июля</div>
+            </div>
+            <div class="letter">
+                <input class="letter__checkbox" type="checkbox">
+                <div class="letter__author-logo">
+                    <div class="letter__author_abbr">Я</div>
+                </div>
+                <div class="letter__author letter__text">Команда
+                    Яндекс.Почты
+                </div>
+                <div class="letter__new-letter-flag"></div>
+                <div class="letter__subject letter__text">Как читать почту
+                    с мобильного
+                </div>
+                <div class="letter__time">6 июня</div>
+            </div>
+            <div class="letter">
+                <input class="letter__checkbox" type="checkbox">
+                <div class="letter__author-logo">
+                    <div class="letter__author_abbr">Я</div>
+                </div>
+                <div class="letter__author letter__text">Яндекс</div>
+                <div class="letter__new-letter-flag"></div>
+                <div class="letter__subject letter__text">Соберите всю
+                    почту в этот ящик
+                </div>
+                <div class="letter__time">6 мая</div>
+            </div>
+        </div>
+
+        <div class="content-footer">
+            <div class="content-footer__text">&copy; 2001 - 2018, Яндекс</div>
+            <div class="content-footer__text">Реклама</div>
+            <div class="content-footer__text">Помощь и обратная связь</div>
+        </div>
+    </div>
+</main>
+<script src="js/script.js"></script>
+</body>
+</html>
