@@ -8,56 +8,68 @@
 <body>
 <script>
     function deleteSelectedChecks() {
-        var checks = document.querySelectorAll(".checkbox");
+        let checks = document.querySelectorAll(".checkbox");
         if(checks[0].checked) {
-            deleteAll(checks)
+            deleteAll(checks);
             checks[0].checked = false;
         } else {
-            for(var i = 1; i < checks.length;i++) {
+            for(let i = 1; i < checks.length; i++) {
                 if(checks[i].checked) {
-                    var checkParent = checks[i];
+                    let checkParent = checks[i];
                     while(!checkParent.classList.contains("message-box__list")) {
                         checkParent = checkParent.parentNode;
                     }
-                    checkParent.remove();
+                    deleteSingleLetter(checkParent)
                 }
             }
         }
     }
+
+    function deleteSingleLetter(toDelete) {
+        toDelete.classList.add("message-box__list-delete");
+        toDelete.addEventListener("animationend", () => {
+            toDelete.remove();
+        });
+    }
+
     function deleteAll(checks) {
-        for(var i = 1; i < checks.length;i++) {
-            var checkParent = checks[i];
+        for(let i = 1; i < checks.length; i++) {
+            let checkParent = checks[i];
             while(!checkParent.classList.contains("message-box__list")) {
                 checkParent = checkParent.parentNode;
             }
-            checkParent.remove();
+            deleteSingleLetter(checkParent);
         }
     }
 
     function addNewMessage() {
-        var templateLetter = '<a href="#">\n' +
+        let templateLetter = '<a href="#">\n' +
             '                    <input type="checkbox" class="checkbox " id="useless2">\n' +
             '                    <img class="img2" src="yaimg.png" alt="yacircle">\n' +
             '                    <div class="unread-name">Команда Яндекс.Почты</div>\n' +
             '                    <div class="unread-marker"></div>\n' +
             '                    <div class="unread">Как читать почту с мобильного</div>\n' +
             '                    <div class="date">14 июл</div>\n' +
-            '                </a>'
-        var list = document.querySelector(".message-box__ul");
-        var node = document.createElement('li');
+            '                </a>';
+        let list = document.querySelector(".message-box__ul");
+        let node = document.createElement('li');
         node.className = "message-box__list";
         node.innerHTML = templateLetter;
-        list.insertBefore(node, list.firstElementChild.nextSibling);
+        node.classList.add("message-box__list-add");
+        list.insertBefore(node, list.firstElementChild);
+        node.addEventListener("animationend", () => {
+            node.classList.remove("message-box__list-add");
+        });
     }
 </script>
 
 <div>
     <div class="three-stripes">
-        <div class="stripe">
+        <div class="three-stripes__stripe">
         </div>
-        <div class="stripe">
+        <div class="three-stripes__stripe">
         </div>
-        <div class="stripe">
+        <div class="three-stripes__stripe">
         </div>
     </div>
     <div class="yandex">
@@ -77,110 +89,115 @@
         <input class="search__input" placeholder="Поиск">
     </div>
 </div>
-<main>
+<main class="main-window">
     <div class="left-buttons">
         <button class="left-buttons__write" onclick="addNewMessage()">
             Написать
         </button>
-        <ul class="left-buttons__ul-categories">
-            <li class="ul-categories__marked-list">
-                <a href="#" class="marked-text">Входящие</a>
-            </li>
-            <li class="unmarked-list"><a href="#" class="unmarked-links">Отправленные</a></li>
-            <li class="unmarked-list"><a href="#" class="unmarked-links">Удаленные</a></li>
-            <li class="unmarked-list"><a href="#" class="unmarked-links">Спам</a></li>
-            <li class="unmarked-list"><a href="#" class="unmarked-links">Черновики</a></li>
-            <li class="unmarked-list"><a href="#" class="unmarked-links">Создать папку</a></li>
-        </ul>
+        <div class="categories">
+            <ul class="categories__ul">
+                <li class="left-list"><a href="#" class="left-links">Входящие</a></li>
+                <li class="left-list"><a href="#" class="left-links">Отправленные</a></li>
+                <li class="left-list"><a href="#" class="left-links">Удаленные</a></li>
+                <li class="left-list"><a href="#" class="left-links">Спам</a></li>
+                <li class="left-list"><a href="#" class="left-links">Черновики</a></li>
+                <li class="left-list"><a href="#" class="left-links">Создать папку</a></li>
+            </ul>
+        </div>
     </div>
     <div class="message-box">
-        <ul class="message-box__ul">
-            <li class="message-box__list">
-                <input type="checkbox" class="checkbox" id="useless0">
-                <button class="message-box__buttons">Переслать</button>
-                <button class="message-box__buttons" onclick = deleteSelectedChecks()>Удалить</button>
-                <button class="message-box__buttons">Это спам!</button>
-                <button class="message-box__buttons">Прочитано</button>
-            </li>
-            <li class="message-box__list">
-                <label for="hide-mail-page">
-                    <div class="other-rows clicker">
-                        <input type="checkbox" class="checkbox" id="useless1">
-                        <img class="img2" src="yaimg.png" alt="yacircle">
-                        <div class="unread-name">Яндекс.Паспорт</div>
-                        <div class="unread-marker"></div>
-                        <div class="unread">Доступ к аккаунта восстановлен</div>
-                        <div class="date">6 авг</div>
-                    </div>
-                </label>
-
-                <input type="checkbox" id="hide-mail-page">
-                <div class="kitten-page">
-                    <label for="hide-mail-page">
-                        <div class="close-page">X</div>
+        <div class="message-box__list">
+            <input type="checkbox" class="checkbox" id="useless0">
+            <button class="message-buttons">Переслать</button>
+            <button class="message-buttons" onclick = deleteSelectedChecks()>Удалить</button>
+            <button class="message-buttons">Это спам!</button>
+            <button class="message-buttons">Прочитано</button>
+        </div>
+        <div class = "message-box__ul-wrap">
+            <ul class="message-box__ul">
+                <li class="message-box__list">
+                    <label for="hideMailPage">
+                        <div class="other-rows">
+                            <input type="checkbox" class="checkbox" id="useless1">
+                            <img class="img2" src="yaimg.png" alt="yacircle">
+                            <div class="unread-name">Яндекс.Паспорт</div>
+                            <div class="unread-marker"></div>
+                            <div class="unread">Доступ к аккаунта восстановлен</div>
+                            <div class="date">6 авг</div>
+                        </div>
                     </label>
-                    <div class="manul-text">
-                        Манул — хищное млекопитающее семейства кошачьих. Своё второе название — па́лласов кот (англ.
-                        Pallas's
-                        cat) —
-                        он получил в честь немецкого натуралиста П. С. Палласа. Синонимичное латинское название
-                        Otocolobus
-                        происходит от греческого us, otos —
-                        ухо, kolobos — уродливый, то есть «уродливое ухо».
-                        <!--<img class = "manulImg" src = "manul.png" alt = "Manul">-->
-                        Манул — животное размером с домашнюю кошку: длина его тела 52—65 см, хвоста 23—31 см; весит он
-                        2—5 кг.
-                        От обычной кошки он отличае тся более плотным,
-                        <img class="manul-img-circ" src="manulCirc.png" alt="ManulCircle">
-                        массивным телом на коротких толстых лапах и очень густой шерстью (на один квадратный сантиметр
-                        приходится 9000 волосков, которые могут достигать длины 7 см).
-                        Голова у манула небольшая, широкая и уплощённая, с маленькими округлыми ушками, которые широко
-                        расставлены. Глаза жёлтые,
-                        зрачки которых при ярком свете в отличие от зрачков глаз домашней кошки не приобретают
-                        щелевидную форму,
-                        а остаются круглыми.
-                        На щеках — пучки удлинённых волос (баки). Хвост длинный и толстый, с закруглённым кончиком.
-                        Мех у манула самый пушистый и густой среди кошачьих. Окрас меха представляет собой комбинацию
-                        светло-серого и палево-охристого цветов;
-                        волоски имеют белые кончики, в результате чего создаётся впечатление, что мех манула припорошен
-                        снегом.
-                        На задней части туловища и на хвосте имеются узкие тёмные поперечные полосы, по бокам морды от
-                        углов
-                        глаз идут вертикальные чёрные полосы.
-                        Кончик хвоста чёрный. Низ тела бурый с белым налётом.
+
+                    <input type="checkbox" id="hideMailPage">
+                    <div class="kitten-page">
+                        <label for="hideMailPage">
+                            <div class="close-page">X</div>
+                        </label>
+                        <div class="manul-text">
+                            <p>Манул — хищное млекопитающее семейства кошачьих. Своё второе название — па́лласов кот (англ.
+                                Pallas's
+                                cat) —
+                                он получил в честь немецкого натуралиста П. С. Палласа. Синонимичное латинское название
+                                Otocolobus
+                                происходит от греческого us, otos —
+                                ухо, kolobos — уродливый, то есть «уродливое ухо».
+                                <!--<img class = "manulImg" src = "manul.png" alt = "Manul">-->
+                                Манул — животное размером с домашнюю кошку: длина его тела 52—65 см, хвоста 23—31 см; весит он
+                                2—5 кг.</p>
+                            <p>От обычной кошки он отличается более плотным,
+                                <img class="manul-img-circ" src="manulCirc.png" alt="ManulCircle">
+                                массивным телом на коротких толстых лапах и очень густой шерстью (на один квадратный сантиметр
+                                приходится 9000 волосков, которые могут достигать длины 7 см).
+                                Голова у манула небольшая, широкая и уплощённая, с маленькими округлыми ушками, которые широко
+                                расставлены. Глаза жёлтые,
+                                зрачки которых при ярком свете в отличие от зрачков глаз домашней кошки не приобретают
+                                щелевидную форму,
+                                а остаются круглыми.</p>
+                            <p>На щеках — пучки удлинённых волос (баки). Хвост длинный и толстый, с закруглённым кончиком.
+                                Мех у манула самый пушистый и густой среди кошачьих. Окрас меха представляет собой комбинацию
+                                светло-серого и палево-охристого цветов;
+                                волоски имеют белые кончики, в результате чего создаётся впечатление, что мех манула припорошен
+                                снегом.
+                                На задней части туловища и на хвосте имеются узкие тёмные поперечные полосы, по бокам морды от
+                                углов
+                                глаз идут вертикальные чёрные полосы.
+                                Кончик хвоста чёрный. Низ тела бурый с белым налётом.
+                                массивным телом на коротких толстых лапах и очень густой шерстью (на один квадратный сантиметр
+                                приходится 9000 волосков, которые могут достигать длины 7 см).</p>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="message-box__list">
-                <a href="#">
-                    <input type="checkbox" class="checkbox " id="useless2">
-                    <img class="img2" src="yaimg.png" alt="yacircle">
-                    <div class="unread-name">Команда Яндекс.Почты</div>
-                    <div class="unread-marker"></div>
-                    <div class="unread">Как читать почту с мобильного</div>
-                    <div class="date">6 июл</div>
-                </a>
-            </li>
-            <li class="message-box__list">
-                <a href="#">
-                    <input type="checkbox" class="checkbox" id="useless3">
-                    <img class="img2" src="yaimg.png" alt="yacircle">
-                    <div class="read-name">Команда Яндекс.Почты</div>
-                    <div class="read">Как читать почту с мобильного</div>
-                    <div class="date">6 июл</div>
-                </a>
-            </li>
-            <li class="message-box__list">
-                <a href="#">
-                    <input type="checkbox" class="checkbox" id="useless4">
-                    <img class="img2" src="yaimg.png" alt="yacircle">
-                    <div class="read-name">Яндекс</div>
-                    <div class="read">Соберите всю почту в этот ящик</div>
-                    <div class="date">6 июл</div>
-                </a>
-            </li>
-        </ul>
-        <footer>
+                </li>
+                <li class="message-box__list">
+                    <a href="#">
+                        <input type="checkbox" class="checkbox " id="useless2">
+                        <img class="img2" src="yaimg.png" alt="yacircle">
+                        <div class="unread-name">Команда Яндекс.Почты</div>
+                        <div class="unread-marker"></div>
+                        <div class="unread">Как читать почту с мобильного</div>
+                        <div class="date">6 июл</div>
+                    </a>
+                </li>
+                <li class="message-box__list">
+                    <a href="#">
+                        <input type="checkbox" class="checkbox" id="useless3">
+                        <img class="img2" src="yaimg.png" alt="yacircle">
+                        <div class="read-name">Команда Яндекс.Почты</div>
+                        <div class="read">Как читать почту с мобильного</div>
+                        <div class="date">6 июл</div>
+                    </a>
+                </li>
+                <li class="message-box__list">
+                    <a href="#">
+                        <input type="checkbox" class="checkbox" id="useless4">
+                        <img class="img2" src="yaimg.png" alt="yacircle">
+                        <div class="read-name">Яндекс</div>
+                        <div class="read">Соберите всю почту в этот ящик asddddddddasdasdasdasdasdasasdasdsadddddddddddddddddddddd</div>
+                        <div class="date">6 июл</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="separator"></div>
+        <footer class = "refs">
             <a class="link-bot" href="#">Помощь и обратная связь</a>
             <a class="link-bot" href="#">Реклама</a>
             <div class="certificate">© 2001-2018, Яндекс</div>
