@@ -1,0 +1,22 @@
+{
+  "name": "task3",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikvoloshin/task3.git"
+  },
+  "author": "Nikita Voloshin",
+  "homepage": "https://github.com/nikvoloshin/task3#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-css-url-adjuster": "^0.2.3",
+    "gulp-rename": "^1.4.0",
+    "html2bl": "github:dab/html2bl"
+  },
+  "dependencies": {
+    "gulp-flatten": "^0.4.0"
+  }
+}

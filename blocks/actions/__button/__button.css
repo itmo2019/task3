@@ -1,0 +1,14 @@
+.actions__button {
+	cursor: pointer;
+	padding: 0;
+	border: none;
+
+	height: inherit;
+	background-color: inherit;
+
+	box-sizing: border-box;
+	padding: 0 10px;
+
+	font: 500 13px/37px "Helvetica Neue";
+	color: #ccc;
+}
