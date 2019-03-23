@@ -153,6 +153,7 @@ body {
     min-height: 500px;
     min-width: max-content;
     height: auto;
+    padding-bottom: 31px;
 }
 
 .message-block__row {
