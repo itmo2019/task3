@@ -157,9 +157,21 @@ input[type="button"] {
 
 .read-letter-header,
 .unread-letter-header {
+    overflow-y: hidden;
     position: relative;
     height: 39px;
     border-bottom: 1px solid #e2e2e2;
+}
+
+.read-letter-header[changing="true"],
+.unread-letter-header[changing="true"] {
+    transition-duration: 200ms;
+}
+
+.read-letter-header[delete="true"],
+.unread-letter-header[delete="true"] {
+    height: 0;
+    border: 0;
 }
 
 .avatar {
@@ -200,7 +212,7 @@ input[type="button"] {
 .letter-date {
     overflow: hidden;
     text-overflow: clip;
-    width: 40px;
+    width: 48px;
     text-align: right;
     position: absolute;
     top: 13px;
@@ -223,7 +235,7 @@ input[type="button"] {
     vertical-align: middle;
     cursor: pointer;
     width: 100%;
-    max-width: calc(75% - 180px);
+    max-width: calc(75% - 193px);
     display: inline-block;
     font-size: 13px;
     white-space: nowrap;
