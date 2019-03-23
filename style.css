@@ -18,7 +18,7 @@
     src: url("fonts/HelveticaNeueCyr-Medium.otf");
 }
 
-header {
+.page__header {
     width: 184px;
     height: 31px;
     position: absolute;
@@ -26,7 +26,7 @@ header {
     top: 12px;
 }
 
-.inline{
+.page_inline{
     display: inline;
 }
 
@@ -36,7 +36,7 @@ html, body{
     background-color: #e5eaf0;
 }
 
-#page{
+.page{
     position: relative;
     width: 800px;
     min-height: 100%;
@@ -53,23 +53,23 @@ a, a:active, a:visited, a:hover {
     position: unset !important;
 }
 
-#ya-mail-logo{
+.page__ya-mail-logo{
     font-size: 25px;
 }
 
-#ya-logo{
+.ya-mail-logo__ya-logo{
     width: 100%;
     font-family: YandexSansBold, sans-serif;
     margin-right: 4px;
     margin-left: 3px;
 }
 
-#mail-logo{
+.ya-mail-logo__mail-logo{
     width: 100%;
     font-family: YandexSansThin, sans-serif;
 }
 
-#ya-search{
+.page__ya-search{
     position: absolute;
     width: 301px;
     height: 32px;
@@ -86,20 +86,20 @@ a, a:active, a:visited, a:hover {
     color: #000000;
 }
 
-#message-creator {
+.page__message-creator {
     position: absolute;
     top: 11px;
     left: 640px;
     opacity: 0.5;
     cursor: pointer;
 }
-#nav-sidebar{
+.ya-sidebar__nav-sidebar{
     margin-left: 22;
     margin-top: 0px;
     padding: 0;
 }
 
-#nav-sidebar li:not(#compose-message){
+.ya-sidebar__nav-sidebar li:not(.ya-sidebar__compose-message){
     width: 137px;
     height: 22px;
     margin-left: 0;
@@ -109,11 +109,11 @@ a, a:active, a:visited, a:hover {
     line-height: 22px;
 }
 
-#nav-sidebar li:not(#compose-message):hover{
+.ya-sidebar__nav-sidebar li:not(.ya-sidebar__compose-message):hover{
     background-color: #cdd6e4;
 }
 
-#compose-message{
+.ya-sidebar__compose-message{
     width: 147px;
     height: 32px;
     background-color: #6287bd;
@@ -128,7 +128,7 @@ a, a:active, a:visited, a:hover {
     line-height: 32px;
 }
 
-#ya-sidebar{
+.page__ya-sidebar{
     position: absolute;
     left: 0;
     top: 56px;
@@ -139,7 +139,7 @@ a, a:active, a:visited, a:hover {
     color: #707070;
 }
 
-section{
+.page__ya-mail{
     position: absolute;
     left: 191px;
     top: 56px;
@@ -153,7 +153,7 @@ section{
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.34);
 }
 
-#content-top-bar{
+.ya-mail__content-top-bar{
     position: relative;
     width: 100%;
     height: 37px;
@@ -163,36 +163,36 @@ section{
     color: #cccccc;
 }
 
-#content-top-bar *{
+.ya-mail__content-top-bar *{
     position: absolute;
     top: 11px;
 }
 
-#content-top-bar ul{
+.ya-mail__content-top-bar ul{
     position: unset;
 }
 
-.select-all{
+.ya-mail__select-all{
     left: 20px;
 }
 
-#resend{
+.ya-mail__resend{
     left: 56px;
 }
 
-#delete{
+.ya-mail__delete{
     left: 150px;
 }
 
-#spam{
+.ya-mail__spam{
     left: 228px;
 }
 
-#mark-as-read{
+.ya-mail__mark-as-read{
     left: 315;
 }
 
-.message{
+.message-list__message{
     position: relative;
     height: 37px;
     font: 13px HelveticaNeue;
@@ -200,33 +200,33 @@ section{
     border-bottom: solid 1px #e2e2e2;
 }
 
-.unread{
+.message_unread{
     font-weight: bold;
 }
 
-.message *{
+.message-list__message *{
     display: inline;
     position: absolute;
     top: 12px;
 }
 
-#content-messages{
+.ya-mail__content-messages{
     width: 100%;
     min-height: 463px;
     border-top: solid 1px #e2e2e2;
     border-bottom: solid 1px #e2e2e2;
 }
 
-#message-list{
+.content-messages__message-list{
     margin: 0;
     padding: 0;
 }
 
-.message-select{
+.message__message-select{
     left: 20px; 
 }
 
-#my-blog{
+.content-messages__my-blog{
     box-sizing: border-box;
     width: 100%;
     min-height: 463px;
@@ -241,22 +241,22 @@ section{
     z-index: 1;
 }
 
-#message-open{
+.message-open{
     position: unset;
 }
 
-#message-select1:checked + #my-blog{
+#message-select1:checked + .content-messages__my-blog{
     display: block;
 }
 
-#round{
+.my-blog__round{
     position: relative;
     float: right;
     border-radius: 50%;
     shape-outside:circle();
 }
 
-#exit {
+.my-blog__exit {
     position: absolute;
     top: 0;
     right: 0;
@@ -270,10 +270,10 @@ section{
     vertical-align: middle;
 }
 
-#exit:hover {
+.my-blog__exit:hover {
     background-color: #cdd6e4;
 }
-.author-avatar{
+.message__author-avatar{
     width: 30px;
     height: 30px;
     left: 46px;
@@ -282,7 +282,7 @@ section{
     border-radius: 15px;
 }
 
-.author-name{
+.message__author-name{
     left: 86px;
     max-width: 170px;
     max-height: 16px;
@@ -290,7 +290,7 @@ section{
     text-overflow: ellipsis;
 }
 
-.mark-as-read-tick{
+.message__mark-as-read-tick{
     width: 10px;
     height: 10px;
     left: 261px;
@@ -298,11 +298,11 @@ section{
     border-radius: 10px;
 }
 
-.mark-as-read-tick:checked {
+.message__mark-as-read-tick:checked {
     background-color: rgb(34, 34, 129);
 }
 
-.message-subject{
+.message__message-subject{
     left: 281px;
     max-width: 250px;
     max-height: 16px;
@@ -310,14 +310,14 @@ section{
     text-overflow: ellipsis;
 }
 
-.message-receive-time{
+.message__message-receive-time{
     right: 20px;
     text-align: right;
     color: #9b9b9b;
     /* font-weight: normal; */
 }
 
-#footer-content{
+.page__footer-content{
     position: relative;
     width: 100%;
     height: 30px;
@@ -334,6 +334,6 @@ footer{
     color: #9b9b9b;
 }
 
-#copyright, .link{
+.footer-content__copyright, .footer-content__link{
     margin-left: 15px;
 }

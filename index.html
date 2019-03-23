@@ -9,20 +9,20 @@
 </head>
 
 <body>
-    <div id="page">
-        <header>
-            <div id="ya-menu-logo" class="inline">
+    <div class="page">
+        <header class="page__header">
+            <div class="ya-menu-logo page_inline page__ya-menu-logo">
                 <a href=""><img src="images/sidebar-menu.png" width="20" height="14"></a>
             </div>
-            <div id="ya-mail-logo" class="inline">
-                <span id="ya-logo">Яндекс</span><span id="mail-logo">Почта</span>
+            <div class="ya-mail-logo page_inline page__ya-mail-logo">
+                <span class="ya-mail-logo__ya-logo">Яндекс</span><span class="ya-mail-logo__mail-logo">Почта</span>
             </div>
         </header>
-        <input type="search" id="ya-search" placeholder="Поиск">
-        <button id="message-creator" onclick="createMessage()">Создать письмо</button>
-        <div id="ya-sidebar">
-            <ul id="nav-sidebar">
-                <li id="compose-message"><a href="">Написать</a></li>
+        <input type="search" class="page__ya-search" placeholder="Поиск">
+        <button class="page__message-creator" onclick="createMessage()">Создать письмо</button>
+        <div class="ya-sidebar page__ya-sidebar">
+            <ul class="ya-sidebar__nav-sidebar">
+                <li class="ya-sidebar__compose-message"><a href="">Написать</a></li>
                 <li><a href="#">Входящие</a></li>
                 <li><a href="#">Отправленные</a></li>
                 <li><a href="#">Удалённые</a></li>
@@ -31,23 +31,23 @@
                 <li><a href="#">Создать папку</a></li>
             </ul>
         </div>
-        <section class="ya-mail">
-            <div id="content-top-bar">
-                <input type="checkbox" class="select-all inline">
-                <ul class="inline">
-                    <li id="resend" class="inline"><a href="#">Переслать</a></li>
-                    <li id="delete" class="inline"><a href="#" onclick="deleteSelected()">Удалить</a></li>
-                    <li id="spam" class="inline"> <a href="#">Это спам!</a></li>
-                    <li id="mark-as-read" class="inline"><a href="#">Прочитанно</a></li>
+        <section class="ya-mail page__ya-mail">
+            <div class="ya-mail__content-top-bar">
+                <input type="checkbox" class="ya-mail__select-all">
+                <ul>
+                    <li class="ya-mail__resend"><a href="#">Переслать</a></li>
+                    <li class="ya-mail__delete"><a href="#" onclick="deleteSelected()">Удалить</a></li>
+                    <li class="ya-mail__spam"> <a href="#">Это спам!</a></li>
+                    <li class="ya-mail__mark-as-read"><a href="#">Прочитанно</a></li>
                 </ul>
             </div>
-            <div id="content-messages">
-                <ul id="message-list">
-                    <li class="message unread">
-                        <input type="checkbox" id="message-select1" class="message-select">
-                        <div id="my-blog">
-                            <label for="message-select1" id="exit">X</label>
-                            <img id="round" src="images/round.png" width="400" height="400">
+            <div class="content-messages ya-mail__content-messages">
+                <ul class="message-list content-messages__message-list">
+                    <li class="message message_unread message-list__message"> 
+                        <input type="checkbox" id="message-select1" class="message__message-select">
+                        <div class="my-blog content-messages__my-blog">
+                            <label for="message-select1" class="my-blog__exit">X</label>
+                            <img class="my-blog__round" src="images/round.png" width="400" height="400">
                             Press tick to close :)
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam vero minus accusamus hic eum fuga, voluptatibus, perspiciatis inventore 
                             sunt, a natus asperiores nisi nam nulla magni cumque laborum nihil. Nam!
@@ -77,45 +77,45 @@
                             facilis doloribus accusantium, laboriosam libero, voluptate aspernatur, 
                             sapiente inventore! Impedit, nulla explicabo!
                         </div>
-                        <label id="message-open" for="message-select1">
-                            <img class="author-avatar" width="30px" height="30px">
-                            <span class="author-name">Яндекс.Паспорт</span>
-                            <input type="checkbox" class="mark-as-read-tick">
-                            <span class="message-subject">Доступ к аккаунту восстановлен</span>
-                            <time class="message-receive-time">6 авг</time>
+                        <label class="message-open" for="message-select1">
+                            <img class="message__author-avatar" width="30px" height="30px">
+                            <span class="message__author-name">Яндекс.Паспорт</span>
+                            <input type="checkbox" class="message__mark-as-read-tick">
+                            <span class="message__message-subject">Доступ к аккаунту восстановлен</span>
+                            <time class="message__message-receive-time">6 авг</time>
                         </label>
                     </li>
-                    <li class="message unread">
-                        <input type="checkbox" class="message-select">
-                        <img class="author-avatar" width="30px" height="30px">
-                        <span class="author-name">Яндекс.Паспорт</span>
-                        <input type="checkbox" class="mark-as-read-tick">
-                        <span class="message-subject">Доступ к аккаунту восстановлен</span>
-                        <time class="message-receive-time">5 авг</time>
+                    <li class="message message_unread message-list__message">
+                        <input type="checkbox" class="message__message-select">
+                        <img class="message__author-avatar" width="30px" height="30px">
+                        <span class="message__author-name">Яндекс.Паспорт</span>
+                        <input type="checkbox" class="message__mark-as-read-tick">
+                        <span class="message__message-subject">Доступ к аккаунту восстановлен</span>
+                        <time class="message__message-receive-time">5 авг</time>
                     </li>
-                    <li class="message">
-                        <input type="checkbox" class="message-select">
-                        <img class="author-avatar" width="30px" height="30px">
-                        <span class="author-name">Яндекс.Паспорт</span>
-                        <span class="message-subject">Доступ к аккаунту восстановлен</span>
-                        <time class="message-receive-time">4 авг</time>
+                    <li class="message message-list__message">
+                        <input type="checkbox" class="message__message-select">
+                        <img class="message__author-avatar" width="30px" height="30px">
+                        <span class="message__author-name">Яндекс.Паспорт</span>
+                        <span class="message__message-subject">Доступ к аккаунту восстановлен</span>
+                        <time class="message__message-receive-time">4 авг</time>
                     </li>
-                    <li class="message">
-                        <input type="checkbox" class="message-select">
-                        <img class="author-avatar" width="30px" height="30px">
-                        <span class="author-name">Яндекс.Паспорт</span>
-                        <span class="message-subject">Доступ к аккаунту восстановлен</span>
-                        <time class="message-receive-time">3 авг</time>
+                    <li class="message message-list__message">
+                        <input type="checkbox" class="message__message-select">
+                        <img class="message__author-avatar" width="30px" height="30px">
+                        <span class="message__author-name">Яндекс.Паспорт</span>
+                        <span class="message__message-subject">Доступ к аккаунту восстановлен</span>
+                        <time class="message__message-receive-time">3 авг</time>
                     </li>
                 </ul>
             </div>
-            <div id="footer-content">
+            <div class="footer-content page__footer-content">
                 <footer>
-                    <nav class="inline">
-                        <a href="#" class="link">Помощь и обратная связь</a>
-                        <a href="#" class="link">Реклама</a>
+                    <nav class="page_inline">
+                        <a href="#" class="footer-content__link">Помощь и обратная связь</a>
+                        <a href="#" class="footer-content__link">Реклама</a>
                     </nav>
-                    <span id="copyright">&copy;2001&mdash;2018, Яндекс</span>
+                    <span class="footer-content__copyright">&copy;2001&mdash;2018, Яндекс</span>
                 </footer>
             </div>
         </section>
