@@ -64,6 +64,7 @@
     }
 
     </script>
+
     <title>Mail</title>
   </head>
 <body>
@@ -75,7 +76,7 @@
             <div class="high-part__one-line"></div>
         </section>
         <section class="high-part">
-            <a href="https://mail.yandex.ru">
+            <a class="header__yandex-mail_unstressed-link" href="https://mail.yandex.ru">
                 <img
                     class="high-part__yandex-mail-picture"
                     alt="yandexMailPicture"
@@ -87,31 +88,32 @@
         </section>
         <section class="high-part high-part__search">
             <input type="text" placeholder="Поиск" class="high-part__search-word">
+            <div class="high-part__cancel-search-sign">&#9747;</div>
         </section>
     </header>
 
     <main>
         <section class="menu">
-            <a id="newLet">
-                <button name="writeButton" class="menu__writeButton" onclick="addLetter()">
+            <a class="menu__actions-list_unstressed-link">
+                <button name="writeButton" class="menu__write-button" onclick="addLetter()">
                     Написать
                 </button>
             </a>
-            <ul>
+            <ul class="menu__actions-list">
                 <li class="menu__navigation">
-                    <a href="" style="font-weight: bold;">Входящие</a>
+                    <a href="" style="font-weight: bold;" class="menu__actions-list_unstressed-link" >Входящие</a>
                 </li>
                 <li class="menu__navigation">
-                    <a href="">Отправленные</a>
+                    <a href="" class="menu__actions-list_unstressed-link">Отправленные</a>
                 </li>
                 <li class="menu__navigation">
-                    <a href="">Спам</a>
+                    <a href="" class="menu__actions-list_unstressed-link">Спам</a>
                 </li>
                 <li class="menu__navigation">
-                    <a href="">Черновики</a>
+                    <a href="" class="menu__actions-list_unstressed-link">Черновики</a>
                 </li>
                 <li class="menu__navigation">
-                    <a href="">Создать папку</a>
+                    <a href="" class="menu__actions-list_unstressed-link">Создать папку</a>
                 </li>
             </ul>
         </section>
@@ -120,7 +122,7 @@
             <ul class="window-letters__header">
                 <li class="window-letters__square-for-button window-letters__header-part">
                     <label>
-                        <input type="checkbox" name="delBut" class="window-letters__input-button" onclick="selectAllButton()">
+                        <input type="checkbox" name="CCC" class="window-letters__input-button" onclick="selectAllButton()">
                         <div class="window-letters__select-button"></div>
                     </label>
                 </li>
@@ -190,7 +192,7 @@
                             <ul class="window-letters__letter-innerior">
                                 <li class="window-letters__square-for-button window-letters__letter-part">
                                     <label>
-                                        <input type="checkbox" name="delBut" class="window-letters__input-button">
+                                        <input type="checkbox" name="CCC" class="window-letters__input-button">
                                         <div class="window-letters__select-button"></div>
                                     </label>
                                 </li>
@@ -222,7 +224,7 @@
                         <ul class="window-letters__letter-innerior">
                             <li class="window-letters__square-for-button window-letters__letter-part">
                                 <label>
-                                    <input type="checkbox" name="delBut" class="window-letters__input-button">
+                                    <input type="checkbox" name="CCC" class="window-letters__input-button">
                                     <div class="window-letters__select-button"></div>
                                 </label>
                             </li>
@@ -234,13 +236,13 @@
                                 />
                             </li>
                             <li class="window-letters__sender window-letters__letter-part">
-                                Яндекс.Паспорт
+                                Яндекс.Паспорppppppppppppppppppppp
                             </li>
                             <li class="window-letters__unread-point window-letters__letter-part">
 
                             </li>
                             <li class="window-letters__letter-text window-letters__letter-part">
-                                Соберите всю почту в этот ящик
+                                Соберите всю почту в этот ящик kkkkkkkkkkkkkkkkkkkkkkkkkkkkaaaaakbbbbkkkkkkkkkkkkkkkkkkkkkkkkkk
                             </li>
                             <li class="window-letters__letter-date window-letters__letter-part">
                                 6 авг
@@ -249,44 +251,15 @@
                         <hr class="window-letters__delimiter-line">
                     </li>
 
-                    <li class="window-letters__letter">
-                        <ul class="window-letters__letter-innerior">
-                            <li class="window-letters__square-for-button window-letters__letter-part">
-                                <label>
-                                    <input type="checkbox" name="delBut" class="window-letters__input-button">
-                                    <div class="window-letters__select-button"></div>
-                                </label>
-                            </li>
-                            <li class="window-letters__sender-pict_wrap window-letters__letter-part">
-                                <img
-                                    src="src/yandexCircle.jpg"
-                                    class="window-letters__sender-pict"
-                                    alt="yandex"
-                                />
-                            </li>
-                            <li class="window-letters__sender window-letters__letter-part">
-                                Яндекс.Паспорт
-                            </li>
-                            <li class="window-letters__unread-point window-letters__letter-part">
-
-                            </li>
-                            <li class="window-letters__letter-text window-letters__letter-part">
-                                Соберите всю почту в этот ящик
-                            </li>
-                            <li class="window-letters__letter-date window-letters__letter-part">
-                                6 авг
-                            </li>
-                        </ul>
-                        <hr class="window-letters__delimiter-line">
-                    </li>
-                </section>
-                <section class="window-letters__help-navigation">
-                    <hr class="window-letters__delimiter-line">
-                    Помощь и обратная связь&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    Реклама&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    © 2001 - 2018, Яндекс
+                    
                 </section>
             </ul>
+            <hr class="window-letters__footer_delimiter-line">
+            <section class="window-letters__footer">
+                Помощь и обратная связь&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Реклама&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                © 2001 - 2018, Яндекс
+            </section>
         </section>
     </main>
 
