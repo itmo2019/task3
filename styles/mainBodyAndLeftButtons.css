@@ -1,25 +1,28 @@
-.mainBody {
+.main-body {
     width: 100%;
+    height: calc(100% - 70px);
     display: inline-block;
 }
 
 .buttons {
-    margin-left: 2%;
+    margin-left: 20px;
+    margin-right: 20px;
     display: inline-block;
-    width: 15%;
-    height: 270px;
+    width: 230px;
+    height: 260px;
     vertical-align: top;
 }
 
-.buttonWrite {
+.button-write {
     border-style: none;
-    border-radius: 3px;
+    border-radius: 4px;
     background: rgb(98, 135, 189);
     text-align: center;
     color: rgb(255, 255, 255);
     font-family: "Yandex Sans Light", serif;
-    font-size: 15px;
-    height: 40px;
+    font-size: 13px;
+    font-weight: bold;
+    height: 35px;
     width: 100%;
 }
 
@@ -29,7 +32,7 @@
 
 .folders__button {
     border: none;
-    background-color: #E5EAF0;
+    background-color: rgb(229, 234, 240);
     text-align: left;
     padding-left: 20px;
     width: 100%;
@@ -41,18 +44,17 @@
 
 .folders__button:hover {
     background: rgb(205, 214, 228);
-    border-radius: 3px;
+    border-radius: 4px;
 }
 
-
-.buttonGetLetter {
+.button-get-letter {
     border-style: none;
     border-radius: 3px;
     background: rgb(98, 135, 189);
     text-align: center;
     color: rgb(255, 255, 255);
     font-family: "Yandex Sans Light", serif;
-    font-size: 15px;
-    height: 40px;
+    font-size: 13px;
+    height: 35px;
     width: 100%;
 }

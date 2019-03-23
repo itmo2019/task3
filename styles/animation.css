@@ -18,3 +18,13 @@
         transform: translateX(0);
     }
 }
+
+@keyframes growing {
+    0% {
+        width: 60%;
+    }
+    100% {
+        width: 100%;
+
+    }
+}

@@ -1,17 +1,17 @@
 var letter = "<div class=\"letter\">\n" +
-    "    <div class=\"wrapper-checkbox-infoSender\">\n" +
-    "        <div class=\"checkbox\"></div>\n" +
-    "        <div class=\"wrapper-checkbox-infoSender__senderPhoto\"></div>\n" +
-    "        <div class=\"wrapper-checkbox-infoSender__senderTheme\">Task 1</div>\n" +
+    "    <div class=\"sender-info-container\">\n" +
+    "        <div class=\"sender-info-container__checkbox\"></div>\n" +
+    "        <div class=\"sender-info-container__photo\"></div>\n" +
+    "        <div class=\"sender-info-container__theme\">Task 1</div>\n" +
     "    </div>\n" +
     "    <div class=\"readed\"></div>\n" +
-    "    <div class=\"wrapper-infoAboutLetter\">\n" +
-    "        <div class=\"wrapper-infoAboutLetter__beginOfLetter\">Здравствуйте, отправил 1 задание</div>\n" +
-    "        <div class=\"wrapper-infoAboutLetter__data\">\n" +
+    "    <div class=\"letter-info-container\">\n" +
+    "        <div class=\"letter-info-container__begin-of-letter\">Здравствуйте, отправил 1 задание</div>\n" +
+    "        <div class=\"letter-info-container__data\">\n" +
     "            <time datetime=\"2019-03-01\">3 мар</time>\n" +
     "        </div>\n" +
+    "        <div class=\"trashcan\" onclick=\"removeLetter(event)\"></div>" +
     "    </div>\n" +
-    "    <div class=\"trashcan\" onclick=\"removeLetter(event)\"></div>" +
     "</div>" +
     "<div class=\"line\"></div>";
 
@@ -24,8 +24,9 @@ function addLetter() {
 function removeLetter(event) {
     let letters = document.getElementById("letters");
     let bodyLetters = letters.children[2];
-    bodyLetters.removeChild(event.currentTarget.parentNode.nextSibling);
-    bodyLetters.removeChild(event.currentTarget.parentNode);
+    bodyLetters.removeChild(event.currentTarget.parentNode.parentNode.nextSibling);
+    bodyLetters.removeChild(event.currentTarget.parentNode.parentNode);
 }
+
 
 
