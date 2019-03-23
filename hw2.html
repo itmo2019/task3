@@ -23,7 +23,7 @@
         <button id="change" onClick="myScrip()">delete</button>
         <script>
             function myScrip() {
-                document.getElementById("will-be-deleted").className = "white-block__deleted white-block_central-row-unread";
+                document.getElementById("will-be-deleted").className = "message-block__deleted message-block__row message-block__central-row message-block_central-row-unread";
             }
         </script>
 
@@ -32,7 +32,7 @@
         <button id="add" onClick="myScrippp()">add</button>
         <script>
             function myScrippp() {
-                document.getElementById("will-be-added").className = "new-message__appear  white-block__row white-block__central-row white-block__central-row_unread white-block__new-message";
+                document.getElementById("will-be-added").className = "new-message__appear  message-block__row message-block__central-row message-block__central-row_unread message-block__new-message";
             }
         </script>
     </span>
@@ -43,16 +43,16 @@
             <button class="left-column__btn_write">Написать</button>
         </form>
         <div class="left-column__btn-group">
-            <button>Входящие</button>
-            <button>Отправленные</button>
-            <button>Удалённые</button>
-            <button>Спам</button>
-            <button>Черновики</button>
-            <button>Создать папку</button>
+            <button class="btn-group__control-button">Входящие</button>
+            <button class="btn-group__control-button">Отправленные</button>
+            <button class="btn-group__control-button">Удалённые</button>
+            <button class="btn-group__control-button">Спам</button>
+            <button class="btn-group__control-button">Черновики</button>
+            <button class="btn-group__control-button">Создать папку</button>
         </div>
     </div>
-    <div class="main__white-block">
-        <div class="white-block__row white-block__upper-row">
+    <div class="main__message-block">
+        <div class="message-block__row message-block__upper-row">
             <label class="check">
                 <input class="check__input" type="checkbox">
             </label>
@@ -67,7 +67,7 @@
                 <span class="tooltip-text">Прочитано</span></div>
         </div>
         <div id="will-be-added"
-             class=" white-block__row white-block__central-row white-block__central-row_unread white-block__new-message">
+             class=" message-block__row message-block__central-row message-block__central-row_unread message-block__new-message">
             <label class="check">
                 <input class="check__input" type="checkbox">
             </label>
@@ -80,7 +80,7 @@
             <div class="central-row__date">16 мар</div>
         </div>
         <label for="hidden-message__chb">
-            <div class="white-block__row white-block__central-row white-block__central-row_unread">
+            <div class="message-block__row message-block__central-row message-block__central-row_unread">
                 <label class="check">
                     <input class="check__input" type="checkbox">
                 </label>
@@ -117,7 +117,7 @@
                 табби (пятнистый, тигровый, мраморный) и многие другие.
             </div>
         </div>
-        <div class="white-block__row white-block__central-row white-block__central-row_unread" id="will-be-deleted">
+        <div class="message-block__row message-block__central-row message-block__central-row_unread" id="will-be-deleted">
             <label class="check">
                 <input class="check__input" type="checkbox">
             </label>
@@ -129,7 +129,7 @@
             <div class="central-row__msg-theme">Как читать почту с мобильного</div>
             <div class="central-row__date">6 июл</div>
         </div>
-        <div class="white-block__row white-block__central-row white-block__central-row_read">
+        <div class="message-block__row message-block__central-row message-block__central-row_read">
             <label class="check">
                 <input class="check__input" type="checkbox">
             </label>
@@ -141,7 +141,7 @@
             <div class="central-row__msg-theme">Как читать почту с мобильного</div>
             <div class="central-row__date">6 июл</div>
         </div>
-        <div class="white-block__row white-block__central-row white-block__central-row_read">
+        <div class="message-block__row message-block__central-row message-block__central-row_read">
             <label class="check">
                 <input class="check__input" type="checkbox">
             </label>
@@ -153,7 +153,7 @@
             <div class="central-row__msg-theme">Соберите всю почту в этот ящик</div>
             <div class="central-row__date">6 июл</div>
         </div>
-        <div class="white-block__lower-row">
+        <div class="message-block__lower-row">
             <div class="lower-row__item">Помощь и обратная связь</div>
             <div class="lower-row__item">Реклама</div>
             <div class="lower-row__item">&copy2001-2018, Яндекс</div>

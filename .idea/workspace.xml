@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b2761e1-9404-4ae2-81c1-020f46e97521" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/yandex_mail.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hw2.css" beforeDir="false" afterPath="$PROJECT_DIR$/hw2.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hw2.html" beforeDir="false" afterPath="$PROJECT_DIR$/hw2.html" afterDir="false" />
     </list>
@@ -20,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hw2.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="367" column="34" lean-forward="true" selection-start-line="367" selection-start-column="34" selection-end-line="367" selection-end-column="34" />
+            <state relative-caret-position="348">
+              <caret line="136" column="26" selection-start-line="136" selection-start-column="26" selection-end-line="136" selection-end-column="26" />
               <folding>
                 <element signature="e#363#472#0" />
                 <element signature="e#496#592#0" />
@@ -38,23 +38,7 @@
                 <element signature="e#1804#1892#0" />
                 <element signature="e#1918#2045#0" />
                 <element signature="e#2071#2092#0" />
-                <element signature="e#2125#2305#0" />
                 <element signature="e#2343#2424#0" />
-                <element signature="e#2445#2750#0" />
-                <element signature="e#2890#3182#0" />
-                <element signature="e#3205#3267#0" />
-                <element signature="e#3285#3482#0" />
-                <element signature="e#3526#3784#0" />
-                <element signature="e#3885#3913#0" />
-                <element signature="e#4294#4383#0" />
-                <element signature="e#4410#4528#0" />
-                <element signature="e#4588#4620#0" />
-                <element signature="e#4642#4832#0" />
-                <element signature="e#4858#4958#0" />
-                <element signature="e#5017#5049#0" />
-                <element signature="e#5089#5116#0" />
-                <element signature="e#5137#5335#0" />
-                <element signature="e#6100#6379#0" />
               </folding>
             </state>
           </provider>
@@ -63,8 +47,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hw2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+            <state relative-caret-position="556">
+              <caret line="50" column="53" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -75,10 +59,20 @@
     <findStrings>
       <find>new-message-an</find>
       <find>date</find>
-      <find>new-me</find>
-      <find>will</find>
       <find>new</find>
+      <find>white-block__del</find>
+      <find>white-block__dele</find>
+      <find>will</find>
+      <find>white-block__ro</find>
+      <find>white-block__de</find>
+      <find>new-me</find>
+      <find>white-block__deleted</find>
+      <find>white-block__row</find>
+      <find>white-block</find>
     </findStrings>
+    <replaceStrings>
+      <replace>message-block</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -86,8 +80,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/hw2.html" />
         <option value="$PROJECT_DIR$/hw2.css" />
+        <option value="$PROJECT_DIR$/hw2.html" />
       </list>
     </option>
   </component>
@@ -102,7 +96,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -119,6 +112,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -157,12 +151,13 @@
       <workItem from="1552250035447" duration="5707000" />
       <workItem from="1552306901614" duration="8607000" />
       <workItem from="1552728709570" duration="28000" />
-      <workItem from="1552732016420" duration="5626000" />
+      <workItem from="1552732016420" duration="6607000" />
+      <workItem from="1553337975572" duration="3236000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19968000" />
+    <option name="totallyTimeSpent" value="24185000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -193,8 +188,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/hw2.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="367" column="34" lean-forward="true" selection-start-line="367" selection-start-column="34" selection-end-line="367" selection-end-column="34" />
+        <state relative-caret-position="348">
+          <caret line="136" column="26" selection-start-line="136" selection-start-column="26" selection-end-line="136" selection-end-column="26" />
           <folding>
             <element signature="e#363#472#0" />
             <element signature="e#496#592#0" />
@@ -211,31 +206,15 @@
             <element signature="e#1804#1892#0" />
             <element signature="e#1918#2045#0" />
             <element signature="e#2071#2092#0" />
-            <element signature="e#2125#2305#0" />
             <element signature="e#2343#2424#0" />
-            <element signature="e#2445#2750#0" />
-            <element signature="e#2890#3182#0" />
-            <element signature="e#3205#3267#0" />
-            <element signature="e#3285#3482#0" />
-            <element signature="e#3526#3784#0" />
-            <element signature="e#3885#3913#0" />
-            <element signature="e#4294#4383#0" />
-            <element signature="e#4410#4528#0" />
-            <element signature="e#4588#4620#0" />
-            <element signature="e#4642#4832#0" />
-            <element signature="e#4858#4958#0" />
-            <element signature="e#5017#5049#0" />
-            <element signature="e#5089#5116#0" />
-            <element signature="e#5137#5335#0" />
-            <element signature="e#6100#6379#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hw2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        <state relative-caret-position="556">
+          <caret line="50" column="53" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="53" />
         </state>
       </provider>
     </entry>
