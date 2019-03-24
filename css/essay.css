@@ -6,7 +6,7 @@
     margin: 0 auto;
 }
 
-.essay_body {
+.essay__body {
     font-family: "Monospaced", monospace;
     width: 100%;
     margin: 0;
@@ -129,7 +129,7 @@
     background: #f9a283
 }
 
-.essay_nuclear_explosion {
+.essay__nuclear-explosion {
     background-image: url("https://i.gifer.com/origin/d4/d4efe215d7b06ed7be0b467c8a4ddffd_w200.gif");
     background-size: 100%;
     display: none;

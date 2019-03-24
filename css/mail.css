@@ -13,20 +13,17 @@ html {
     padding: 0 22px 14px;
 }
 
-.sidebar_logo_container {
-    overflow: visible;
-}
-
-.sidebar_logo {
+.sidebar__logo {
     position: relative;
 }
 
 .sidebar_logo_container {
+    overflow: visible;
     height: 60px;
     position: relative;
 }
 
-.sidebar_hamburger {
+.sidebar__hamburger {
     height: 32px;
     left: 10px;
     position: absolute;
@@ -36,7 +33,7 @@ html {
 }
 
 
-.sidebar_logo {
+.sidebar__logo {
     font-size: 32px;
     font-weight: 100;
     margin-left: 48px;
@@ -74,7 +71,7 @@ html {
     width: 32px;
 }
 
-.letters_inline_first_task {
+.letter-inline-first-task {
     position: relative;
     display: none;
 }
@@ -85,15 +82,15 @@ html {
     text-decoration: unset;
 }
 
-.letters_letter_unread .letters_sender_name {
+.letters_letter_unread .letter__sender-name {
     font-weight: bold;
 }
 
-.letters_letter_unread .letters_preview {
+.letters_letter_unread .letter__preview {
     font-weight: bold;
 }
 
-.letters_panel_link:hover {
+.letters__panel-button:hover {
     color: #343434;
     font-style: unset;
     text-decoration: unset;
@@ -105,22 +102,22 @@ html {
     width: 192px;
 }
 
-.sidebar_menu_item_active {
+.sidebar__menu-item_active {
     background-color: #cdd6e4;
     border-radius: 3px;
     font-weight: bold;
 }
 
-.sidebar_menu > li:hover {
+.sidebar__menu-list > li:hover {
     background-color: #c8d1dd;
     border-radius: 3px;
 }
 
-.sidebar_menu {
+.sidebar__menu-list {
     padding-left: 10px;
 }
 
-.sidebar_menu > li {
+.sidebar__menu-list > li {
     color: #707070;
     display: block;
     margin: 6px 0;
@@ -133,7 +130,7 @@ html {
     top: 0;
 }
 
-.layout_letters {
+.layout-letters {
     height: calc(100% - 114px);
     min-height: calc(100% - 114px);
 }
@@ -148,7 +145,7 @@ html {
     position: relative;
 }
 
-.letters_panel {
+.letters__panel {
     border-bottom: solid 1px #e2e2e2;
     height: 48px;
     justify-content: start;
@@ -156,14 +153,14 @@ html {
 }
 
 
-.letters_letter {
+.letter {
     background-color: #fff;
     border-bottom: solid 1px #e2e2e2;
     height: 48px;
     overflow: hidden;
 }
 
-.letters_panel_item {
+.letters__panel-item {
     color: #ccc;
     float: left;
     font-weight: 500;
@@ -186,7 +183,7 @@ html {
     margin: 0 16px;
 }
 
-.letters_sender_icon {
+.letter__sender-icon {
     background-color: #f33;
     border-color: #fff;
     border-radius: 16px;
@@ -229,7 +226,7 @@ html {
     transform: scaleX(0.7) scaleY(1.2);
 }
 
-.letters_sender_name {
+.letter__sender-name {
     float: left;
     overflow: hidden;
     width: 200px;
@@ -240,7 +237,7 @@ html {
     white-space: nowrap !important;
 }
 
-.letters_read_box {
+.letter__read-box {
     float: left;
     height: 8px;
     margin: 20px 10px;
@@ -248,17 +245,17 @@ html {
     width: 8px;
 }
 
-.letters_letter_unread .letters_read_box {
+.letters_letter_unread .letter__read-box {
     background-color: #6287bd;
     border-color: #fff;
     border-radius: 4px;
 }
 
-.sidebar_logo_yandex {
+.sidebar_img-yandex {
     position: absolute;
 }
 
-.sidebar_logo_mail {
+.sidebar__img-mail {
     left: 112px;
     position: absolute;
 }
@@ -269,51 +266,51 @@ html {
     padding: 0 10px 0 20px;
 }
 
-.checkbox-input:hover {
+.checkbox__input:hover {
     filter: brightness(110%);
 }
 
-.checkbox-input:hover {
+.checkbox__input:hover {
     cursor: pointer;
 }
 
-.checkbox-input {
+.checkbox__input {
     filter: brightness(120%);
     transform: scale(1.5);
 }
 
-.letters_preview {
+.letter__preview {
     float: left;
     overflow: hidden;
     padding: 0 10px;
     width: calc(100% - 418px);
 }
 
-.letters_date {
+.letter__date {
     float: right;
     padding: 0 10px;
     width: 48px;
 }
 
-.letters_checkbox_hidden {
+.letters__control-checkbox {
     display: none;
 }
 
-.letters_checkbox_hidden:checked ~ .letters_inbox {
+.letters__control-checkbox:checked ~ .letters__inbox {
     display: none;
 }
 
-.letters_checkbox_hidden:checked ~ .letters_inline_first_task {
+.letters__control-checkbox:checked ~ .letter-inline-first-task {
     display: block;
 }
 
-.label_control {
+.control-label {
     display: block;
     height: 100%;
     width: 100%;
 }
 
-.search_bar_close {
+.search-bar__button-close {
     background: none;
     border: none;
     color: #dfdfdf;
@@ -331,11 +328,11 @@ html {
     cursor: pointer;
 }
 
-.search_bar_close:hover {
+.search-bar__button-close:hover {
     opacity: 0.5;
 }
 
-.search_bar {
+.search-bar {
     display: block;
     height: 100%;
     margin: 0 auto;
@@ -343,7 +340,7 @@ html {
     width: 400px;
 }
 
-.search_bar_input {
+.search-bar__input {
     background-color: #f2f4f6;
     border: solid 1px #ccc;
     color: #9b9b9b;
@@ -354,12 +351,12 @@ html {
     width: 100%;
 }
 
-.search_bar_input::placeholder {
+.search-bar__input::placeholder {
     color: #aeaeae;
     font-size: 20px;
 }
 
-.layout_search {
+.layout-search {
     height: 32px;
     margin-bottom: 12px;
     padding: 14px;

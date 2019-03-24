@@ -44,7 +44,7 @@ function addLetter(sender, unread, theme, date) {
 
 function deleteSelectedLetters() {
     const checked = [].filter
-        .call(document.getElementsByClassName("checkbox-input"), (elem) => elem.checked)
+        .call(document.getElementsByClassName("checkbox__input"), (elem) => elem.checked)
         .map((doc) => parentWithClass(doc, "letters_letter"));
     checked.forEach((parent) => {
         parent.style.setProperty("animation", "delete_animation 0.5s");
