@@ -32,7 +32,7 @@
                 <div class="mail-menu__get-letters-button-wrapper">
                     <button id="mail-menu__get-letters-button" onclick="insertLetterToTop()">Получить почту</button>
                 </div>
-                <ul class="mail-menu__menu-options">
+                <ul class="mail-menu__option-list">
                     <li class="mail-menu__menu-option"><a href="" class="mail-menu__menu-link">Входящие</a></li>
                     <li class="mail-menu__menu-option"><a href="" class="mail-menu__menu-link">Отправленные</a></li>
                     <li class="mail-menu__menu-option"><a href="" class="mail-menu__menu-link">Удалённые</a></li>
@@ -44,16 +44,16 @@
 
             <div class="letter-box">
                 <ul class="letter-box__header">
-                    <li class="all-mails-chooser letter-box_element_first">
+                    <li class="letter-box__all-chooser-wrapper letter-box__element_first">
                         <label>
-                            <input id="all-mails-chooser__input" type="checkbox" onclick="markAll()">
-                            <span class="all-mails-chooser__box"></span>
+                            <input id="letter-box__all-chooser-input" type="checkbox" onclick="markAll()">
+                            <span class="letter-box__all-chooser-box"></span>
                         </label>
                     </li>
-                    <li class="letter-box__item letter-box_element"><input type="button" class="letter-box_option" value="Переслать"></li>
-                    <li class="letter-box__item letter-box_element"><input type="button" class="letter-box_option" id="remove-letter" value="Удалить" onclick="removeLetters()"></li>
-                    <li class="letter-box__item letter-box_element"><input type="button" class="letter-box_option" value="Это спам!"></li>
-                    <li class="letter-box__item letter-box_element"><input type="button" class="letter-box_option" value="Прочитано"></li>
+                    <li class="letter-box__item letter-box__element"><input type="button" class="letter-box_option" value="Переслать"></li>
+                    <li class="letter-box__item letter-box__element"><input type="button" class="letter-box_option" id="remove-letter" value="Удалить" onclick="removeLetters()"></li>
+                    <li class="letter-box__item letter-box__element"><input type="button" class="letter-box_option" value="Это спам!"></li>
+                    <li class="letter-box__item letter-box__element"><input type="button" class="letter-box_option" value="Прочитано"></li>
                 </ul>
                 <hr class="letter-box__hr">
 

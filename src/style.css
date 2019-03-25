@@ -30,12 +30,12 @@
     visibility: inherit;
 }
 
-#all-mails-chooser__input:checked + .all-mails-chooser__box {
+#letter-box__all-chooser-input:checked + .letter-box__all-chooser-box {
     border-color: rgba(153, 122, 0, .5);
     box-shadow: inset 0 90px #ffeba0;
 }
 
-#all-mails-chooser__input:checked + .all-mails-chooser__box:after {
+#letter-box__all-chooser-input:checked + .letter-box__all-chooser-box:after {
     visibility: inherit;
 }
 
@@ -200,13 +200,13 @@
     font-size: 13px;
 }
 
-.letter-box_element {
+.letter-box__element {
     display: inline-block;
     margin-left: 25px;
     color: #ccc;
 }
 
-.letter-box_element_first {
+.letter-box__element_first {
     display: inline-block;
     margin-right: -5px;
 }
@@ -223,17 +223,17 @@
     cursor: pointer;
 }
 
-.all-mails-chooser {
+.letter-box__all-chooser-wrapper {
     list-style-type: none;
     width: 16px;
     height: 16px;
 }
 
-#all-mails-chooser__input {
+#letter-box__all-chooser-input {
     position: absolute;
 }
 
-.all-mails-chooser__box {
+.letter-box__all-chooser-box {
     position: absolute;
     width: 16px;
     height: 16px;
@@ -243,7 +243,7 @@
     cursor: pointer;
 }
 
-.all-mails-chooser__box:after {
+.letter-box__all-chooser-box:after {
     margin-top: -9px;
     margin-right: 0;
     margin-bottom: 0;
@@ -427,7 +427,7 @@
     cursor: pointer;
 }
 
-.mail-menu__menu-options {
+.mail-menu__option-list {
     margin-top: 8px;
     width: 100%;
     white-space: normal;
