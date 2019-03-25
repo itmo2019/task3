@@ -1,33 +1,5 @@
-const baseTiming = 500;
-const letterSize = 50;
-
-function drawNewLetterTick(currentTime, drawnLetter) {
-    let delta = (currentTime * letterSize) / baseTiming;
-    drawnLetter.style.height = delta + 'px';
-    drawnLetter.style.top = (delta - letterSize) + 'px';
-}
-
-function drawNewLetter(drawnLetter) {
-    drawnLetter.style.height = 0;
-    drawnLetter.style.top = -letterSize + 'px';
-
-    let now = performance.now();
-
-    function animateImpl(time) {
-        let timeElapsed = time - now;
-        if (timeElapsed >= baseTiming) {
-            drawNewLetterTick(baseTiming, drawnLetter);
-        } else {
-            drawNewLetterTick(timeElapsed, drawnLetter);
-            requestAnimationFrame(animateImpl);
-        }
-    }
-    requestAnimationFrame(animateImpl);
-}
-
 function insertLetterToTop() {
     let insertedLetter = document.createElement('li');
-    insertedLetter.className = 'letter';
     insertedLetter.innerHTML =
         `
         <ul class="letter__line">
@@ -52,7 +24,13 @@ function insertLetterToTop() {
     } else {
         allLetters.appendChild(insertedLetter);
     }
-    drawNewLetter(insertedLetter)
+    insertedLetter.classList.add("add-letter", "letter");
+    insertedLetter.addEventListener(
+        "webkitAnimationEnd",
+        function () {
+            insertedLetter.classList.remove("add-letter");
+        }
+    );
 }
 
 function markAll() {
@@ -89,12 +67,6 @@ function removeCheckboxes() {
     );
 }
 
-function removeLetterTick(currentTime, letter) {
-    let delta = (currentTime * letterSize) / baseTiming;
-    letter.style.height = (letterSize - delta) + 'px';
-    letter.style.top = -delta + 'px';
-}
-
 function removeLetters() {
     document.body.querySelectorAll('.check__input')
         .forEach (
@@ -102,20 +74,14 @@ function removeLetters() {
                 if (checkbox.checked) {
                     let letter = findLetter(checkbox);
                     letter.style.zIndex = 0;
-                    let now = performance.now();
 
-                    function animateImpl(time) {
-                        let currentTime = time - now;
-                        if (currentTime >= baseTiming) {
-                            removeLetterTick(baseTiming, letter);
+                    letter.classList.add("remove-letter");
+                    letter.addEventListener(
+                        "webkitAnimationEnd",
+                        function () {
                             letter.parentNode.removeChild(letter);
-                        } else {
-                            removeLetterTick(currentTime, letter);
-                            requestAnimationFrame(animateImpl);
                         }
-                    }
-
-                    requestAnimationFrame(animateImpl);
+                    );
                 }
             }
         );

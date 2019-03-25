@@ -533,3 +533,33 @@
         width: 5%;
     }
 }
+
+.add-letter {
+    animation-duration: 2s;
+    animation-name: create-letter;
+}
+
+@keyframes create-letter {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+.remove-letter {
+    animation-duration: 2s;
+    animation-name: delete-letter;
+}
+
+@keyframes delete-letter {
+    from {
+        opacity: 100%;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
