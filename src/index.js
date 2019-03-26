@@ -38,7 +38,7 @@ function deleteTopMail() {
     let childToDelete = document.getElementsByClassName("mail-list__elem")[0];
     if (childToDelete != null) {
         setTimeout(function () {
-            childToDelete.className = " removed";
+            childToDelete.className = " will-be-removed";
             childToDelete.addEventListener('transitionend', function () {
                 this.remove();
             });
