@@ -236,21 +236,21 @@ body {
     font-weight: bold;
 }
 
-.mail__yandex-team-2 {
+.mail__yandex-team-second-one {
     width: 145px;
     height: 15px;
 }
 
-.mail__yandex-team-2_view {
+.mail__yandex-team-second-one_view {
     margin: 0;
 }
 
-.team-body-2 {
+.team-body-second-one {
     width: 192px;
     height: 15px;
 }
 
-.team-body-2_view {
+.team-body-second-one_view {
     margin: 0;
 }
 
@@ -284,12 +284,12 @@ body {
     margin: 0;
 }
 
-.ivan-ivanov {
+.sender-ivan {
     width: 145px;
     height: 15px;
 }
 
-.ivan-ivanov_view {
+.sender-ivan_view {
     margin: 0;
     font-weight: bold;
 }
