@@ -16,7 +16,7 @@
     white-space: normal;
 }
 
-.mail-main__nav-li-link, .mail-main__support-line-link {
+.mail-main__nav-item-link, .mail-main__support-line-link {
     text-decoration: none;
     cursor: pointer;
 }

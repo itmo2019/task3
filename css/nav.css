@@ -9,26 +9,26 @@
     padding: 0;
 }
 
-.nav__li {
+.nav__item {
     list-style-type: none;
     min-height: 14px;
     color: #707070;
     font-size: 11px;
 }
 
-.nav__li > .nav__li-link {
+.nav__item > .nav__item-link {
     display: block;
     padding: 5px 10px;
     width: 87%;
     color: #707070;
 }
 
-.nav__li:hover {
+.nav__item:hover {
     border-radius: 3px;
     background-color: #d8e1ef;
 }
 
-.nav__li_select {
+.nav__item_select {
     border-radius: 3px;
     background-color: #cdd6e4;
     color: #555;
