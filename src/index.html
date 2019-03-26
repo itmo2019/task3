@@ -30,48 +30,53 @@
         <button onclick="addLetter()" class="left-buttons__write">
             <div class="left-buttons__write-text">Написать</div>
         </button>
-        <a href="#" class="buttons-links">
+        <a href="#" class="left-buttons__links">
             <div class="left-buttons__inbox">
                 <div class="left-buttons__inbox-text">Входящие</div>
             </div>
         </a>
-        <a href="#" class="buttons-links">
+        <a href="#" class="left-buttons__links">
             <div class="left-buttons__button-text left-buttons__other">Отправленные</div>
         </a>
-        <a href="#" class="buttons-links">
+        <a href="#" class="left-buttons__links">
             <div class="left-buttons__button-text left-buttons__other">Удалённые</div>
         </a>
-        <a href="#" class="buttons-links">
+        <a href="#" class="left-buttons__links">
             <div class="left-buttons__button-text left-buttons__other">Спам</div>
         </a>
-        <a href="#" class="buttons-links">
+        <a href="#" class="left-buttons__links">
             <div class="left-buttons__button-text left-buttons__other">Черновики</div>
         </a>
-        <a href="#" class="buttons-links">
+        <a href="#" class="left-buttons__links">
             <div class="left-buttons__button-text left-buttons__other">Создать папку</div>
         </a>
     </div>
     <div class="mail-box" id="mail-box__show-my-article">
-        <button class="mail-box__white-square"></button>
-        <a href="#" class="buttons-links">
-            <div class="mail-box__upper-text mail-box__forward">Переслать</div>
-        </a>
-        <a href="#" class="buttons-links">
-            <button onclick="deleteLetter()" class="mail-box__upper-text mail-box__delete">Удалить</button>
-        </a>
-        <a href="#" class="buttons-links">
-            <div class="mail-box__upper-text mail-box__this-is-spam">Это спам!</div>
-        </a>
-        <a href="#" class="buttons-links">
-            <div class="mail-box__upper-text mail-box__read">Прочитано</div>
-        </a>
-        <div class="mail-box__line"></div>
+        <div class="mail-box__upper-buttons">
+            <label>
+                <input type="checkbox" onclick="checkAll()" class="mail-box__white-square mail-box__main-white-square">
+            </label>
+            <a href="#" class="mail-box__links">
+                <div class="mail-box__upper-text mail-box__forward">Переслать</div>
+            </a>
+            <a href="#" class="mail-box__links">
+                <button onclick="deleteLetter()" class="mail-box__upper-text mail-box__delete">Удалить</button>
+            </a>
+            <a href="#" class="mail-box__links">
+                <div class="mail-box__upper-text mail-box__this-is-spam">Это спам!</div>
+            </a>
+            <a href="#" class="mail-box__links">
+                <div class="mail-box__upper-text mail-box__read">Прочитано</div>
+            </a>
+            <div class="mail-box__line"></div>
+        </div>
         <div class="my-article">
             <a href="#hide">
-                <img onclick="deleteAnimation()" src="images/cancel.png" class="my-article__article-close" alt="art-close">
+                <img onclick="deleteAnimation()" src="images/cancel.png" class="my-article__close"
+                     alt="art-close">
             </a>
             <ul>
-                <li><p class="my-article__article-text">Фронтендом я интересовался еще в школе. В 9
+                <li><p class="my-article__text">Фронтендом я интересовался еще в школе. В 9
                     классе на уроках информатики одним из заданий было написание собственного сайта.
                     К сожалению те файлы не сохранились, но тогда ничего сложного я не писал, просто несколько html
                     страничек,
@@ -81,7 +86,7 @@
                     Это и было одной из причин, по которой я выбрал изучать курс фронтенда.
                 </p></li>
                 <img src="images/cat.jpeg" class="my-article__cat-picture" alt="cat">
-                <li><p class="my-article__article-text">
+                <li><p class="my-article__text">
                     Другой причиной является то, что этот курс является практическим, то есть тут
                     можно
                     получить много
@@ -91,7 +96,7 @@
                     К тому же практические знания редко бывают лишними, ведь никогда не знаешь когда они могут
                     пригодится
                 </p></li>
-                <li><p class="my-article__article-text">
+                <li><p class="my-article__text">
                     Прежде всего я надеюсь, что к концу курса научусь писать сайты так, <b>чтобы на них можно было
                     нормально
                     смотреть</b>. То есть хочется научиться
@@ -163,6 +168,15 @@
     </div>
 </div>
 <script>
+    function checkAll() {
+        var letters = document.getElementsByClassName("mail-box__letters")[0];
+        var lettersArray = Array.from(letters.children);
+        var mainCheck = document.getElementsByClassName("mail-box__main-white-square")[0];
+        for (var i = 0; i < lettersArray.length; i++) {
+            lettersArray[i].getElementsByClassName("mail-box__white-square")[0].checked = mainCheck.checked;
+        }
+    }
+
     function addLetter() {
         var newLetter = document.createElement('li');
         var letters = document.getElementsByClassName("mail-box__letters")[0];
@@ -189,10 +203,10 @@
                     lettersArray[i].classList.remove("added-animated-letter");
                 }
                 lettersArray[i].classList.add("deleted-animated-letter");
-                console.log(lettersArray[i].className);
                 let del_index = i;
                 let removeFunc = function (event) {
                     letters.removeChild(lettersArray[del_index]);
+                    document.getElementsByClassName("mail-box__main-white-square")[0].checked = false;
                 };
                 lettersArray[del_index].addEventListener("webkitAnimationEnd", removeFunc);
             }
