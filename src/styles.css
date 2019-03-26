@@ -8,14 +8,6 @@ body {
     float: right;
 }
 
-.Rectangle {
-    margin-bottom: 4.8px;
-    clear: right;
-    width: 20px;
-    height: 2.4px;
-    background-color: #000;
-}
-
 .header__mail-logo {
     width: 153px;
     height: 31px;
