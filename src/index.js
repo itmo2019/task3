@@ -35,8 +35,18 @@ function addNewMail() {
 }
 
 function deleteTopMail() {
-    let list = document.getElementById("mailList");
     let childToDelete = document.getElementsByClassName("mail-list__elem")[0];
-    if (childToDelete != null)
-        list.removeChild(childToDelete);
+    if (childToDelete != null) {
+        setTimeout(function () {
+            childToDelete.className = " removed";
+            childToDelete.addEventListener('transitionend', function () {
+                this.remove();
+            });
+        }, 10);
+
+    }
+
+
+
+
 }
