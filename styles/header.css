@@ -46,7 +46,7 @@
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
 }
 
-.search__search {
+.search__search-input {
     display: inline;
     position: relative;
     padding-left: 16px;
