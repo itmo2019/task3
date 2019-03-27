@@ -5,7 +5,6 @@
 	<title>Входящие - Яндекс.Почта</title>
 	
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script defer type="text/javascript" src="js/index.js"></script>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -62,6 +61,27 @@
 
 			<div class="letters__content">
 				<ul class="letters__list">
+                    <template id="new-letter-template">
+                        <li class="letter letters__letter letter_unread">
+                            <a href="#" class="letter__link">
+                                <div class="letter__preview">
+                                    <div class="checkbox letters__checkbox">
+                                        <label class="checkbox__label letters__checkbox-label">
+                                            <input type="checkbox" class="checkbox__real-checkbox">
+                                            <span class="checkbox__checkbox-view"></span>
+                                        </label>
+                                    </div>
+
+                                    <span class="letter__profile-image profile-image" style=""></span>
+                                    <span class="profile-name letter__profile-name text_with-ellipsis"></span>
+                                    <span class="letter__unread-flag unread-flag"></span>
+                                    <span class="content-preview letter__content-preview text_with-ellipsis"></span>
+                                    <time class="date letter__date text_with-ellipsis" datetime=""></time>
+                                </div>
+                            </a>
+                        </li>
+                    </template>
+
 					<li class="letter letters__letter letter_unread">
 						<a href="#" class="letter__link">
 							<div class="letter__preview">
@@ -144,7 +164,9 @@
 					<span class="footer__text footer__item text_with-ellipsis">© 2001—2018, Яндекс</span>
 				</div>
 			</footer>
-		</div>
+
+            <script defer type="text/javascript" src="js/index.js"></script>
+        </div>
 	</div>
 </body>
 </html>

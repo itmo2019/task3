@@ -1,20 +1,18 @@
-(function() {
-	document.querySelector('.delete-letters-button').onclick = () => {
-		removeLetters(getMarkedLetters());
-	};
+document.querySelector('.delete-letters-button').onclick = () => {
+    removeLetters(getMarkedLetters());
+};
 
-	function removeLetters(letters) {
-		letters.forEach(letter => {
-			letter.classList.add('letter_deleted');
-			letter.addEventListener("animationend", () => {
-				letter.remove();
-			});
-		});
-	}
+function removeLetters(letters) {
+    letters.forEach(letter => {
+        letter.addEventListener("animationend", () => {
+            letter.remove();
+        });
+        letter.classList.add('letter_deleted');
+    });
+}
 
-	function getMarkedLetters() {
-		return Array.from(document.querySelectorAll('.letter')).filter(letter =>
-			letter.getElementsByClassName('checkbox__real-checkbox')[0].checked
-		);
-	}
-})();
+function getMarkedLetters() {
+    return Array.from(document.querySelectorAll('.letter')).filter(letter =>
+        letter.querySelector('.checkbox__real-checkbox').checked
+    );
+}
