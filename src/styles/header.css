@@ -49,6 +49,7 @@
     font-size: 15px;
     color: #000000;
     border: transparent;
+    box-sizing: border-box;
 }
 
 .search__clear {

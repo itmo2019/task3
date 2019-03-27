@@ -4,9 +4,9 @@
     font-family: HelveticaNeue, sans-serif;
 }
 
-.left-panel a {
-    text-decoration: none;
+.folder__link-decoration {
     color: #707070 !important;
+    text-decoration: none;
 }
 
 .left-panel {
@@ -37,22 +37,16 @@
 .folders {
     font-size: 11px;
     margin-top: 8px;
-    list-style-type: none;
-}
-
-.folders > ul {
     padding-left: 0;
 }
 
-.folders > ul > li {
-    list-style-type: none;
+.folder {
     padding: 5px 10px;
-    color: #707070;
     position: relative;
     display: block;
 }
 
-.folders > ul > li:hover {
+.folder:hover {
     border-radius: 3px;
     background-color: #cdd6e4;
     font-weight: bold;

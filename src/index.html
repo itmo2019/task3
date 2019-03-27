@@ -10,7 +10,7 @@
     <script src="scripts/message__actions.js" type="text/javascript"></script>
     <script src="scripts/message__template.js" type="text/javascript"></script>
 </head>
-<body>
+<body class="body">
 <header class="header">
     <button class="header__pancakes">
         <img alt="menu button" src="images/header__pancakes.svg">
@@ -28,14 +28,20 @@
 <main class="main">
     <aside class="left-panel">
         <button class="compose">Написать</button>
-        <nav class="folders">
-            <ul>
-                <li><a href="#">Входящие</a></li>
-                <li><a href="#">Отправленные</a></li>
-                <li><a href="#">Удаленные</a></li>
-                <li><a href="#">Спам</a></li>
-                <li><a href="#">Черновики</a></li>
-                <li><a href="#">Создать папку</a></li>
+        <nav>
+            <ul class="folders">
+                <li class="folder">
+                    <a class="folder__link-decoration" href="#">Входящие</a></li>
+                <li class="folder">
+                    <a class="folder__link-decoration" href="#">Отправленные</a></li>
+                <li class="folder">
+                    <a class="folder__link-decoration" href="#">Удаленные</a></li>
+                <li class="folder">
+                    <a class="folder__link-decoration" href="#">Спам</a></li>
+                <li class="folder">
+                    <a class="folder__link-decoration" href="#">Черновики</a></li>
+                <li class="folder">
+                    <a class="folder__link-decoration" href="#">Создать папку</a></li>
             </ul>
         </nav>
     </aside>
@@ -44,14 +50,16 @@
             <label>
                 <input class="toolbar__check" id="checkbox__toolbar" onclick="checkAll(this)" type="checkbox">
             </label>
-            <input id="button__create-mail" onclick="newMailIncoming()" type="button" value="Новое письмо">
-            <a>Переслать</a>
-            <input id="button__delete-mail" onclick="deleteMail()" type="button" value="Удалить">
-            <a>Это спам!</a>
-            <a>Прочитано</a>
+            <input class="toolbar__button" id="button__create-mail" onclick="newMailIncoming()" type="button"
+                   value="Новое письмо">
+            <input class="toolbar__button" type="button" value="Переслать">
+            <input class="toolbar__button" id="button__delete-mail" onclick="deleteMail()" type="button"
+                   value="Удалить">
+            <input class="toolbar__button" type="button" value="Это спам!">
+            <input class="toolbar__button" type="button" value="Прочитано">
             <hr class="hr">
         </div>
-        <div id="messages" class="message-list">
+        <div class="message-list" id="messages">
             <input id="message-list__cutter" type="checkbox">
             <div class="message">
                 <label for="message-list__cutter">
@@ -126,11 +134,9 @@
                     <label for="message-list__cutter">
                         <img alt="logo of message contact" class="message__logo" src="images/message__logo.svg">
                         <div class="message__contact">Команда Яндекс.Почты
-                            ssssssssssssssssssssssssssssssssssssssssssssssss
                         </div>
                         <div class="message__read-icon message__read-icon-invisible"></div>
                         <div class="message__subject">Как читать почту с мобильного
-                            sssssssssssssssssssssssssssssssssssssssssssssssssssssssss
                         </div>
                         <div class="message__date">6 июл</div>
                     </label>
@@ -155,9 +161,9 @@
         </div>
         <footer class="footer">
             <hr class="hr">
-            <a href="#">Помощь и обратная связь</a>
-            <a href="#">Реклама</a>
-            <a href="#">&copy; 2001-2018, Яндекс</a>
+            <a href="#" class="footer__link-decoration">Помощь и обратная связь</a>
+            <a href="#" class="footer__link-decoration">Реклама</a>
+            <a href="#" class="footer__link-decoration">&copy; 2001-2018, Яндекс</a>
         </footer>
     </div>
 </main>
