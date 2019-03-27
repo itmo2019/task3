@@ -1,5 +1,5 @@
 var countLetter = 1;
-let createNewLetter = document.getElementById("add-new-letter");
+let createNewLetter = document.getElementById("new-letter-button");
 let mailsPlaceholder = document.getElementById("mails-placeholder");
 
 
@@ -84,13 +84,3 @@ function deleteMessage(item) {
     };
 }
 
-function dfs(item) {
-    let array = [item];
-    let child = item.children;
-    Array.from(child).forEach((child) => {
-        dfs(child).forEach((v) => {
-            array.push(v);
-        });
-    });
-    return array;
-}

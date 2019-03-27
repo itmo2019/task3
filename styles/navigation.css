@@ -1,9 +1,9 @@
-.menu {
+.main__menu {
     display: inline-block;
 }
 
 /*New letter button*/
-.menu__write-letter-button {
+.main__menu__write-letter-button {
     width: 147px;
     height: 32px;
     border-radius: 3px;
@@ -18,12 +18,12 @@
     font-weight: 500;
 }
 
-.menu__write-letter-button:hover {
+.main__menu__write-letter-button:hover {
     cursor: pointer;
 }
 
 /*Action button*/
-.menu__navigate-by-action__action-button {
+.main__menu__navigate-by-action__action-button {
     display: block;
     width: 147px;
     height: 22px;
@@ -42,7 +42,7 @@
     font-weight: 500;
 }
 
-.menu__navigate-by-action__action-button:hover {
+.main__menu__navigate-by-action__action-button:hover {
     background-color: #cdd6e4;
     color: #555;
     font-weight: 700;
