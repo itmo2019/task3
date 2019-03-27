@@ -3,7 +3,7 @@
     white-space: nowrap;
 }
 
-.main__mails-placeholder {
+.mails-placeholder {
     display: inline-block;
     position: absolute; /*wtf??????*/
     margin-left: 22px;

@@ -13,71 +13,71 @@
     <title>Яндекс Почта</title>
 </head>
 <body class="body">
-<!-- считаю, что header независим и его можно использовать где-нибудь в другом месте -->
-<header class="header">
-    <div class="header__action-button">
-        <div class="header__action-button__line_transparent_height_8px"></div>
-        <div class="header__action-button__line_black"></div>
-        <div class="header__action-button__line_transparent"></div>
-        <div class="header__action-button__line_black"></div>
-        <div class="header__action-button__line_transparent"></div>
-        <div class="header__action-button__line_black"></div>
+
+<header class="logo-action-search">
+    <div class="action-button">
+        <div class="action-button__line_transparent_height_8px"></div>
+        <div class="action-button__line_black"></div>
+        <div class="action-button__line_transparent"></div>
+        <div class="action-button__line_black"></div>
+        <div class="action-button__line_transparent"></div>
+        <div class="action-button__line_black"></div>
     </div>
-    <div class="header__logo-placeholder">
-        <img src="images/YaLogo.png" class="header__logo-placeholder__image">
+    <div class="logo">
+        <img src="images/YaLogo.png" class="logo__image">
     </div>
-    <div class="header__search-placeholder">
-        <input class="header__search-placeholder__search" placeholder="Поиск">
-        <div class="header__search-placeholder__close-button">&times;</div>
+    <div class="search">
+        <input class="search__search" placeholder="Поиск">
+        <div class="search__close-button">&times;</div>
     </div>
 </header>
-<!-- считаю, что main независим и его можно использовать где-нибудь в другом месте -->
 <main class="main">
-    <div class="main__menu">
-        <button class="main__menu__write-letter-button text_hide-by-size">Написать</button>
-        <nav class="main__menu__navigate-by-action">
-            <button class="main__menu__navigate-by-action__action-button text_hide-by-size">Входящие</button>
-            <button class="main__menu__navigate-by-action__action-button text_hide-by-size">Отправленные</button>
-            <button class="main__menu__navigate-by-action__action-button text_hide-by-size">Удалённые</button>
-            <button class="main__menu__navigate-by-action__action-button text_hide-by-size">Спам</button>
-            <button class="main__menu__navigate-by-action__action-button text_hide-by-size">Черновики</button>
-            <button class="main__menu__navigate-by-action__action-button text_hide-by-size">Создать папку</button>
-            <button class="main__menu__navigate-by-action__action-button text_hide-by-size" id="new-letter-button">ДОБАВИТЬ НОВОЕ
+    <div class="menu">
+        <button class="menu__write-letter-button text_hide-by-size">Написать</button>
+        <nav class="menu__navigate-by-action">
+            <button class="menu__action-button text_hide-by-size">Входящие</button>
+            <button class="menu__action-button text_hide-by-size">Отправленные</button>
+            <button class="menu__action-button text_hide-by-size">Удалённые</button>
+            <button class="menu__action-button text_hide-by-size">Спам</button>
+            <button class="menu__action-button text_hide-by-size">Черновики</button>
+            <button class="menu__action-button text_hide-by-size">Создать папку</button>
+            <button class="menu__action-button text_hide-by-size" id="new-letter-button">ДОБАВИТЬ НОВОЕ
                 ПИСЬМО
             </button>
         </nav>
     </div>
-    <div class="main__mails-placeholder">
-        <div class="main__mails-placeholder__mails-actions">
-            <div class="main__mails-placeholder__mails-actions__item">
-                <!-- это является блоком чек-бокс т.к. используется в других местах (в письме)-->
+    <div class="mails-placeholder">
+
+        <div class="mails-action">
+            <div class="mails-action__item">
                 <label class="mails-checkbox">
                     <input class="mails-checkbox__checkbox" type="checkbox">
                     <span class="mails-checkbox__alternative-drawing"></span>
                 </label>
             </div>
-            <button class="main__mails-placeholder__mails-actions__button main__mails-placeholder__mails-actions__item text_hide-by-size">
+            <button class="mails-action__button mails-action__item text_hide-by-size">
                 Переслать
             </button>
-            <button class="main__mails-placeholder__mails-actions__button main__mails-placeholder__mails-actions__item text_hide-by-size">
+            <button class="mails-action__button mails-action__item text_hide-by-size">
                 Удалить
             </button>
-            <button class="main__mails-placeholder__mails-actions__button main__mails-placeholder__mails-actions__item text_hide-by-size">
+            <button class="mails-action__button mails-action__item text_hide-by-size">
                 Это спам!
             </button>
-            <button class="main__mails-placeholder__mails-actions__button main__mails-placeholder__mails-actions__item text_hide-by-size">
+            <button class="mails-action__button mails-action__item text_hide-by-size">
                 Прочитано
             </button>
         </div>
-        <div id="mails-placeholder" class="main__mails-placeholder__list-of-mails"></div>
-        <div class="main__mails-placeholder__list-of-footer-items">
-            <a class="main__mails-placeholder__list-of-footer-items__company-about text_hide-by-size" href="#">
+
+        <div id="mails-placeholder" class="list-of-mails"></div>
+        <div class="list-of-footer-items">
+            <a class="list-of-footer-items__company-about text_hide-by-size" href="#">
                 © 2001—2018, Яндекс
             </a>
-            <a class="main__mails-placeholder__list-of-footer-items__company-about text_hide-by-size" href="#">
+            <a class="list-of-footer-items__company-about text_hide-by-size" href="#">
                 Реклама
             </a>
-            <a class="main__mails-placeholder__list-of-footer-items__company-about text_hide-by-size" href="#">
+            <a class="list-of-footer-items__company-about text_hide-by-size" href="#">
                 Помощь и обратная связь
             </a>
         </div>
