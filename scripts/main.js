@@ -28,7 +28,7 @@ const getEmailIdByNum = (num /*: number */) => {
 }
 
 const getAllEmailsSelectCheckboxes = () => {
-  return document.getElementsByClassName(CLASS_EMAIL_CHECKBOX)
+  return document.querySelectorAll(`.${CLASS_EMAIL_CHECKBOX}`)
 }
 
 const getMaximalExistingMessageId = () => {
@@ -59,7 +59,7 @@ const possibleMailTitles = [
 const possibleMonths = ['янв', 'фев', 'мар', 'апр', 'май', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек']
 
 const getFirstByClass = (className /*: string*/) => {
-  const elements = document.getElementsByClassName(className)
+  const elements = document.querySelectorAll(`.${className}`)
   if (elements && elements.length > 0) {
     return elements[0]
   }
