@@ -19,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hw2.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="154" column="17" selection-start-line="154" selection-start-column="17" selection-end-line="154" selection-end-column="17" />
+            <state relative-caret-position="387">
+              <caret line="72" column="23" selection-start-line="72" selection-start-column="23" selection-end-line="72" selection-end-column="23" />
               <folding>
                 <element signature="e#363#472#0" />
                 <element signature="e#496#592#0" />
@@ -29,15 +29,12 @@
                 <element signature="e#737#765#0" />
                 <element signature="e#785#813#0" />
                 <element signature="e#829#1059#0" />
-                <element signature="e#1077#1155#0" />
                 <element signature="e#1177#1432#0" />
                 <element signature="e#1456#1559#0" />
-                <element signature="e#1576#1611#0" />
                 <element signature="e#1619#1783#0" />
                 <element signature="e#1804#1892#0" />
                 <element signature="e#1918#2045#0" />
                 <element signature="e#2071#2092#0" />
-                <element signature="e#2343#2424#0" />
               </folding>
             </state>
           </provider>
@@ -46,8 +43,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hw2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="17" column="68" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
+            <state relative-caret-position="85">
+              <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -68,6 +65,8 @@
       <find>white-block__deleted</find>
       <find>white-block__row</find>
       <find>white-block</find>
+      <find>main__mes</find>
+      <find>search__cr</find>
     </findStrings>
     <replaceStrings>
       <replace>message-block</replace>
@@ -86,9 +85,9 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="4">
     <option name="x" value="67" />
-    <option name="y" value="25" />
-    <option name="width" value="927" />
-    <option name="height" value="1055" />
+    <option name="y" value="27" />
+    <option name="width" value="917" />
+    <option name="height" value="1053" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -116,7 +115,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../task4" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -151,18 +150,19 @@
       <workItem from="1552306901614" duration="8607000" />
       <workItem from="1552728709570" duration="28000" />
       <workItem from="1552732016420" duration="6607000" />
-      <workItem from="1553337975572" duration="6558000" />
+      <workItem from="1553337975572" duration="10830000" />
+      <workItem from="1553769725423" duration="567000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27507000" />
+    <option name="totallyTimeSpent" value="32346000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="927" height="1055" extended-state="4" />
+    <frame x="67" y="27" width="917" height="1053" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24668142" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24608502" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -187,15 +187,15 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/hw2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="17" column="68" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
+        <state relative-caret-position="85">
+          <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hw2.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="154" column="17" selection-start-line="154" selection-start-column="17" selection-end-line="154" selection-end-column="17" />
+        <state relative-caret-position="387">
+          <caret line="72" column="23" selection-start-line="72" selection-start-column="23" selection-end-line="72" selection-end-column="23" />
           <folding>
             <element signature="e#363#472#0" />
             <element signature="e#496#592#0" />
@@ -204,15 +204,12 @@
             <element signature="e#737#765#0" />
             <element signature="e#785#813#0" />
             <element signature="e#829#1059#0" />
-            <element signature="e#1077#1155#0" />
             <element signature="e#1177#1432#0" />
             <element signature="e#1456#1559#0" />
-            <element signature="e#1576#1611#0" />
             <element signature="e#1619#1783#0" />
             <element signature="e#1804#1892#0" />
             <element signature="e#1918#2045#0" />
             <element signature="e#2071#2092#0" />
-            <element signature="e#2343#2424#0" />
           </folding>
         </state>
       </provider>
