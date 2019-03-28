@@ -10,55 +10,57 @@
         <script src="scripts/main.js" type="text/javascript"></script>
     </head>
     <body id="container">
-        <header id="header">
+        <header class="header">
           <button class="hamburger">
             <img class="hamburger__img" src="images/hamburger.svg">
           </button>
-          <div class="mail-logo"></div>
+          <div class="header__mlogo"></div>
           <div class="search-bar-container">
-            <div class="search-bar-and-close">
-              <input type="text" id="search-bar" placeholder="Поиск"/>
-              <span id="search-bar-close">&#x2715;</span>
+            <div class="search-bar-container__search-bar-and-close">
+              <input type="text" id="search-bar" class="search-bar-container__search-bar" placeholder="Поиск"/>
+              <span class="search-bar-container__search-bar-close">&#x2715;</span>
             </div>
           </div>
         </header>
-        <main id="content">
+        <main class="content">
             <nav class="left-menu">
               <button class="new-message-btn">Написать</button>
               <div class="menu-actions">
                 <div class="menu-action-wrapper">
-                  <div class="menu_actions__action selected-menu-action">
-                    <a href="#inbox">Входящие</a>
+                  <div class="menu-action-wrapper__action selected-menu-action">
+                    <a class="menu-action-wrapper__link" href="#inbox">Входящие</a>
                   </div>
                 </div>
                 <div class="menu-action-wrapper">
-                  <div class="menu_actions__action">
-                    <a href="#sent">Отправленные</a>
+                  <div class="menu-action-wrapper__action">
+                    <a class="menu-action-wrapper__link" href="#sent">Отправленные</a>
                   </div>
                 </div>
                 <div class="menu-action-wrapper">
-                  <div class="menu_actions__action">
-                    <a href="#deleted">Удалённые</a>
+                  <div class="menu-action-wrapper__action">
+                    <a class="menu-action-wrapper__link" href="#deleted">Удалённые</a>
                   </div>
                 </div>
                 <div class="menu-action-wrapper">
-                  <div class="menu_actions__action">
-                    <a href="#spam">Спам</a>
+                  <div class="menu-action-wrapper__action">
+                    <a class="menu-action-wrapper__link" href="#spam">Спам</a>
                   </div>
                 </div>
                 <div class="menu-action-wrapper">
-                  <div class="menu_actions__action">
-                    <a href="#drafts">Черновики</a>
+                  <div class="menu-action-wrapper__action">
+                    <a class="menu-action-wrapper__link" href="#drafts">Черновики</a>
                   </div>
                 </div>
                 <div class="menu-action-wrapper">
-                  <div class="menu_actions__action">
-                    <a href="#new_folder">Создать папку</a>
+                  <div class="menu-action-wrapper__action">
+                    <a class="menu-action-wrapper__link" href="#new_folder">Создать папку</a>
                   </div>
                 </div>
                 <div class="menu-action-wrapper">
-                  <div class="menu_actions__action">
-                    <a href="#long_name">Очень длинная команда, ну просто очень длинная, самая длинная здесь</a>
+                  <div class="menu-action-wrapper__action">
+                    <a class="menu-action-wrapper__link" href="#long_name">
+                      Очень длинная команда, ну просто очень длинная, самая длинная здесь
+                    </a>
                   </div>
                 </div>
               </div>
@@ -86,39 +88,53 @@
                 <h3>Они делают нас счастливее</h3>
                 <p>Добиться кошачьей любви, кажется, непросто — независимый и гордый нрав делает животного похожим на неприступную снежную королеву. Но потом она трется об ноги и с мурчанием ложится тебе на колени, и вот тогда-то и понимаешь, что ты тот избранный, заслуживший любовь этого грациозного существа! И ведь секрет прост: ты сделал кошку счастливой — кошка сделает счастливым тебя.</p>
             </div> 
-            <section class="mail-screen-and-footer">
+            <section class="content__mail-screen-and-footer">
               <section class="mail-screen">
                 <section class="mail-screen-element-wrapper">
                   <div class="mail-navigation">
-                    <input id="select-all-emails-checkbox" type="checkbox" class="email__mailscreen-checkbox"/>
-                    <button class="mail-nav-bnt"><a href="">Написать</a></button>
-                    <button id="delete-selected-mails" class="mail-nav-bnt">
+                    <input id="select-all-emails-checkbox" type="checkbox" class="mail-screen__checkbox"/>
+                    <button class="mail-navigation__nav-btn">
+                      <a class="mail-navigation__link" href="">Написать</a>
+                    </button>
+                    <button id="delete-selected-mails" class="mail-navigation__nav-btn">
                       Удалить
                     </button>
-                    <button id="fetch-inbox" class="mail-nav-bnt">
+                    <button id="fetch-inbox" class="mail-navigation__nav-btn">
                       Входящие
                     </button>
-                    <button class="mail-nav-bnt"><a href="">Отправленные</a></button>
-                    <button class="mail-nav-bnt"><a href="">Удалённые</a></button>
-                    <button class="mail-nav-bnt"><a href="">Спам!</a></button>
-                    <button class="mail-nav-bnt"><a href="">Прочитано</a></button>
+                    <button class="mail-navigation__nav-btn">
+                      <a class="mail-navigation__link" href="">Отправленные</a>
+                    </button>
+                    <button class="mail-navigation__nav-btn">
+                      <a class="mail-navigation__link" href="">Удалённые</a>
+                    </button>
+                    <button class="mail-navigation__nav-btn">
+                      <a class="mail-navigation__link" href="">Спам!</a>
+                    </button>
+                    <button class="mail-navigation__nav-btn">
+                      <a class="mail-navigation__link" href="">Прочитано</a>
+                    </button>
                   </div>
                 </section>
                 <section class="mail-emails">
                   <section id="__msg1" class="mail-screen-element-wrapper">
                     <div class="unread email">
                       <div class="email__mail-date">6 авг</div>
-                      <input data-msg="1" type="checkbox" class="email__mailscreen-checkbox"/>
+                      <input data-msg="1" type="checkbox" class="mail-screen__checkbox"/>
                       <img class="email__sender-photo" src="images/yandex-logo.png" />
-                      <span class="email__sender-part email__sender-name"><label for="toggle-first-mail">Яндекс.Паспорт</label></span>
+                      <span class="email__sender-part email__sender-name">
+                        <label class="email__label" for="toggle-first-mail">Яндекс.Паспорт</label>
+                      </span>
                       <div class="email__unread-flag"></div>
-                      <div class="email__sender-part email__sender-title"><label for="toggle-first-mail">Как читать почту с мобильного и не только</label></div>
+                      <div class="email__sender-part email__sender-title">
+                        <label class="email__label" for="toggle-first-mail">Как читать почту с мобильного и не только</label>
+                      </div>
                     </div>
                   </section>
                   <section id="__msg2" class="mail-screen-element-wrapper">
                     <div class="unread email">
                       <div class="email__mail-date">6 авг</div>
-                      <input data-msg="2" type="checkbox" class="email__mailscreen-checkbox"/>
+                      <input data-msg="2" type="checkbox" class="mail-screen__checkbox"/>
                       <img class="email__sender-photo" src="images/yandex-logo.png" />
                       <div class="email__sender-part email__sender-name">Команда Яндекс.Почты</div>
                       <div class="email__unread-flag"></div>
@@ -128,7 +144,7 @@
                   <section id="__msg3" class="mail-screen-element-wrapper">
                     <div class="email">
                       <div class="email__mail-date">6 июл</div>
-                      <input data-msg="3" type="checkbox" class="email__mailscreen-checkbox"/>
+                      <input data-msg="3" type="checkbox" class="mail-screen__checkbox"/>
                       <img class="email__sender-photo" src="images/yandex-logo.png" />
                       <div class="email__sender-part email__sender-name">Команда Яндекс.Почты</div>
                       <div class="email__unread-flag"></div>
@@ -138,7 +154,7 @@
                   <section id="__msg4" class="mail-screen-element-wrapper">
                     <div class="email">
                       <div class="email__mail-date">28 мар</div>
-                      <input data-msg="4" type="checkbox" class="email__mailscreen-checkbox"/>
+                      <input data-msg="4" type="checkbox" class="mail-screen__checkbox"/>
                       <img class="email__sender-photo" src="images/yandex-logo.png" />
                       <div class="email__sender-part email__sender-name">Яндекс</div>
                       <div class="email__unread-flag"></div>
@@ -148,7 +164,7 @@
                   <section id="__msg5" class="mail-screen-element-wrapper">
                     <div class="email">
                       <div class="email__mail-date">28 мар</div> 
-                      <input data-msg="5" type="checkbox" class="email__mailscreen-checkbox"/>
+                      <input data-msg="5" type="checkbox" class="mail-screen__checkbox"/>
                       <img class="email__sender-photo" src="images/yandex-logo.png" />
                       <div class="email__sender-part email__sender-name">Самое длинное название Яндекса которое вообще когда-либо и где-либо существовало</div>
                       <div class="email__unread-flag"></div>
@@ -158,7 +174,7 @@
                   <section id="__msg6" class="mail-screen-element-wrapper">
                     <div class="email">
                       <div class="email__mail-date">28 мар</div> 
-                      <input data-msg="6" type="checkbox" class="email__mailscreen-checkbox"/>
+                      <input data-msg="6" type="checkbox" class="mail-screen__checkbox"/>
                       <img class="email__sender-photo" src="images/yandex-logo.png" />
                       <div class="email__sender-part email__sender-name">Самое длинное название Яндекса которое вообще когда-либо и где-либо существовало</div>
                       <div class="email__unread-flag"></div>
@@ -168,7 +184,7 @@
                   <section id="__msg7" class="mail-screen-element-wrapper">
                     <div class="email">
                       <div class="email__mail-date">28 мар</div> 
-                      <input data-msg="7" type="checkbox" class="email__mailscreen-checkbox"/>
+                      <input data-msg="7" type="checkbox" class="mail-screen__checkbox"/>
                       <img class="email__sender-photo" src="images/yandex-logo.png" />
                       <div class="email__sender-part email__sender-name">Самое длинное название Яндекса которое вообще когда-либо и где-либо существовало</div>
                       <div class="email__unread-flag"></div>
@@ -178,7 +194,7 @@
                   <section id="__msg8" class="mail-screen-element-wrapper">
                     <div class="email">
                       <div class="email__mail-date">28 мар</div> 
-                      <input data-msg="8" type="checkbox" class="email__mailscreen-checkbox"/>
+                      <input data-msg="8" type="checkbox" class="mail-screen__checkbox"/>
                       <img class="email__sender-photo" src="images/yandex-logo.png" />
                       <div class="email__sender-part email__sender-name">Самое длинное название Яндекса которое вообще когда-либо и где-либо существовало</div>
                       <div class="email__unread-flag"></div>
@@ -188,7 +204,7 @@
                   <section id="__msg9" class="mail-screen-element-wrapper">
                     <div class="email">
                       <div class="email__mail-date">1 янв</div> 
-                      <input data-msg="9" type="checkbox" class="email__mailscreen-checkbox"/>
+                      <input data-msg="9" type="checkbox" class="mail-screen__checkbox"/>
                       <img class="email__sender-photo" src="images/yandex-logo.png" />
                       <div class="email__sender-part email__sender-name">Самое длинное название Яндекса которое вообще когда-либо и где-либо существовало</div>
                       <div class="email__unread-flag"></div>
@@ -199,13 +215,13 @@
             </section>
             <footer class="mail-footer">
               <span class="footer-item">
-                <a class="mail-footer__link" href="#help">Помощь и обратная связь</a>
+                <a class="footer-item__link" href="#help">Помощь и обратная связь</a>
               </span>
               <span class="footer-item">
-                <a class="mail-footer__link" href="#ads">Реклама</a>
+                <a class="footer-item__link" href="#ads">Реклама</a>
               </span>
               <span class="footer-item">
-                <a class="mail-footer__link" href="https://yandex.ru">&copy; 2001-2018, Яндекс</a>
+                <a class="footer-item__link" href="https://yandex.ru">&copy; 2001-2018, Яндекс</a>
               </span>
             </footer>
           </section>

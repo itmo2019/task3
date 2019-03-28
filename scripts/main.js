@@ -5,7 +5,7 @@ const ID_DELETE_SELECTED_EMAILS     = 'delete-selected-mails'
 const ID_SELECT_ALL_EMAILS_CHECKBOX = 'select-all-emails-checkbox'
 
 const CLASS_EMAILS_CONTAINER = 'mail-emails'
-const CLASS_EMAIL_CHECKBOX   = 'email__mailscreen-checkbox'
+const CLASS_EMAIL_CHECKBOX   = 'mail-screen__checkbox'
 
 const ANIMATION_BOUNCE_IN_CLASS        = 'bounceIn'
 const ANIMATION_BOUNCE_OUT_RIGHT_CLASS = 'bounceOutRight'
@@ -74,7 +74,7 @@ const composeNewMessage = (msgId /*: number*/) => {
   return `<section id="${getEmailIdByNum(msgId)}" class="mail-screen-element-wrapper ${ANIMATION_BOUNCE_IN_CLASS}">
     <div class="unread email">
       <div class="email__mail-date">${day} ${month}</div>
-      <input data-msg="${msgId}" type="checkbox" class="email__mailscreen-checkbox"/>
+      <input data-msg="${msgId}" type="checkbox" class="mail-screen__checkbox"/>
       <img class="email__sender-photo" src="images/yandex-logo.png" />
       <div class="email__sender-part email__sender-name">Команда Яндекс.Письма</div>
       <div class="email__unread-flag"></div>
