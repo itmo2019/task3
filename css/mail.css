@@ -1,31 +1,31 @@
 @font-face {
     font-family: YandexSansBold;
-    src: url("fonts/YandexSansDisplay-Bold.ttf");
+    src: url("../fonts/YandexSansDisplay-Bold.ttf");
 }
 
 @font-face {
     font-family: YandexSansThin;
-    src: url("fonts/YandexSansDisplay-Thin.ttf");
+    src: url("../fonts/YandexSansDisplay-Thin.ttf");
 }
 
 @font-face {
     font-family: YandexSansLight;
-    src: url("fonts/YandexSansDisplay-Light.ttf");
+    src: url("../fonts/YandexSansDisplay-Light.ttf");
 }
 
 @font-face {
     font-family: YandexSansRegular;
-    src: url("fonts/YandexSansDisplay-Regular.ttf");
+    src: url("../fonts/YandexSansDisplay-Regular.ttf");
 }
 
 @font-face {
     font-family: HelveticaNeue;
-    src: url("fonts/HelveticaNeueCyr-Medium.otf");
+    src: url("../fonts/HelveticaNeueCyr-Medium.otf");
 }
 
 @font-face {
     font-family: HelveticaNeueLight;
-    src: url("fonts/HelveticaNeueCyr-Light.otf");
+    src: url("../fonts/HelveticaNeueCyr-Light.otf");
 }
 
 header {
@@ -178,6 +178,24 @@ html {
     color: #000000;
     background-color: white;
     border-bottom: 1px solid #e2e2e2;
+}
+
+.letters_mail_new {
+    opacity: 0;
+    height: 0;
+}
+
+.letters_mail_show {
+    transition: all 250ms;
+    transition-timing-function: ease;
+    opacity: 1;
+    height: 40px;
+}
+
+.letters_mail_will_be_removed {
+    opacity: 0;
+    transition: opacity 400ms;
+    transition-timing-function: ease;
 }
 
 .single-line {
@@ -359,7 +377,7 @@ footer {
     display: inline-block;
     width: 153px;
     height: 31px;
-    content: url(./img/mail-logo.png);
+    content: url(../img/mail-logo.png);
 }
 
 .ya-search {
@@ -394,18 +412,5 @@ footer {
     }
     100% {
         right: 100%;
-    }
-}
-
-@keyframes create_animation {
-    from {
-        opacity: 0;
-        height: 0;
-    }
-    50% {
-        height: 40px;
-    }
-    to {
-        opacity: 1;
     }
 }
