@@ -2,9 +2,9 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles/animation.css">
     <link rel="stylesheet" href="styles/fonts.css">
     <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/animation.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/body.css">
     <link rel="stylesheet" href="styles/main.css">
@@ -83,6 +83,22 @@
         </div>
     </div>
 </main>
+
+<template id="mail-template">
+    <div class="mail mail_status_not-read" data-delete>
+        <div class="mail__item mail__select">
+            <label class="mails-checkbox">
+                <input class="mails-checkbox__checkbox" type="checkbox">
+                <span class="mails-checkbox__alternative-drawing"></span>
+            </label>
+        </div>
+        <img class="mail__item mail__logo" src="//yastatic.net/mail/socialavatars/socialavatars/v4/ya-default.svg" data-delete>
+        <div class="mail__item mail__title text_hide-by-size" data-delete>всем привей! + smth else</div>
+        <div class="mail__item mail__text-message text_hide-by-size" data-delete>как дела???</div>
+        <div class="mail__item mail__receive-time text_hide-by-size" data-delete>6 янв</div>
+    </div>
+</template>
+
 <script src="scripts/letter-generate.js"></script>
 </body>
 </html>
