@@ -8,18 +8,7 @@ function setRemoveListener() {
 }
 
 function removeMessage(message) {
-    let id = setInterval(disappearing, 5);
-    let duration = 100.0;
-    let k = 0;
-    let stepOpacity = 1.0/duration;
-    function disappearing() {
-        if (k === duration) {
-            clearInterval(id);
-        } else {
-            k++;
-            message.style.opacity = (1.0 - k * stepOpacity).toString();
-        }
-    }
+    message.classList.add("fade-out");
 }
 
 function removeMessages() {
@@ -30,7 +19,7 @@ function removeMessages() {
         });
     rem_messages.forEach(message => {
         removeMessage(message);
-        setTimeout(() => message.parentNode.removeChild(message), 500);
+        setTimeout(() => message.parentNode.removeChild(message), 1000);
     });
 }
 

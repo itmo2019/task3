@@ -1,6 +1,6 @@
 setNewMessageListener();
 
-let myMessage = '<li class="message">\n    ' +
+const myMessage =
     '<label>\n' +
     '        <input class="checkbox message__checkbox" type="checkbox">\n    ' +
     '</label>\n    ' +
@@ -20,22 +20,26 @@ let myMessage = '<li class="message">\n    ' +
     '        <a href="" class="message__text">\n' +
     '            6 авг\n' +
     '        </a>\n    ' +
-    '</div>\n    ' +
-    '</li>'
+    '</div>\n    '
 
 function setNewMessageListener() {
-    let button = document.body
+    const button = document.body
         .getElementsByClassName('actions__item')[1];
     button
-        .addEventListener('click', () => addNewMessage());
+        .addEventListener('click', () => {
+            const m = addNewMessage();
+            setTimeout(() => {
+                m.className = 'message';
+            },0);
+        });
 }
 
 function addNewMessage() {
-    let newMessage = document.createElement('li');
-    newMessage.className = 'message';
+    const newMessage = document.createElement('li');
+    newMessage.className = 'message fade-out';
     newMessage.innerHTML = myMessage;
-
-    let mailBox = document.getElementsByClassName('mail-box')[0];
+    const mailBox = document.getElementsByClassName('mail-box')[0];
     mailBox.appendChild(newMessage);
+    return newMessage;
 }
 
