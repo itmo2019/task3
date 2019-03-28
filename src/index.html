@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="css/mail-box.css" type="text/css">
 	<link rel="stylesheet" href="css/top-menu.css" type="text/css">
 	<link rel="stylesheet" href="css/message.css" type="text/css">
-	<link rel="stylesheet" href="css/checkbox.css" type="text/css">
+	<link rel="stylesheet" href="css/check.css" type="text/css">
 	<link rel="stylesheet" href="css/is-read-mark.css" type="text/css">
 	<link rel="stylesheet" href="css/footer.css" type="text/css">
 	<link rel="stylesheet" href="css/article.css" type="text/css">
@@ -45,10 +45,10 @@
 	</div>
 	<main class="mail-box page__mail-box">
 		<div class="top-menu">
-			<div class="checkbox top-menu__checkbox">
+			<div class="check top-menu__check">
 				<label>
-					<input type="checkbox" class="checkbox__input">
-					<span class="checkbox__custom"></span>
+					<input type="checkbox" class="check__input">
+					<span class="check__box"></span>
 				</label>
 			</div>
 			<div class="top-menu__button-list">
@@ -86,11 +86,34 @@
 			</div>
 		</div>
 		<ul class="mail-box__message-list">
+            <template id="new-message-template">
+                <li class="message new-message">
+                    <div class="check message__check">
+                        <label>
+                            <input type="checkbox" class="check__input">
+                            <span class="check__box"></span>
+                        </label>
+                    </div>
+                    <span class="message__content">
+                        <span class="message__sender">
+                            <img class="message__sender-picture" src="images/yandex-logo.png" width="30">
+                            <span class="message__sender-name message__sender-name_not-read">Команда Яндекс.Почты</span>
+                        </span>
+                        <span class="is-read-mark message__is-read-mark is-read-mark_not-read"></span>
+                        <span class="message__text">
+                            <span class="message__text-inner message__text-inner_not-read">
+                                Новое сообщение!
+                            </span>
+                        </span>
+                        <span class="message__date"><time datetime="08-06">6 июл</time></span>
+                    </span>
+                </li>
+            </template>
 			<li class="message">
-				<div class="checkbox message__checkbox">
+				<div class="check message__check">
 					<label>
-						<input type="checkbox" class="checkbox__input">
-						<span class="checkbox__custom"></span>
+						<input type="checkbox" class="check__input">
+						<span class="check__box"></span>
 					</label>
 				</div>
 				<label for="first-message">
@@ -110,10 +133,10 @@
 				</label>
 			</li>
 			<li class="message">
-				<div class="checkbox message__checkbox">
+				<div class="check message__check">
 					<label>
-						<input type="checkbox" class="checkbox__input">
-						<span class="checkbox__custom"></span>
+						<input type="checkbox" class="check__input">
+						<span class="check__box"></span>
 					</label>
 				</div>
 				<span class="message__content">
@@ -131,10 +154,10 @@
 				</span>
 			</li>
 			<li class="message">
-				<div class="checkbox message__checkbox">
+				<div class="check message__check">
 					<label>
-						<input type="checkbox" class="checkbox__input">
-						<span class="checkbox__custom"></span>
+						<input type="checkbox" class="check__input">
+						<span class="check__box"></span>
 					</label>
 				</div>
 				<span class="message__content">
@@ -150,10 +173,10 @@
 				</span>
 			</li>
 			<li class="message">
-				<div class="checkbox message__checkbox">
+				<div class="check message__check">
 					<label>
-						<input type="checkbox" class="checkbox__input">
-						<span class="checkbox__custom"></span>
+						<input type="checkbox" class="check__input">
+						<span class="check__box"></span>
 					</label>
 				</div>
 				<span class="message__content">
@@ -171,10 +194,10 @@
 				</span>
 			</li>
 			<li class="message">
-				<div class="checkbox message__checkbox">
+				<div class="check message__check">
 					<label>
-						<input type="checkbox" class="checkbox__input">
-						<span class="checkbox__custom"></span>
+						<input type="checkbox" class="check__input">
+						<span class="check__box"></span>
 					</label>
 				</div>
 				<span class="message__content">
@@ -192,10 +215,10 @@
 				</span>
 			</li>
 			<li class="message">
-				<div class="checkbox message__checkbox">
+				<div class="check message__check">
 					<label>
-						<input type="checkbox" class="checkbox__input">
-						<span class="checkbox__custom"></span>
+						<input type="checkbox" class="check__input">
+						<span class="check__box"></span>
 					</label>
 				</div>
 				<span class="message__content">
@@ -211,10 +234,10 @@
 				</span>
 			</li>
 			<li class="message">
-				<div class="checkbox message__checkbox">
+				<div class="check message__check">
 					<label>
-						<input type="checkbox" class="checkbox__input">
-						<span class="checkbox__custom"></span>
+						<input type="checkbox" class="check__input">
+						<span class="check__box"></span>
 					</label>
 				</div>
 				<span class="message__content">
@@ -232,10 +255,10 @@
 				</span>
 			</li>
 			<li class="message">
-				<div class="checkbox message__checkbox">
+				<div class="check message__check">
 					<label>
-						<input type="checkbox" class="checkbox__input">
-						<span class="checkbox__custom"></span>
+						<input type="checkbox" class="check__input">
+						<span class="check__box"></span>
 					</label>
 				</div>
 				<span class="message__content">
@@ -253,10 +276,10 @@
 				</span>
 			</li>
 			<li class="message">
-				<div class="checkbox message__checkbox">
+				<div class="check message__check">
 					<label>
-						<input type="checkbox" class="checkbox__input">
-						<span class="checkbox__custom"></span>
+						<input type="checkbox" class="check__input">
+						<span class="check__box"></span>
 					</label>
 				</div>
 				<span class="message__content">
@@ -272,10 +295,10 @@
 				</span>
 			</li>
 			<li class="message">
-				<div class="checkbox message__checkbox">
+				<div class="check message__check">
 					<label>
-						<input type="checkbox" class="checkbox__input">
-						<span class="checkbox__custom"></span>
+						<input type="checkbox" class="check__input">
+						<span class="check__box"></span>
 					</label>
 				</div>
 				<span class="message__content">
@@ -293,10 +316,10 @@
 				</span>
 			</li>
 			<li class="message">
-				<div class="checkbox message__checkbox">
+				<div class="check message__check">
 					<label>
-						<input type="checkbox" class="checkbox__input">
-						<span class="checkbox__custom"></span>
+						<input type="checkbox" class="check__input">
+						<span class="check__box"></span>
 					</label>
 				</div>
 				<span class="message__content">
@@ -314,10 +337,10 @@
 				</span>
 			</li>
 			<li class="message">
-				<div class="checkbox message__checkbox">
+				<div class="check message__check">
 					<label>
-						<input type="checkbox" class="checkbox__input">
-						<span class="checkbox__custom"></span>
+						<input type="checkbox" class="check__input">
+						<span class="check__box"></span>
 					</label>
 				</div>
 				<span class="message__content">
@@ -333,10 +356,10 @@
 				</span>
 			</li>
 			<li class="message">
-				<div class="checkbox message__checkbox">
+				<div class="check message__check">
 					<label>
-						<input type="checkbox" class="checkbox__input">
-						<span class="checkbox__custom"></span>
+						<input type="checkbox" class="check__input">
+						<span class="check__box"></span>
 					</label>
 				</div>
 				<span class="message__content">
