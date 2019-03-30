@@ -1,10 +1,10 @@
 let newMessageBody = ''+
-'<input type="checkbox" class="message__message-select">\n'+
-'<img class="message__author-avatar" width="30px" height="30px">\n'+
-'<span class="message__author-name">Яндекс.Паспорт</span>\n'+
-'<input type="checkbox" class="message__mark-as-read-tick">\n'+
-'<span class="message__message-subject">Доступ к аккаунту восстановлен</span>\n'+
-'<time class="message__message-receive-time">5 авг</time>';
+'<input type="checkbox" class="message__elem message__message-select page_checkbox">\n'+
+'<img class="message__elem message__author-avatar" src="images/ya-message-logo.svg" width="30px" height="30px">\n'+
+'<span class="message__elem message__author-name page_text-overflow_hide">Яндекс.Паспорт</span>\n'+
+'<div class="message__elem message__mark-as-read-tick"></div>\n'+
+'<span class="message__elem message__message-subject page_text-overflow_hide">Доступ к аккаунту восстановлен</span>\n'+
+'<time class="message__elem message__message-receive-time page_text-overflow_hide">5 авг</time>';
 
 function createMessage() {
     let list = document.getElementsByClassName('content-messages__message-list')[0];

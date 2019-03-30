@@ -19,11 +19,12 @@
 }
 
 .page__header {
-    width: 184px;
+    display: inline-block;
+    width: 100%;
     height: 31px;
-    position: absolute;
-    left: 22px;
-    top: 12px;
+    position: relative;
+    margin-top: 13px;
+    margin-bottom: 13px;
 }
 
 .page_inline{
@@ -38,9 +39,26 @@ html, body{
 
 .page{
     position: relative;
-    width: 800px;
+    min-width: 800px;
+    width: 80%;
     min-height: 100%;
     margin: 0 auto;
+}
+
+.page__ya-menu-logo{
+    margin-left: 22px;
+}
+
+.page__ya-menu-logo img{
+    vertical-align: bottom;
+    position: relative;
+    bottom: 3px;
+}
+
+.page__ya-mail-logo{
+    vertical-align: bottom;
+    position: relative;
+    display: inline-block;
 }
 
 ul{
@@ -53,53 +71,40 @@ a, a:active, a:visited, a:hover {
     position: unset !important;
 }
 
-.page__ya-mail-logo{
-    font-size: 25px;
-}
-
-.ya-mail-logo__ya-logo{
-    width: 100%;
-    font-family: YandexSansBold, sans-serif;
-    margin-right: 4px;
-    margin-left: 3px;
-}
-
-.ya-mail-logo__mail-logo{
-    width: 100%;
-    font-family: YandexSansThin, sans-serif;
-}
-
 .page__ya-search{
-    position: absolute;
-    width: 301px;
+    display: inline-block;
+    position: relative;
+    min-width: 301px;
+    width: 38%;
     height: 32px;
-    left: 320px;
-    top: 11px;
-    vertical-align: middle;
+    left: 18%;
     opacity: 0.5;
     padding-left: 16px;
-    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
-    background-color: #ffffff;
-    font-family: YandexSanThin;
+    font-family: YandexSanThin, sans-serif;
     font-size: 15px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
     line-height: 2.13;
     color: #000000;
 }
 
 .page__message-creator {
-    position: absolute;
-    top: 11px;
-    left: 640px;
+    display: inline-block;
+    position: relative;
+    left: 18%;
     opacity: 0.5;
     cursor: pointer;
 }
+
 .ya-sidebar__nav-sidebar{
     margin-left: 22;
     margin-top: 0px;
     padding: 0;
 }
 
-.ya-sidebar__nav-sidebar li:not(.ya-sidebar__compose-message){
+.ya-sidebar__nav-sidebar li:not(.nav-sidebar__compose-message){
     width: 137px;
     height: 22px;
     margin-left: 0;
@@ -109,11 +114,11 @@ a, a:active, a:visited, a:hover {
     line-height: 22px;
 }
 
-.ya-sidebar__nav-sidebar li:not(.ya-sidebar__compose-message):hover{
+.ya-sidebar__nav-sidebar li:not(.nav-sidebar__compose-message):hover{
     background-color: #cdd6e4;
 }
 
-.ya-sidebar__compose-message{
+.nav-sidebar__compose-message{
     width: 147px;
     height: 32px;
     background-color: #6287bd;
@@ -128,11 +133,26 @@ a, a:active, a:visited, a:hover {
     line-height: 32px;
 }
 
+.page_text-overflow_hide{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.page_visibility_hide{
+    visibility: hidden;
+}
+
+.page_checkbox{
+    width: 16px;
+    height: 16px;
+}
+
 .page__ya-sidebar{
-    position: absolute;
-    left: 0;
-    top: 56px;
+    position: relative;
+    display: inline-block;
     width: 200px;
+    vertical-align: top;
     font-family: HelveticaNeue, sans-serif;
     font-size: 11px;
     font-weight: 500px;
@@ -140,14 +160,11 @@ a, a:active, a:visited, a:hover {
 }
 
 .page__ya-mail{
-    position: absolute;
-    left: 191px;
-    top: 56px;
-    margin-bottom: 30px;
-    width: 589;
+    position: relative;
+    display: inline-block;
+    width: 74%;
+    min-width: 589;
     min-height: 530px;
-    left: 291px;
-    top: 76px;
     background-color: #ffffff;
     border-radius: 3px;
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.34);
@@ -155,64 +172,69 @@ a, a:active, a:visited, a:hover {
 
 .ya-mail__content-top-bar{
     position: relative;
+    padding: 0;
+    margin: 0;
     width: 100%;
     height: 37px;
+    line-height: 37px;
     font-family: HelveticaNeue, sans-serif;
     font-size: 13px;
     font-weight: 500;
+    vertical-align: middle;
     color: #cccccc;
 }
 
-.ya-mail__content-top-bar *{
-    position: absolute;
-    top: 11px;
-}
-
 .ya-mail__content-top-bar ul{
-    position: unset;
+    cursor: pointer;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    margin-left: 0;
 }
 
 .ya-mail__select-all{
-    left: 20px;
+    display: inline-block;
+    margin-left: 20px;
+    height: 100%;
+    width: 30px;
 }
 
-.ya-mail__resend{
-    left: 56px;
+.ya-mail__select-all input{
+    margin: 0;
+    height: 100%;
 }
 
-.ya-mail__delete{
-    left: 150px;
-}
-
-.ya-mail__spam{
-    left: 228px;
-}
-
-.ya-mail__mark-as-read{
-    left: 315;
+.ya-mail__action{
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+    max-width: 85px;
+    margin-left: 20px;
 }
 
 .message-list__message{
     position: relative;
     height: 37px;
+    line-height: 37px;  
     font: 13px HelveticaNeue;
     color: #000000;
     border-bottom: solid 1px #e2e2e2;
+    vertical-align: middle;
+}
+
+.message-list__message:hover{
+    background-color: #cdd6e4;
 }
 
 .message_unread{
     font-weight: bold;
 }
 
-.message-list__message *{
-    display: inline;
-    position: absolute;
-    top: 12px;
-}
-
 .ya-mail__content-messages{
     width: 100%;
-    min-height: 463px;
+    min-height: 456px;
+    height: fit-content;
     border-top: solid 1px #e2e2e2;
     border-bottom: solid 1px #e2e2e2;
 }
@@ -223,13 +245,14 @@ a, a:active, a:visited, a:hover {
 }
 
 .message__message-select{
-    left: 20px; 
+    margin: 0;
+    margin-left: 20px; 
 }
 
 .content-messages__my-blog{
     box-sizing: border-box;
     width: 100%;
-    min-height: 463px;
+    min-height: 455px;
     position: absolute;
     top: 0;
     background-color: white;
@@ -243,6 +266,10 @@ a, a:active, a:visited, a:hover {
 
 .message-open{
     position: unset;
+}
+
+#message-select1{
+    display: none;
 }
 
 #message-select1:checked + .content-messages__my-blog{
@@ -273,48 +300,48 @@ a, a:active, a:visited, a:hover {
 .my-blog__exit:hover {
     background-color: #cdd6e4;
 }
+
+.message__elem{
+    display: inline-block;
+    height: 37px;
+    line-height: 37px;
+    vertical-align: middle;
+}
+
 .message__author-avatar{
     width: 30px;
     height: 30px;
-    left: 46px;
-    top: 4px;
-    background-image: url(https://yastatic.net/mail/socialavatars/socialavatars/v4/ya-default.svg);
+    margin-left: 10px;
+    margin-right: 10px;
     border-radius: 15px;
 }
 
 .message__author-name{
-    left: 86px;
-    max-width: 170px;
-    max-height: 16px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    widows: 26%;
 }
 
 .message__mark-as-read-tick{
     width: 10px;
     height: 10px;
-    left: 261px;
+    margin-left: 69px;
+    margin-right: 15px;
     background-color: #6287bd;
     border-radius: 10px;
 }
 
-.message__mark-as-read-tick:checked {
-    background-color: rgb(34, 34, 129);
-}
-
 .message__message-subject{
-    left: 281px;
-    max-width: 250px;
-    max-height: 16px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    width: 37%;
 }
 
 .message__message-receive-time{
-    right: 20px;
+    position: relative;
+    margin-right: 20px;
+    float: right;
+    width: fit-content;
+    max-width: 60px;
     text-align: right;
     color: #9b9b9b;
-    /* font-weight: normal; */
+    font-weight: normal;
 }
 
 .page__footer-content{
@@ -324,16 +351,17 @@ a, a:active, a:visited, a:hover {
 }
 
 footer{
-    width: 345px;
-    height: 12px;
-    position: absolute;
-    right: 20px;
-    bottom: 10px;
+    text-align: right;
     font-size: 11px;
     font-family: HelveticaNeueLight;
     color: #9b9b9b;
 }
 
 .footer-content__copyright, .footer-content__link{
-    margin-left: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 150px;
+    width: fit-content;
+    margin-right: 20px;
+    line-height: 30px;
 }
