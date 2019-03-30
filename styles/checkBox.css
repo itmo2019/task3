@@ -1,36 +1,21 @@
-
-#header-letters__checkbox {
-    display: none;
+.check__input {
+    position: absolute;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
-.header-letters-checkbox__label {
-    cursor: pointer;
-    vertical-align: middle;
-}
-
-.header-letters-checkbox__label:before {
-    content: "";
-    color: rgb(0, 0, 0);
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    position: relative;
-    top: 3px;
-    background: white;
-    border: 1px solid rgb(226, 226, 226);
-    border-radius: 3px;
-}
-
-#header-letters__checkbox:checked + .header-letters-checkbox__label:before {
-    content: "\2714";
-}
-
-.sender-info-container__checkbox {
+.check__box {
     display: inline-block;
     vertical-align: middle;
-    background: white;
-    border: 1px solid #e2e2e2;
-    border-radius: 3px;
     width: 16px;
     height: 16px;
+    box-shadow: 0 0 0 1px #e2e2e2;
+    border-radius: 1px;
+    background-color: white;
+    cursor: pointer;
+}
+
+
+.check__input:checked + .check__box {
+    background-image: url(../images/checkMark.svg);
 }

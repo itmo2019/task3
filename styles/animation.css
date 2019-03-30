@@ -21,10 +21,14 @@
 
 @keyframes growing {
     0% {
-        width: 60%;
+        width: 65%;
     }
     100% {
-        width: 100%;
-
+        width: 95%;
     }
+}
+
+
+.start-transition {
+    opacity: 0;
 }
