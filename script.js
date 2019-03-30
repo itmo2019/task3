@@ -49,28 +49,12 @@ function selectAll(selectAllCheckbox) {
 function createMessage() {
     let messagesList = document.getElementsByClassName('messages-list')[0];
     let newMessage = document.createElement('div');
-    newMessage.className = 'message';
+    newMessage.className = 'message to-create';
     newMessage.innerHTML = messageTemplate;
-    newMessage.style.height = '0';
     messagesList.insertBefore(newMessage, messagesList.children[0]);
-
-    let animationDuration = 1000;
-    let height = 22;
-    let durationPerPixel = animationDuration / height;
-
-    var startTime = performance.now();
-    requestAnimationFrame(function animate(currentTime) {
-        var timePassed = currentTime - startTime;
-        if (timePassed > animationDuration) timePassed = animationDuration;
-        function draw(timePassed) {
-            var shift = (timePassed / durationPerPixel);
-            newMessage.style.height = shift + 'px';
-        }
-        draw(timePassed);
-        if (timePassed < animationDuration) {
-            requestAnimationFrame(animate);
-        }
-    });
+    setTimeout(() => {
+        newMessage.classList.remove("to-create");
+    }, 3500);
 }
 
 function deleteSelectedMessages() {
@@ -79,11 +63,14 @@ function deleteSelectedMessages() {
     for (let i = 0; i < checkboxes.length; i++) {
         if (checkboxes[i].checked) {
             let message = checkboxes[i].parentElement.parentElement;
+            message.classList.add("to-delete");
             if (message.className.includes('labeled-message')) {
                 message = message.parentElement;
             }
-            messagesList.removeChild(message);
-            i--;
+            setTimeout(() => {
+                messagesList.removeChild(message)
+            }, 3500);
+
         }
     }
     anyCheckboxIsActive = false;
