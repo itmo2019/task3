@@ -46,22 +46,25 @@ function receiveMessage() {
 
   msgInput.id = 'select-message100';
   msgInput.type = 'checkbox';
-  msgInput.classList.add('checkbox');
+  msgInput.classList.add('message-item__checkbox');
+  msgInput.classList.add('mail-box__input');
   msgInput.checked = document.getElementById('select-all').checked
 
-  msgLogoSpan.classList.add('circle');
+  msgLogoSpan.classList.add('message-item__circle');
 
   msgLogoImg.src = "images/message-company-logo.png";
 
-  msgThemeP.classList.add('unread-message-preview');
+  msgThemeP.classList.add('message-item__text_theme');
+  msgThemeP.classList.add('bold-text');
   msgThemeP.innerText = genereateTheme();
 
-  msgUnreadCircleSpan.classList.add('unread-circle');
+  msgUnreadCircleSpan.classList.add('message-item__unread-circle');
 
-  msgContentP.classList.add('unread-message-content');
+  msgContentP.classList.add('message-item__text_content');
+  msgContentP.classList.add('bold-text');
   msgContentP.innerText = generateContent();
 
-  msgTime.classList.add('message-time');
+  msgTime.classList.add('message-item__time');
   msgTime.dateTime = generateDateTime();
   msgTime.innerText = "6 авг"
 
