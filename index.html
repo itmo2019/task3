@@ -278,7 +278,13 @@
                 }
             }
 
-            setInterval(addMail, 60000);
+            function newMailTimeoutSetup() {
+                setTimeout(() => {
+                    addMail(); 
+                    newMailTimeoutSetup()
+                }, (Math.random() + 1) * 5*60*1000);
+            }
+            newMailTimeoutSetup();
 
             document.getElementById("write-mail").addEventListener("click", addMail);
             
