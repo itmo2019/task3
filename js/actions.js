@@ -10,7 +10,7 @@ function createLetter() {
 function addLetter() {
     let allLetters = document.getElementById('all-letters');
     let newLetter = createLetter();
-    allLetters.insertBefore(newLetter, allLetters.firstChild);
+    allLetters.insertBefore(newLetter, allLetters.querySelectorAll("li")[0]);
     allLetters.classList.add('all-letter-down');
     newLetter.addEventListener("webkitAnimationEnd", function () {
         removeClass(newLetter, 'animation-insert');
