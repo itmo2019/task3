@@ -18,15 +18,11 @@
 			for (var i = 0; i < d.length; i++) {
 				d[i].className+=" deleted";
 			}
-			var d = document.getElementById("lastline");
-			d.className += " deleted";
 		}
 	</script>
 	<script language="JavaScript" type="text/javascript">
 		document.getElementById("newButton").onclick=function(){
 			var d = document.getElementById("newLetter");
-			d.className += " show";
-			var d = document.getElementById("newLine");
 			d.className += " show";
 		}
 	</script>
@@ -38,31 +34,28 @@
 		width="153"
 		class="yandex__logo">
 	</div>
-	<div class="body__inbox"></div>
 	<div class="body__newbox">
 		<a class="body__newbox-refl">Написать</a>
 	</div>
 	<div class="menu body__menu">
-		<ul class="menu__list-of-options">
-			<li class="menu__list-in">
-				<a>Входящие</a>
-			</li>
-			<li class="menu__list-send">
-				<a>Отправленные</a>
-			</li>
-			<li class="menu__list-del">
-				<a>Удаленные</a>
-			</li>
-			<li class="menu__list-spam">
-				<a>Спам</a>
-			</li>
-			<li class="menu__list-draft">
-				<a>Черновики</a>
-			</li>
-			<li class="menu__list-makedir">
-				<a>Создать папку</a>
-			</li>
-		</ul>
+		<div class="menu__item">
+			Входящие
+		</div>
+		<div class="menu__item">
+			Отправленные
+		</div>
+		<div class="menu__item">
+			Удаленные
+		</div>
+		<div class="menu__item">
+			Спам
+		</div>
+		<div class="menu__item">
+			Черновики
+		</div>
+		<div class="menu__item">
+			Создать папку
+		</div>
 	</div>	
 	<div class="window body__window">
 		<div class="allright window__allright">
@@ -81,7 +74,6 @@
 			<label id="krestik" for="essay-action">x</label>
            	<iframe src="essay/index.html" width=100% height=100%></iframe>
 		</article>
-		<div class="window__firstline"></div>
 		<div class="letters window__letters">
 			<div class="letter letters__letter" id="newLetter">
 				<input type="checkbox" class="letter__box">
@@ -91,7 +83,6 @@
 				<div class="letter__textletter">Привет! У меня хорошие новости!</div>
 				<div class="letter__date">16 мар</div>
 			</div>
-			<div class="letters__line" id="newLine"></div>
 			<div class = "firstletter letters__firstletter">
 				<label for="essay-action" class="firstletter__clickme">
 					<input type="checkbox" class="firstletter__box">
@@ -102,7 +93,6 @@
 					<div class="firstletter__unreaded"></div>
 				</label>
 			</div>
-			<div class="letters__line"></div>
 			<div class="letter letters__letter" id="toDeleteLetter">
 				<input type="checkbox" class="letter__box">
 					<div class="letter__logo-authtor">Я</div>
@@ -111,7 +101,6 @@
 					<div class="letter__textletter">Как читать почту с мобильного</div>
 					<div class="letter__date">6 июл</div>
 			</div>
-			<div class="letters__line" id="toDelLine"></div>
 			<div class="lettermove letters__lettermove">
 				<input type="checkbox" class="lettermove__box">
 					<div class="lettermove__logo-authtor">Я</div>
@@ -119,7 +108,6 @@
 					<div class="lettermove__textletter">Как читать почту с мобильного</div>
 					<div class="lettermove__date">6 июл</div>
 			</div>
-			<div class="letters__line"></div>
 			<div class="lettermove letters__lettermove">
 				<input type="checkbox" class="lettermove__box">
 					<div class="lettermove__logo-authtor">Я</div>
@@ -127,7 +115,7 @@
 					<div class="lettermove__textletter">Это очень длинное письмо и поэтому его показывать не стоит. Very long text, very long text, very long text, very long text, very long text, very long text, very long text, very long text, very long text, very long text, very long text, very long text, very long text</div>
 					<div class="lettermove__date">8 июл</div>
 			</div>
-			<div class="letters__line" id="lastline"></div>
+			<div class="letters__emptypart"></div>
 		</div>
 	</div>
 </body>

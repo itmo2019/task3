@@ -8,6 +8,13 @@
 	src: url(./YandexSansText-Bold/YandexSansText-Bold.woff2) format('woff2');
 	src: url(YandexSansText-Bold/YandexSansText-Bold.ttf) format('truetype');
 }
+@font-face {
+	font-family: 'Yandex Sans Text Regular';
+	src: url('YandexSansText-Regular/YandexSansText-Regular.woff') format('woff'),
+		 url('YandexSansText-Regular/YandexSansText-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
 .window__header {
 	margin-left: 20px; 
 	margin-top: 11px; 
@@ -18,35 +25,55 @@
 .thin {
 	font-family: Yandex Sans Text Thin;
 }
+@keyframes del-animation {
+    70% {
+        transform:  translateX(100%);
+    }
+    to {
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+    }
+}
 
 #toDeleteLetter.deleted {
-    visibility: hidden;
+    animation: del-animation linear 1s;
+    animation-fill-mode:forwards;
+    animation-duration: 0.5s;
+    opacity: 1;
+    animation-iteration-count: 1;
+}
+
+@keyframes new-animation {
+	30% {
+		opacity: 0;
+		height: auto;
+		position: static;
+    }
+    to {
+    	position: static;
+    	height: auto;
+        opacity: 1;
+    }
+}
+#newLetter {
+	position: absolute;
+    height: 0;
     opacity: 0;
-    filter: alpha(opacity=0);
-    transform: translateX(100%);
-    transition: all 0.5s ease-in-out;
 }
-.lettermove.deleted {
-    transform: translateY(-50px);
-    transition-delay: 0.5s;
-}
-#lastline.deleted {
-    visibility: hidden;
-}
-#newLetter, #newLine {
-	display: none;
-}
+
 #newLetter.show {
-	display: block;
+	animation: new-animation linear 1s;
+    animation-fill-mode:forwards;
+    animation-duration: 0.5s;
+    opacity: 1;
+    animation-iteration-count: 1;
 }
-#newLine.show {
-	display: block;
-}
+
 .yandex {
 	width: 153px;
   	height: 31px;
-  	/*text-align: center;
-	font-size: 22px;*/
 }
 .body__yandex {
 	position: absolute;
@@ -55,33 +82,34 @@
 }
 .window {
 	position: absolute;
-	/*width: 589px;*/
 	min-width: 589px;
 	width: 73.625vw;
-  	height: 530px;
+  	min-height: 530px;
 	margin-top: 56px;
 	margin-left: 191px;
 	box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.34);
-	background-color: #ffffff;
+	background-color: #fff;
 }
 .window__allright {
-	width: inherit;
+	border-top: 1px solid #e2e2e2;
+	width: 100%;
 	position: absolute;
-	margin-top: 498.5px;
+	margin-top: 10px;
+	bottom: 0;
 }
-.allright__line {
-	width: inherit;
- 	height: 1px;
-    border: solid 1px #e2e2e2;
+.letters__emptypart {
+	width: 100%;
+	height: 30px;
 }
+
 .allright__foot {
-	margin-top: 8.5px;
+	margin-top: 8px;
 	float: right;
 	margin-right: 20px; 
 	white-space: nowrap;
 	width: 345px;
 	height: 12px;
-	font-family: HelveticaNeue;
+	font-family: HelveticaNeue, Helvetica, sans-serif;
 	font-size: 11px;
 	font-weight: normal;
 	font-style: normal;
@@ -97,7 +125,7 @@
 	margin-top: 7px;
 	width: 56px; 
 	height: 15px;
-	font-family: HelveticaNeue;
+	font-family: HelveticaNeue, Helvetica, sans-serif;
 	font-size: 12px;
 	font-weight: 500;
 	font-style: normal;
@@ -115,37 +143,39 @@
   	margin-top: 56px;
 	margin-left: 22px;
 }
+.menu {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	position: absolute;
+	margin-top: 96px;
+	width: 100%;
+	margin-left: 22px;
+}
 
-.menu__list-of-options {
-	position: absolute;
-	margin-top: 96px;
-	width: 147px;
-	margin-left: 22px;
-}
-.window__firstline {
-	position: relative;
-	margin-top: 10px;
-	width: 100%;
-	height: 2px;
-	border: solid 1px #e2e2e2;
-}
-.letters__line {
-	position: relative;
-	margin-top: 4px;
-	width: 100%;
-	height: 2px;
-	border: solid 1px #e2e2e2;
-} 
-.body__inbox{
-	/*position: relative;*/
-	position: absolute;
-	margin-top: 96px;
-	margin-left: 22px;
-  	width: 147px;
+.menu__item {
+	width: 137px;
   	height: 22px;
-  	border-radius: 3px;
-  	background-color: #cdd6e4;
+  	padding-left: 10px;
+  	padding-top: 4px;
+  	list-style-type: none;
+	text-overflow: ellipsis;
+  	font-family: HelveticaNeue, Helvetica, sans-serif;
+  	font-size: 11px;
+  	font-weight: 500;
+  	font-style: normal;
+  	font-stretch: normal;
+  	line-height: normal;
+  	letter-spacing: normal;
+  	color: #707070;
 }
+.menu__item:hover {
+	background: #cdd6e4;
+	border-radius: 3px;
+  	font-weight: bold;
+  	color: #555;
+}
+
 label {
 	display: inline-block;
 	width: inherit;
@@ -164,16 +194,17 @@ label {
 	margin-left: 20px;
 	margin-right: 10px;
 }
-.firstletter {
-	width: 100%;
-}
-.letter {
+
+.letter, .firstletter, .lettermove {
+	border-bottom: 1px solid #e2e2e2;
+	margin: 0px;
+	padding-bottom: 4px;
 	width: 100%;
 }
 
 .header__item {
-	background: #ffffff;
-	color: #cccccc;
+	background: #fff;
+	color: #ccc;
 	border: 0 none;
 }
 .letter__authtor, .firstletter__authtor {
@@ -183,7 +214,8 @@ label {
 	font-weight: normal;
 }
 .window__letters {
-	position: absolute;
+	border-top: 1px solid #e2e2e2;
+	margin-top: 10px;
 	width: 100%;
 }
 .letter__authtor, .firstletter__authtor, .lettermove__authtor{
@@ -193,15 +225,14 @@ label {
 	overflow: hidden;
 	white-space: nowrap;
 	width: 155px;
-	margin-top: 12px;
 	margin-left: 10px;
-	font-family: HelveticaNeue;
+	font-family: HelveticaNeue, Helvetica, sans-serif;
 	font-size: 13px;
 	font-style: normal;
 	font-stretch: normal;
 	line-height: normal;
 	letter-spacing: normal;
-	color: #000000;
+	color: #000;
 }
 .letter__textletter, .firstletter__textletter {
 	font-weight: bold;
@@ -212,37 +243,32 @@ label {
 .letter__textletter, .firstletter__textletter, .lettermove__textletter {
 	display: inline-block;
 	position: relative;
-	margin-top: 12px;
 	margin-left: 50px;
 	width: calc(100% - 376px);
 	height: 16px;
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
-	font-family: HelveticaNeue;
+	font-family: HelveticaNeue, Helvetica, sans-serif;
 	font-size: 13px;
 	font-style: normal;
 	font-stretch: normal;
 	line-height: normal;
 	letter-spacing: normal;
-	color: #000000;
+	color: #000;
 }
 
 .letter__date, .firstletter__date, .lettermove__date {
 	display: inline-block;
-	
 	position: relative;
-	/*width: inherit;*/
-	/*position: absolute;*/
 	margin-top: 13px;
-	/*margin-left: 538px;*/
 	overflow: hidden;
 	white-space: nowrap;
 	width: 40px;
 	margin-right: 10px;
 	margin-left: auto;
 	float: right;
- 	font-family: HelveticaNeue;
+ 	font-family: HelveticaNeue, Helvetica, sans-serif;
   	font-size: 13px;
   	font-weight: normal;
   	font-style: normal;
@@ -252,38 +278,6 @@ label {
   	text-align: right;
   	color: #9b9b9b;
 }
-li {
-	margin-bottom: 8px;
-	list-style-type: none;
-	width: 81px;
- 	height: 13px;
- 	text-overflow: ellipsis;
-	overflow: hidden;
-	white-space: nowrap;
-  	font-family: HelveticaNeue;
-  	font-size: 11px;
-  	font-weight: 500;
-  	font-style: normal;
-  	font-stretch: normal;
-  	line-height: normal;
-  	letter-spacing: normal;
-  	color: #707070;
-}
-
-.menu__list-in{
-	margin-top: 4px;
-	margin-bottom: 11px;
-  	width: 56px;
-  	height: 13px;
-  	font-family: HelveticaNeue;
-  	font-size: 11px;
-  	font-weight: bold;
-  	font-style: normal;
-  	font-stretch: normal;
-  	line-height: normal;
-  	letter-spacing: normal;
-  	color: #555555;
-}
 
 .letter__logo-authtor, .firstletter__logo-authtor, .lettermove__logo-authtor 
  {
@@ -292,12 +286,12 @@ li {
     width: 30px;
     height: 30px;
     margin-top: 10px;
-    font-family: Yandex Sans Text Thin;
-    background-color: #ff3333;
+    font-family: Yandex Sans Text Thin, sans-serif;
+    background-color: #f33;
     border-radius: 50%;
     font-size: 22px;
     font-weight: normal;
-    color: #ffffff;
+    color: #fff;
     text-align: center;
 }
 body {
@@ -305,7 +299,11 @@ body {
 	background-color: #e5eaf0;
 }
 .body__find {
-	font-family: Yandex Sans Text Thin;
+	font-family: Yandex Sans Text Regular, sans-serif;
+	font-size: 15px;
+	padding-left: 16px;
+	border: none;
+
 	position: absolute;
 	margin-top: 11px;
 	margin-left: 320px;
@@ -313,7 +311,7 @@ body {
 	height: 32px;
 	opacity: 0.5;
 	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
-	background-color: #ffffff;
+	background-color: #fff;
 }
 .letter__unreaded, .firstletter__unreaded  {
 	position: absolute;
@@ -326,7 +324,7 @@ body {
 }
 .x {
 	position: absolute;
-	margin-left: 281.5px; 
+	margin-left: 281px; 
 	margin-top: 5px;
  	width: 9px;
  	height: 9px;
@@ -334,9 +332,10 @@ body {
 
 #essay {
     position: absolute;
+    z-index: 100;
     margin-top: 10px;
     display: none;
-    background: #ffffff;
+    background: #fff;
     height:491px; 
     width: 100%;
 }
@@ -350,14 +349,11 @@ body {
 
 #krestik {
 	position: absolute;
+	z-index: 200;
     font-size: 20px;
     margin-top: 0px;
     margin-left: 90%;
-    color: #cccccc;
-}
-
-#essay-action:checked ~ .window__letters {
-    display: none;
+    color: #ccc;
 }
 
 #essay-action:checked ~ #essay {
