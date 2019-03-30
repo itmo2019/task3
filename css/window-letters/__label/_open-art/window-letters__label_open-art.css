@@ -1,0 +1,15 @@
+#window-letters__label_open-art {
+  display: none;
+}
+
+#window-letters__label_open-art:checked ~ .window-letters__first-letter {
+  display: none;
+}
+
+#window-letters__label_open-art:checked ~ #window-letters__letters-list_after-first {
+  display: none;
+}
+
+#window-letters__label_open-art:checked ~ .window-letters__article {
+  display: inline-block;
+}

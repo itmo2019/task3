@@ -18,49 +18,91 @@
             var letters = document.getElementById('window-letters__letters-list_after-first');
             var newLetter = document.createElement('li');
             newLetter.className = "window-letters__letter";
-            newLetter.innerHTML = '<ul class="window-letters__letter-innerior">\n' +
-                                            '<li class="window-letters__square-for-button window-letters__letter-part">\n' +
-                                                '<label>\n' +
-                                                    '<input type="checkbox" name="delBut" class="window-letters__input-button">\n' +
-                                                    '<div class="window-letters__select-button"></div>\n' +
-                                                '</label>\n' +
-                                            '</li>\n' +
-                                            '<li class="window-letters__sender-pict_wrap window-letters__letter-part">\n' +
-                                                '<img  \n' +
-                                                    'src="src/yandexCircle.jpg"\n' +
-                                                    'class="window-letters__sender-pict" \n' +
-                                                    'alt="yandex" \n' +
-                                                '/>\n' +
-                                            '</li>\n' +
-                                            '<li class="window-letters__sender window-letters__letter-part">\n' +
-                                                'Яндекс\n' +
-                                            '</li>\n' +
-                                            '<li class="window-letters__unread-point window-letters__letter-part">\n' +
-                                             '\n' +
-                                            '</li>\n' +
-                                            '<li class="window-letters__letter-text window-letters__letter-part">\n' +
-                                                'Письмо\n' +
-                                            '</li>\n' +
-                                            '<li class="window-letters__letter-date window-letters__letter-part">\n' +
-                                                '16 авг\n' +
-                                            '</li>\n' +
-                                        '</ul>\n' +
-                                        '<hr class="window-letters__delimiter-line">\n';
+            newLetter.innerHTML = `<ul class="window-letters__letter-innerior">
+                            <li class="window-letters__square-for-button window-letters__letter-part">
+                                <label>
+                                    <input type="checkbox" name="CCC" class="window-letters__input-button">
+                                    <div class="window-letters__select-button"></div>
+                                </label>
+                            </li>
+                            <li class="window-letters__letter-sender_pict_wrap window-letters__letter-part">
+                                <img
+                                    src="src/yandexCircle.jpg"
+                                    class="window-letters__letter-sender_pict"
+                                    alt="yandex"
+                                />
+                            </li>
+                            <li class="window-letters__letter-sender window-letters__letter-part">
+                                Яндекс.Паспорppppppppppppppppppppp
+                            </li>
+                            <li class="window-letters__letter-unread-point window-letters__letter-part">
 
+                            </li>
+                            <li class="window-letters__letter-text window-letters__letter-part">
+                                AAAAAAAAAA
+                            </li>
+                            <li class="window-letters__letter-date window-letters__letter-part">
+                                6 авг
+                            </li>
+                            <li>
+
+                            </li>
+                            <hr class="window-letters__delimiter-line">
+                        </ul>`;
+            newLetter.style.marginTop = `-52.6px`;
             letters.insertBefore(newLetter, letters.firstChild);
+            firstLetterNow = document.querySelector(".window-letters__letter");
+            addOneLetter(firstLetterNow);
         }
 
-    function deleteLetter() {
+    function deleteLetters() {
         var allCheckboxButtons = document.querySelectorAll('.window-letters__input-button');
+        allCheckboxButtons[0].checked = false;
         for (var i = 1; i < allCheckboxButtons.length; i++) {
             if (allCheckboxButtons[i].checked) {
                 var letter = allCheckboxButtons[i];
                 while (letter.className != 'window-letters__letter') {
                     letter = letter.parentElement;
                 }
-                letter.remove();
+                letter.style.zIndex = `0`;
+                deleteOneLetter(letter);
             }
         }
+    }
+
+    function deleteOneLetter(letter) {
+        animate(function (timePassed) {
+            letter.style.marginTop = '-' + timePassed / 19 + 'px';
+        }, 1000, 
+        function() {
+            letter.remove();
+        }
+        );
+    }
+
+    function addOneLetter(letter) {
+        animate(function (timePassed) {
+            letter.style.marginTop = (timePassed / 19 - 52.6) + 'px';
+        }, 1000, 
+        function() {
+        }
+        );
+    }
+
+    function animate(draw, duration, deleteAtAll) {
+        var startTime = performance.now();
+        requestAnimationFrame(function animate(time) {
+            var timePassed = time - startTime;
+            if (timePassed > duration) {
+                timePassed = duration;
+            }
+            draw(timePassed);
+            if (timePassed < duration) {
+                requestAnimationFrame(animate);
+            } else {
+                deleteAtAll();
+            }
+        });
     }
 
     </script>
@@ -68,7 +110,7 @@
     <title>Mail</title>
   </head>
 <body>
-  <content class="wrapper">
+  <content>
     <header>
         <section class="high-part high-part__before-lines">
             <div class="high-part__one-line"></div>
@@ -76,9 +118,9 @@
             <div class="high-part__one-line"></div>
         </section>
         <section class="high-part">
-            <a class="header__yandex-mail_unstressed-link" href="https://mail.yandex.ru">
+            <a class="high-part__yandex-mail_unstressed-link" href="https://mail.yandex.ru">
                 <img
-                    class="high-part__yandex-mail-picture"
+                    class="high-part__yandex-mail_picture"
                     alt="yandexMailPicture"
                     src="src/YandexMail.png"
                     width="153"
@@ -88,7 +130,7 @@
         </section>
         <section class="high-part high-part__search">
             <input type="text" placeholder="Поиск" class="high-part__search-word">
-            <div class="high-part__cancel-search-sign">&#9747;</div>
+            <div class="high-part__search-cancel-sign">&#9747;</div>
         </section>
     </header>
 
@@ -127,55 +169,55 @@
                     </label>
                 </li>
                 <li class="window-letters__header-part">
-                    <input type="button" name="resendButton" value="Переслать" class=" window-letters__header_not-chechbox">
+                    <input type="button" name="resendButton" value="Переслать" class=" window-letters__header-buttons">
                 </li>
                 <li class="window-letters__header-part">
-                    <input type="button" name="deleteButton" value="Удалить" class="window-letters__header_not-chechbox" onclick="deleteLetter()">
+                    <input type="button" name="deleteButton" value="Удалить" class="window-letters__header-buttons" onclick="deleteLetters()">
                 </li>
                 <li class="window-letters__header-part">
-                    <input type="button" name="spamButton" value="Это спам!" class="window-letters__header_not-chechbox">
+                    <input type="button" name="spamButton" value="Это спам!" class="window-letters__header-buttons">
                 </li>
                 <li class="window-letters__header-part">
-                    <input type="button" name="readButton" value="Прочитано" class="window-letters__header_not-chechbox">
+                    <input type="button" name="readButton" value="Прочитано" class="window-letters__header-buttons">
                 </li>
             </ul>
             <hr class="window-letters__delimiter-line">
 
             <ul class="window-letters__letters-list">
-                <input type="checkbox" id="window-letters__open-art-label">
-                <article id="window-letters__article">
-                    <label for="window-letters__open-art-label" id="window-letters__article_cancel-sign">&#9747;</label>
+                <input type="checkbox" id="window-letters__label_open-art">
+                <article class="window-letters__article">
+                    <label for="window-letters__label_open-art" class="window-letters__article-cancel-sign">&#9747;</label>
                     <img
                         src="src/cat-circle.png"
-                        id="circledCat"
+                        class="window-letters__article-circled-cat"
                         width="290"
                         height="290"
                         alt="Я изучаю HTML и CSS"
                     />
 
-                    <p class="begin">
+                    <p class="window-letters__article-beginning">
                         Я студентка 3 курса университета <abbr title="информационных технологий, механики и оптики">ИТМО</abbr>, поэтому я считаю, что если ты ещё не определился с будущей специализацией,
                         то самое время это сделать. В отличие от многих знакомых с моего потока, я ещё не уверена в том,
                         чем бы мне хотелось заниматься в ближайшем обозримом будущем. Вследствие этого мне было бы
                         интересно пройти этот курс.
                     </p>
 
-                    <p>
-                        <span id="firstWord" class="first">Во-первых</span>, внешний вид сайтов/приложений/etc &ndash; это первое, на что обращают внимание
+                    <p class="window-letters__article-paragraph">
+                        <span class="window-letters__article-first-word" class="window-letters__article-paragraph_first">Во-первых</span>, внешний вид сайтов/приложений/etc &ndash; это первое, на что обращают внимание
                         пользователи, а уже потом на функциональность, поэтому без знания того, как сделать красиво,
                         чтобы привлечь внимание пользователя, успеха добиться невозможно. По этой причине я ожидаю, что
                         меня научат, как пользоваться существующими возможности разработки.
                     </p>
 
-                    <p>
-                        <span id="firstWord" class="second">Во-вторых</span>, взаимодействие между членами команды разработчиков &ndash; немаловажная составляющая успеха,
-                        поэтому мне было бы интересно узнать, как устроена работа <span id="frontend">фронтенд</span>-разработчиков, чтобы лучше понимать их
+                    <p class="window-letters__article-paragraph">
+                        <span class="window-letters__article-first-word" class="window-letters__article-paragraph_second">Во-вторых</span>, взаимодействие между членами команды разработчиков &ndash; немаловажная составляющая успеха,
+                        поэтому мне было бы интересно узнать, как устроена работа <span class="window-letters__frontend-word">фронтенд</span>-разработчиков, чтобы лучше понимать их
                         и, возможно, писать код, который было бы проще понимать и позже реализовывать.
                     </p>
 
-                    <p>
-                        <span id="firstWord" class="third">В-третьих</span>, я считаю, что любое знание может быть полезным, даже если оно не кажется таковым на первый взгляд.
-                        Как говорится <i><q>всё, что нас не убивает, делает нас сильнее</q></i>, (но я это не про <span id="frontend">фронтенд</span> <span id="smiles">:)</span> ), поэтому я думаю,
+                    <p class="window-letters__article-paragraph">
+                        <span class="window-letters__article-first-word" class="window-letters__article-paragraph_third">В-третьих</span>, я считаю, что любое знание может быть полезным, даже если оно не кажется таковым на первый взгляд.
+                        Как говорится <i><q>всё, что нас не убивает, делает нас сильнее</q></i>, (но я это не про <span class="window-letters__frontend-word">фронтенд</span> :) ), поэтому я думаю,
                         что этот курс поможет расширить моё сознание и открыть некоторые ещё не изведанные мной стороны <b>IT</b>-сферы.
                     </p>
 
@@ -188,7 +230,7 @@
 
                 <section id="window-letters__letters-list_after-first">
                     <li class="window-letters__letter">
-                        <label for="window-letters__open-art-label" class="window-letters__first-letter">
+                        <label for="window-letters__label_open-art" class="window-letters__first-letter">
                             <ul class="window-letters__letter-innerior">
                                 <li class="window-letters__square-for-button window-letters__letter-part">
                                     <label>
@@ -196,17 +238,17 @@
                                         <div class="window-letters__select-button"></div>
                                     </label>
                                 </li>
-                                <li  class="window-letters__sender-pict_wrap window-letters__letter-part">
+                                <li  class="window-letters__letter-sender_pict_wrap window-letters__letter-part">
                                     <!-- <img
                                         src="src/yandexCircle.jpg"
-                                        class="window-letters__sender-pict"
+                                        class="window-letters__letter-sender_pict"
                                         alt="yandex"
                                     /> -->
                                 </li>
-                                <li class="window-letters__sender window-letters__letter-part">
+                                <li class="window-letters__letter-sender window-letters__letter-part">
                                     Anonymous
                                 </li>
-                                <li class="window-letters__unread-point window-letters__letter-part">
+                                <li class="window-letters__letter-unread-point window-letters__letter-part">
 
                                 </li>
                                 <li class="window-letters__letter-text window-letters__letter-part">
@@ -215,9 +257,9 @@
                                 <li class="window-letters__letter-date window-letters__letter-part">
                                     10 авг
                                 </li>
+                                <hr class="window-letters__delimiter-line">
                             </ul>
                         </label>
-                        <hr class="window-letters__delimiter-line">
                     </li>
 
                     <li class="window-letters__letter">
@@ -228,33 +270,32 @@
                                     <div class="window-letters__select-button"></div>
                                 </label>
                             </li>
-                            <li class="window-letters__sender-pict_wrap window-letters__letter-part">
+                            <li class="window-letters__letter-sender_pict_wrap window-letters__letter-part">
                                 <img
                                     src="src/yandexCircle.jpg"
-                                    class="window-letters__sender-pict"
+                                    class="window-letters__letter-sender_pict"
                                     alt="yandex"
                                 />
                             </li>
-                            <li class="window-letters__sender window-letters__letter-part">
+                            <li class="window-letters__letter-sender window-letters__letter-part">
                                 Яндекс.Паспорppppppppppppppppppppp
                             </li>
-                            <li class="window-letters__unread-point window-letters__letter-part">
+                            <li class="window-letters__letter-unread-point window-letters__letter-part">
 
                             </li>
                             <li class="window-letters__letter-text window-letters__letter-part">
-                                Соберите всю почту в этот ящик kkkkkkkkkkkkkkkkkkkkkkkkkkkkaaaaakbbbbkkkkkkkkkkkkkkkkkkkkkkkkkk
+                                Соберите всю почту в этот ящик kkkkkkkkkkkkkkkkkkkkkkkkkkkk aaaaa kbbbbkkkkkk kkkkkkkk kkkkaaaaaaaaaaaaaaa
                             </li>
                             <li class="window-letters__letter-date window-letters__letter-part">
                                 6 авг
                             </li>
+                            <hr class="window-letters__delimiter-line">
                         </ul>
-                        <hr class="window-letters__delimiter-line">
                     </li>
-
                     
                 </section>
             </ul>
-            <hr class="window-letters__footer_delimiter-line">
+            <hr class="window-letters__footer-delimiter-line">
             <section class="window-letters__footer">
                 Помощь и обратная связь&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 Реклама&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
