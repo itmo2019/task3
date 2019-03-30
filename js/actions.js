@@ -1,47 +1,40 @@
-let oneLetter = '<label>\n' +
-    '                    <input type="checkbox" class="check">\n' +
-    '                </label>\n' +
-    '                <div class="main-block__img-ya">\n' +
-    '                    <img src="img/yandex.png" alt="Yandex">\n' +
-    '                </div>\n' +
-    '                <span class="main-block__mail-from bold-text">Яндекс</span>\n' +
-    '                <div class="main-block__mail-not-read"></div>\n' +
-    '                <span class="main-block__topic bold-text">Собери свою поту в этот ящик</span>\n' +
-    '                <time class="main-block__date" datetime="06.07">6 июл</time>';
+function createLetter() {
+    let elem = document.createElement('li');
+    elem.className = 'animation-insert main-block__letter';
+    let temp = document.getElementById("template-letter");
+    let clone = temp.content.cloneNode(true);
+    elem.appendChild(clone);
+    return elem;
+}
 
 function addLetter() {
     let allLetters = document.getElementById('all-letters');
-    let newLetter = document.createElement('div');
-    newLetter.className = 'animation-insert main-block__letter';
-    newLetter.innerHTML = oneLetter;
-    allLetters.insertBefore(newLetter, allLetters.childNodes[2]);
+    let newLetter = createLetter();
+    allLetters.insertBefore(newLetter, allLetters.firstChild);
     allLetters.classList.add('all-letter-down');
-    setTimeout(removeClass, 600, newLetter, 'animation-insert');
-    setTimeout(removeClass, 600, allLetters, 'all-letter-down');
-
+    newLetter.addEventListener("webkitAnimationEnd", function () {
+        removeClass(newLetter, 'animation-insert');
+    });
+    allLetters.addEventListener("webkitAnimationEnd", function () {
+        removeClass(allLetters, 'all-letter-down');
+    });
 }
 
 function removeClass(letter, name) {
     letter.classList.remove(name);
 }
 
-function removeWithAnimation(letter) {
-    removeClass(letter, 'animation-delete');
-    letter.remove();
-}
-
 function remove() {
-    let checkboxes = document.body.querySelectorAll('.check');
-    for (let i = 1; i < checkboxes.length; i++) {
-        if (checkboxes[i].checked) {
-            let letter = checkboxes[i];
-            while (!letter.classList.contains('main-block__letter')) {
-                letter = letter.parentElement;
-            }
+    let letters = document.getElementById('all-letters').querySelectorAll("li");
+    letters.forEach(letter => {
+        if (letter.querySelector(".check").checked) {
             letter.classList.add('animation-delete');
-            setTimeout(removeWithAnimation, 600, letter);
+            letter.addEventListener("webkitAnimationEnd", function () {
+                removeClass(letter, 'animation-delete');
+                letter.remove()
+            });
         }
-    }
+    });
 }
 
 document.getElementById('get-letter').addEventListener("click", addLetter);

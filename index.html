@@ -76,7 +76,20 @@
             </ul>
         </div>
 
-        <div class="main-block__all-letters" id="all-letters">
+        <template id="template-letter">
+            <label>
+                <input type="checkbox" class="check">
+            </label>
+            <div class="main-block__img-ya">
+                <img src="img/yandex.png" alt="Yandex">
+            </div>
+            <span class="main-block__mail-from  bold-text">Команда Яндекс.Почты</span>
+            <div class="main-block__mail-not-read"></div>
+            <span class="main-block__topic bold-text">Как читать почту с мобильного</span>
+            <time class="main-block__date" datetime="06.07">6 июл</time>
+        </template>
+        <ul class="main-block__all-letters" id="all-letters">
+
             <input type="checkbox" class="check hidden-check" id="op">
             <div class="main-block__my-letter">
                 <label for="op" class="close clearfix">
@@ -121,7 +134,7 @@
                 </p>
             </div>
 
-            <div class="main-block__letter clearfix">
+            <li class="main-block__letter clearfix">
                 <label>
                     <input type="checkbox" class="check">
                 </label>
@@ -134,21 +147,9 @@
                     <span class="main-block__topic bold-text">Статья про Амурского тигра</span>
                     <time class="main-block__date" datetime="06.08">6 авг</time>
                 </label>
-            </div>
+            </li>
 
-            <div class="main-block__letter clearfix">
-                <label>
-                    <input type="checkbox" class="check">
-                </label>
-                <div class="main-block__img-ya">
-                    <img src="img/yandex.png" alt="Yandex">
-                </div>
-                <span class="main-block__mail-from  bold-text">Команда Яндекс.Почты</span>
-                <div class="main-block__mail-not-read"></div>
-                <span class="main-block__topic bold-text">Как читать почту с мобильного</span>
-                <time class="main-block__date" datetime="06.07">6 июл</time>
-            </div>
-            <div class="main-block__letter clearfix">
+            <li class="main-block__letter clearfix">
                 <label>
                     <input type="checkbox" class="check">
                 </label>
@@ -159,8 +160,8 @@
                 <div class="main-block__mail-not-read hidden"></div>
                 <span class="main-block__topic">Как читать почту с мобильного</span>
                 <time class="main-block__date" datetime="06.07">6 июл</time>
-            </div>
-            <div class="main-block__letter clearfix">
+            </li>
+            <li class="main-block__letter clearfix">
                 <label>
                     <input type="checkbox" class="check">
                 </label>
@@ -171,8 +172,8 @@
                 <div class="main-block__mail-not-read hidden"></div>
                 <span class="main-block__topic">Собери свою поту в этот ящик</span>
                 <time class="main-block__date" datetime="06.07">6 июл</time>
-            </div>
-        </div>
+            </li>
+        </ul>
 
         <footer class="footer">
             <span class="footer__texts">
