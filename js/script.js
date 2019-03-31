@@ -1,18 +1,20 @@
 function addNewLetter() {
-    let newLetterCode = '<div class="content__animated-add-letter letter">\n' +
-        '                <input class="letter__checkbox" type="checkbox">\n' +
-        '                <div class="letter__author-logo">\n' +
-        '                    <div class="letter__author_abbr">Я</div>\n' +
-        '                </div>\n' +
-        '                <div class="letter__author bold-text letter__text">Команда\n' +
-        '                    Яндекс.Почты\n' +
-        '                </div>\n' +
-        '                <div class="letter__new-letter-flag letter_new-letter-flag-enabled"></div>\n' +
-        '                <div class="letter__subject bold-text letter__text">Как\n' +
-        '                    читать почту с мобильного\n' +
-        '                </div>\n' +
-        '                <div class="letter__time">6 июля</div>\n' +
-        '            </div>';
+    let authorAbbr = 'Я';
+    let author = 'Команда Яндекс.Почты';
+    let subject = 'Как читать почту с мобильного';
+    let date = '6 июля';
+    let newLetterCode = `
+                    <div class="letter__animated-add-letter letter">
+                        <input class="letter__checkbox" type="checkbox">
+                        <div class="letter__author-logo">
+                            <div class="letter__author-abbr">${authorAbbr}</div>
+                        </div>
+                        <div class="letter__author bold-text letter__text">${author}</div>
+                        <div class="letter__new-letter-flag letter__new-letter-flag_enabled"></div>
+                        <div class="letter__subject bold-text letter__text">${subject}</div>
+                        <div class="letter__time">${date}</div>
+                    </div>
+                    `;
 
     let newLetterNode = new DOMParser().parseFromString(newLetterCode, "text/html");
     let letters = document.querySelector(".letters");

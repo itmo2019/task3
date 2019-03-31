@@ -216,7 +216,7 @@ body {
     float: left;
 }
 
-.letter__author_abbr {
+.letter__author-abbr {
     color: #fff;
     text-align: center;
     margin-top: 3px;
@@ -257,7 +257,7 @@ body {
     float: left;
 }
 
-.letter_new-letter-flag-enabled {
+.letter__new-letter-flag_enabled {
     background-color: #6287bd;
 }
 
@@ -295,7 +295,7 @@ body {
     opacity: 0.5;
 }
 
-.hidden-page {
+.letter-page_hidden {
     width: 90%;
     height: 100%;
     margin: 0;
@@ -307,21 +307,21 @@ body {
     overflow-y: scroll;
 }
 
-.hidden-page__page-close-button {
+.letter-page__page-close-button {
     position: relative;
     float: right;
     font-size: 30px;
 }
 
-#hidden-page-viewer {
+#letter-page-viewer {
     display: none;
 }
 
-#hidden-page-viewer:checked + .hidden-page {
+#letter-page-viewer:checked + .letter-page_hidden {
     display: block;
 }
 
-.hidden-page__raccoon-image {
+.letter-page__raccoon-image {
     width: 25%;
     float: right;
     shape-outside: url("images/raccoon.png");
