@@ -20,7 +20,7 @@
 
   <main class="main-content">
     <div class="mail-menu">
-      <button class="mail-menu__send-button">Написать</button>
+      <button class="mail-menu__send-button" onclick="createMail()">Написать</button>
 
       <ul class="mail-menu__bar">
         <li class="mail-menu__bar-item
@@ -29,7 +29,7 @@
         </li>
         <li class="mail-menu__bar-item"><a href="">Отправленные</a></li>
         <li class="mail-menu__bar-item"><a href="">Удалённые</a></li>
-        <li class="mail-menu__bar-item"><a href="">Спам</a></li>
+        <li class="mail-menu__bar-item" onclick="createMail()"><a href="">Спам</a></li>
         <li class="mail-menu__bar-item"><a href="">Черновики</a></li>
         <li class="mail-menu__bar-item"><a href="">Создать папку</a></li>
       </ul>
@@ -37,14 +37,14 @@
 
     <div class="mail-box">
       <div class="mail-action">
-        <input type="checkbox" class="mail-action__chooce_all">
+        <input type="checkbox" class="mail-action__chooce_all" id="mail-action__chooce_all-id" onclick="markAll()">
         <div class="mail-action__items">
           <button class="mail-action__button
                          mail-action__resend">
             Переслать
           </button>
           <button class="mail-action__button
-                         mail-action__delete">
+                         mail-action__delete" onclick="removeMarkedMails()">
             Удалить
           </button>
           <button class="mail-action__button
@@ -57,46 +57,11 @@
           </button>
         </div>
       </div>
-      <ul class="mails">
-        <li class="mail">
+      <ul class="mails" id="mails_id">
+        <li class="mail" id="mail_id">
           <div class="mail__content
                       mail__content__unread">
-            <input type="checkbox" class="mail__ariticle-link" id="article-checkbox">
-            <div class="mail__article">
-              <label class="mail__close-label" for="article-checkbox">x</label>
-              С древних времён вину приписывались лечебные свойства. В качестве лекарства оно применялось в Месопотамии,
-              Китае и Древнем Египте за две тысячи лет до нашей эры. Гиппократ применял вино в качестве антисептика,
-              диуретика, успокоительного и растворителя для лекарств, а также рекомендовал пить вино своим пациентам.
-              <img src="resources/images/wine.png" class="mail__wine-img">
-              Эффекты, оказываемые употреблением вина на здоровье, ещё полностью не изучены. Эпидемиологические данные
-              свидетельствуют, что употребление вина в разумных пределах снижает риск развития сердечной недостаточности
-              и
-              такого серьёзного заболевания сердечно-сосудистой системы, как инфаркт миокарда, повышает гемоглобин и
-              оказывает влияние на качественный состав крови.
-
-              Хотя на данный момент ещё достоверно не установлено, чем обусловлен данный эффект. Одни учёные связывают
-              его с
-              действием алкоголя, другие — с действием биологически активных веществ, содержащихся в вине. С высокой
-              степенью достоверности установлено, что умеренное потребление алкоголя снижает вероятность развития
-              сердечной
-              недостаточности.
-            </div>
-            <label for="article-checkbox">
-              <div>
-                <input type="checkbox" class="mail__chooce">
-                <img class="mail__sender-logo" src="./resources/images/ya-logo.png">
-                <span class="mail__sender-name mail__sender-name__hidden-text">Яндекс.Паспорт</span>
-                <div class="mail__unread-flag"></div>
-                <span class="mail__title mail__title__hidden-text">Доступ к аккаунту восстановлен</span>
-                <time class="mail__time">6 авг</time>
-              </div>
-            </label>
-          </div>
-        </li>
-        <li class="mail">
-          <div class="mail__content
-                      mail__content__unread">
-            <input type="checkbox" class="mail__chooce">
+            <input type="checkbox" class="mail__chooce" id="mail__chooce-id">
             <img class="mail__sender-logo" src="./resources/images/ya-logo.png">
             <span class="mail__sender-name mail__sender-name__hidden-text">Команда Яндекс.Почта</span>
             <div class="mail__unread-flag"></div>
@@ -107,9 +72,9 @@
             <time class="mail__time">6 июл</time>
           </div>
         </li>
-        <li class="mail">
+        <li class="mail" id="mail_id">
           <div class="mail__content">
-            <input type="checkbox" class="mail__chooce">
+            <input type="checkbox" class="mail__chooce" id="mail__chooce-id">
             <img class="mail__sender-logo" src="./resources/images/ya-logo.png">
             <span class="mail__sender-name mail__sender-name__hidden-text">Команда Яндекс.Почта</span>
             <div class="mail__unread-flag inactive"></div>
@@ -117,9 +82,9 @@
             <time class="mail__time">6 июл</time>
           </div>
         </li>
-        <li class="mail">
+        <li class="mail" id="mail_id">
           <div class="mail__content">
-            <input type="checkbox" class="mail__chooce">
+            <input type="checkbox" class="mail__chooce" id="mail__chooce-id">
             <img class="mail__sender-logo" src="./resources/images/ya-logo.png">
             <span class="mail__sender-name mail__sender-name__hidden-text">Яндекс</span>
             <div class="mail__unread-flag inactive"></div>
@@ -140,5 +105,6 @@
   </main>
 
 </body>
+<script src="script.js"></script>
 
 </html>

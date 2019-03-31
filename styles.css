@@ -350,3 +350,32 @@ label {
   float: right;
   width: 200px;
 }
+
+
+.insert-action {
+  animation-name: insert-animation;
+  animation-duration: 1s;
+}
+
+@keyframes insert-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.remove-action {
+  animation-name: remove-animation;
+  animation-duration: 1s;
+}
+
+@keyframes remove-animation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
