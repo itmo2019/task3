@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <link href="css/mail.css" rel="stylesheet">
     <link href="js/letters.js" rel="script">
-    <link href="template/letter_template.html" rel="import">
     <script src="js/letters.js"></script>
 </head>
 <body>
@@ -95,5 +94,15 @@
         </div>
     </div>
 </div>
+<template id="letter_template">
+    <div class="letters_mail unread letters_mail_new">
+        <input class="ya-checkbox" type="checkbox">
+        <img class="letters__mail_user-avatar" src="img/ya-default.svg">
+        <span class="letters__mail_sender">Длиннной динович длинновинский</span>
+        <input type="checkbox" class="letters__mail_read-mark">
+        <span class="letters__mail_message-title">Съешь ещё этих мягких французскихбулок, да выпей чаю</span>
+        <span class="letters__mail_receive-time">26 мар</span>
+    </div>
+</template>
 </body>
 </html>

@@ -42,10 +42,8 @@ function buildLetter(avatar, sender, title, date) {
 }
 
 function getLetterTemplate() {
-    let link = document.querySelector('link[href="template/letter_template.html"]');
-    let content = link.import.cloneNode(true);
-
-    return content.querySelector('.letters_mail');
+    let template = document.querySelector('#letter_template');
+    return document.importNode(template.content.querySelector(".letters_mail"), true);
 }
 
 function setText(letter, className, text) {
