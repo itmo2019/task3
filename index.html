@@ -7,51 +7,67 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-  <header class="top_elements">
-    <div class="service_logo">
-      <img class="menu_button" src="./resources/svg/menu-button.svg">
-      <img class="logo" src="./resources/images/mail_logo.png">
+<body class="body">
+  <header class="header">
+    <div class="service-logo">
+      <img class="service-logo__menu-img" src="./resources/svg/menu-button.svg">
+      <img class="service-logo__logo-img" src="./resources/images/mail_logo.png">
     </div>
-    <div class="search_block">
-      <input type="text" class="search" placeholder="Поиск">
+    <div class="search-block">
+      <input type="text" class="search-block__input" placeholder="Поиск">
     </div>
   </header>
 
-  <main class="main_info">
-    <div class="left_part_bar">
-      <button class="send_button">Написать</button>
+  <main class="main-content">
+    <div class="mail-menu">
+      <button class="mail-menu__send-button">Написать</button>
 
-      <ul class="bar">
-        <li class="hovered-item"><a href="">Входящие</a></li>
-        <li><a href="">Отправленные</a></li>
-        <li><a href="">Удалённые</a></li>
-        <li><a href="">Спам</a></li>
-        <li><a href="">Черновики</a></li>
-        <li><a href="">Создать папку</a></li>
+      <ul class="mail-menu__bar">
+        <li class="mail-menu__bar-item
+                   mail-menu__bar-item__hover">
+          <a href="">Входящие</a>
+        </li>
+        <li class="mail-menu__bar-item"><a href="">Отправленные</a></li>
+        <li class="mail-menu__bar-item"><a href="">Удалённые</a></li>
+        <li class="mail-menu__bar-item"><a href="">Спам</a></li>
+        <li class="mail-menu__bar-item"><a href="">Черновики</a></li>
+        <li class="mail-menu__bar-item"><a href="">Создать папку</a></li>
       </ul>
     </div>
 
-    <div class="mail_box">
-      <div class="mails_action">
-        <input type="checkbox" class="chooce_all chooce">
-        <div class="mails_action_items">
-          <button class="resend">Переслать</button>
-          <button class="delete">Удалить</button>
-          <button class="spam">Это спам!</button>
-          <button class="read">Прочитано</button>
+    <div class="mail-box">
+      <div class="mail-action">
+        <input type="checkbox" class="mail-action__chooce_all">
+        <div class="mail-action__items">
+          <button class="mail-action__button
+                         mail-action__resend">
+            Переслать
+          </button>
+          <button class="mail-action__button
+                         mail-action__delete">
+            Удалить
+          </button>
+          <button class="mail-action__button
+                         mail-action__spam">
+            Это спам!
+          </button>
+          <button class="mail-action__button
+                         mail-action__read">
+            Прочитано
+          </button>
         </div>
       </div>
       <ul class="mails">
         <li class="mail">
-          <div class="unread_mail mail_context">
-            <input type="checkbox" id="article_checkbox">
-            <div class="article">
-              <label class="close_item" for="article_checkbox">x</label>
+          <div class="mail__content
+                      mail__content__unread">
+            <input type="checkbox" class="mail__ariticle-link" id="article-checkbox">
+            <div class="mail__article">
+              <label class="mail__close-label" for="article-checkbox">x</label>
               С древних времён вину приписывались лечебные свойства. В качестве лекарства оно применялось в Месопотамии,
               Китае и Древнем Египте за две тысячи лет до нашей эры. Гиппократ применял вино в качестве антисептика,
               диуретика, успокоительного и растворителя для лекарств, а также рекомендовал пить вино своим пациентам.
-              <img src="resources/images/wine.png" class="wine_img">
+              <img src="resources/images/wine.png" class="mail__wine-img">
               Эффекты, оказываемые употреблением вина на здоровье, ещё полностью не изучены. Эпидемиологические данные
               свидетельствуют, что употребление вина в разумных пределах снижает риск развития сердечной недостаточности
               и
@@ -65,57 +81,59 @@
               сердечной
               недостаточности.
             </div>
-            <label for="article_checkbox">
+            <label for="article-checkbox">
               <div>
-                <input type="checkbox" class="chooce_item chooce">
-                <img class="sender_logo" src="./resources/images/ya-logo.png">
-                <span class="sender-name hidden_text">Яндекс.Паспорт</span>
-                <div class="unread_mail_flag"></div>
-                <span class="sender-title hidden_text">Доступ к аккаунту восстановлен</span>
-                <time class="sender-time">6 авг</time>
+                <input type="checkbox" class="mail__chooce">
+                <img class="mail__sender-logo" src="./resources/images/ya-logo.png">
+                <span class="mail__sender-name mail__sender-name__hidden-text">Яндекс.Паспорт</span>
+                <div class="mail__unread-flag"></div>
+                <span class="mail__title mail__title__hidden-text">Доступ к аккаунту восстановлен</span>
+                <time class="mail__time">6 авг</time>
               </div>
             </label>
           </div>
         </li>
         <li class="mail">
-          <div class="unread_mail mail_context">
-            <input type="checkbox" class="chooce_item chooce">
-            <img class="sender_logo" src="./resources/images/ya-logo.png">
-            <span class="sender-name hidden_text">Команда Яндекс.Почта</span>
-            <div class="unread_mail_flag"></div>
-            <span class="sender-title hidden_text">Тут ну ооооочень-оооооооочень много буковок в тееееема этоооооого
+          <div class="mail__content
+                      mail__content__unread">
+            <input type="checkbox" class="mail__chooce">
+            <img class="mail__sender-logo" src="./resources/images/ya-logo.png">
+            <span class="mail__sender-name mail__sender-name__hidden-text">Команда Яндекс.Почта</span>
+            <div class="mail__unread-flag"></div>
+            <span class="mail__title mail__title__hidden-text">Тут ну ооооочень-оооооооочень много буковок в тееееема
+              этоооооого
               совсем пустого
               письма</span>
-            <time class="sender-time">6 июл</time>
+            <time class="mail__time">6 июл</time>
           </div>
         </li>
         <li class="mail">
-          <div class="mail_context">
-            <input type="checkbox" class="chooce_item chooce">
-            <img class="sender_logo" src="./resources/images/ya-logo.png">
-            <span class="sender-name hidden_text">Команда Яндекс.Почта</span>
-            <div class="unread_mail_flag inactive"></div>
-            <span class="sender-title hidden_text">Как читать почту с мобильного</span>
-            <time class="sender-time">6 июл</time>
+          <div class="mail__content">
+            <input type="checkbox" class="mail__chooce">
+            <img class="mail__sender-logo" src="./resources/images/ya-logo.png">
+            <span class="mail__sender-name mail__sender-name__hidden-text">Команда Яндекс.Почта</span>
+            <div class="mail__unread-flag inactive"></div>
+            <span class="mail__title mail__title__hidden-text">Как читать почту с мобильного</span>
+            <time class="mail__time">6 июл</time>
           </div>
         </li>
         <li class="mail">
-          <div class="mail_context">
-            <input type="checkbox" class="chooce_item chooce">
-            <img class="sender_logo" src="./resources/images/ya-logo.png">
-            <span class="sender-name hidden_text">Яндекс</span>
-            <div class="unread_mail_flag inactive"></div>
-            <span class="sender-title hidden_text">Собери всю почту в этот ящик</span>
-            <time class="sender-time">6 июл</time>
+          <div class="mail__content">
+            <input type="checkbox" class="mail__chooce">
+            <img class="mail__sender-logo" src="./resources/images/ya-logo.png">
+            <span class="mail__sender-name mail__sender-name__hidden-text">Яндекс</span>
+            <div class="mail__unread-flag inactive"></div>
+            <span class="mail__title mail__title__hidden-text">Собери всю почту в этот ящик</span>
+            <time class="mail__time">6 июл</time>
           </div>
         </li>
       </ul>
 
       <div class="contacts">
-        <footer class="contacts_info">
-          <span class="contact_info_item"><a href="">Помощь и обратная связь</a></span>
-          <span class="contact_info_item"><a href="">Реклама</a></span>
-          <span class="contact_info_item">&copy; 2001 &ndash; 2018, Яндекс</span>
+        <footer class="contacts__info">
+          <span class="contact__info-item"><a href="">Помощь и обратная связь</a></span>
+          <span class="contact__info-item"><a href="">Реклама</a></span>
+          <span class="contact__info-item">&copy; 2001 &ndash; 2018, Яндекс</span>
         </footer>
       </div>
     </div>

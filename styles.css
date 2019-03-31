@@ -25,7 +25,7 @@
   src: url("./resources/font_style/YandexSansText-Light.ttf")
 }
 
-body {
+.body {
   margin: 0 auto;
   position: relative;
   background-color: #e5eaf0
@@ -40,20 +40,13 @@ ul {
   list-style-type: none;
 }
 
-header {
+.header {
   margin-left: 22px;
   height: 56px;
   position: relative;
 }
 
-.menu_button {
-  width: 27px;
-  height: 27px;
-  top: 4px;
-  position: absolute;
-}
-
-.service_logo {
+.service-logo {
   position: relative;
   cursor: pointer;
   top: 12px;
@@ -61,7 +54,13 @@ header {
   width: 180px;
 }
 
-.logo {
+.service-logo__menu-img {
+  width: 27px;
+  height: 27px;
+  top: 4px;
+  position: absolute;
+}
+.service-logo__logo-img {
   width: 150px;
   height: 31px;
   left: 31px;
@@ -70,7 +69,7 @@ header {
   font-size: 25px;
 }
 
-.search_block {
+.search-block {
   left: 320px;
   width: 37%;
   height: 31px;
@@ -83,7 +82,7 @@ header {
   line-height: 2.13;
 }
 
-.search {
+.search-block__input {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -93,17 +92,17 @@ header {
   outline: none;
 }
 
-.main_info {
+.main-content {
   margin-left: 22px;
   position: relative;
 }
 
-.left_part_bar {
+.mail-menu {
   width: 148px;
   position: relative;
 }
 
-.send_button {
+.mail-menu__send-button {
   width: 100%;
   height: 32px;
   border-radius: 3px;
@@ -117,7 +116,7 @@ header {
   color: #fff;
 }
 
-.bar {
+.mail-menu__bar {
   top: 40px;
   width: 100%;
   padding-left: 0px;
@@ -126,7 +125,7 @@ header {
   font-family: YandexSanBold;
 }
 
-.bar li {
+.mail-menu__bar-item {
   height: 22px;
   font-family: YandexSanBold;
   padding-left: 10px;
@@ -139,12 +138,12 @@ header {
   color: #555;
 }
 
-.hovered-item,
-.bar li:hover {
+.mail-menu__bar-item__hover,
+.mail-menu__bar .mail-menu__bar-item:hover {
   background-color: #cdd6e4;
 }
 
-.mail_box {
+.mail-box {
   width: 75%;
   min-width: 589px;
   min-height: 530px;
@@ -157,7 +156,7 @@ header {
   position: relative;
 }
 
-.mails_action {
+.mail-action {
   width: 100%;
   height: 37px;
   position: relative;
@@ -165,13 +164,19 @@ header {
   border-bottom-width: 2px;
 }
 
-.chooce_all {
+.mail-action__chooce_all {
   top: 11px;
   left: 20px;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  border-radius: 3px;
+  border: solid 1px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
   position: absolute;
 }
 
-.mails_action_items button {
+.mail-action__button {
   top: 11px;
   background: #fff;
   position: absolute;
@@ -184,40 +189,26 @@ header {
   color: #ccc;
 }
 
-.resend {
+.mail-action__resend {
   left: 7%;
 }
 
-.delete {
+.mail-action__delete {
   left: 19%;
 }
 
-.spam {
+.mail-action__spam {
   left: 29%;
 }
 
-.read {
+.mail-action__read {
   left: 40%;
-}
-
-.chooce {
-  width: 16px;
-  height: 16px;
-  margin: 0;
-  border-radius: 3px;
-  border: solid 1px rgba(0, 0, 0, 0.15);
-  background-color: #fff;
 }
 
 .mails {
   min-height: 462px;
   padding: 0px;
   margin: 0px;
-}
-
-.unread_mail .sender-name,
-.unread_mail .sender-title {
-  font-weight: bold;
 }
 
 .mail {
@@ -233,19 +224,29 @@ header {
   border-bottom-width: 1px;
 }
 
-.mail_context {
+.mail__content__unread .mail__sender-name,
+.mail__content__unread .mail__title {
+  font-weight: bold;
+}
+
+.mail__content {
   display: table-cell;
   position: relative;
   vertical-align: middle;
   height: 100%;
 }
 
-.chooce_item {
+.mail__chooce {
   margin-left: 20px;
   vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  border: solid 1px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
 }
 
-.sender_logo {
+.mail__sender-logo {
   width: 30px;
   height: 30px;
   margin-left: 10px;
@@ -258,20 +259,21 @@ header {
   color: #fff;
 }
 
-.hidden_text {
+.mail__sender-name__hidden-text,
+.mail__title__hidden-text {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
-.sender-name {
+.mail__sender-name {
   width: 25%;
   margin-left: 10px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.unread_mail_flag {
+.mail__unread-flag {
   width: 10px;
   height: 10px;
   margin-left: 10px;
@@ -282,13 +284,13 @@ header {
   background-color: #6287bd;
 }
 
-.sender-title {
+.mail__title {
   display: inline-block;
   vertical-align: middle;
   width: 40%;
 }
 
-.sender-time {
+.mail__time {
   right: 20px;
   top: 13px;
   position: absolute;
@@ -300,7 +302,7 @@ header {
   border-top: solid 1px #e2e2e2;
 }
 
-.contacts_info {
+.contacts__info {
   top: 9px;
   right: 20px;
   position: absolute;
@@ -309,15 +311,15 @@ header {
   color: #9b9b9b;
 }
 
-.contact_info_item {
+.contact__info-item {
   padding: 15px;
 }
 
-#article_checkbox {
+.mail__ariticle-link {
   display: none;
 }
 
-#article_checkbox:checked + .article {
+.mail__ariticle-link:checked + .mail__article {
   display: block;
 }
 
@@ -325,7 +327,7 @@ header {
   background: #fff;
 }
 
-.article {
+.mail__article {
   position: absolute;
   background-color: #fff;
   z-index: 1;
@@ -338,13 +340,13 @@ label {
   cursor: pointer;
 }
 
-.close_item {
+.mail__close-label {
   float: right;
   font-size: 20px;
   color: #708090;
 }
 
-.wine_img {
+.mail__wine-img {
   float: right;
   width: 200px;
 }
