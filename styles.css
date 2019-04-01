@@ -319,21 +319,8 @@ ul {
   display: none;
 }
 
-.mail__ariticle-link:checked + .mail__article {
-  display: block;
-}
-
 .inactive {
   background: #fff;
-}
-
-.mail__article {
-  position: absolute;
-  background-color: #fff;
-  z-index: 1;
-  font-size: 16px;
-  padding: 5px;
-  display: none;
 }
 
 label {
@@ -345,12 +332,6 @@ label {
   font-size: 20px;
   color: #708090;
 }
-
-.mail__wine-img {
-  float: right;
-  width: 200px;
-}
-
 
 .insert-action {
   animation-name: insert-animation;
