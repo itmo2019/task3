@@ -16,9 +16,8 @@ function addLetter() {
         let before = mailsPlaceholder.getElementsByClassName("mail")[0];
         mailsPlaceholder.insertBefore(element, before);
     }
-    setTimeout(() => {
-        element.classList.add("create-animation");
-    }, 0);
+    element.offsetHeight;
+    element.classList.add("create-animation");
     countLetter++;
 }
 
