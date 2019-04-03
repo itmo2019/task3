@@ -30,6 +30,8 @@
 @import url("css/window-letters/__input-button/window-letters__input-button.css");
 @import url("css/window-letters/__label/_open-art/window-letters__label_open-art.css");
 @import url("css/window-letters/__letter/window-letters__letter.css");
+@import url("css/window-letters/__letter/_add/window-letters__letter_add.css");
+@import url("css/window-letters/__letter/_delete/window-letters__letter_delete.css");
 @import url("css/window-letters/__letter-date/window-letters__letter-date.css");
 @import url("css/window-letters/__letter-innerior/window-letters__letter-innerior.css");
 @import url("css/window-letters/__letter-part/window-letters__letter-part.css");

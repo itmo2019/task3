@@ -17,7 +17,6 @@
         function addLetter() {
             var letters = document.getElementById('window-letters__letters-list_after-first');
             var newLetter = document.createElement('li');
-            newLetter.className = "window-letters__letter";
             newLetter.innerHTML = `<ul class="window-letters__letter-innerior">
                             <li class="window-letters__square-for-button window-letters__letter-part">
                                 <label>
@@ -49,10 +48,11 @@
                             </li>
                             <hr class="window-letters__delimiter-line">
                         </ul>`;
-            newLetter.style.marginTop = `-52.6px`;
+            newLetter.className = "window-letters__letter";
             letters.insertBefore(newLetter, letters.firstChild);
-            firstLetterNow = document.querySelector(".window-letters__letter");
-            addOneLetter(firstLetterNow);
+            window.setTimeout(function() {
+            	newLetter.classList.add('window-letters__letter_add');
+            }, 100);
         }
 
     function deleteLetters() {
@@ -61,48 +61,15 @@
         for (var i = 1; i < allCheckboxButtons.length; i++) {
             if (allCheckboxButtons[i].checked) {
                 var letter = allCheckboxButtons[i];
-                while (letter.className != 'window-letters__letter') {
+                while (letter.className != "window-letters__letter window-letters__letter_add") {
                     letter = letter.parentElement;
                 }
-                letter.style.zIndex = `0`;
-                deleteOneLetter(letter);
+                letter.classList.add('window-letters__letter_delete');
+                window.setTimeout(function() {
+                    letter.remove();
+            	}, 1000);
             }
         }
-    }
-
-    function deleteOneLetter(letter) {
-        animate(function (timePassed) {
-            letter.style.marginTop = '-' + timePassed / 19 + 'px';
-        }, 1000, 
-        function() {
-            letter.remove();
-        }
-        );
-    }
-
-    function addOneLetter(letter) {
-        animate(function (timePassed) {
-            letter.style.marginTop = (timePassed / 19 - 52.6) + 'px';
-        }, 1000, 
-        function() {
-        }
-        );
-    }
-
-    function animate(draw, duration, deleteAtAll) {
-        var startTime = performance.now();
-        requestAnimationFrame(function animate(time) {
-            var timePassed = time - startTime;
-            if (timePassed > duration) {
-                timePassed = duration;
-            }
-            draw(timePassed);
-            if (timePassed < duration) {
-                requestAnimationFrame(animate);
-            } else {
-                deleteAtAll();
-            }
-        });
     }
 
     </script>
@@ -229,7 +196,7 @@
                 </article>
 
                 <section id="window-letters__letters-list_after-first">
-                    <li class="window-letters__letter">
+                    <li class="window-letters__letter window-letters__letter_add">
                         <label for="window-letters__label_open-art" class="window-letters__first-letter">
                             <ul class="window-letters__letter-innerior">
                                 <li class="window-letters__square-for-button window-letters__letter-part">
@@ -262,7 +229,7 @@
                         </label>
                     </li>
 
-                    <li class="window-letters__letter">
+                    <li class="window-letters__letter window-letters__letter_add">
                         <ul class="window-letters__letter-innerior">
                             <li class="window-letters__square-for-button window-letters__letter-part">
                                 <label>
