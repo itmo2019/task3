@@ -1,19 +1,19 @@
-let templateLetter = '<input type="checkbox" class="letter__checkbox">\n' +
-    '<img class="letter__pic" alt="logo" src="https://yastatic.net/mail/socialavatars/socialavatars/v4/ya-default.svg">\n' +
-    '<span class="letter__sender letter__unread">Команда Яндекс.Почты</span>\n' +
-    '<div class="letter__msg-mark letter__mark-unread"></div>\n' +
-    '<span class="letter__message letter__unread">Just a simple test';
-let time = "</span>\n" + '<time class="letter__date-msg" datetime="2019-03-16">16 мар</time>\n';
+let templateLetter = `<input type="checkbox" class="letter__checkbox">\n
+    <img class="letter__pic" alt="logo" src="https://yastatic.net/mail/socialavatars/socialavatars/v4/ya-default.svg">\n
+    <span class="letter__sender letter__unread">Команда Яндекс.Почты</span>\n
+    <div class="letter__msg-mark letter__mark-unread"></div>\n
+    <span class="letter__message letter__unread">Just a simple test`;
+let time = `</span>\n <time class="letter__date-msg" datetime="2019-03-16">16 мар</time>\n`;
 
 
-let testLetter = '<input type="checkbox" class="letter__checkbox">' +
-    '<img class="letter__pic" alt="logo"' +
-    'src="https://yastatic.net/mail/socialavatars/socialavatars/v4/ya-default.svg">' +
-    '<span class="letter__sender letter__unread">Команда Яндекс.Почты</span>' +
-    '<div class="letter__msg-mark letter__mark-unread"></div>' +
-    '<span class="letter__message letter__unread">Как читать почту с' +
-    'мобильногоiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</span>' +
-    '<time class="letter__date-msg" datetime="2018-07-06">6 июл</time>';
+let testLetter = `<input type="checkbox" class="letter__checkbox">
+    <img class="letter__pic" alt="logo"
+    src="https://yastatic.net/mail/socialavatars/socialavatars/v4/ya-default.svg">
+    <span class="letter__sender letter__unread">Команда Яндекс.Почты</span>
+    <div class="letter__msg-mark letter__mark-unread"></div>
+    <span class="letter__message letter__unread">Как читать почту с
+    мобильногоiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</span>
+    <time class="letter__date-msg" datetime="2018-07-06">6 июл</time>`;
 
 let count = 0
 function addLetter() {
