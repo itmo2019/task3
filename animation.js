@@ -1,6 +1,8 @@
 let letter_num = 6;
 let check_name = "check_mark";
 let mail_name = "mail";
+let content = "content";
+
 let chosen_for_del = new Set();
 
 for (let i = 1; i < letter_num; i++) {
@@ -16,11 +18,9 @@ for (let i = 1; i < letter_num; i++) {
 }
 
 function delete_mail (i) {
-    document.getElementById("content" + i).remove()
-    document.getElementById(mail_name + i).childNodes.forEach(a => a.remove());
-    document.getElementById(mail_name + i).classList.add("hide");
+    document.getElementById(content + i).classList.add("hide");
     setTimeout(function (){
-        document.getElementById(mail_name + i).remove()
+        document.getElementById(content + i).remove()
     }, 900);
 }
 
@@ -32,6 +32,6 @@ let remove = document.getElementById("remove").onclick = function () {
 }
 
 let create = document.getElementById("create").onclick = function () {
-    document.getElementById(mail_name + 5).classList.remove("new_mail");
+    document.getElementById(content + 5).classList.remove("hide");
     document.getElementById("create").remove();
 }
