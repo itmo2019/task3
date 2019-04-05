@@ -5,7 +5,6 @@ let templateLetter = `<input type="checkbox" class="letter__checkbox">\n
     <span class="letter__message letter__unread">Just a simple test`;
 let time = `</span>\n <time class="letter__date-msg" datetime="2019-03-16">16 мар</time>\n`;
 
-
 let testLetter = `<input type="checkbox" class="letter__checkbox">
     <img class="letter__pic" alt="logo"
     src="https://yastatic.net/mail/socialavatars/socialavatars/v4/ya-default.svg">
