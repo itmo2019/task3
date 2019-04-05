@@ -1,3 +1,8 @@
+window.onload = function () {
+    let sendBtn = document.querySelector(".ya-big-button");
+    sendBtn.onclick = sendLetter;
+};
+
 function sendLetter() {
     const mails = document.getElementById("letters");
     const letter = generateLetter();
