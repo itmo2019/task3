@@ -9,25 +9,25 @@ function addLetter(sender, unread, theme, date) {
     let before;
     const inbox = document.getElementById("inbox");
     const letter =
-        x("div", "letters_letter", () => {
+        x("div", "letter", () => {
             if (unread) {
-                ctx.className += " letters_letter_unread";
+                ctx.className += " letter_unread";
             }
             //ctx.style.setProperty("display", "none");
             children.push(x("label", "checkbox", () => {
-                children.push(x("input", "checkbox-input", () => {
+                children.push(x("input", "checkbox__input", () => {
                     ctx.setAttribute("type", "checkbox");
                 }));
             }));
-            children.push(x("a", "link_unset_style", () => {
+            children.push(x("a", "mail-link", () => {
                 ctx.attributes["href"] = "#";
-                children.push(x("div", "letters_sender_icon", () => {
-                    children.push(x("span", "single-letter", () => sender[0]));
+                children.push(x("div", "letter__sender-icon", () => {
+                    children.push(x("span", "letter__single-letter", () => sender[0]));
                 }));
-                children.push(x("p", "letters_sender_name single-line", () => sender));
-                children.push(x("div", "letters_read_box"));
-                children.push(x("p", "single-line letters_preview", () => theme));
-                children.push(x("div", "letters_date gray-text", () => {
+                children.push(x("p", "letter__sender-name single-line", () => sender));
+                children.push(x("div", "letter__read-box"));
+                children.push(x("p", "single-line letter__preview", () => theme));
+                children.push(x("div", "letter__date gray-text", () => {
                     children.push(x("p", "single-line", () => date));
                 }));
             }))
@@ -45,7 +45,8 @@ function addLetter(sender, unread, theme, date) {
 function deleteSelectedLetters() {
     const checked = [].filter
         .call(document.getElementsByClassName("checkbox__input"), (elem) => elem.checked)
-        .map((doc) => parentWithClass(doc, "letters_letter"));
+        .filter((it) => it.id !== "checkbox_all")
+        .map((doc) => parentWithClass(doc, "letter"));
     checked.forEach((parent) => {
         parent.style.setProperty("animation", "delete_animation 0.5s");
         parent.style.setProperty("animation-fill-mode", "forwards");
@@ -59,6 +60,13 @@ function parentWithClass(element, className) {
         return element
     } else {
         return parentWithClass(element.parentElement, className)
+    }
+}
+
+function selectAll() {
+    const checkBox = document.getElementById("checkbox_all");
+    if (checkBox.checked) {
+        [].forEach.call(document.getElementsByClassName("checkbox__input"), (elem) => { elem.checked = true })
     }
 }
 

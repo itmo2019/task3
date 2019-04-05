@@ -8,10 +8,10 @@
     <link href="js/index.js" rel="script">
     <script src="js/index.js"></script>
 </head>
-<body class="mail_body">
+<body class="mail-body">
 <div class="layout_sidebar">
     <nav class="sidebar">
-        <div class="sidebar_logo_container">
+        <div class="sidebar__logo-container">
             <svg class="sidebar__hamburger" viewBox="0 0 16 16" xml:space="preserve"
                  xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 0h16v2H0V0zm0 7h16v2H0V7zm0 7h16v2H0v-2z" fill="currentColor"
@@ -19,7 +19,7 @@
                     </path>
             </svg>
             <div class="sidebar__logo">
-                <img alt="yandex" class="sidebar_img-yandex" src="images/sidebar__img-yandex.svg">
+                <img alt="yandex" class="sidebar__img-yandex" src="images/sidebar__img-yandex.svg">
                 <img alt="mail" class="sidebar__img-mail" src="images/sidebar_img-mail.svg">
             </div>
         </div>
@@ -29,13 +29,13 @@
         <div class="sidebar__menu-container">
             <ul class="sidebar__menu-list">
                 <li class="sidebar__menu-item sidebar__menu-item_active">
-                    <a class="link_unset_style" href="#">Входящие</a>
+                    <a class="mail-link" href="#">Входящие</a>
                 </li>
-                <li><a class="sidebar__menu-item link_unset_style" href="#">Отправленные</a></li>
-                <li><a class="sidebar__menu-item link_unset_style" href="#">Удалённые</a></li>
-                <li><a class="sidebar__menu-item link_unset_style" href="#">Спам</a></li>
-                <li><a class="sidebar__menu-item link_unset_style" href="#">Черновики</a></li>
-                <li><a class="sidebar__menu-item link_unset_style" href="#">Создать папку</a></li>
+                <li><a class="sidebar__menu-item mail-link" href="#">Отправленные</a></li>
+                <li><a class="sidebar__menu-item mail-link" href="#">Удалённые</a></li>
+                <li><a class="sidebar__menu-item mail-link" href="#">Спам</a></li>
+                <li><a class="sidebar__menu-item mail-link" href="#">Черновики</a></li>
+                <li><a class="sidebar__menu-item mail-link" href="#">Создать папку</a></li>
             </ul>
         </div>
     </nav>
@@ -50,31 +50,31 @@
     <div class="letters">
         <div class="letters__panel">
             <label class="checkbox">
-                <input class="checkbox__input" type="checkbox">
+                <input class="checkbox__input" type="checkbox" id="checkbox_all" onclick="selectAll()">
             </label>
             <div class="letters__panel-item">
-                <p><a class="link_unset_style single-line letters__panel-button" href="#">Переслать</a></p>
+                <p><a class="mail-link single-line letters__panel-button" href="#">Переслать</a></p>
             </div>
             <div class="letters__panel-item">
-                <p><a class="link_unset_style single-line letters__panel-button" href="#"
+                <p><a class="mail-link single-line letters__panel-button" href="#"
                       onclick="deleteSelectedLetters()">Удалить</a></p>
             </div>
             <div class="letters__panel-item">
-                <p><a class="link_unset_style single-line letters__panel-button" href="#">Это спам!</a></p>
+                <p><a class="mail-link single-line letters__panel-button" href="#">Это спам!</a></p>
             </div>
             <div class="letters__panel-item">
-                <p><a class="link_unset_style single-line letters__panel-button" href="#">Прочитано</a></p>
+                <p><a class="mail-link single-line letters__panel-button" href="#">Прочитано</a></p>
             </div>
         </div>
         <input class="letters__control-checkbox" id="open-task-1" type="checkbox"/>
         <div class="letters__inbox" id="inbox">
-            <div class="letter letters_letter_unread">
-                <label class="control-label clickable" for="open-task-1">
+            <div class="letter letter_unread">
+                <label class="essay-close__control-label clickable" for="open-task-1">
                     <label class="checkbox">
                         <input class="checkbox__input" type="checkbox">
                     </label>
                     <div class="letter__sender-icon">
-                        <span class="single-letter">Я</span>
+                        <span class="letter__single-letter">Я</span>
                     </div>
                     <p class="letter__sender-name single-line">Яндекс.Паспорт</p>
                     <div class="letter__read-box"></div>
@@ -84,13 +84,13 @@
                     </div>
                 </label>
             </div>
-            <div class="letter letters_letter_unread">
+            <div class="letter letter_unread">
                 <label class="checkbox">
                     <input class="checkbox__input" type="checkbox">
                 </label>
-                <a class="link_unset_style" href="#">
+                <a class="mail-link" href="#">
                     <div class="letter__sender-icon">
-                        <span class="single-letter">Я</span>
+                        <span class="letter__single-letter">Я</span>
                     </div>
                     <p class="letter__sender-name single-line">Команда Яндекс.Почты</p>
                     <div class="letter__read-box"></div>
@@ -104,9 +104,9 @@
                 <label class="checkbox">
                     <input class="checkbox__input" type="checkbox">
                 </label>
-                <a class="link_unset_style" href="#">
+                <a class="mail-link" href="#">
                     <div class="letter__sender-icon">
-                        <span class="single-letter">Я</span>
+                        <span class="letter__single-letter">Я</span>
                     </div>
                     <p class="letter__sender-name single-line">Яндекс</p>
                     <div class="letter__read-box "></div>
@@ -121,8 +121,8 @@
             <div class="essay__body">
                 <div class="essay__nuclear-explosion" id="explosion"></div>
                 <div class="all" id="all">
-                    <div class="essay_centered_item essay_paragraph_container">
-                        <p class="essay_paragraph">
+                    <div class="essay_centered_item essay__paragraph-container">
+                        <p class="essay__paragraph">
                             <u>По поводу курса</u>, ожидаю разбор классических проблем фронтенд разработки <sub>(понятия
                             не имею, что
                             это
@@ -135,8 +135,8 @@
                                 <rt> Эм-ви-ви-эм</rt>
                             </ruby>
                             ), типо как
-                            <img alt="round"
-                                 class="essay_streamlined_img"
+                            <img alt="Round button"
+                                 class="essay__img-rounded"
                                  src="https://openclipart.org/image/2400px/svg_to_png/23674/Anonymous-red-round-button.png"/>
                             написать сайт так, чтобы он работал при потере соединения с сервером (считая, что у нас
                             интерактивное
@@ -154,23 +154,23 @@
                             hit to copystrike
                         </button>
                     </div>
-                    <button class="essay_close gray-text">
-                        <label class="control-label clickable" for="open-task-1">
+                    <button class="essay-close gray-text">
+                        <label class="essay-close__control-label clickable" for="open-task-1">
                             X
                         </label>
                     </button>
                 </div>
             </div>
         </div>
-        <footer class="letters_footer gray-text">
-            <div class="letters_footer_item">
-                <p><a class="single-line letters_footer_link link_unset_style" href="#">© 2001-2018, Яндекс</a></p>
+        <footer class="letters__footer gray-text">
+            <div class="letters__footer-item">
+                <p><a class="single-line letters__footer-link mail-link" href="#">© 2001-2018, Яндекс</a></p>
             </div>
-            <div class="letters_footer_item">
-                <p><a class="single-line letters_footer_link link_unset_style" href="#">Реклама</a></p>
+            <div class="letters__footer-item">
+                <p><a class="single-line letters__footer-link mail-link" href="#">Реклама</a></p>
             </div>
-            <div class="letters_footer_item">
-                <p><a class="single-line letters_footer_link link_unset_style" href="#">Помощь и обратная связь</a></p>
+            <div class="letters__footer-item">
+                <p><a class="single-line letters__footer-link mail-link" href="#">Помощь и обратная связь</a></p>
             </div>
         </footer>
     </div>
