@@ -1,0 +1,9 @@
+.letters {
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.34);
+    height: 100%;
+    min-height: 500px;
+    padding-bottom: 48px;
+    position: relative;
+}
