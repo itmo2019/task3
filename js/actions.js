@@ -12,10 +12,10 @@ function addLetter() {
     let newLetter = createLetter();
     allLetters.insertBefore(newLetter, allLetters.querySelectorAll("li")[0]);
     allLetters.classList.add('all-letter-down');
-    newLetter.addEventListener("webkitAnimationEnd", function () {
+    newLetter.addEventListener("animationend", function () {
         removeClass(newLetter, 'animation-insert');
     });
-    allLetters.addEventListener("webkitAnimationEnd", function () {
+    allLetters.addEventListener("animationend", function () {
         removeClass(allLetters, 'all-letter-down');
     });
 }
@@ -29,7 +29,7 @@ function remove() {
     letters.forEach(letter => {
         if (letter.querySelector(".check").checked) {
             letter.classList.add('animation-delete');
-            letter.addEventListener("webkitAnimationEnd", function () {
+            letter.addEventListener("animationend", function () {
                 removeClass(letter, 'animation-delete');
                 letter.remove()
             });
