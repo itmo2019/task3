@@ -1,6 +1,6 @@
 window.onload = function () {
     let sendBtn = document.querySelector(".ya-big-button");
-    sendBtn.onclick = sendLetter;
+    sendBtn.addEventListener("click", () => sendLetter());
 };
 
 function sendLetter() {
