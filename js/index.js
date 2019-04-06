@@ -5,6 +5,7 @@ const senders = ["Полиция мемов", "Яндекс.Такси", "ГоС
 const themes = ["Запощен недопустимый мем", "До Краснодара за 55000P", "Ваша справка готова"];
 const dates = ["31 тра", "29 сич", "15 лис"];
 
+
 function addLetter(sender, unread, theme, date) {
     let before;
     const inbox = document.getElementById("inbox");
@@ -93,4 +94,27 @@ function x(tag, style, builder) {
     ctx = oldCtx;
     children = oldChildren;
     return element
+}
+
+const addNewLetterDebounced = debounce(addRandomLetter, 5 * 60 * 1000);
+function addNewLetterRepeated() {
+    addNewLetterDebounced();
+    setTimeout(addNewLetterRepeated, new Date().getMilliseconds() % (60 * 1000))
+}
+
+addNewLetterRepeated();
+
+function debounce(func, wait, immediate) {
+    let timeout;
+    return function() {
+        let context = this, args = arguments;
+        let later = function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        const callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
 }
