@@ -1,5 +1,6 @@
 @font-face {
     font-family: YandexSansBold;
+    font-weight: 700;
     src: url("fonts/YandexSansDisplay-Bold.ttf");
 }
 
@@ -18,6 +19,22 @@
     src: url("fonts/HelveticaNeueCyr-Medium.otf");
 }
 
+html, body{
+    height: 100%;
+    margin: 0;
+    background-color: #e5eaf0;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a, a:active, a:visited, a:hover {
+    color: unset;
+    text-decoration: none;
+    position: unset !important;
+}
+
 .page__header {
     display: inline-block;
     width: 100%;
@@ -31,44 +48,27 @@
     display: inline;
 }
 
-html, body{
-    height: 100%;
-    margin: 0;
-    background-color: #e5eaf0;
-}
-
 .page{
     position: relative;
     min-width: 800px;
-    width: 80%;
+    padding-right: 20px;
     min-height: 100%;
-    margin: 0 auto;
 }
 
 .page__ya-menu-logo{
     margin-left: 22px;
 }
 
-.page__ya-menu-logo img{
-    vertical-align: bottom;
-    position: relative;
-    bottom: 3px;
-}
-
 .page__ya-mail-logo{
-    vertical-align: bottom;
-    position: relative;
     display: inline-block;
+    position: relative;
+    vertical-align: bottom;
 }
 
-ul{
-    list-style-type: none;
-}
-
-a, a:active, a:visited, a:hover {
-    color: unset;
-    text-decoration: none;
-    position: unset !important;
+.page__sidebar-menu{
+    position: relative;
+    vertical-align: bottom;
+    bottom: 3px;
 }
 
 .page__ya-search{
@@ -104,7 +104,7 @@ a, a:active, a:visited, a:hover {
     padding: 0;
 }
 
-.ya-sidebar__nav-sidebar li:not(.nav-sidebar__compose-message){
+.ya-sidebar__action{
     width: 137px;
     height: 22px;
     margin-left: 0;
@@ -114,11 +114,11 @@ a, a:active, a:visited, a:hover {
     line-height: 22px;
 }
 
-.ya-sidebar__nav-sidebar li:not(.nav-sidebar__compose-message):hover{
+.ya-sidebar__action:hover{
     background-color: #cdd6e4;
 }
 
-.nav-sidebar__compose-message{
+.ya-sidebar__compose-message{
     width: 147px;
     height: 32px;
     background-color: #6287bd;
@@ -150,7 +150,7 @@ a, a:active, a:visited, a:hover {
 
 .page__ya-sidebar{
     position: relative;
-    display: inline-block;
+    float: left;
     width: 200px;
     vertical-align: top;
     font-family: HelveticaNeue, sans-serif;
@@ -161,8 +161,7 @@ a, a:active, a:visited, a:hover {
 
 .page__ya-mail{
     position: relative;
-    display: inline-block;
-    width: 74%;
+    overflow: hidden;
     min-width: 589;
     min-height: 530px;
     background-color: #ffffff;
@@ -173,7 +172,6 @@ a, a:active, a:visited, a:hover {
 .ya-mail__content-top-bar{
     position: relative;
     padding: 0;
-    margin: 0;
     width: 100%;
     height: 37px;
     line-height: 37px;
@@ -184,23 +182,21 @@ a, a:active, a:visited, a:hover {
     color: #cccccc;
 }
 
-.ya-mail__content-top-bar ul{
+.ya-mail__top-content-list{
     cursor: pointer;
     padding: 0;
     width: 100%;
     height: 100%;
     margin: auto;
-    margin-left: 0;
 }
 
 .ya-mail__select-all{
     display: inline-block;
-    margin-left: 20px;
     height: 100%;
     width: 30px;
 }
 
-.ya-mail__select-all input{
+.ya-mail__select-all-check{
     margin: 0;
     height: 100%;
 }
@@ -210,10 +206,10 @@ a, a:active, a:visited, a:hover {
     display: inline-block;
     width: fit-content;
     max-width: 85px;
-    margin-left: 20px;
+    padding-left: 20px;
 }
 
-.message-list__message{
+.content-messages__message{
     position: relative;
     height: 37px;
     line-height: 37px;  
@@ -223,7 +219,7 @@ a, a:active, a:visited, a:hover {
     vertical-align: middle;
 }
 
-.message-list__message:hover{
+.content-messages__message:hover{
     background-color: #cdd6e4;
 }
 
@@ -330,7 +326,7 @@ a, a:active, a:visited, a:hover {
 }
 
 .message__message-subject{
-    width: 37%;
+    width: 75%;
 }
 
 .message__message-receive-time{
@@ -364,4 +360,45 @@ footer{
     width: fit-content;
     margin-right: 20px;
     line-height: 30px;
+}
+
+.create_animation{
+    animation: add 1s forwards;
+}
+
+.delete_animation{
+    animation: remove 1s forwards;
+}
+
+@keyframes add{
+    0%{
+        height: 0;
+        opacity: 0;
+    }
+
+    50%{
+        height: 500px;
+        opacity: 0.5;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes remove{
+    0%{
+        height: 22px;
+        opacity: 1;
+    }
+
+    50%{
+        height: 500px;
+        opacity: 0.5;
+    }
+
+    100%{
+        height: 0px;
+        opacity: 0;
+    }
 }

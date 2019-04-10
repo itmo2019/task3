@@ -9,20 +9,12 @@ let newMessageBody = ''+
 function createMessage() {
     let list = document.getElementsByClassName('content-messages__message-list')[0];
     let newMessage = document.createElement('li');
-    newMessage.className = 'message message_unread message-list__message';
+    newMessage.className = 'message message_unread content-messages__message create_animation';
     newMessage.innerHTML = newMessageBody;
     list.insertBefore(newMessage, list.children[0]);
-
-    var pos = 0;
-    var id = setInterval(frame, 5);
-    function frame() {
-        if (pos == 37) {
-            clearInterval(id);
-        } else {
-            pos++; 
-            newMessage.style.height = pos + "px";
-        }
-    }
+    setTimeout(() => {
+        newMessage.classList.remove('create_animation');
+    }, 1000);
 }
 
 function deleteSelected() {
@@ -31,24 +23,10 @@ function deleteSelected() {
     for (let i = 0; i < checkboxes.length; ++i) {
         if (checkboxes[i].checked) {
             let curMessage = checkboxes[i].parentElement;
-            var pos = 37;
-            var id = setInterval(frame, 5);
-            function frame() {
-                if (pos == 0) {
-                    clearInterval(id);
-                } else {
-                    pos--;
-                    curMessage.style.height = pos + "px";
-                }
-            }
-        }
-    }
-    
-    for (let i = 0; i < checkboxes.length; ++i) {
-        if (checkboxes[i].checked) {
-            let curMessage = checkboxes[i].parentElement;
-            list.removeChild(curMessage);
-            i--;
+            curMessage.classList.add('delete_animation');
+            setTimeout(() => {
+                list.removeChild(curMessage);
+            }, 2000);
         }
     }
 }
