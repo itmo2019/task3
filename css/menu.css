@@ -3,7 +3,7 @@
     width: 147px;
 }
 
-.menu_position {
+.menu_position-in-parents-block {
     float: left;
     position: relative;
     margin-left: 22px;

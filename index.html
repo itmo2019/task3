@@ -25,7 +25,7 @@
         <div class="search__clean-search"></div>
     </div>
 </header>
-<div class="menu menu_position">
+<div class="menu menu_position-in-parents-block">
     <ul class="buttons-list menu__buttons-list">
         <li class="buttons-list__element buttons-list__element_new-message-button" id="new">Написать</li>
         <li class="buttons-list__element">Входящие</li>
@@ -37,17 +37,17 @@
         <li class="buttons-list__element">Создать папку</li>
     </ul>
 </div>
-<div class="content-block content-block_position">
+<div class="content-block content-block_position-in-parents-block">
     <div class="content-menu content-block__content-menu">
-        <input type="checkbox" class="check" id="input0">
+        <input type="checkbox" class="content-menu__check" id="input0">
         <label for="input0" class="check-style content-menu__check-style"></label>
-        <span class="content-menu__button content-menu__button_without-margin-left">Переслать</span>
+        <span class="content-menu__button content-menu__button_first">Переслать</span>
         <span class="content-menu__button delete_message">Удалить</span>
         <span class="content-menu__button">Это спам!</span>
         <span class="content-menu__button">Прочитано</span>
         <span class="content-menu__button new_message">Получить письмо</span>
     </div>
-    <input type="checkbox" class="open-email-page" id="new-page-content__close-page-checkbox">
+    <input type="checkbox" class="open-email-page content-block__open-email-page" id="new-page-content__close-page-checkbox">
     <div class="new-page content-block__new-page">
         <div class="new-page-content">
             <div class="new-page-content__close-page">
@@ -68,27 +68,27 @@
     <div class="emails-block">
         <ul class="emails-list emails-block__emails-list">
             <li class="emails-list__element emails-list__element_with-font-weight">
-                <input type="checkbox" class="check" id="input1">
+                <input type="checkbox" class="content-menu__check" id="input1">
                 <label for="input1" class="check-style emails-list__check-style"></label>
                 <label for="new-page-content__close-page-checkbox">
                     <div class="emails-list__logo"></div>
                     <span class="emails-list__title">Коты</span>
-                    <div class="emails-list__read-circle-indicator"></div>
+                    <div class="emails-list__read-circle-indicator emails-list__read-circle-indicator_not-readed"></div>
                     <span class="emails-list__preview">Айлурофобия. Айлурофобия является психическим расстройством, сопровождающееся патологической боязнью кошек. Вообще, фобий насчитывается более 300 и айлурофобия, не самая страшная и необычная среди них. Возникнуть такое патологическое состояние может в любом возрасте. Так как любая фобия развивается на подсознательном уровне, в большинстве случаев больной не может назвать причину, по которой боится кошек.</span>
                     <span class="emails-list__date">6 июл</span>
                 </label>
             </li>
             <li class="emails-list__element emails-list__element_with-font-weight">
-                <input type="checkbox" class="check" id="input2">
+                <input type="checkbox" class="content-menu__check" id="input2">
                 <label for="input2" class="check-style emails-list__check-style"></label>
                 <div class="emails-list__logo"></div>
                 <span class="emails-list__title">Яндекс.Паспорт</span>
-                <div class="emails-list__read-circle-indicator"></div>
+                <div class="emails-list__read-circle-indicator emails-list__read-circle-indicator_not-readed"></div>
                 <span class="emails-list__preview">Доступ к аккаунту восстановлен</span>
                 <span class="emails-list__date">6 июл</span>
             </li>
             <li class="emails-list__element">
-                <input type="checkbox" class="check" id="input3">
+                <input type="checkbox" class="content-menu__check" id="input3">
                 <label for="input3" class="check-style emails-list__check-style"></label>
                 <div class="emails-list__logo"></div>
                 <span class="emails-list__title">Очень длинная тема письма, которая не вмещается сюда</span>
@@ -97,7 +97,7 @@
                 <span class="emails-list__date">6 июл</span>
             </li>
             <li class="emails-list__element">
-                <input type="checkbox" class="check" id="input4">
+                <input type="checkbox" class="content-menu__check" id="input4">
                 <label for="input4" class="check-style emails-list__check-style"></label>
                 <div class="emails-list__logo"></div>
                 <span class="emails-list__title">Команда Яндекс.Почты</span>
@@ -106,7 +106,7 @@
                 <span class="emails-list__date">6 июл</span>
             </li>
             <li class="emails-list__element">
-                <input type="checkbox" class="check" id="input5">
+                <input type="checkbox" class="content-menu__check" id="input5">
                 <label for="input5" class="check-style emails-list__check-style"></label>
                 <div class="emails-list__logo"></div>
                 <span class="emails-list__title">Яндекс</span>

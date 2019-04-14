@@ -13,7 +13,7 @@ function getNewMessage() {
 
     newMessage.className = "emails-list__element emails-list__element_with-font-weight";
     newMessage.innerHTML =
-        '<input type="checkbox" class="check emails-list__check" id="input' + checkCounter + '">\n' +
+        '<input type="checkbox" class="content-menu__check emails-list__check" id="input' + checkCounter + '">\n' +
         '<label for="input' + checkCounter + '" class="check-style emails-list__check-style"></label>\n' +
         '<div class="emails-list__logo"></div>\n' +
         '<span class="emails-list__title">Команда Яндекс.Почты</span>\n' +
@@ -36,11 +36,11 @@ function addMessage() {
 
     setTimeout(function () {
         newMessage.classList.add("emails-list__element_new-finish");
-    }, 0);
+    }, 1);
 }
 
 function deleteMessage() {
-    let checks = document.body.querySelectorAll('.check');
+    let checks = document.body.querySelectorAll('.content-menu__check');
 
     for (let check of checks) {
         if (check.checked) {
