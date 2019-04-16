@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Почта</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/animations.css">
+        <script type="text/javascript" src="js/app.js"></script>
+    </head>
+    
+    <body>
+        <header>
+            <div class="hamburger header__inline-element">
+                <div class="hamburger__div"></div>
+                <div class="hamburger__div"></div>
+                <div class="hamburger__div"></div>
+            </div>
+            <div class="logo header__inline-element">
+                <img src="assets/logo.png" width=153 height=31></img>
+            </div>
+            
+            <div class="search header__search header__inline-element">
+                <div class="search__text">
+                    Поиск
+                </div>
+                <div class="search__close">
+                    ×
+                </div>
+            </div>
+        </header>
+        <main>    
+            <div class="side-panel">
+                <button class="side-panel__button side-panel__button_primary">
+                    Написать
+                </button>
+                <button class="side-panel__button side-panel__button_secondary side-panel__button_active">
+                    Входящие
+                </button>
+                <button class="side-panel__button side-panel__button_secondary">
+                    Отправленные
+                </button>
+                <button class="side-panel__button side-panel__button_secondary">
+                    Удалённые
+                </button>
+                <button class="side-panel__button side-panel__button_secondary">
+                    Спам
+                </button>
+                <button class="side-panel__button side-panel__button_secondary">
+                    Черновики
+                </button>
+                <button class="side-panel__button side-panel__button_secondary">
+                    Создать папку
+                </button>
+            </div>
+            <div class="mailbox">
+                <div class="mailbox__header">
+                    <label class="checkbox">
+                        <input type="checkbox" class="checkbox__input"/>
+                        <span class="checkbox__span"></span>
+                    </label>
+                    <button class="mailbox__header-element">
+                        Переслать
+                    </button>
+                    <button class="mailbox__header-element" onclick="deleteSelected()">
+                        Удалить
+                    </button>
+                    <button class="mailbox__header-element">
+                        Это спам
+                    </button>
+                    <button class="mailbox__header-element">
+                        Прочитано
+                    </button>
+                </div>
+
+                <input class="mailbox__trigger" type="checkbox" id="first-msg"/>
+                <div class="mailbox__mail-list">
+                    <div class="mailbox__mail mail__new" data-state="hidden">
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input"/>
+                            <span class="checkbox__span"></span>
+                        </label>
+                        <div class="mailbox__mail-element mail__pic">
+                            <img class="pic__img" src="assets/cat-face.png"></img>
+                        </div>
+                        <div class="mailbox__mail-element mail__author">
+                            Кот
+                        </div>
+                        <div class="mailbox__mail-element mail__dot"></div>
+                        <div class="mailbox__mail-element mail__title">
+                            Новое сообщение
+                        </div>
+                        <time class="mailbox__mail-element mail__time" datetime="2019-03-16 22:22">
+                            Mar 16
+                        </time>
+                    </div>
+
+                    <label for="first-msg">
+                        <div class="mailbox__mail mail__new">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox__input"/>
+                                <span class="checkbox__span"></span>
+                            </label>
+                            <div class="mailbox__mail-element mail__pic">
+                                <img class="pic__img" src="assets/owl-face.jpg"></img>
+                            </div>
+                            <div class="mailbox__mail-element mail__author">
+                                Сова
+                            </div>
+                            <div class="mailbox__mail-element mail__dot"></div>
+                            <div class="mailbox__mail-element mail__title">
+                                От совы (!КЛИКАБЕЛЬНО!)
+                            </div>
+                            <time class="mailbox__mail-element mail__time" datetime="2019-03-09 13:37">
+                                Mar 9
+                            </time>
+                        </div>
+                    </label>
+
+                    <div class="mailbox__mail">
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input"/>
+                            <span class="checkbox__span"></span>
+                        </label>
+                        <div class="mailbox__mail-element mail__pic">
+                            <img class="pic__img" src="assets/cat-face.png"></img>
+                        </div>
+                        <div class="mailbox__mail-element mail__author">
+                            Кот
+                        </div>
+                        <div class="mailbox__mail-element mail__dot"></div>
+                        <div class="mailbox__mail-element mail__title">
+                            Старое сообщение
+                        </div>
+                        <time class="mailbox__mail-element mail__time" datetime="2019-02-23 11:11">
+                            Feb 23
+                        </time>
+                    </div>
+
+                    <div class="mailbox__mail">
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input"/>
+                            <span class="checkbox__span"></span>
+                        </label>
+                        <div class="mailbox__mail-element mail__pic">
+                            <img class="pic__img" src="assets/spam.png"></img>
+                        </div>
+                        <div class="mailbox__mail-element mail__author">
+                            Неспамнеспамнеспамнеспам
+                        </div>
+                        <div class="mailbox__mail-element mail__dot"></div>
+                        <div class="mailbox__mail-element mail__title">
+                            Легкий способ зарабатывать 10000000000 в секунду, нужно всего-лишь...
+                        </div>
+                        <time class="mailbox__mail-element mail__time" datetime="2019-01-01 01:01">
+                            Jan 1
+                        </time>
+                    </div>
+
+                    <!-- Много писем, чтобы потестить overflow  -->
+
+                    <div class="mailbox__mail" id="deletable">
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input"/>
+                            <span class="checkbox__span"></span>
+                        </label>
+                        <div class="mailbox__mail-element mail__pic">
+                            <img class="pic__img" src="assets/spam.png"></img>
+                        </div>
+                        <div class="mailbox__mail-element mail__author">
+                            Неспамнеспамнеспамнеспам
+                        </div>
+                        <div class="mailbox__mail-element mail__dot"></div>
+                        <div class="mailbox__mail-element mail__title">
+                            Легкий способ зарабатывать 10000000000 в секунду, нужно всего-лишь...
+                        </div>
+                        <time class="mailbox__mail-element mail__time" datetime="2019-01-01 01:01">
+                            Jan 1
+                        </time>
+                    </div>
+                    <div class="mailbox__mail">
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input"/>
+                            <span class="checkbox__span"></span>
+                        </label>
+                        <div class="mailbox__mail-element mail__pic">
+                            <img class="pic__img" src="assets/spam.png"></img>
+                        </div>
+                        <div class="mailbox__mail-element mail__author">
+                            Неспамнеспамнеспамнеспам
+                        </div>
+                        <div class="mailbox__mail-element mail__dot"></div>
+                        <div class="mailbox__mail-element mail__title">
+                            Легкий способ зарабатывать 10000000000 в секунду, нужно всего-лишь...
+                        </div>
+                        <time class="mailbox__mail-element mail__time" datetime="2019-01-01 01:01">
+                            Jan 1
+                        </time>
+                    </div>
+                    <div class="mailbox__mail">
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input"/>
+                            <span class="checkbox__span"></span>
+                        </label>
+                        <div class="mailbox__mail-element mail__pic">
+                            <img class="pic__img" src="assets/spam.png"></img>
+                        </div>
+                        <div class="mailbox__mail-element mail__author">
+                            Неспамнеспамнеспамнеспам
+                        </div>
+                        <div class="mailbox__mail-element mail__dot"></div>
+                        <div class="mailbox__mail-element mail__title">
+                            Легкий способ зарабатывать 10000000000 в секунду, нужно всего-лишь...
+                        </div>
+                        <time class="mailbox__mail-element mail__time" datetime="2019-01-01 01:01">
+                            Jan 1
+                        </time>
+                    </div>
+                    <div class="mailbox__mail">
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input"/>
+                            <span class="checkbox__span"></span>
+                        </label>
+                        <div class="mailbox__mail-element mail__pic">
+                            <img class="pic__img" src="assets/spam.png"></img>
+                        </div>
+                        <div class="mailbox__mail-element mail__author">
+                            Неспамнеспамнеспамнеспам
+                        </div>
+                        <div class="mailbox__mail-element mail__dot"></div>
+                        <div class="mailbox__mail-element mail__title">
+                            Легкий способ зарабатывать 10000000000 в секунду, нужно всего-лишь...
+                        </div>
+                        <time class="mailbox__mail-element mail__time" datetime="2019-01-01 01:01">
+                            Jan 1
+                        </time>
+                    </div>
+                    <div class="mailbox__mail">
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input"/>
+                            <span class="checkbox__span"></span>
+                        </label>
+                        <div class="mailbox__mail-element mail__pic">
+                            <img class="pic__img" src="assets/spam.png"></img>
+                        </div>
+                        <div class="mailbox__mail-element mail__author">
+                            Неспамнеспамнеспамнеспам
+                        </div>
+                        <div class="mailbox__mail-element mail__dot"></div>
+                        <div class="mailbox__mail-element mail__title">
+                            Легкий способ зарабатывать 10000000000 в секунду, нужно всего-лишь...
+                        </div>
+                        <time class="mailbox__mail-element mail__time" datetime="2019-01-01 01:01">
+                            Jan 1
+                        </time>
+                    </div>
+                    <div class="mailbox__mail">
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input"/>
+                            <span class="checkbox__span"></span>
+                        </label>
+                        <div class="mailbox__mail-element mail__pic">
+                            <img class="pic__img" src="assets/spam.png"></img>
+                        </div>
+                        <div class="mailbox__mail-element mail__author">
+                            Неспамнеспамнеспамнеспам
+                        </div>
+                        <div class="mailbox__mail-element mail__dot"></div>
+                        <div class="mailbox__mail-element mail__title">
+                            Легкий способ зарабатывать 10000000000 в секунду, нужно всего-лишь...
+                        </div>
+                        <time class="mailbox__mail-element mail__time" datetime="2019-01-01 01:01">
+                            Jan 1
+                        </time>
+                    </div>
+                    <div class="mailbox__mail">
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input"/>
+                            <span class="checkbox__span"></span>
+                        </label>
+                        <div class="mailbox__mail-element mail__pic">
+                            <img class="pic__img" src="assets/spam.png"></img>
+                        </div>
+                        <div class="mailbox__mail-element mail__author">
+                            Неспамнеспамнеспамнеспам
+                        </div>
+                        <div class="mailbox__mail-element mail__dot"></div>
+                        <div class="mailbox__mail-element mail__title">
+                            Легкий способ зарабатывать 10000000000 в секунду, нужно всего-лишь...
+                        </div>
+                        <time class="mailbox__mail-element mail__time" datetime="2019-01-01 01:01">
+                            Jan 1
+                        </time>
+                    </div>
+                    <div class="mailbox__mail">
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input"/>
+                            <span class="checkbox__span"></span>
+                        </label>
+                        <div class="mailbox__mail-element mail__pic">
+                            <img class="pic__img" src="assets/spam.png"></img>
+                        </div>
+                        <div class="mailbox__mail-element mail__author">
+                            Неспамнеспамнеспамнеспам
+                        </div>
+                        <div class="mailbox__mail-element mail__dot"></div>
+                        <div class="mailbox__mail-element mail__title">
+                            Легкий способ зарабатывать 10000000000 в секунду, нужно всего-лишь...
+                        </div>
+                        <time class="mailbox__mail-element mail__time" datetime="2019-01-01 01:01">
+                            Jan 1
+                        </time>
+                    </div>
+                    <div class="mailbox__mail">
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input"/>
+                            <span class="checkbox__span"></span>
+                        </label>
+                        <div class="mailbox__mail-element mail__pic">
+                            <img class="pic__img" src="assets/spam.png"></img>
+                        </div>
+                        <div class="mailbox__mail-element mail__author">
+                            Неспамнеспамнеспамнеспам
+                        </div>
+                        <div class="mailbox__mail-element mail__dot"></div>
+                        <div class="mailbox__mail-element mail__title">
+                            Легкий способ зарабатывать 10000000000 в секунду, нужно всего-лишь...
+                        </div>
+                        <time class="mailbox__mail-element mail__time" datetime="2019-01-01 01:01">
+                            Jan 1
+                        </time>
+                    </div>
+                    <div class="mailbox__mail">
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input"/>
+                            <span class="checkbox__span"></span>
+                        </label>
+                        <div class="mailbox__mail-element mail__pic">
+                            <img class="pic__img" src="assets/spam.png"></img>
+                        </div>
+                        <div class="mailbox__mail-element mail__author">
+                            Неспамнеспамнеспамнеспам
+                        </div>
+                        <div class="mailbox__mail-element mail__dot"></div>
+                        <div class="mailbox__mail-element mail__title">
+                            Легкий способ зарабатывать 10000000000 в секунду, нужно всего-лишь...
+                        </div>
+                        <time class="mailbox__mail-element mail__time" datetime="2019-01-01 01:01">
+                            Jan 1
+                        </time>
+                    </div>
+                    <div class="mailbox__mail">
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input"/>
+                            <span class="checkbox__span"></span>
+                        </label>
+                        <div class="mailbox__mail-element mail__pic">
+                            <img class="pic__img" src="assets/spam.png"></img>
+                        </div>
+                        <div class="mailbox__mail-element mail__author">
+                            Неспамнеспамнеспамнеспам
+                        </div>
+                        <div class="mailbox__mail-element mail__dot"></div>
+                        <div class="mailbox__mail-element mail__title">
+                            Легкий способ зарабатывать 10000000000 в секунду, нужно всего-лишь...
+                        </div>
+                        <time class="mailbox__mail-element mail__time" datetime="2019-01-01 01:01">
+                            Jan 1
+                        </time>
+                    </div>
+                    <div class="mailbox__mail">
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input"/>
+                            <span class="checkbox__span"></span>
+                        </label>
+                        <div class="mailbox__mail-element mail__pic">
+                            <img class="pic__img" src="assets/spam.png"></img>
+                        </div>
+                        <div class="mailbox__mail-element mail__author">
+                            Неспамнеспамнеспамнеспам
+                        </div>
+                        <div class="mailbox__mail-element mail__dot"></div>
+                        <div class="mailbox__mail-element mail__title">
+                            Легкий способ зарабатывать 10000000000 в секунду, нужно всего-лишь...
+                        </div>
+                        <time class="mailbox__mail-element mail__time" datetime="2019-01-01 01:01">
+                            Jan 1
+                        </time>
+                    </div>
+                    <div class="mailbox__mail">
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input"/>
+                            <span class="checkbox__span"></span>
+                        </label>
+                        <div class="mailbox__mail-element mail__pic">
+                            <img class="pic__img" src="assets/spam.png"></img>
+                        </div>
+                        <div class="mailbox__mail-element mail__author">
+                            Неспамнеспамнеспамнеспам
+                        </div>
+                        <div class="mailbox__mail-element mail__dot"></div>
+                        <div class="mailbox__mail-element mail__title">
+                            Легкий способ зарабатывать 10000000000 в секунду, нужно всего-лишь...
+                        </div>
+                        <time class="mailbox__mail-element mail__time" datetime="2019-01-01 01:01">
+                            Jan 1
+                        </time>
+                    </div>
+                    <div class="mailbox__mail">
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input"/>
+                            <span class="checkbox__span"></span>
+                        </label>
+                        <div class="mailbox__mail-element mail__pic">
+                            <img class="pic__img" src="assets/spam.png"></img>
+                        </div>
+                        <div class="mailbox__mail-element mail__author">
+                            Неспамнеспамнеспамнеспам
+                        </div>
+                        <div class="mailbox__mail-element mail__dot"></div>
+                        <div class="mailbox__mail-element mail__title">
+                            Легкий способ зарабатывать 10000000000 в секунду, нужно всего-лишь...
+                        </div>
+                        <time class="mailbox__mail-element mail__time" datetime="2019-01-01 01:01">
+                            Jan 1
+                        </time>
+                    </div>
+                    <div class="mailbox__mail">
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input"/>
+                            <span class="checkbox__span"></span>
+                        </label>
+                        <div class="mailbox__mail-element mail__pic">
+                            <img class="pic__img" src="assets/spam.png"></img>
+                        </div>
+                        <div class="mailbox__mail-element mail__author">
+                            Неспамнеспамнеспамнеспам
+                        </div>
+                        <div class="mailbox__mail-element mail__dot"></div>
+                        <div class="mailbox__mail-element mail__title">
+                            Легкий способ зарабатывать 10000000000 в секунду, нужно всего-лишь...
+                        </div>
+                        <time class="mailbox__mail-element mail__time" datetime="2019-01-01 01:01">
+                            Jan 1
+                        </time>
+                    </div>
+                    <div class="mailbox__mail">
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input"/>
+                            <span class="checkbox__span"></span>
+                        </label>
+                        <div class="mailbox__mail-element mail__pic">
+                            <img class="pic__img" src="assets/spam.png"></img>
+                        </div>
+                        <div class="mailbox__mail-element mail__author">
+                            Неспамнеспамнеспамнеспам
+                        </div>
+                        <div class="mailbox__mail-element mail__dot"></div>
+                        <div class="mailbox__mail-element mail__title">
+                            Легкий способ зарабатывать 10000000000 в секунду, нужно всего-лишь...
+                        </div>
+                        <time class="mailbox__mail-element mail__time" datetime="2019-01-01 01:01">
+                            Jan 1
+                        </time>
+                    </div>
+                    <div class="mailbox__mail">
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input"/>
+                            <span class="checkbox__span"></span>
+                        </label>
+                        <div class="mailbox__mail-element mail__pic">
+                            <img class="pic__img" src="assets/spam.png"></img>
+                        </div>
+                        <div class="mailbox__mail-element mail__author">
+                            Неспамнеспамнеспамнеспам
+                        </div>
+                        <div class="mailbox__mail-element mail__dot"></div>
+                        <div class="mailbox__mail-element mail__title">
+                            Легкий способ зарабатывать 10000000000 в секунду, нужно всего-лишь...
+                        </div>
+                        <time class="mailbox__mail-element mail__time" datetime="2019-01-01 01:01">
+                            Jan 1
+                        </time>
+                    </div>
+                    <div class="mailbox__mail">
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input"/>
+                            <span class="checkbox__span"></span>
+                        </label>
+                        <div class="mailbox__mail-element mail__pic">
+                            <img class="pic__img" src="assets/spam.png"></img>
+                        </div>
+                        <div class="mailbox__mail-element mail__author">
+                            Неспамнеспамнеспамнеспам
+                        </div>
+                        <div class="mailbox__mail-element mail__dot"></div>
+                        <div class="mailbox__mail-element mail__title">
+                            Легкий способ зарабатывать 10000000000 в секунду, нужно всего-лишь...
+                        </div>
+                        <time class="mailbox__mail-element mail__time" datetime="2019-01-01 01:01">
+                            Jan 1
+                        </time>
+                    </div>
+                </div>
+                <div class="mailbox__mail-contents">
+                    <label class="mailbox__msg-close" for="first-msg">
+                        ×
+                    </label>
+                    <h1>Как падают кошки</h1>
+                    <article>
+                        <section>
+                            Большинство представителей семейства кошачьих имеет склонность к обзору местности с высоты. Крупные лесные кошки-рыси вообше значительную часть времени проводят на деревьях, находясь в засаде или погоне за добычей. А львы и леопарды в саваннах Африки приспособились в жаркое время отдыхать на деревьях, распластавшись на ветках и опустив вниз лапы. Случается, однако, что кошки не удерживаются на высоте и падают. Но и в падении у них есть свои особенности. Многим приходилось наблюдать, как падает обыкновенная кошка, сорвавшись с карниза дома, с дерева или с забора. Сначала она падает к земле головой, спиной или боком, но затем, сделав резкий поворот в воздухе, вывертывается и становится на лапки. И так всегда. Как бы ни падала кошка, приземляется она всегда на лапки и тотчас же может бежать дальше. Такое мгновенное выравнивание положения тела у кошек обеспечивается действием ее вестибулярного аппарата.
+                        </section>
+                        <img class="article__sova" src="assets/sova.png" height="300" class="sova"></img>
+                        <section>
+                            При падении кошки вестибулярный аппарат помогает ей осуществить ряд последовательно возникающих рефлексов и приземлиться на лапы. Ненормальное положение тела в пространстве приводит в раздражение отолитовый прибор каналов внутреннего уха кошки. В ответ на это раздражение происходит рефлекторное сокращение мускулов шеи, приводящих голову животного в нормальное положение по отношению к горизонту. Это - первый рефлекс. Сокращение же шейных мышц и постановка шеи при повороте головы являются возбудителем для осуществления другого рефлекса - сокращения определенных мышц туловища и конечностей. В итоге животное принимает правильное положение.
+                        </section>
+                        <section>
+                            Этот сложный врожденный цепной рефлекс выработался у некоторых животных как приспособление к образу жизни. Ведь животным, особенно из семейства кошачьих, часто приходится во время охоты прыгать и падать с деревьев, скал или со спины своей жертвы. И не будь у них этого приспособительного рефлекса, от них не только ушла бы добыча, но иной раз и самому охотнику пришлось бы пострадать от зубов, рогов или копыт своей жертвы.
+                        </section>
+                        <p>Текст статьи взят с сайта <a href="https://petsi.net/articles/cats/how-cat-comes-down">petsi.net</a></p>
+                    </article>
+                </div>
+
+                <div class="footer">
+                    <div class="footer__inline-element">
+                        © 2019 – 2019, Ямдекс
+                    </div>
+                    <div class="footer__inline-element">
+                        <a class="footer__link" href="http://www.milliondollarhomepage.com/">Реклама</a>
+                    </div>
+                    <div class="footer__inline-element">
+                        <a class="footer__link" href="mailto:yakovlev.ilya.v@gmail.com?Subject=Help" target="_top">Помощь и обратная связь</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
