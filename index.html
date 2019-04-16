@@ -62,7 +62,7 @@
                     <button class="mailbox__header-element">
                         Переслать
                     </button>
-                    <button class="mailbox__header-element">
+                    <button class="mailbox__header-element" onclick="deleteSelected()">
                         Удалить
                     </button>
                     <button class="mailbox__header-element">
@@ -75,7 +75,7 @@
 
                 <input class="mailbox__trigger" type="checkbox" id="first-msg"/>
                 <div class="mailbox__mail-list">
-                    <div class="mailbox__mail mail__new" state="hidden">
+                    <div class="mailbox__mail mail__new" data-state="hidden">
                         <label class="checkbox">
                             <input type="checkbox" class="checkbox__input"/>
                             <span class="checkbox__span"></span>
