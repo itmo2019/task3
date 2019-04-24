@@ -24,9 +24,9 @@ function addNewMail() {
     let list = document.getElementById("mailList");
     let firstElem = document.getElementsByClassName("mail-list__elem")[0];
     if (firstElem != null) {
-        let ref = firstElem.childNodes[1].childNodes[3];
+        let ref = firstElem.querySelector(".simple-link_view");
         ref.setAttribute("href", "index.html");
-        firstElem.childNodes[1].childNodes[3].replaceWith(ref);
+        firstElem.querySelector(".simple-link_view").replaceWith(ref);
     }
     list.insertBefore(newItem, list.childNodes[0]);
     setTimeout(function() {
