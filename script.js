@@ -14,7 +14,7 @@ function getNewMessage() {
     newMessage.className = "emails-list__element emails-list__element_with-font-weight";
     newMessage.innerHTML =
         '<input type="checkbox" class="content-menu__check emails-list__check" id="input' + checkCounter + '">\n' +
-        '<label for="input' + checkCounter + '" class="check-style emails-list__check-style"></label>\n' +
+        '<label for="input' + checkCounter + '" class="check-view emails-list__check-view"></label>\n' +
         '<div class="emails-list__logo"></div>\n' +
         '<span class="emails-list__title">Команда Яндекс.Почты</span>\n' +
         '<div class="emails-list__read-circle-indicator"></div>\n' +

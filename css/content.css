@@ -1,11 +1,11 @@
 .content-block {
     height: calc(100% - 70px);
-    background-color: #ffffff;
+    background-color: #fff;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.34);
     border-radius: 3px;
 }
 
-.content-block_position-in-parents-block {
+.body__content-block {
     margin-left: 191px;
     margin-right: 22px;
 }
@@ -26,13 +26,13 @@
     display: none;
 }
 
-.check-style {
+.check-view {
     display: block;
     height: 14px;
     width: 14px;
 }
 
-.content-menu__check-style {
+.content-menu__check-view {
     float: left;
     margin-left: 31px;
     position: relative;
@@ -180,7 +180,7 @@
             margin-top 1s linear 0.3s;
 }
 
-.emails-list__check-style {
+.emails-list__check-view {
     display: inline-block;
     vertical-align: middle;
     margin-left: 20px;
@@ -243,7 +243,7 @@
     font-weight: 500;
 }
 
-.emails-list__element_with-font-weight {
+.emails-list__element_highlighted {
     font-weight: 700;
 }
 
@@ -257,7 +257,7 @@
     position: relative;
     float: right;
     top: 50%;
-    color: #cccccc;
+    color: #ccc;
     font-size: 11px;
     transform: translateY(-50%);
     opacity: 1;
