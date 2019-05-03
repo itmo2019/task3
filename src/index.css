@@ -40,7 +40,3 @@ body {
 .inbox__show-story-checkbox:checked ~ #first {
     font-weight: normal;
 }
-
-
-
-
