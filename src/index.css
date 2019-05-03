@@ -6,307 +6,27 @@ body {
     margin: 0;
 }
 
-.header {
-    width: 100%;
-    height: 35px;
-    padding: 14px 0;
-}
-
-.menu {
-    position: absolute;
-    width: 150px;
-    height: 100%;
-    margin: 0 10px 0 20px;
-}
-
-.menu-rect {
-    float: left;
-    width: 20px;
-    height: 30px;
-    padding-top: 8px;
-}
-
-.rectangle {
-    width: 20px;
-    min-height: 2px;
-    height: 2px;
-    margin-bottom: 5px;
-    background-color: #000;
-}
-
-.yandex-mail {
-    margin-left: 30px;
-}
-
-.logo {
-    height: 30px;
-    width: 152px;
-}
-
-.rectangle-write {
-    width: 100%;
-    height: 32px;
-    border-radius: 3px;
-    background-color: #6287bd;
-    font-family: HelveticaNeue-Medium, sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-    border: none;
-    color: #ffffff;
-    margin-bottom: 8px;
-}
-
-.rectangle-write:hover {
+.inbox__header-checkbox:hover, .round:hover, .letter__author:hover, .letter__title:hover, .photo:hover, .inbox__close-story-button:hover {
     cursor: pointer;
 }
 
-.rectangle-write:active {
-    cursor: pointer;
-    border-top: solid 2px #50709d;
-    border-left: solid 2px #50709d;
-}
-
-.rectangle-inbox {
-    width: 100%;
-    height: 22px;
-    border-radius: 3px;
-    background-color: #cdd6e4;
-    text-align: start;
-    font-family: HelveticaNeue-Bold, sans-serif;
-    font-size: 11px;
-    margin-bottom: 3px;
-    border: none;
-    color: #555555;
-}
-
-.rectangle-inbox:hover {
-    cursor: pointer;
-}
-
-.rectangle-menu {
-    width: 100%;
-    height: 22px;
-    border-radius: 3px;
-    background-color: inherit;
-    text-align: start;
-    font-family: HelveticaNeue-Medium, sans-serif;
-    font-size: 11px;
-    margin-bottom: 3px;
-    padding: 0 7px;
-    border: none;
-    color: #707070;
-}
-
-.rectangle-menu:hover {
-    cursor: pointer;
-    background-color: #cdd6e4;;
-}
-
-.letters {
-    height: 100vh;
-    margin: 0 10px 0 190px;
-}
-
-.finder {
-    width: 100%;
-    height: 36px;
-    padding: 14px 0;
-}
-
-.find {
-    position: relative;
-    margin-left: 30%;
-    width: 40%;
-    color: #a5a5a5;
-    height: 32px;
-    opacity: 0.5;
-    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
-    background-color: #ffffff;
-    font-size: 16px;
-    padding-left: 4px;
-    padding-right: 20px;
-}
-
-.close {
-    position: relative;
-    border: none;
-    margin: auto auto auto -25px;
-    padding-left: 0;
-    width: 10px;
-    font-size: 16px;
-    border-radius: 3px;
-    background-color: inherit;
-    text-align: start;
-    color: #bcbcbc;
-}
-
-.close:hover {
-    cursor: pointer;
-    color: #dadada;
-}
-
-.all-mail {
-    position: relative;
-    width: 100%;
-    background-color: white;
-    border-radius: 3px;
-    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.34);
-    min-height: calc(100% - 70px);
-}
-
-.kinds {
-    height: 30px;
-    border-bottom: solid 1px #e2e2e2;
-    display: block;
-}
-
-.kind {
-    margin-top: 7px;
-    float: left;
-    font-size: 14px;
-    font-weight: 500;
-    color: #ccc;
-    margin-left: 20px;
-}
-
-.kind:hover {
-    cursor: pointer;
-    color: #000;
-}
-
-.check {
-    float: left;
-    width: 16px;
-    height: 16px;
-    margin-top: 7px;
-    margin-left: 10px;
-    border-radius: 3px;
-    border: solid 1px rgba(0, 0, 0, 0.15);
-    background-color: #fff;
-}
-
-.mail {
-    position: relative;
-    display: block;
-    height: 30px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-size: 13px;
-    border-bottom: solid 1px #e2e2e2;
-}
-
-.check:hover, .round:hover, .who:hover, .what:hover, .photo:hover, .cross:hover {
-    cursor: pointer;
-}
-
-.round {
-    float: left;
-    width: 30px;
-    height: 30px;
-    background-color: #ff3333;
-    border-radius: 50%;
-    line-height: 30px;
-    text-align: center;
-    color: white;
-    margin-left: 10px;
-    font-size: 22px;
-    font-weight: normal;
-}
-
-.who {
-    position: absolute;
-    height: 16px;
-    margin-top: 8px;
-    margin-left: 80px;
-}
-
-.what {
-    position: absolute;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin-top: 7px;
-    margin-left: 280px;
-    max-width: calc(100% - 500px);
-}
-
-.when {
-    position: relative;
-    margin-right: 20px;
-    width: 40px;
-    margin-left: auto;
-    margin-top: 7px;
-    font-weight: normal;
-    padding-left: 5px;
-    color: #9b9b9b;
-}
-
-.unread-round {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    top: calc(50% - 5px);
-    border-radius: 50%;
-    margin-left: 260px;
-    background-color: #6287bd;
-}
-
-.mail-list {
-    padding: 0;
-    margin: 0;
-}
-
-.first-letter {
-    font-weight: bold;
-}
-
-.second-letter {
-    font-weight: bold;
-}
-
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 30px;
-    margin-top: 2px;
-    font-size: 12px;
-    overflow: hidden;
-    border-top: solid 1px #e2e2e2;
-}
-
-.info {
-    float: right;
-    font-size: 12px;
-    font-weight: 500;
-    color: #ccc;
-    margin-right: 20px;
-    margin-top: 9px;
-    display: block;
-}
-
-.info:hover {
-    cursor: pointer;
-    color: #000;
-}
-
-.show-story {
+.inbox__show-story-checkbox {
     display: none;
 }
 
-.show-story:not(:checked) ~ .mail {
+.inbox__show-story-checkbox:not(:checked) ~ .letter {
     display: block;
 }
 
-.show-story:checked ~ .mail-list {
+.inbox__show-story-checkbox:checked ~ .mail-list {
     display: none;
 }
 
-.show-story:not(:checked) ~ .story {
+.inbox__show-story-checkbox:not(:checked) ~ .inbox__story {
     display: none;
 }
 
-.show-story:checked ~ .story {
+.inbox__show-story-checkbox:checked ~ .inbox__story {
     box-sizing: border-box;
     width: 100%;
     min-height: 400px;
@@ -317,34 +37,10 @@ footer {
     display: block;
 }
 
-.show-story:checked ~ #first {
+.inbox__show-story-checkbox:checked ~ #first {
     font-weight: normal;
 }
 
-.cross {
-    font-size: 28px;
-    float: right;
-    margin-right: 10px;
-    border: none;
-    background: white;
-}
 
-.circle {
-    width: 150px;
-    float: right;
-    shape-outside: circle(40%);
-    clip-path: circle(40%);
-}
 
-.photo {
-    float: left;
-    width: 30px;
-    height: 30px;
-    margin-left: 10px;
-}
 
-.avatar {
-    width: 100%;
-    height: 100%;
-    clip-path: circle();
-}

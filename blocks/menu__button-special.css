@@ -10,3 +10,13 @@
   color: #ffffff;
   margin-bottom: 8px;
 }
+
+.menu__button-special:hover {
+  cursor: pointer;
+}
+
+.menu__button-special:active {
+  cursor: pointer;
+  border-top: solid 2px #50709d;
+  border-left: solid 2px #50709d;
+}
