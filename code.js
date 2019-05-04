@@ -14,39 +14,68 @@ let testLetter = `<input type="checkbox" class="letter__checkbox">
     мобильногоiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</span>
     <time class="letter__date-msg" datetime="2018-07-06">6 июл</time>`;
 
-let count = 0
+function adding() {
+  let currLetters = document.querySelector(".block-inner__letters");
+  let letters = currLetters.firstElementChild;
+  console.log(letters);
+  for (let i = 0; i < letters.length; i++) {
+    // console.log(i);
+
+    // console.log(letters[i]);
+    letters[i].classList.remove("msg-added");
+    letters[i].classList.add("msg-added");
+    setTimeout(function() {
+      letters[i].classList.add("msg-added2");
+    }, 1);
+  }
+}
+
+let count = 0;
 function addLetter() {
-    let test = document.querySelector('.block-inner__letters')
-    let letters = test.childNodes;
-    var newLetter = document.createElement('div');
-    newLetter.classList.add("letters__letter");
-    newLetter.classList.add("letter");
-    newLetter.innerHTML = templateLetter + " " + (++count) + time;
-    test.insertBefore(newLetter, letters[0]);
+  let currLetters = document.querySelector(".block-inner__letters");
+  let letters = currLetters.children;
+  var newLetter = document.createElement("div");
+  newLetter.classList.add("letters__letter");
+  newLetter.classList.add("letter");
+  newLetter.innerHTML = templateLetter + " " + ++count + time;
+  newLetter.classList.add("msg-adding-start");
+  currLetters.insertBefore(newLetter, letters[0]);
+  setTimeout(() => {
+    newLetter.classList.add("msg-adding-finish");
+  }, 70);
 }
 
 function deleteMsgs(toDelete) {
-    for (var i = 0; i < toDelete.length; i++) {
-        toDelete[i].remove();
-    }
+  for (var i = 0; i < toDelete.length; i++) {
+    toDelete[i].remove();
+  }
 }
 
 function deleteLetter() {
-    let checkboxes = document.querySelectorAll('.letter__checkbox');
-    var toDelete = [];
-    for (var i = 0; i < checkboxes.length; i++) {
-        if (checkboxes[i].checked) {
-            var parent = checkboxes[i].parentElement;
-            toDelete.push(parent);
-            if (Math.random() > 0.5) {
-                parent.classList.add("msg-deleted-right");
-            } else {
-                parent.classList.add("msg-deleted-left");
-            }
-        }
+  let checkboxes = document.querySelectorAll(".letter__checkbox");
+  var toDelete = [];
+  for (var i = 0; i < checkboxes.length; i++) {
+    if (checkboxes[i].checked) {
+      var parent = checkboxes[i].parentElement;
+      parent.classList.add("msg-deleting-start");
+      toDelete.push(parent);
+      if (Math.random() > 0.5) {
+        // setTimeout(() => {
+          parent.classList.add("msg-deleting-right");
+        // }, 200);
+      } else {
+        // setTimeout(() => {
+          parent.classList.add("msg-deleting-left");
+        // }, 200);
+      }
     }
-    setTimeout(deleteMsgs, 1000, toDelete);
+  }
+  setTimeout(deleteMsgs, 1000, toDelete);
 }
 
-document.getElementById('actions__button-write').addEventListener("click", addLetter);
-document.getElementById('can-do__delete').addEventListener("click", deleteLetter);
+document
+  .getElementById("actions__button-write")
+  .addEventListener("click", addLetter);
+document
+  .getElementById("can-do__delete")
+  .addEventListener("click", deleteLetter);
