@@ -1,0 +1,38 @@
+body {
+    min-width: 760px;
+    height: 100vh;
+    margin: 0;
+    background-color: #e5eaf0;
+    font-family: 'HelveticaNeue', sans-serif;
+}
+
+.inbox__show-story-checkbox {
+    display: none;
+}
+
+.inbox__show-story-checkbox:not(:checked) ~ .letter {
+    display: block;
+}
+
+.inbox__show-story-checkbox:checked ~ .inbox__wrapper {
+    display: none;
+}
+
+.inbox__show-story-checkbox:not(:checked) ~ .inbox__story {
+    display: none;
+}
+
+.inbox__show-story-checkbox:checked ~ .inbox__story {
+    display: block;
+    width: 100%;
+    min-height: 400px;
+    box-sizing: border-box;
+    padding: 10px 10px;
+    background-color: white;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.inbox__show-story-checkbox:checked ~ #first {
+    font-weight: normal;
+}

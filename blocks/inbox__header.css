@@ -1,0 +1,8 @@
+.inbox__header {
+  display: block;
+  height: 40px;
+  box-sizing: border-box;
+  padding: 5px 0;
+
+  border-bottom: solid 1px #e2e2e2;
+}

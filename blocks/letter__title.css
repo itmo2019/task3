@@ -1,0 +1,10 @@
+.letter__title {
+  position: absolute;
+
+  overflow: hidden;
+  max-width: calc(100% - 370px);
+  padding-top: 12px;
+  margin-left: 280px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
