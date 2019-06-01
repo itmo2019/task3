@@ -29,6 +29,23 @@
     outline: 0;
 }
 
+.letter__sender-ico {
+    margin: 5px 10px;
+    box-sizing: border-box;
+    padding: 4px 8px;
+    width: 30px;
+    font-size: 20px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+    background: #f22;
+    align-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-family: HelveticaNeue, serif;
+}
+
 .letter__read-mark:checked {
     background-color: #6287bd;
 }
@@ -129,13 +146,13 @@
 }
 
 .letter_new {
-height: 0;
+
 opacity: 0;
 }
 
 .letter_showed {
-transition: all 500ms;
-height: 40px;
+transition: all 1000ms;
+
 opacity: 1;
 }
 
