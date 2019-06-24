@@ -13,7 +13,37 @@ body {
     background-color: #e5eaf0;
 }
 
-.left-menu__textMenu {
+.letter__animated-add-letter {
+    animation-duration: 2s;
+    animation-name: add-new-letter;
+}
+
+@keyframes add-new-letter {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+.letter__animated-delete-letter {
+    animation-duration: 1s;
+    animation-name: delete-letter;
+}
+
+@keyframes delete-letter {
+    from {
+        opacity: 100%;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.left-menu__text-menu {
     width: 137px;
     font-family: HelveticaNeue;
     margin-left: -10px;
@@ -28,21 +58,16 @@ body {
     line-height: 16px;
 }
 
-#content {
+.content {
     display: none;
 }
 
-#show:target #content {
+#show:target .content .mem {
     display: inline-block;
 }
 
-#show:target #mem {
+#show:target {
     display: none;
-}
-
-.openMoon {
-    width: 100%;
-    height: 750px;
 }
 
 .header__yp-logo {
@@ -53,7 +78,7 @@ body {
     display: inline-block;
 }
 
-.left-menu__textMenu:hover {
+.left-menu__text-menu:hover {
     border-radius: 3px;
     background-color: #cdd6e4;
     font-weight: bold;
@@ -64,11 +89,11 @@ body {
     color: inherit;
 }
 
-.main-part_del-line {
+.main-part__del-line {
     text-decoration: none;
 }
 
-.ul {
+.left-menu__actions-block {
     margin-top: 0;
     width: 100%;
     margin-left: -30px;
@@ -104,7 +129,7 @@ body {
     color: #000000;
 }
 
-.close {
+.content__close {
     float: right;
     margin-top: 10px;
     margin-right: 10px;
@@ -130,7 +155,7 @@ body {
     margin-top: 7px;
 }
 
-.head__search {
+.header__search {
     vertical-align: text-bottom;
     border-width: 0;
     display: inline-block;
@@ -171,7 +196,16 @@ body {
     color: #ffffff;
 }
 
-.cross {
+.header__cross {
+    width: 9px;
+    height: 9px;
+    opacity: 0.15;
+    float: right;
+    margin-top: 12px;
+    margin-right: 10px;
+}
+
+.content__cross {
     width: 9px;
     height: 9px;
     opacity: 0.15;
@@ -186,6 +220,17 @@ body {
     border-bottom: solid 1px #e2e2e2;
 }
 
+.letter {
+    height: 37px;
+    width: 100%;
+    border-bottom: solid 1px #e2e2e2;
+}
+
+.main-content {
+    height: 37px;
+    width: 100%;
+    border-bottom: solid 1px #e2e2e2;
+}
 
 .main-title__text-title {
     font-family: HelveticaNeue;
@@ -210,9 +255,8 @@ body {
     width: 100%;
 }
 
-.text-moon {
-    margin-top: 25px;
-    margin-right: 20px;
+.content__text-letter {
+    margin: 25px;
 }
 
 .end-title__text-endline {
@@ -225,26 +269,18 @@ body {
     color: #9b9b9b;
 }
 
-.main-title__y-logo {
+.letter__y-logo {
     margin-left: 10px;
     display: inline-block;
     width: 37px;
     border-radius: 50%;
 }
 
-.moon-logo {
-    position: relative;
-    float: left;
-    shape-outside: circle(50%);
-    margin: 20px;
-    width: 200px;
-}
-
-.main-title_is-bold {
+.letter_is-bold {
     font-weight: bold;
 }
 
-.main-title__text-sender-letter {
+.letter__text-sender-letter {
     font-family: HelveticaNeue;
     overflow: hidden;
     white-space: nowrap;
@@ -259,9 +295,8 @@ body {
     color: #000000;
 }
 
-.main-title__text-letter {
+.letter__text-letter {
     font-family: HelveticaNeue;
-    position: absolute;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -275,7 +310,7 @@ body {
     color: #000000;
 }
 
-.main-title__mark-new-letter {
+.letter__mark-new-letter {
     display: inline-block;
     margin-left: 20px;
     margin-top: 15px;
@@ -284,10 +319,9 @@ body {
     border-radius: 50%;
     background-color: #6287bd;
     vertical-align: top;
-
 }
 
-.main-title__mark-no-letter {
+.letter__mark-no-letter {
     display: inline-block;
     margin-left: 20px;
     margin-top: 15px;
@@ -298,18 +332,19 @@ body {
     vertical-align: top;
 }
 
-.main-title__data {
+.letter__data {
     font-family: HelveticaNeue;
     float: right;
     margin-top: 11px;
     margin-right: 20px;
     height: 15px;
+    width: 8%;
     font-size: 13px;
     text-align: right;
     color: #9b9b9b;
 }
 
-.main-title__checkbox {
+.main-part__checkbox {
     display: inline-block;
     margin-left: 20px;
     margin-top: 11px;
@@ -324,7 +359,7 @@ body {
     vertical-align: top;
 }
 
-.main-title__checkbox:checked {
+.main-part__checkbox:checked {
     display: inline-block;
     background: #e2e2e2;
     background-clip: content-box;

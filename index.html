@@ -15,26 +15,26 @@
         <div class="header__line"></div>
     </div>
     <img class="header__yp-logo" src="images/header-logo.svg">
-    <div class="head__search">
+    <div class="header__search">
         <input class="header__text-search" type="text" placeholder="Поиск">
-        <img class="cross" src="images/cross.png">
+        <img class="header__cross" src="images/cross.png">
     </div>
 </header>
 <div class="main-part">
 
     <div class="left-menu">
         <button class="left-menu__button"><span class="left-menu__text-write">Написать</span></button>
-        <ul class="ul">
-            <li class="left-menu__textMenu"><a class="main-part_unhighlight main-part_del-line" href="#">Входящие</a>
+        <ul class="left-menu__actions-block">
+            <li class="left-menu__text-menu"><a class="main-part_unhighlight main-part__del-line" href="#">Входящие</a>
             </li>
-            <li class="left-menu__textMenu"><a class="main-part_unhighlight main-part_del-line"
-                                               href="#">Отправленные</a></li>
-            <li class="left-menu__textMenu"><a class="main-part_unhighlight main-part_del-line" href="#">Удалённые</a>
+            <li class="left-menu__text-menu"><a class="main-part_unhighlight main-part__del-line"
+                                                href="#">Отправленные</a></li>
+            <li class="left-menu__text-menu"><a class="main-part_unhighlight main-part__del-line" href="#">Удалённые</a>
             </li>
-            <li class="left-menu__textMenu"><a class="main-part_unhighlight main-part_del-line" href="#">Спам</a></li>
-            <li class="left-menu__textMenu"><a class="main-part_unhighlight main-part_del-line" href="#">Черновики</a>
+            <li class="left-menu__text-menu"><a class="main-part_unhighlight main-part__del-line" href="#">Спам</a></li>
+            <li class="left-menu__text-menu"><a class="main-part_unhighlight main-part__del-line" href="#">Черновики</a>
             </li>
-            <li class="left-menu__textMenu"><a class="main-part_unhighlight main-part_del-line" href="#">Создать
+            <li class="left-menu__text-menu"><a class="main-part_unhighlight main-part__del-line" href="#">Создать
                 папку</a></li>
         </ul>
     </div>
@@ -42,115 +42,27 @@
     <div class="main-info">
         <div>
             <div class="main-title">
-                <label>
-                    <input class="main-title__checkbox" type="checkbox" onclick="selectAll()">
-                </label>
-                <a class="main-title__text-title main-part_del-line" href="#">Переслать</a>
-                <a class="main-title__text-title main-part_del-line" href="#">Удалить</a>
-                <a class="main-title__text-title main-part_del-line" href="#">Это спам!</a>
-                <a class="main-title__text-title main-part_del-line" href="#">Прочитано</a>
+                <input class="main-part__checkbox" type="checkbox" onclick="selectAll()">
+                <a class="main-title__text-title main-part__del-line" href="#">Переслать</a>
+                <a class="main-title__text-title main-part__del-line" href="#">Удалить</a>
+                <a class="main-title__text-title main-part__del-line" href="#">Это спам!</a>
+                <a class="main-title__text-title main-part__del-line" href="#">Прочитано</a>
             </div>
             <div class="size-content" id="show">
-                <div id="mem">
-                    <div class="main-title">
-                        <label>
-                            <input class="main-title__checkbox" type="checkbox">
-                        </label>
-                        <a class="main-part_del-line" href="#show">
-                            <img class="main-title__y-logo" src="images/logo.jpg">
-                            <span class="main-title__text-sender-letter">Яндекс.Наука</span>
-                            <div class="main-title__mark-no-letter"></div>
-                            <span class="main-title__text-letter">Статья о луне</span>
-                            <span class="main-title__data">6 авг</span>
-                        </a>
-                    </div>
+                <div class="mem">
 
-                    <div class="main-title">
-                        <label>
-                            <input class="main-title__checkbox" type="checkbox">
-                        </label>
-                        <a class="main-part_del-line" href="#">
-                            <img class="main-title__y-logo" src="images/logo.jpg">
-                            <span class="main-title__text-sender-letter main-title_is-bold">Яндекс.Паспорт</span>
-                            <div class="main-title__mark-new-letter"></div>
-                            <span class="main-title__text-letter main-title_is-bold">Доступ к аккаунту восстановлен</span>
-                            <span class="main-title__data">6 авг</span>
-                        </a>
-                    </div>
-                    <div class="main-title">
-                        <label>
-                            <input class="main-title__checkbox" type="checkbox">
-                        </label>
-                        <a class="main-part_del-line" href="#">
-                            <img class="main-title__y-logo" src="images/logo.jpg">
-                            <span class="main-title__text-sender-letter main-title_is-bold">Яндекс.Паспорт</span>
-                            <div class="main-title__mark-new-letter"></div>
-                            <span class="main-title__text-letter main-title_is-bold">Доступ к аккаунту восстановлен</span>
-                            <span class="main-title__data">6 авг</span>
-                        </a>
-                    </div>
-                    <div class="main-title">
-                        <label>
-                            <input class="main-title__checkbox" type="checkbox">
-                        </label>
-                        <a class="main-part_del-line" href="#">
-                            <img class="main-title__y-logo" src="images/logo.jpg">
-                            <span class="main-title__text-sender-letter main-title_is-bold">Яндекс.Паспорт</span>
-                            <div class="main-title__mark-new-letter"></div>
-                            <span class="main-title__text-letter main-title_is-bold">Доступ к аккаунту восстановлен</span>
-                            <span class="main-title__data">6 авг</span>
-                        </a>
-                    </div>
-                    <div class="main-title">
-                        <label>
-                            <input class="main-title__checkbox" type="checkbox">
-                        </label>
-                        <a class="main-part_del-line" href="#">
-                            <img class="main-title__y-logo" src="images/logo.jpg">
-                            <span class="main-title__text-sender-letter">Команда Яндекс.Почты</span>
-                            <div class="main-title__mark-no-letter"></div>
-                            <span class="main-title__text-letter">Как читать почту с мобильного</span>
-                            <span class="main-title__data">6 июл</span>
-                        </a>
-                    </div>
-
-                    <div class="main-title">
-                        <label>
-                            <input class="main-title__checkbox" type="checkbox">
-                        </label>
-                        <a class="main-part_del-line" href="#">
-                            <img class="main-title__y-logo" src="images/logo.jpg">
-                            <span class="main-title__text-sender-letter">Яндекс</span>
-                            <div class="main-title__mark-no-letter"></div>
-                            <span class="main-title__text-letter">Соберите всю почту в этот ящик</span>
-                            <span class="main-title__data">6 июл</span>
-                        </a>
-                    </div>
                 </div>
 
-                <div id="content">
-                    <a class="close main-part_del-line" href="#"><img class="cross" src="images/cross.png"></a>
-                    <img class="moon-logo" src="images/moon.png">
-                    <p class="text-moon">Луна́ — естественный спутник Земли. Самый близкий к Солнцу спутник планеты, так
-                        как
-                        у
-                        ближайших к Солнцу планет,
-                        Меркурия и Венеры, спутников нет. Второй по яркости объект на земном небосводе после Солнца и
-                        пятый
-                        по
-                        величине естественный спутник планеты Солнечной системы. Среднее расстояние между центрами Земли
-                        и
-                        Луны
-                        — 384 467 км (0,002 57 а. е., ~ 30 диаметров Земли).
-                        Луна является единственным внеземным астрономическим объектом, на котором побывал человек.
-                    </p>
+                <div class="content">
+                    <a class="content__close main-part__del-line" href="#" onclick="closeLetter()"><img class="content__cross" src="images/cross.png"></a>
+                    <div class="content__text-letter"></div>
                 </div>
             </div>
         </div>
         <div class="end-title">
-            <span class="end-title__text-endline">&copy; 2001-2018, <a class="main-part_unhighlight main-part_del-line" href="#">Яндекс</a></span>
-            <span class="end-title__text-endline"><a class="main-part_unhighlight main-part_del-line" href="#">Реклама</a></span>
-            <span class="end-title__text-endline"><a class="main-part_unhighlight main-part_del-line" href="#">Помощь и обратная связь</a></span>
+            <span class="end-title__text-endline">&copy; 2001-2018, <a class="main-part_unhighlight main-part__del-line" href="#">Яндекс</a></span>
+            <span class="end-title__text-endline"><a class="main-part_unhighlight main-part__del-line" href="#">Реклама</a></span>
+            <span class="end-title__text-endline"><a class="main-part_unhighlight main-part__del-line" href="#">Помощь и обратная связь</a></span>
         </div>
 
     </div>
